@@ -3,7 +3,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 import subprocess,xml.etree.ElementTree as ET
 root=Path(__file__).resolve().parents[1]
-pages=['index.html','es/index.html','guide/index.html','es/guia/index.html','privacy/index.html','es/privacidad/index.html']
+pages=['index.html','es/index.html','guide/index.html','es/guia/index.html','privacy/index.html','es/privacidad/index.html','photos/index.html','es/fotos/index.html']
 class Page(HTMLParser):
  def __init__(self):super().__init__();self.tags=[]
  def handle_starttag(self,tag,attrs):self.tags.append((tag,dict(attrs)))
@@ -25,5 +25,5 @@ for file in pages:
  assert 'googletagmanager.com' not in (root/file).read_text()
 assert (root/'CNAME').read_text().strip()=='staywhiteswan.com'
 ET.parse(root/'sitemap.xml')
-for file in ['assets/site.js','assets/config.js']:subprocess.run(['node','--check',str(root/file)],check=True)
-print('Six localized pages, local assets, metadata, sitemap, CNAME and JavaScript checks passed.')
+for file in ['assets/site.js','assets/config.js','assets/gallery.js']:subprocess.run(['node','--check',str(root/file)],check=True)
+print('Eight localized pages, local assets, metadata, sitemap, CNAME and JavaScript checks passed.')

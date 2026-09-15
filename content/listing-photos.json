@@ -1,0 +1,330 @@
+{
+  "listingUrl": "https://www.airbnb.com/rooms/47911834",
+  "retrievedAt": "2026-09-15",
+  "photos": [
+    {
+      "id": "1685140620",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/ff259429-9a94-49be-b410-fe5b56916b07.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Living room opening to the pool",
+        "es": "Sala abierta hacia la piscina"
+      }
+    },
+    {
+      "id": "2569987642",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/c1bcf5e9-3227-4261-b738-4ca488fbf67e.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Light-filled living room",
+        "es": "Sala llena de luz"
+      }
+    },
+    {
+      "id": "2569987644",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/8bd62214-ed80-4517-931a-1fce8cdd53fd.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Open-plan living and dining",
+        "es": "Sala y comedor integrados"
+      }
+    },
+    {
+      "id": "2569961413",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/4921d6b1-77c6-4c25-876e-960af9af4aa9.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Kitchen and breakfast bar",
+        "es": "Cocina y barra de desayuno"
+      }
+    },
+    {
+      "id": "1852228438",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/3a855894-0298-4d89-b9ea-8cca1ce92041.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Kitchen with ocean views",
+        "es": "Cocina con vista al mar"
+      }
+    },
+    {
+      "id": "1852232843",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/3a41d820-20de-428d-82de-45227d88de94.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Coffee and tea corner",
+        "es": "Rincón de café y té"
+      }
+    },
+    {
+      "id": "2569961436",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/24a7cd09-277e-4838-bea1-da420d843bbe.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Kitchen and dining table",
+        "es": "Cocina y mesa de comedor"
+      }
+    },
+    {
+      "id": "2569961410",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/926ea32e-2868-457d-b781-1f5357b8e9cc.jpeg",
+      "category": "living",
+      "alt": {
+        "en": "Space to gather around the table",
+        "es": "Espacio para compartir en la mesa"
+      }
+    },
+    {
+      "id": "2580025731",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/d3d3a45d-7b64-4bf2-96e3-59e805655b9e.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Primary bedroom facing the ocean",
+        "es": "Habitación principal frente al mar"
+      }
+    },
+    {
+      "id": "2580025730",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/9cfa0406-14de-4e83-b12b-d1979863a2fb.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Ocean views from the primary bedroom",
+        "es": "Vista al mar desde la habitación principal"
+      }
+    },
+    {
+      "id": "2580025741",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/e73886df-2787-454c-885e-d72e644f710d.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Primary bedroom and sitting area",
+        "es": "Habitación principal con sala de estar"
+      }
+    },
+    {
+      "id": "1852230521",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/39a55ebb-940d-474e-8429-e924670f64e7.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Sunrise from the balcony",
+        "es": "Amanecer desde el balcón"
+      }
+    },
+    {
+      "id": "2569961498",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/8d573704-1a6c-4b7a-8a36-747a7397376c.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Second bedroom with ocean view",
+        "es": "Segunda habitación con vista al mar"
+      }
+    },
+    {
+      "id": "2569961475",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/c97ebfe3-512f-473c-89b7-89736488bee6.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Second bedroom beside the Pacific",
+        "es": "Segunda habitación frente al Pacífico"
+      }
+    },
+    {
+      "id": "2569961569",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/48c8974f-ef33-430e-9658-c58f4a72c727.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Third bedroom with two beds",
+        "es": "Tercera habitación con dos camas"
+      }
+    },
+    {
+      "id": "2569961551",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/cc7c6456-e9f7-4660-acb5-66da32166d35.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Third bedroom and workspace",
+        "es": "Tercera habitación con escritorio"
+      }
+    },
+    {
+      "id": "2569961576",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/524446b4-4f97-4435-97c4-72b106743df1.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Fourth bedroom beside the palms",
+        "es": "Cuarta habitación junto a las palmeras"
+      }
+    },
+    {
+      "id": "2569961572",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/e80dabd3-c171-4ce8-8ee8-3c81368979bc.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Fourth bedroom and desk",
+        "es": "Cuarta habitación con escritorio"
+      }
+    },
+    {
+      "id": "2569961584",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/d9935cfc-d3da-4c1d-906d-165a3f4f1f11.jpeg",
+      "category": "bedrooms",
+      "alt": {
+        "en": "Balcony framed by palms",
+        "es": "Balcón entre palmeras"
+      }
+    },
+    {
+      "id": "1856102816",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/75c73bff-d359-4b09-a795-8d5eaf95badb.jpeg",
+      "category": "details",
+      "alt": {
+        "en": "Bathroom with rainfall shower",
+        "es": "Baño con ducha de lluvia"
+      }
+    },
+    {
+      "id": "2570005062",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/90dcdf51-93af-4193-8cac-f973d53f8af3.jpeg",
+      "category": "details",
+      "alt": {
+        "en": "Bathroom with stone basin",
+        "es": "Baño con lavabo de piedra"
+      }
+    },
+    {
+      "id": "1852228371",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/703a360c-0d57-4c39-8fba-b28447ab5c04.jpeg",
+      "category": "details",
+      "alt": {
+        "en": "Bath amenities",
+        "es": "Productos de baño"
+      }
+    },
+    {
+      "id": "2569961468",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/d34c7f66-1b53-4f86-a729-2b858d98fba4.jpeg",
+      "category": "details",
+      "alt": {
+        "en": "Bathroom with walk-in shower",
+        "es": "Baño con ducha abierta"
+      }
+    },
+    {
+      "id": "1856102817",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/3b543ccb-5581-4701-9957-be37f0248367.jpeg",
+      "category": "details",
+      "alt": {
+        "en": "Guest half bathroom",
+        "es": "Medio baño de visitas"
+      }
+    },
+    {
+      "id": "2569996360",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/dd48699b-81a2-49fa-a418-1105c81a577f.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "Covered outdoor dining and lounge",
+        "es": "Comedor y sala al aire libre bajo techo"
+      }
+    },
+    {
+      "id": "2569961464",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/5476160c-d275-45b2-b289-a98a6343eda6.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "Outdoor bar and dining area",
+        "es": "Bar exterior y comedor"
+      }
+    },
+    {
+      "id": "2569961465",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/62132252-3367-4e42-b082-5394c8150fb3.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "Outdoor cooking area",
+        "es": "Cocina exterior"
+      }
+    },
+    {
+      "id": "2569998613",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/564e5eed-e411-4670-a996-eedb9057c0a5.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "Lunch with an ocean view",
+        "es": "Almuerzo con vista al mar"
+      }
+    },
+    {
+      "id": "1685140810",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/8eaa873d-f369-47cb-84d3-40aaf50e09fd.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "Infinity pool overlooking the Pacific",
+        "es": "Piscina infinita frente al Pacífico"
+      }
+    },
+    {
+      "id": "2569961419",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/78fb7097-3f67-41b0-a309-24e23eeab487.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "Private pool and the villa",
+        "es": "Piscina privada y la villa"
+      }
+    },
+    {
+      "id": "2569999123",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/2c2d94a8-bf7b-4b88-98d5-54e2756f4b79.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "Poolside daybed in the garden",
+        "es": "Cama de descanso junto a la piscina"
+      }
+    },
+    {
+      "id": "1685140634",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/ed86f0cb-a4a1-4f91-bcae-afb1a7cdaf32.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "White Swan illuminated at dusk",
+        "es": "White Swan iluminada al anochecer"
+      }
+    },
+    {
+      "id": "2569961540",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/hosting/Hosting-47911834/original/aa3ca620-4fab-4f0b-9940-2d0b6ddf4d7a.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "The villa, garden and pool",
+        "es": "La villa, el jardín y la piscina"
+      }
+    },
+    {
+      "id": "1852228366",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/3f1bfe08-b97f-43fc-b355-24811e4ca38a.jpeg",
+      "category": "details",
+      "alt": {
+        "en": "Private parking and entrance",
+        "es": "Estacionamiento privado y entrada"
+      }
+    },
+    {
+      "id": "1852228465",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/d119522a-5945-45f5-a5d6-47955133db05.jpeg",
+      "category": "details",
+      "alt": {
+        "en": "Upstairs hallway",
+        "es": "Pasillo del segundo nivel"
+      }
+    },
+    {
+      "id": "1852230572",
+      "sourceUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-47911834/original/21026c8d-ae15-48ac-8b02-7315dbcf70a5.jpeg",
+      "category": "outdoors",
+      "alt": {
+        "en": "The beach below Xanadu",
+        "es": "La playa de Xanadu"
+      }
+    }
+  ]
+}

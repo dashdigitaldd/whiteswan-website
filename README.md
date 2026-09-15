@@ -15,6 +15,7 @@ Public discovery and guest experience for White Swan Villa / Xanadu Beach House,
 |---|---|---|
 | `/` | `/es/` | Villa discovery, experiences and enquiry |
 | `/guide/` | `/es/guia/` | Existing guest guide |
+| `/photos/` | `/es/fotos/` | Full photo tour with filters and accessible viewer |
 | `/privacy/` | `/es/privacidad/` | Data and analytics choices |
 
 The root remains English, with explicit language links and reciprocal hreflang. Both languages render without JavaScript. Legacy root links to arrival, house, rules and checkout redirect to the guest guide when JavaScript is available. The guest guide preserves the existing operational content and contacts; it is not automatically promoted to verified AI knowledge.
@@ -28,7 +29,7 @@ python3 -m http.server 8120 --bind 127.0.0.1
 python3 scripts/check.py
 ```
 
-The generated six HTML pages are maintained by `scripts/build.py`. Edit its bilingual copy/template and `content/guide.html.template`, then regenerate with Python plus the dev-only packages in `requirements-dev.txt`. Generated output and responsive WebP images are committed, so GitHub Pages does not need these packages. Original photos remain intact. Do not edit generated HTML alone.
+The generated eight HTML pages are maintained by `scripts/build.py`. Edit its bilingual copy/template and `content/guide.html.template`, then regenerate with Python plus the dev-only packages in `requirements-dev.txt`. Generated output and responsive WebP images are committed, so GitHub Pages does not need these packages. Original photos remain intact. Do not edit generated HTML alone.
 
 ## Connected intake
 
@@ -45,3 +46,7 @@ First-party events are opt-in: `page_view`, `enquiry_open`, `whatsapp_click`, `a
 Each page has its own title, description, canonical, hreflang, crawlable navigation and structured data. `sitemap.xml` and `robots.txt` are committed. Search Console ownership, sitemap submission, indexing and actual rankings are not configured or guaranteed by this code.
 
 See [growth architecture](docs/GROWTH_ENGINE.md), [launch checklist](docs/LAUNCH.md), and [payment discovery](docs/PAYMENTS.md).
+
+## Editorial design and current listing photos
+
+The public homepage and photo tour use the 36-photo collection retrieved from the current Airbnb listing on September 15, 2026. See [photography provenance, asset preparation and design maintenance](docs/PHOTOGRAPHY.md). The homepage renderer is in `scripts/homepage.py`, separate from the original guest guide. The public deployment remains pending the upstream website PR merge.
