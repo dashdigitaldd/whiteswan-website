@@ -18,6 +18,30 @@
       menuButton.focus();
     }
   });
+  const dayTabs = [...document.querySelectorAll("[data-day-tab]")];
+  function chooseDay(tab, focus = false) {
+    dayTabs.forEach((button) => {
+      const selected = button === tab;
+      button.setAttribute("aria-selected", String(selected));
+      button.tabIndex = selected ? 0 : -1;
+      document.getElementById(button.getAttribute("aria-controls")).hidden = !selected;
+    });
+    if (focus) tab.focus();
+  }
+  dayTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => chooseDay(tab));
+    tab.addEventListener("keydown", (event) => {
+      let next;
+      if (event.key === "ArrowRight") next = (index + 1) % dayTabs.length;
+      if (event.key === "ArrowLeft") next = (index - 1 + dayTabs.length) % dayTabs.length;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = dayTabs.length - 1;
+      if (next !== undefined) {
+        event.preventDefault();
+        chooseDay(dayTabs[next], true);
+      }
+    });
+  });
   const viewer = document.querySelector(".photo-viewer");
   if (!viewer) return;
   const es = document.documentElement.lang === "es";

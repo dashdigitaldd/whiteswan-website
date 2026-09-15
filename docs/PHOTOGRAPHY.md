@@ -31,3 +31,20 @@ This work updates the existing public website PR. The upstream owner must merge 
 Eight localized pages were checked at 320, 390, 768 and 1440 pixels. Browser checks cover mobile navigation, category filters, arrow-key navigation, Escape, a simulated touch swipe, full-size links without JavaScript, contextual WhatsApp fallback and no horizontal overflow. The retained form was separately tested with a mocked intake service for failed submission, retry, receipt and analytics consent. Static checks validate local assets, metadata, CNAME and JavaScript syntax.
 
 The fully scrolled homepage transferred about 1 MB of image resources in a local desktop browser check, with no broken images. This is an observed asset-load measurement, not a field Core Web Vitals or Lighthouse score. Production performance and search results must be measured after the upstream release.
+
+## Curated homepage sequence
+
+The September 15 art-direction pass chooses photos for what each section needs to communicate, rather than repeating generic room views. Only existing, real property photography is used; no content is generated or removed from the photographs.
+
+| Section | Selected photograph | Reason |
+|---|---|---|
+| Opening | Listing 1685140810, infinity pool facing the ocean | Communicates the view and the private-pool experience immediately. Separate responsive framing keeps the horizon and pool legible on a phone. |
+| Villa introduction | Listing 2569961540, elevated exterior; 2569999123, poolside daybed inset | Shows the house, garden and pool as one property, with a closer relaxation detail. The main frame stays wide enough to show the architecture. |
+| Bedroom | Listing 2580025730, bed facing the ocean | Makes the bedroom's view tangible and shows the bed, rather than leading with the sitting area. |
+| Shared spaces | Listing 2569987642, living room; 2569961410, dining | Gives each card a different purpose: rest, gathering and meals. |
+| A day at White Swan | Listing 1852230521 at first light; 2569998613, terrace; 1685140634 at dusk | A user-controlled, bilingual three-scene sequence. No autoplay, invented itinerary or time-specific service promise. Tabs support arrow keys, Home/End and native focus. |
+| Experiences | Existing chef table, poolside massage/daybed setting and celebration place setting | Keeps service imagery relevant to the actual house without implying that a pictured meal or decoration is included. |
+| Coast | Listing 1852230572, the beach below Xanadu | Shows the property's actual coastal setting instead of a generic destination image. The access-route FAQ remains visible. |
+| Closing | Existing `transfer` aerial photograph of the illuminated house | Shows the whole private retreat at night. This file is house photography despite its legacy service-based filename. |
+
+Homepage/social preview imagery follows the new ocean-and-pool opening. The full 36-photo tour remains available, reordered to lead with the strongest views. Gallery completeness and homepage curation are intentionally separate. Desktop/mobile image crops are layout choices; they do not modify the original image content.

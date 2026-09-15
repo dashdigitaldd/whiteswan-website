@@ -1219,3 +1219,327 @@ body:has(.photo-viewer[open]) {
 .editorial-footer .footer-bottom a {
   min-height: 24px;
 }
+
+/* Art direction: horizon first, distinct spaces, a day into evening. */
+.coast-hero .hero-photo img {
+  object-position: 50% 61%;
+}
+.coast-hero .hero-photo:after {
+  background:
+    linear-gradient(90deg, rgba(10, 30, 29, 0.46), rgba(10, 30, 29, 0.04) 80%),
+    linear-gradient(0deg, rgba(10, 30, 29, 0.52), transparent 70%);
+}
+.coast-hero .hero-copy {
+  padding-top: 160px;
+  padding-bottom: 90px;
+  max-width: 1200px;
+}
+.coast-hero h1 {
+  font-size: clamp(68px, 8.2vw, 124px);
+  letter-spacing: -0.045em;
+}
+.coast-hero .hero-copy p {
+  max-width: 540px;
+  font-size: 13px;
+}
+.story-photos {
+  padding: 0 0 115px 0;
+}
+.story-main {
+  margin-left: 0;
+  display: block;
+  overflow: hidden;
+}
+.story-main img {
+  aspect-ratio: 5/4;
+  object-position: 50% 50%;
+}
+.story-inset {
+  left: auto;
+  right: -25px;
+  bottom: 0;
+  width: 42%;
+  border-width: 8px;
+}
+.story-inset img {
+  aspect-ratio: 4/5;
+  object-position: 50% 57%;
+}
+.story-photos .vertical-note {
+  left: 0;
+  right: auto;
+  top: auto;
+  bottom: 62px;
+  writing-mode: horizontal-tb;
+  max-width: 50%;
+  line-height: 1.8;
+}
+.space-card:nth-child(1) img {
+  object-position: 65% 50%;
+}
+.space-card:nth-child(2) img {
+  object-position: 48% 50%;
+}
+.space-card:nth-child(3) img {
+  object-position: 43% 50%;
+}
+.editorial .day-story {
+  padding-top: 65px;
+  padding-bottom: 105px;
+  background: #efefe7;
+  max-width: none;
+}
+.day-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.day-heading .eyebrow {
+  margin: 0;
+}
+.day-heading > p {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-style: italic;
+  margin: 0;
+}
+.day-tabs {
+  display: flex;
+  gap: 38px;
+  margin: 32px 0;
+  border-bottom: 1px solid #cdd2c5;
+}
+.day-tabs button {
+  font-size: 12px;
+  text-align: left;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  padding: 16px 0;
+  color: #5d695c;
+  min-height: 50px;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.day-tabs button > span {
+  font-size: 9px;
+  color: #7a6850;
+}
+.day-tabs button[aria-selected="true"] {
+  color: #20392d;
+  border-bottom-color: #806b44;
+}
+.day-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 7%;
+  align-items: center;
+  outline-offset: 8px;
+}
+.day-panel figure {
+  margin: 0;
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+.day-panel img {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  object-position: 50% 57%;
+  background: #d8ddd2;
+}
+.day-panel figcaption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background: #20382ed9;
+  padding: 9px 12px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+.day-panel h2 {
+  font-size: clamp(33px, 3.3vw, 52px);
+}
+.day-panel p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #5e695a;
+  max-width: 33ch;
+}
+.day-sun {
+  display: block;
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 1;
+  color: #927953;
+  margin-bottom: 30px;
+}
+.final-invitation {
+  min-height: 690px;
+  text-align: left;
+  place-items: center start;
+  padding-left: 7.2vw;
+}
+.final-photo img {
+  object-position: 60% 47%;
+}
+.final-photo:after {
+  background: linear-gradient(90deg, #07150dc7, #07150d0d 82%);
+}
+.final-invitation h2 {
+  font-size: clamp(60px, 6.5vw, 95px);
+}
+.final-invitation .actions {
+  justify-content: start;
+}
+.coastal-image img {
+  object-position: 50% 65%;
+}
+@media (min-width: 1600px) {
+  .editorial .day-story {
+    padding-left: max(110px, calc((100vw - 1292px) /2));
+    padding-right: max(110px, calc((100vw - 1292px) /2));
+  }
+}
+@media (max-width: 950px) {
+  .day-panel {
+    gap: 5%;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  }
+  .day-panel h2 {
+    font-size: 36px;
+  }
+  .day-sun {
+    margin-bottom: 20px;
+  }
+  .day-panel p {
+    font-size: 12px;
+  }
+  .story-inset {
+    right: -12px;
+  }
+  .story-photos .vertical-note {
+    font-size: 7px;
+  }
+  .coast-hero h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 700px) {
+  .coast-hero .hero-photo img {
+    object-position: 50% 57%;
+  }
+  .coast-hero .hero-photo:after {
+    background: linear-gradient(0deg, #0b2629a8, #0b26294d 62%, #0b262900);
+  }
+  .coast-hero .hero-copy {
+    padding: 100px 25px 90px;
+  }
+  .coast-hero h1 {
+    font-size: clamp(46px, 11.9vw, 76px);
+    line-height: 1.05;
+  }
+  .coast-hero .hero-copy p {
+    font-size: 12px;
+    max-width: 320px;
+  }
+  .story-photos {
+    padding-bottom: 100px;
+    margin-right: 10px;
+  }
+  .story-main {
+    margin-left: 0;
+  }
+  .story-main img {
+    aspect-ratio: 5/4;
+  }
+  .story-inset {
+    width: 43%;
+    right: -10px;
+  }
+  .story-photos .vertical-note {
+    bottom: 45px;
+    font-size: 7px;
+    max-width: 52%;
+  }
+  .day-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .day-heading > p {
+    font-size: 25px;
+  }
+  .day-tabs {
+    gap: 0;
+    justify-content: space-between;
+    margin: 20px 0 28px;
+  }
+  .day-tabs button {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .day-tabs button > span {
+    font-size: 8px;
+  }
+  .day-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+  }
+  .day-panel figure {
+    width: 100%;
+  }
+  .day-panel img {
+    aspect-ratio: 4/3;
+  }
+  .day-panel h2 {
+    font-size: 43px;
+  }
+  .day-panel p {
+    font-size: 14px;
+    max-width: 40ch;
+  }
+  .day-panel > div {
+    padding: 0 4px;
+  }
+  .day-sun {
+    display: none;
+  }
+  .editorial .day-story {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+  .day-panel figcaption {
+    bottom: 14px;
+    left: 14px;
+    font-size: 8px;
+  }
+  .final-invitation {
+    min-height: 600px;
+    padding: 65px 25px;
+    align-items: end;
+  }
+  .final-photo img {
+    object-position: 48% 35%;
+  }
+  .final-photo:after {
+    background: linear-gradient(0deg, #07150ddb, #07150d05 90%);
+  }
+  .final-invitation h2 {
+    font-size: 62px;
+  }
+  .final-invitation .eyebrow {
+    font-size: 9px;
+  }
+  .final-invitation .actions {
+    gap: 22px;
+  }
+}
+.story-main img {
+  aspect-ratio: 16/10;
+}
