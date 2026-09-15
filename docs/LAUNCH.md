@@ -1,5 +1,11 @@
 # Release and traffic launch
 
+## Current release state
+
+The current Sites workspace rejects public publishing. The isolated intake service is built and tested but **not publicly deployed**. Public configuration therefore ships with an empty intake origin and analytics disabled. Enquiry buttons explain that the form is not yet available and offer the existing WhatsApp contact; they do not collect or claim to save a submission. The private app shows its intake connection as unconfigured.
+
+Deploy the service on an approved public host, configure its exact allowed origins and private feed secrets, validate a synthetic receipt/feed import, then set the public origin and enable optional analytics. Never point the browser at the private Sites service or broaden the admin audience.
+
 ## What can ship without DNS changes
 
 The public pages continue at the existing GitHub Pages root. `CNAME` is unchanged. The public intake service has its own runtime origin and isolated database. Configure `assets/config.js` with that public origin only; do not add a private feed key to the website. The admin app receives the corresponding server-only read key.

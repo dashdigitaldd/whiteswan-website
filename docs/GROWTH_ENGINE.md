@@ -79,3 +79,7 @@ Record accepted/rejected suggestions, source versions and actual service outcome
 - [Google: multilingual sites](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites) — separate language URLs and canonical/hreflang treatment.
 - [Google: GA4 recommended events](https://developers.google.com/analytics/devguides/collection/ga4/reference/events) — lead measurement is distinct from purchases.
 - [Meta-hosted SDK webhook reference](https://whatsapp.github.io/WhatsApp-Nodejs-SDK/api-reference/webhooks/start/) — subscription verification and request signature concepts. This older SDK reference is not a recommendation to use that SDK; re-check the current Cloud API payload/version during implementation.
+
+## Current hosting gate
+
+The current Sites workspace cannot publish a public intake API. The code is prepared in the separate private intake repository, but no public intake deployment is running. The public website currently uses a WhatsApp fallback, with form collection and analytics disabled; the admin integration remains unconfigured. An approved public host must be provisioned and verified before enabling collection.
