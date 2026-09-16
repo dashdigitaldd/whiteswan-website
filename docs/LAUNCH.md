@@ -35,3 +35,7 @@ The website owner can revert the release commit in the upstream repository witho
 ## Direct booking and guest-review release
 
 The main CTAs now stay on our site. `/stay/` and `/es/reservar/` currently prepare a WhatsApp request without checking live availability or reserving nights. The account-specific Hospitable Direct embed is pending; follow `BOOKING.md` before claiming on-site reservations are live. Promerica checkout remains a separate onboarding dependency. Six public reviews are a curated static snapshot; `REVIEWS.md` documents selection and refresh.
+
+## WhatsApp concierge entry points
+
+The website’s topic/service links compose messages to the existing owner number. Test their language, selected interest and exact destination without sending. The contextual message is an editable guest claim, not authenticated identity. Automatic replies and shared-portal WhatsApp ingestion remain pending; follow `SHARED_CONCIERGE.md` before advertising them as active.

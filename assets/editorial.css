@@ -1974,3 +1974,169 @@ body:has(.photo-viewer[open]) {
     width: 100%;
   }
 }
+
+/* One public conversation entry point, shared by every discovery page. */
+.editorial .conversation-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9%;
+  background: #eeeade;
+  max-width: none;
+  padding-left: max(7.2vw, calc((100vw - 1292px) /2));
+  padding-right: max(7.2vw, calc((100vw - 1292px) /2));
+}
+.conversation-section > div > p {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 46ch;
+}
+.conversation-section .conversation-note {
+  font-size: 11px;
+  margin-top: 30px;
+}
+.conversation-topics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.conversation-topics h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.editorial .concierge-topic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-height: 45px;
+  padding: 12px 0;
+  border-bottom: 1px solid #a18b6235;
+  font-size: 12px;
+  color: var(--pine);
+  line-height: 1.5;
+  text-decoration: none;
+}
+.concierge-topic:hover {
+  color: #876d43;
+}
+.conversation-topics > .fine {
+  grid-column: 1/-1;
+  margin: 0;
+  font-size: 11px;
+}
+.more-services > a {
+  font-size: 11px !important;
+  gap: 14px !important;
+}
+.concierge-launcher {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 65;
+  border: 0;
+  color: var(--pine);
+}
+.concierge-launcher > summary {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 13px 18px;
+  background: var(--ivory);
+  border: 1px solid #a18b62;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.3;
+}
+.concierge-launcher > summary::-webkit-details-marker {
+  display: none;
+}
+.concierge-launcher summary small {
+  display: block;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 4px;
+  letter-spacing: 0.06em;
+}
+.chat-symbol {
+  font-family: var(--serif);
+  font-size: 27px;
+}
+.concierge-toggle {
+  font-size: 21px;
+  margin-left: 8px;
+}
+.concierge-launcher[open] .concierge-toggle {
+  transform: rotate(45deg);
+}
+.concierge-panel {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  right: 0;
+  width: 350px;
+  max-height: min(590px, calc(100svh - 160px));
+  overflow: auto;
+  background: var(--ivory);
+  border: 1px solid #a18b62;
+  padding: 25px;
+  overscroll-behavior: contain;
+}
+.concierge-panel .eyebrow {
+  font-size: 8px;
+  margin-bottom: 15px;
+}
+.editorial .concierge-panel h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.concierge-panel > p {
+  font-size: 12px;
+  padding: 0;
+  margin-bottom: 14px;
+}
+.concierge-panel > .fine {
+  font-size: 10px;
+  margin: 18px 0 0;
+}
+.concierge-panel nav {
+  display: grid;
+}
+@media (max-width: 1100px) {
+  .editorial-header nav {
+    gap: 17px;
+  }
+  .editorial .conversation-section {
+    gap: 6%;
+  }
+  .conversation-topics {
+    gap: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .editorial .conversation-section {
+    display: block;
+    padding: 65px 25px;
+  }
+  .conversation-topics {
+    margin-top: 35px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .concierge-launcher {
+    bottom: 90px;
+    right: 14px;
+  }
+  .concierge-launcher > summary {
+    padding: 10px 13px;
+    gap: 10px;
+    font-size: 11px;
+  }
+  .concierge-panel {
+    width: min(350px, calc(100vw - 28px));
+    max-height: calc(100svh - 240px);
+    padding: 22px;
+  }
+  .concierge-launcher .chat-symbol {
+    font-size: 23px;
+  }
+}

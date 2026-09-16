@@ -61,4 +61,27 @@ class PublicContracts(unittest.TestCase):
     def test_changed_wording_requires_editorial_acceptance(self):self.sync_fixture(text='Changed review.')
     def test_explicitly_accepted_wording_remains_allowlisted(self):self.sync_fixture(text='Changed review.',accept=True)
 
+
+class ConciergeLinks(unittest.TestCase):
+    def test_all_topics_are_contextual_native_links(self):
+        from concierge import TOPICS, whatsapp, widget
+        from urllib.parse import urlsplit, parse_qs
+        for lang in ['en','es']:
+            for topic in TOPICS:
+                url=urlsplit(whatsapp(lang,topic,'/es/#concierge' if lang=='es' else '/#concierge'))
+                self.assertEqual(url.netloc,'wa.me')
+                self.assertEqual(url.path,'/50370528003')
+                message=parse_qs(url.query)['text'][0]
+                self.assertIn(TOPICS[topic][3 if lang=='es' else 2],message)
+                self.assertIn('https://staywhiteswan.com/',message)
+                self.assertNotIn('utm_',message)
+            rendered=widget(lang,'/photos/')
+            self.assertEqual(rendered.count('data-topic='),12)
+            self.assertIn('<details',rendered)
+            self.assertIn('target="_blank" rel="noopener"',rendered)
+    def test_context_rejects_external_or_query_paths(self):
+        from concierge import whatsapp
+        for path in ['//outside.invalid','https://outside.invalid','/?email=private']:
+            with self.assertRaises(AssertionError):whatsapp('en','villa',path)
+
 if __name__=='__main__':unittest.main()

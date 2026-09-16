@@ -59,3 +59,7 @@ The public homepage and photo tour use the 36-photo collection retrieved from th
 Six selected, verbatim public Airbnb reviews were retrieved through the Hospitable API. They are rendered statically, with source attribution and original-language copy. Private feedback and provider credentials are excluded. See [review provenance and safe refresh](docs/REVIEWS.md).
 
 The booking page supports the exact property-specific Hospitable embed through `content/hospitable-widget.html.template`. Until supplied and verified, the explicit WhatsApp request mode remains active. See [booking implementation and activation](docs/BOOKING.md).
+
+## One shared concierge
+
+Villa questions and service interests can start directly in WhatsApp through the bilingual concierge launcher and contextual service links. The main portal remains the intended source of agent configurations, verified knowledge, learning and approvals. WhatsApp receiving and automatic replies are **not connected yet**. See [shared concierge implementation and activation contract](docs/SHARED_CONCIERGE.md).

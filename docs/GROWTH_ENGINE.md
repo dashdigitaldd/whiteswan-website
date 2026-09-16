@@ -7,7 +7,8 @@ Status: first connected release, September 15, 2026. White Swan is the public br
 ```mermaid
 flowchart LR
   Search[Search / social / campaigns] --> Web[Public EN / ES website]
-  Web --> Airbnb[Airbnb accommodation checkout]
+  Web --> StayPage[On-site stay planning / Direct activation pending]
+  StayPage --> WA
   Web --> Intake[Isolated public enquiry API]
   Web --> WA[Existing WhatsApp links]
   Intake --> Feed[Protected append-only feed]
@@ -27,7 +28,7 @@ The public website remains GitHub Pages. Its form calls a separate Worker/D1 int
 
 ## Running capabilities in this release
 
-- Six static English/Spanish pages with canonical/hreflang metadata, sitemap, responsive real property photos and a retained guest guide.
+- Ten static English/Spanish pages with canonical/hreflang metadata, sitemap, responsive real property photos and a retained guest guide.
 - Public enquiry form: service interest, dates, group size, contact information, free-text request and contact-only consent. A successful server receipt creates an enquiry, not a reservation or payment.
 - A signed form session supplies a stable enquiry ID. Identical retries return the same receipt; changed payloads for that ID conflict. The form retains data on failure. Reopening after success starts a new enquiry.
 - Optional first-party analytics with an allowlisted payload. No GA4/GTM tag is installed and no automatic marketing consent is inferred. Attribution is limited to consented campaign labels; it is self-reported browser data, not proof of causation.
@@ -83,3 +84,7 @@ Record accepted/rejected suggestions, source versions and actual service outcome
 ## Current hosting gate
 
 The current Sites workspace cannot publish a public intake API. The code is prepared in the separate private intake repository, but no public intake deployment is running. The public website currently uses a WhatsApp fallback, with form collection and analytics disabled; the admin integration remains unconfigured. An approved public host must be provisioned and verified before enabling collection.
+
+## Shared concierge update — September 16, 2026
+
+Website questions and all service interests now have direct, contextual WhatsApp entry links plus a bilingual concierge launcher. The future channel must reuse the portal’s agents and verified knowledge rather than introduce a separate website bot. The links carry topic, page and language in editable message text; they do not send, identify a reservation or create an app record. See [the shared concierge contract](SHARED_CONCIERGE.md) for reuse boundaries and activation requirements.

@@ -50,3 +50,15 @@ document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]');if(!
 // Preserve old guest-guide deep links without forcing search visitors into a language redirect.
 if(location.pathname==='/'&&['#arrive','#house','#rules','#checkout'].includes(location.hash))location.replace('/guide/'+location.hash);
 })();
+
+// Native details works without JavaScript; Escape/outside click adds convenience.
+(() => {
+ const launcher=document.querySelector('.concierge-launcher');
+ if(!launcher)return;
+ document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&launcher.open){launcher.open=false;launcher.querySelector('summary').focus();}
+ });
+ document.addEventListener('click',event=>{
+  if(launcher.open&&!launcher.contains(event.target))launcher.open=false;
+ });
+})();
