@@ -49,3 +49,7 @@ The first direct-payment release requires approved merchant status, verified ban
 Promerica is the first bank to contact when settlement should remain there. Its e-commerce page and POS page publish different document lists (including different VAT-history periods); do not combine these into a definitive onboarding checklist. Ask for the exact requirements for the chosen online product and merchant activity. Personal account ownership does not itself prove approval as an online merchant.
 
 Sources: [Promerica payment portfolio](https://solucionesdigitales.promerica.com.sv/medios-de-pago) and [Promerica POS requirements](https://www.promerica.com.sv/banca-de-empresas/pos-promerica/). The POS page provides the merchant team contact: comerciosafiliados@promerica.com.sv and +503 2513-5000. No enquiry has been sent to the bank.
+
+## Website booking update — September 16, 2026
+
+Primary booking navigation now leads to the on-site stay pages rather than directly to Airbnb. The working interim path is an explicitly host-reviewed WhatsApp request. Hospitable Direct Lite is a candidate for embedded requests before integrated payments, subject to account activation and obtaining the real widget. It does not provide Promerica settlement or instant paid confirmation. See [booking activation](BOOKING.md).

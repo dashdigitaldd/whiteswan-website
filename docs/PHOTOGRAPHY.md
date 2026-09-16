@@ -20,7 +20,7 @@ The full-screen viewer supports buttons, arrow keys, Escape, mobile swipe, and n
 
 ## Capacity discrepancy
 
-The live public Airbnb listing reports 8 guests while the connected Hospitable property and existing house guide report 10. Owner confirmation is pending. The redesigned homepage shows verified room/bed/bath facts and directs visitors to Airbnb for current capacity and booking terms. It does not publish a new maximum occupancy claim. Existing operational guide content has not been silently changed.
+The live public Airbnb listing reports 8 guests while the connected Hospitable property and existing house guide report 10. Owner confirmation is pending. The redesigned homepage shows verified room/bed/bath facts; the stay-request page asks the host to confirm group capacity and booking terms. It does not publish a new maximum occupancy claim. Existing operational guide content has not been silently changed.
 
 ## Publication
 
@@ -28,17 +28,17 @@ This work updates the existing public website PR. The upstream owner must merge 
 
 ## Validation of this revision
 
-Eight localized pages were checked at 320, 390, 768 and 1440 pixels. Browser checks cover mobile navigation, category filters, arrow-key navigation, Escape, a simulated touch swipe, full-size links without JavaScript, contextual WhatsApp fallback and no horizontal overflow. The retained form was separately tested with a mocked intake service for failed submission, retry, receipt and analytics consent. Static checks validate local assets, metadata, CNAME and JavaScript syntax.
+Ten localized pages were checked at 320, 390, 768 and 1440 pixels. Browser checks cover mobile navigation, category filters, arrow-key navigation, Escape, a simulated touch swipe, full-size links without JavaScript, contextual WhatsApp fallback and no horizontal overflow. The retained form was separately tested with a mocked intake service for failed submission, retry, receipt and analytics consent. Static checks validate local assets, metadata, CNAME and JavaScript syntax.
 
 The fully scrolled homepage transferred about 1 MB of image resources in a local desktop browser check, with no broken images. This is an observed asset-load measurement, not a field Core Web Vitals or Lighthouse score. Production performance and search results must be measured after the upstream release.
 
 ## Curated homepage sequence
 
-The September 15 art-direction pass chooses photos for what each section needs to communicate, rather than repeating generic room views. Only existing, real property photography is used; no content is generated or removed from the photographs.
+The current art direction chooses photos for what each section needs to communicate, rather than repeating generic room views. Only existing, real property photography is used; no content is generated or removed from the photographs.
 
 | Section | Selected photograph | Reason |
 |---|---|---|
-| Opening | Listing 1685140810, infinity pool facing the ocean | Communicates the view and the private-pool experience immediately. Separate responsive framing keeps the horizon and pool legible on a phone. |
+| Opening | Listing 2569961419, sunlit house, pool and palms | Makes the house the first impression. Copy sits beside the photograph on desktop; the full 3:2 image leads on mobile. |
 | Villa introduction | Listing 2569961540, elevated exterior; 2569999123, poolside daybed inset | Shows the house, garden and pool as one property, with a closer relaxation detail. The main frame stays wide enough to show the architecture. |
 | Bedroom | Listing 2580025730, bed facing the ocean | Makes the bedroom's view tangible and shows the bed, rather than leading with the sitting area. |
 | Shared spaces | Listing 2569987642, living room; 2569961410, dining | Gives each card a different purpose: rest, gathering and meals. |
@@ -47,4 +47,10 @@ The September 15 art-direction pass chooses photos for what each section needs t
 | Coast | Listing 1852230572, the beach below Xanadu | Shows the property's actual coastal setting instead of a generic destination image. The access-route FAQ remains visible. |
 | Closing | Existing `transfer` aerial photograph of the illuminated house | Shows the whole private retreat at night. This file is house photography despite its legacy service-based filename. |
 
-Homepage/social preview imagery follows the new ocean-and-pool opening. The full 36-photo tour remains available, reordered to lead with the strongest views. Gallery completeness and homepage curation are intentionally separate. Desktop/mobile image crops are layout choices; they do not modify the original image content.
+Homepage/social preview imagery follows the house-and-pool opening. The full 36-photo tour remains available, reordered to lead with the strongest views. Gallery completeness and homepage curation are intentionally separate. Desktop/mobile image crops are layout choices; they do not modify the original image content.
+
+## House-first resort revision — September 16, 2026
+
+The owner requested that the first impression show the architecture as well as the pool. The opening now uses listing photo **2569961419**: the sunlit house, private pool and palms. The previous ocean-only hero is retained in the gallery. A sand-toned copy panel sits beside the photograph on desktop; on mobile the complete 3:2 photograph appears first, followed by the copy. No headline covers the house. The social preview uses the same house photograph.
+
+The visual direction uses restrained serif type, ivory/sand surfaces, pine buttons, fine bronze rules and natural property photography. It takes cues from luxury coastal hospitality without borrowing hotel branding or suggesting affiliation, resort staffing or unverified amenities.

@@ -1543,3 +1543,434 @@ body:has(.photo-viewer[open]) {
 .story-main img {
   aspect-ratio: 16/10;
 }
+
+/* A quiet resort opening: the architecture stays unobscured. */
+.editorial {
+  --ivory: #faf8f2;
+  --gold: #a18b62;
+}
+.editorial .resort-hero {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  min-height: 560px;
+  height: min(690px, calc(100svh - 99px));
+  max-height: none;
+  color: var(--pine);
+  background: #eeeade;
+  align-items: stretch;
+}
+.resort-hero .hero-photo {
+  position: relative;
+  inset: auto;
+  grid-column: 2;
+  grid-row: 1;
+}
+.resort-hero .hero-photo img {
+  object-position: 50% 50%;
+}
+.resort-hero .hero-photo:after {
+  background: linear-gradient(0deg, #12221a55, transparent 15%);
+}
+.resort-hero .hero-copy {
+  grid-column: 1;
+  grid-row: 1;
+  padding: 54px 3.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.resort-hero h1 {
+  font-size: clamp(44px, 4.6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+.resort-hero .eyebrow {
+  color: #766544;
+  font-size: 9px;
+  line-height: 1.8;
+  letter-spacing: 0.15em;
+}
+.resort-hero p {
+  color: #677064;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 29ch;
+}
+.resort-hero .actions {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 22px;
+}
+.editorial .resort-hero .hero-link {
+  color: var(--pine);
+  border-color: #a18b6260;
+}
+.resort-hero .hero-caption {
+  left: calc(32% + 28px);
+  right: 28px;
+  color: white;
+  bottom: 24px;
+  font-size: 8px;
+}
+.resort-hero .hero-caption > a:nth-child(2) {
+  display: none;
+}
+.guest-stories {
+  border-bottom: 1px solid var(--line);
+}
+.guest-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+}
+.guest-review {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ac9672;
+  padding-top: 27px;
+}
+.review-stars {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #8a7042;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+.review-stars > span:last-child {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.03em;
+}
+.guest-review blockquote {
+  margin: 22px 0 26px;
+  flex: 1;
+}
+.guest-review blockquote p {
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1.38;
+  margin: 0;
+}
+.guest-review figcaption {
+  display: grid;
+  gap: 4px;
+  font-size: 11px;
+}
+.guest-review time {
+  color: var(--muted);
+  font-size: 10px;
+}
+.review-source {
+  margin: 35px 0 0;
+  font-size: 10px;
+  max-width: none;
+}
+.editorial .stay-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+.stay-intro h1 {
+  font-size: clamp(48px, 5.3vw, 80px);
+  margin-bottom: 25px;
+}
+.stay-intro p,
+.stay-aside > p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.stay-photo {
+  position: relative;
+}
+.stay-photo img {
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+.stay-photo > span {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  padding-top: 14px;
+}
+.editorial .stay-booking {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 9%;
+  align-items: start;
+  border-top: 1px solid var(--line);
+}
+.stay-aside h2 {
+  font-size: clamp(40px, 4vw, 60px);
+}
+.stay-aside dl {
+  margin-top: 38px;
+}
+.stay-aside dl > div {
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+.stay-aside dt {
+  color: var(--muted);
+  font-size: 10px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.stay-aside dd {
+  margin: 0;
+}
+.booking-card {
+  background: #f0eee5;
+  border: 1px solid #ded7c7;
+  padding: 38px;
+  min-width: 0;
+}
+.editorial .booking-card h2 {
+  font-size: 41px;
+}
+.booking-mode-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+.booking-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 25px;
+}
+.booking-fields label {
+  display: grid;
+  gap: 8px;
+  font-size: 11px;
+  min-width: 0;
+}
+.booking-fields input,
+.booking-fields select {
+  padding: 12px;
+  width: 100%;
+  min-width: 0;
+  background: var(--ivory);
+  color: var(--pine);
+  border: 1px solid #bcb9ac;
+  border-radius: 0;
+  font-size: 16px;
+  min-height: 50px;
+}
+.booking-fields .guest-field {
+  grid-column: 1 / -1;
+}
+#stay-request > .fine {
+  font-size: 11px;
+  margin: 18px 0;
+}
+#stay-request > .button,
+.stay-whatsapp {
+  width: 100%;
+}
+.booking-footnote {
+  margin: 24px 0 0;
+  padding-top: 19px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+}
+#stay-summary {
+  scroll-margin: 35px;
+}
+#stay-summary > p {
+  font-size: 13px;
+}
+#stay-summary .stay-selection {
+  border-block: 1px solid var(--line);
+  padding: 15px 0;
+}
+#edit-stay {
+  margin-top: 15px;
+}
+.hospitable-widget {
+  min-height: 450px;
+}
+.hospitable-widget iframe {
+  max-width: 100%;
+  width: 100%;
+  border: 0;
+}
+.editorial .stay-help {
+  padding-top: 0;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px 35px;
+}
+.stay-help p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 27px;
+}
+@media (min-width: 1600px) {
+  .resort-hero .hero-copy {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
+@media (max-width: 950px) and (min-width: 701px) {
+  .editorial .resort-hero {
+    grid-template-columns: 37% 63%;
+    min-height: 480px;
+    height: 580px;
+  }
+  .resort-hero h1 {
+    font-size: 47px;
+  }
+  .resort-hero .hero-photo img {
+    object-position: 38% center;
+  }
+  .resort-hero .hero-caption {
+    left: calc(37% + 20px);
+  }
+  .resort-hero .hero-caption > span {
+    display: none;
+  }
+  .resort-hero .hero-caption {
+    justify-content: flex-end;
+  }
+  .guest-review-grid {
+    gap: 22px;
+  }
+  .guest-review blockquote p {
+    font-size: 22px;
+  }
+  .editorial .stay-booking {
+    gap: 5%;
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+  .booking-card {
+    padding: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .editorial .resort-hero {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+  .resort-hero .hero-photo {
+    width: 100%;
+    order: 0;
+  }
+  .resort-hero .hero-photo img {
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+  }
+  .resort-hero .hero-photo:after {
+    display: none;
+  }
+  .resort-hero .hero-copy {
+    order: 1;
+    padding: 32px 25px 35px;
+  }
+  .resort-hero .eyebrow {
+    font-size: 8px;
+    margin-bottom: 17px;
+  }
+  .resort-hero h1 {
+    font-size: 48px;
+    margin-bottom: 17px;
+  }
+  .resort-hero h1 br {
+    display: none;
+  }
+  .resort-hero h1 em {
+    display: block;
+  }
+  .resort-hero p {
+    max-width: 38ch;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+  .resort-hero .actions {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-top: 21px;
+  }
+  .editorial .resort-hero .button {
+    gap: 12px;
+    padding: 14px;
+    font-size: 10px;
+  }
+  .editorial .resort-hero .hero-link {
+    font-size: 10px;
+    gap: 12px;
+  }
+  .resort-hero .hero-caption {
+    display: none;
+  }
+  .guest-review-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .guest-review blockquote p {
+    font-size: 26px;
+  }
+  .guest-review {
+    padding-top: 21px;
+  }
+  .guest-review blockquote {
+    margin-top: 16px;
+    margin-bottom: 18px;
+  }
+  .editorial .stay-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .stay-intro h1 {
+    font-size: 49px;
+  }
+  .editorial .stay-booking {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 35px;
+    gap: 30px;
+  }
+  .stay-aside h2 {
+    font-size: 39px;
+  }
+  .stay-aside dl {
+    display: none;
+  }
+  .booking-card {
+    padding: 25px 20px;
+    width: 100%;
+  }
+  .editorial .booking-card h2 {
+    font-size: 35px;
+  }
+  .booking-fields {
+    grid-template-columns: 1fr;
+  }
+  .editorial .stay-help {
+    padding-bottom: 40px;
+    gap: 15px;
+  }
+  .stay-help > * {
+    width: 100%;
+  }
+}

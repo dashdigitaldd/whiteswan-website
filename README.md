@@ -7,13 +7,14 @@ Public discovery and guest experience for White Swan Villa / Xanadu Beach House,
 - Production: https://staywhiteswan.com — deployed by GitHub Pages from `scalix09/whiteswan-website`, branch `main`, root `/`.
 - Proposed changes are in the `dashdigitaldd` fork. A fork push does **not** update the current domain. The upstream owner must merge the reviewed pull request.
 - Preserve `CNAME`, DNS and both existing WhatsApp numbers. Coordinate with the owner before changing any of them.
-- Accommodation checkout remains Airbnb listing `47911834` until direct-payment onboarding and inventory reconciliation are completed. Website enquiries do not reserve nights, suppliers or prices.
+- Primary booking CTAs stay on our website at `/stay/` and `/es/reservar/`. The current mode prepares a host-reviewed WhatsApp request; instant booking and payment are not active. The exact Hospitable Direct widget is still required. Airbnb listing `47911834` remains a secondary booking alternative. See [booking activation](docs/BOOKING.md).
 
 ## Routes
 
 | English | Spanish | Purpose |
 |---|---|---|
 | `/` | `/es/` | Villa discovery, experiences and enquiry |
+| `/stay/` | `/es/reservar/` | On-site stay planning and future Hospitable Direct widget |
 | `/guide/` | `/es/guia/` | Existing guest guide |
 | `/photos/` | `/es/fotos/` | Full photo tour with filters and accessible viewer |
 | `/privacy/` | `/es/privacidad/` | Data and analytics choices |
@@ -27,9 +28,11 @@ GitHub Pages serves committed static HTML, CSS, JS and photographs. It still nee
 ```sh
 python3 -m http.server 8120 --bind 127.0.0.1
 python3 scripts/check.py
+# After installing requirements-dev.txt:
+python3 -m unittest discover -s tests
 ```
 
-The generated eight HTML pages are maintained by `scripts/build.py`. Edit its bilingual copy/template and `content/guide.html.template`, then regenerate with Python plus the dev-only packages in `requirements-dev.txt`. Generated output and responsive WebP images are committed, so GitHub Pages does not need these packages. Original photos remain intact. Do not edit generated HTML alone.
+The generated ten HTML pages are maintained by `scripts/build.py`. Edit its bilingual copy/template and `content/guide.html.template`, then regenerate with Python plus the dev-only packages in `requirements-dev.txt`. Generated output and responsive WebP images are committed, so GitHub Pages does not need these packages. Original photos remain intact. Do not edit generated HTML alone.
 
 ## Connected intake
 
@@ -50,3 +53,9 @@ See [growth architecture](docs/GROWTH_ENGINE.md), [launch checklist](docs/LAUNCH
 ## Editorial design and current listing photos
 
 The public homepage and photo tour use the 36-photo collection retrieved from the current Airbnb listing on September 15, 2026. See [photography provenance, asset preparation and design maintenance](docs/PHOTOGRAPHY.md). The homepage renderer is in `scripts/homepage.py`, separate from the original guest guide. The public deployment remains pending the upstream website PR merge.
+
+## Guest reviews and booking integration
+
+Six selected, verbatim public Airbnb reviews were retrieved through the Hospitable API. They are rendered statically, with source attribution and original-language copy. Private feedback and provider credentials are excluded. See [review provenance and safe refresh](docs/REVIEWS.md).
+
+The booking page supports the exact property-specific Hospitable embed through `content/hospitable-widget.html.template`. Until supplied and verified, the explicit WhatsApp request mode remains active. See [booking implementation and activation](docs/BOOKING.md).

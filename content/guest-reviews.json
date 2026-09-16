@@ -1,0 +1,54 @@
+{
+  "retrieved_at": "2026-09-16",
+  "source": "Hospitable API v2 / property reviews",
+  "source_url": "https://www.airbnb.com/rooms/47911834/reviews",
+  "selection_note": "Selected five-star public reviews, reproduced verbatim in their original language. Not an unfiltered review feed. No guest names were supplied by this API response.",
+  "reviews": {
+    "en": [
+      {
+        "source_id": "3b3f1c8d-22ba-4fff-b65e-b281cb7e4e87",
+        "platform": "airbnb",
+        "rating": 5,
+        "date": "2026-09-04",
+        "text": "The place and the views were amazing, and we enjoyed all the amenities. For me, this is a must-repeat place."
+      },
+      {
+        "source_id": "708c16f2-70e8-4c9b-85bb-a6c7db4d81bd",
+        "platform": "airbnb",
+        "rating": 5,
+        "date": "2026-07-29",
+        "text": "This place surpassed all expectations! The home was beautifully decorated, well-stocked, and located close to excellent local dining. Sergio and Wendy’s communication was top-notch from booking to checkout, making our trip completely stress-free. We would definitely book again!"
+      },
+      {
+        "source_id": "616b5ac0-04a7-4535-9907-6f39ca541af1",
+        "platform": "airbnb",
+        "rating": 5,
+        "date": "2026-08-08",
+        "text": "Beautiful and relaxing place! It surpassed all of our expectations. The comforts of the U.S. brought to the natural beauty of El Salvador. The home is stocked with all the necessities you’ll need for a comfortable stay. Will return if we ever get the chance!"
+      }
+    ],
+    "es": [
+      {
+        "source_id": "bfeef902-73b0-43de-9efd-d020e05942ff",
+        "platform": "airbnb",
+        "rating": 5,
+        "date": "2026-09-15",
+        "text": "Excelente alojamiento, tiene todo lo que necesitas para una increíble estancia."
+      },
+      {
+        "source_id": "027c6966-e332-4d2d-b238-e7fc9fcad16d",
+        "platform": "airbnb",
+        "rating": 5,
+        "date": "2026-08-09",
+        "text": "Tuvimos una estadía muy agradable todo acorde a las fotos del lugar. Un lugar muy limpio tranquilo privado y acogedor cerca de playas y restaurantes. El anfitrión contestaba rápido cuando yo los contactaba. Me encanto que la casa estuviera bien equipada"
+      },
+      {
+        "source_id": "834f42f8-4a67-47bc-8fbe-bdd4664488cf",
+        "platform": "airbnb",
+        "rating": 5,
+        "date": "2026-06-26",
+        "text": "Excelente lugar! Así como está en las fotos así es el lugar! Las habitaciones son preciosas, los lugares de estar preciosos la cocina es lo mejor del lugar (amamos cocinar) recomendadisimo! Sin duda volvemos a rentar este lugar por más días!"
+      }
+    ]
+  }
+}

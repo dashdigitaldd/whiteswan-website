@@ -14,7 +14,7 @@ The active GitHub account has read access to the upstream website, so this chang
 
 ## Acceptance before increasing traffic
 
-- Confirm the six routes, mobile CTA/form, language links, existing guest guide and both original WhatsApp contacts.
+- Confirm the ten routes, mobile CTA/form, language links, existing guest guide and both original WhatsApp contacts.
 - Submit an explicitly labeled test enquiry, verify one receipt and one private lead, then remove test data using the approved operations procedure. Do not send test messages to guests or vendors.
 - Check the visitor sees a recoverable form error if the intake service is unavailable. Retry should not duplicate the enquiry.
 - Confirm guest capacity, prices, cancellation terms and operational instructions with the owner; imported old guide content is not current AI verification.
@@ -31,3 +31,7 @@ Website feed sync is operator-triggered, with up to 50 records per batch and a C
 ## Rollback
 
 The website owner can revert the release commit in the upstream repository without changing DNS or CNAME. Keep the intake service and saved data while diagnosing a frontend rollback. A private app rollback does not undo applied database migrations; use additive-compatible migrations. No checkout, bank, WhatsApp registration or provider-send changes are made by this release.
+
+## Direct booking and guest-review release
+
+The main CTAs now stay on our site. `/stay/` and `/es/reservar/` currently prepare a WhatsApp request without checking live availability or reserving nights. The account-specific Hospitable Direct embed is pending; follow `BOOKING.md` before claiming on-site reservations are live. Promerica checkout remains a separate onboarding dependency. Six public reviews are a curated static snapshot; `REVIEWS.md` documents selection and refresh.
