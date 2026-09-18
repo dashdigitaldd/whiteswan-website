@@ -37,3 +37,5 @@ The gallery supports filters, keyboard navigation, Escape, mobile swipe and full
 The Airbnb listing reports 8 guests while the existing operational sources report 10. The website continues to ask the host to confirm group capacity; this visual pass does not introduce a new occupancy claim. Booking requests and WhatsApp links remain unchanged.
 
 The upstream owner must merge the website PR to update `staywhiteswan.com`; the current GitHub account has read-only upstream access. DNS, CNAME and WhatsApp numbers are unchanged. Local checks do not constitute production performance or search-ranking results.
+
+Three homepage service illustrations are maintained separately; see [SERVICE_IMAGERY.md](SERVICE_IMAGERY.md) for saved assets, provenance and final prompts. These are excluded from the 35-photo property tour.

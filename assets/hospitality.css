@@ -131,3 +131,43 @@
 @media(max-width:1150px){.editorial-header{position:relative;z-index:71}.mobile-menu{position:absolute;top:112px;left:20px;right:20px;z-index:70;padding:22px 28px;background:#fbf9f3;border:1px solid #d7cebb;box-shadow:0 18px 30px #2534280b;max-height:calc(100svh - 200px);overflow:auto;grid-template-columns:1fr 1fr;gap:0 26px}.mobile-menu>a{border-bottom:1px solid var(--line);padding:15px 0;font:26px/1.2 var(--serif);min-height:54px}.mobile-menu>a:last-child{color:#806b44}.menu-toggle[aria-expanded=true] span:first-child{transform:translateY(3.5px) rotate(45deg)}.menu-toggle[aria-expanded=true] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}}
 @media(max-width:700px){.mobile-menu{top:92px;left:12px;right:12px;padding:14px 20px;gap:0 20px;max-height:calc(100svh - 175px)}.mobile-menu>a{font-size:23px;padding:15px 0}.editorial .guest-review-grid{display:grid;grid-template-columns:1fr;gap:27px}.guest-review.review-featured{grid-row:auto;padding:28px 25px}.editorial .review-featured blockquote p{font-size:35px;line-height:1.25}.review-featured blockquote{margin:26px 0}.editorial .guest-review:not(.review-featured) blockquote p{font-size:24px}.guest-review:not(.review-featured) figcaption{font-size:10px}.editorial .photo-tour{padding-top:42px}.photo-tour-grid[data-gallery-layout="all"]>figure:first-child{margin-bottom:4px}.photo-tour-grid[data-gallery-layout="all"]>figure:first-child img{aspect-ratio:3/2}.photo-tour-grid[data-gallery-layout="all"]>figure:first-child figcaption{font-size:22px;gap:12px}.photo-tour-grid figcaption{gap:10px}.photo-index{font-size:16px}.gallery-invitation{display:block;margin-top:55px;padding-top:40px}.gallery-invitation h2{font-size:43px;margin-bottom:24px}.gallery-invitation p{max-width:30ch}.stay-steps{display:none}.stay-duration{font-size:23px}.editorial .stay-booking{padding-top:25px}.editorial .stay-booking .stay-aside{display:none}.editorial .stay-intro .text-link{margin:0}.editorial .resort-hero .eyebrow{font-size:9px}.editorial .final-invitation .hero-link{font-size:12px}.editorial-footer a:not(.brand),.editorial-footer button{font-size:12px;min-height:30px}}
 @media(prefers-reduced-motion:reduce){.editorial .photo-tour-grid img,.gallery-filters button{transition:none}.editorial .button:active{transform:none}}
+
+/* A shorter, quieter homepage: paired villa photographs and two combined chapters. */
+.editorial .villa-story{display:block;padding-top:90px;padding-bottom:70px}
+.villa-story .intro{display:grid;grid-template-columns:1fr 1fr;gap:0 8%;margin-bottom:40px}
+.villa-story .intro>.eyebrow{grid-column:1/-1}
+.villa-story .intro>h2{grid-row:2/5;margin:0}
+.villa-story .intro .lead-copy{font-size:23px;margin:0 0 12px}
+.villa-story .intro .muted{font-size:13px;margin-bottom:17px;max-width:49ch}
+.villa-story .intro>.text-link{justify-self:start}
+.villa-story .story-note{display:none}
+.villa-diptych{display:grid;grid-template-columns:1.65fr 1fr;gap:24px;padding:0;position:static;align-items:start}
+.villa-diptych .story-main,.villa-diptych .story-inset{position:static;display:block;width:100%;border:0;margin:0;overflow:hidden}
+.villa-diptych .story-main img,.villa-diptych .story-inset img{width:100%;height:440px;aspect-ratio:auto;object-fit:cover;object-position:center}
+.villa-diptych .story-inset img{object-position:50% 70%}
+.villa-diptych a>span{display:flex;justify-content:space-between;padding-top:15px;font:italic 20px/1.4 var(--serif);color:var(--pine)}
+.editorial .space-section{padding-top:30px;padding-bottom:65px}
+.space-section .section-heading{margin-bottom:30px}
+.space-section h2{font-size:clamp(36px,4vw,56px)}
+.editorial .experience-story{padding-top:75px;padding-bottom:60px}
+.experience-story .section-heading{margin-bottom:32px}
+.experience-story .curated-card>img{aspect-ratio:3/2;object-fit:cover}
+.experience-story .curated-card>div{padding-top:22px}
+.experience-story .curated-card h3{font-size:34px;margin-bottom:12px}
+.experience-story .curated-card p{line-height:1.7;min-height:3.4em;margin-bottom:14px}
+.experience-story .more-services{margin:30px 0 10px;padding:22px 0;gap:12px 25px}
+.experience-story .thoughtful-extras{margin:0 0 20px}
+.experience-story .thoughtful-extras summary{padding:16px 0}
+.experience-story .thoughtful-extras summary>span{font-size:23px}
+.editorial .destination-section{padding-top:80px;padding-bottom:70px}
+#local-discoveries{scroll-margin-top:85px}
+.editorial .faq-suite{padding-top:75px;padding-bottom:75px}
+.stay-at-a-glance{margin-top:28px;border-top:1px solid var(--line);scroll-margin-top:100px}
+.stay-at-a-glance .essential-card{display:grid;grid-template-columns:105px 1fr;gap:18px;padding:18px 0!important;border:0;border-bottom:1px solid var(--line);align-items:center;background:none}
+.stay-at-a-glance .essential-card small{display:block;font:10px/1.5 Inter,sans-serif;color:var(--muted);margin-bottom:5px}
+.stay-at-a-glance .essential-card strong{font:26px/1.15 var(--serif);color:var(--pine)}
+.stay-at-a-glance .essential-card>span:last-child{display:flex;align-items:center;justify-content:space-between;gap:15px;font:11px/1.7 Inter,sans-serif;color:var(--pine)}
+.stay-at-a-glance .essential-card i{font-style:normal;color:#927a4e}
+.stay-at-a-glance .essential-card:hover{background:#f0ecdf80;transform:none}
+@media(max-width:1050px){.villa-diptych .story-main img,.villa-diptych .story-inset img{height:340px}.villa-diptych{gap:18px}.editorial .faq-suite{gap:5%}}
+@media(max-width:700px){.editorial .villa-story{padding-top:52px;padding-bottom:38px}.villa-story .intro{display:block;margin-bottom:27px}.villa-story .intro>h2{margin-bottom:20px}.villa-story .intro .lead-copy{font-size:22px}.villa-story .intro .muted{font-size:13px}.villa-diptych{grid-template-columns:1fr;gap:24px}.villa-diptych .story-main img{height:auto;aspect-ratio:3/2}.villa-diptych .story-inset img{height:auto;aspect-ratio:4/3;object-position:50% 76%}.villa-diptych a>span{font-size:20px;padding-top:10px}.editorial .space-section{padding-top:15px;padding-bottom:40px}.editorial .experience-story{padding-top:50px;padding-bottom:40px}.experience-story .curated-card>img{aspect-ratio:3/2}.experience-story .curated-card p{min-height:0}.experience-story .curated-card h3{font-size:32px}.experience-story .more-services>span{flex-basis:100%}.editorial .destination-section{padding-top:50px;padding-bottom:45px}.editorial .faq-suite{padding-top:50px;padding-bottom:45px}.stay-at-a-glance{margin-top:20px}.stay-at-a-glance .essential-card{grid-template-columns:105px 1fr;padding:12px 0!important}.stay-at-a-glance .essential-card strong{font-size:24px}.faq-library{margin-top:30px}}

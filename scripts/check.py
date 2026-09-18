@@ -45,6 +45,7 @@ print('Curated public review fields and on-site booking entry points passed.')
 
 # Every rendered photograph must use the curated treatment, including srcset and viewer links.
 assets=json.loads((root/'content/editorial-assets.json').read_text())['assets']
+assets.update(json.loads((root/'content/service-imagery.json').read_text())['assets'])
 allowed={v['url'] for asset in assets.values() for v in asset['variants']}
 seen=set()
 for file in pages:
@@ -63,5 +64,5 @@ for file in pages:
 for file in ['photos/index.html','es/fotos/index.html']:
  p=Page();p.feed((root/file).read_text())
  assert sum('data-photo-open' in a for t,a in p.tags)==35
-assert len(seen)==45,('curated coverage',len(seen))
-print('All 45 editorial photographs are used; excluded daybed imagery is absent on every route.')
+assert seen=={asset['src'] for asset in assets.values()},('curated coverage',len(seen))
+print('All 45 editorial photographs and 3 labeled service illustrations are used; excluded daybed imagery is absent on every route.')

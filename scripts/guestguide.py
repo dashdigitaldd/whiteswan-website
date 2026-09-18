@@ -56,13 +56,19 @@ def destinations(lang, path, embedded=False):
     T = lambda en, es: es if lang == 'es' else en
     el = prepare(source(lang).get_element_by_id('explore'), lang)
     el.set('class', 'section destination-section' if embedded else 'handbook-section destination-section')
-    el.set('id', 'local-discoveries' if embedded else 'explore')
+    el.set('id', 'explore')
     el.find('h2').set('id', 'coast-heading' if embedded else 'explore-heading')
     el.set('aria-labelledby', el.find('h2').get('id'))
     intro = el.find('p')
     intro.text = T('Salt-air mornings, little coastal towns and a day out in the hills. A few places to make your own.', 'Mañanas de brisa marina, pueblos costeros y un día entre montañas. Lugares para descubrir a tu ritmo.')
     if embedded:
-        el.find('span').text = T('PLACES TO DISCOVER', 'LUGARES POR DESCUBRIR')
+        el.find('span').text = T('04 — THE COAST & BEYOND', '04 — LA COSTA Y MÁS ALLÁ')
+        alias = html.Element('div', id='local-discoveries')
+        # Wrap the retained destination content so both historical anchors still work.
+        for child in list(el):
+            alias.append(child)
+        el.append(alias)
+        el = alias
         for child in list(el.find('span')): el.find('span').remove(child)
     grid = el.xpath('./div')[0]
     grid.set('class', 'destination-grid')
@@ -81,7 +87,7 @@ def destinations(lang, path, embedded=False):
     note = html.Element('p', attrib={'class': 'fine destination-note'})
     note.text = T('Driving times and activity prices are approximate. Ask your concierge about current arrangements before heading out.', 'Los tiempos de viaje y precios de actividades son aproximados. Consulta los detalles actuales con tu concierge antes de salir.')
     el.append(note)
-    return serialize(el)
+    return serialize(el.getparent() if embedded else el)
 
 
 def guide(lang, head, components):
