@@ -7,7 +7,7 @@ The homepage uses the existing daytime house photograph and the same `guide-tran
 - Daylight / After dark buttons select a photograph and stop automatic playback. A separate localized pause/play button controls movement and rotation. Keyboard focus entering the controls pauses playback.
 - Reduced-motion and data-saver preferences disable autoplay. Reduced motion also removes the dissolve and zoom, while keeping manual scene selection. Changing the preference at runtime stops playback; it never restarts without a guest action.
 - The timer and zoom pause while the cover is outside the viewport or the document is hidden. Returning starts a fresh 14-second hold.
-- The daytime photo keeps high fetch priority. The night photo has low priority. If either image cannot decode, the controls stay hidden and daylight remains the fallback.
+- The daytime photo keeps high fetch priority and a matching responsive AVIF preload with WebP fallback. Both cover photos have AVIF alternatives. The night photo has low priority. If either image cannot decode, the controls stay hidden and daylight remains the fallback.
 - The fixed cover dimensions prevent layout shifts between differently sized source photographs. Mobile uses a 3:2 viewport.
 
 Implementation: `scripts/homepage.py::hero_scene`, `assets/hero-motion.js`, and the cinematic-cover rules in `assets/hospitality.css`. Regenerate with `scripts/build.py` after template changes.

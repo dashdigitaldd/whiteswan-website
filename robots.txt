@@ -2,4 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /content/
 Disallow: /scripts/
+Disallow: /tests/
+Disallow: /docs/
+Disallow: /artifacts/
 Sitemap: https://staywhiteswan.com/sitemap.xml

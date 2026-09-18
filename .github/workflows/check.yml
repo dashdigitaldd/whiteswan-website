@@ -13,4 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python3 -m pip install -r requirements-dev.txt
       - run: python3 scripts/check.py
+      - run: python3 -m unittest discover -s tests
+      - run: python3 scripts/build.py
+      - run: git diff --exit-code -- '*.html' sitemap.xml robots.txt assets/site.min.css

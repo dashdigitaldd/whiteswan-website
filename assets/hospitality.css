@@ -217,3 +217,14 @@
 .services-foot p{font-size:11px;line-height:1.8;color:#c5cbbb;margin:0;max-width:none}
 .services-foot .text-link{font-size:11px;white-space:nowrap}
 @media(max-width:700px){.editorial .services-simple{padding-top:40px;padding-bottom:28px}.services-simple .section-heading{margin-bottom:26px}.services-simple .section-heading h2{font-size:43px;margin-bottom:16px}.services-simple .curated-experiences{gap:30px}.services-simple .curated-card>img{aspect-ratio:16/9}.services-simple .curated-card>div{padding-top:16px}.services-simple .curated-card h3{font-size:29px}.editorial .services-simple .curated-card p{min-height:0;max-width:none;margin-bottom:15px}.services-foot{display:block;margin-top:28px}.services-foot .text-link{display:inline-flex;margin-top:12px}.services-foot p{max-width:34ch}}
+
+/* Search-visible hierarchy and readable supporting text, without extra home sections. */
+.page-breadcrumbs{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:11px;line-height:1.8;color:#57614f;padding:22px max(7.2vw,calc((100vw - 1292px)/2)) 0}
+.page-breadcrumbs a{text-decoration:none;border-bottom:1px solid #b5a886}
+.photo-tour>.page-breadcrumbs,.privacy>.page-breadcrumbs{padding:0;margin-bottom:28px}
+.editorial .resort-hero p,.review-stars>span:last-child,.guest-review time{color:#59634f}
+.editorial .destination-section .eyebrow,.editorial .destination-section .dist{color:#75603b}
+.editorial .destination-section .tx p,.editorial .destination-section .destination-note{color:#58614f}
+.editorial-footer p,.editorial-footer a:not(.brand),.editorial-footer button,.editorial-footer div>span:not(.eyebrow),.editorial-footer .footer-bottom{color:#535e4c}
+.editorial-footer .eyebrow{color:#75603b}
+@media(max-width:700px){.page-breadcrumbs{padding:20px 24px 0}.photo-tour>.page-breadcrumbs,.privacy>.page-breadcrumbs{padding:0;margin-bottom:22px}}
