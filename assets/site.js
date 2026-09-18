@@ -62,3 +62,11 @@ if(location.pathname==='/'&&['#arrive','#house','#rules','#checkout'].includes(l
   if(launcher.open&&!launcher.contains(event.target))launcher.open=false;
  });
 })();
+
+// Keep a guest's place when switching between the two complete guides.
+(() => {
+ const language=document.querySelector('[data-preserve-section]');
+ if(!language)return;
+ const update=()=>{const target=new URL(language.href);target.hash=location.hash;language.href=target.pathname+target.hash;};
+ update();window.addEventListener('hashchange',update);
+})();

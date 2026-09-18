@@ -1,8 +1,6 @@
 """Generate committed, build-free GitHub Pages output. Dev-only: Pillow + lxml."""
 from pathlib import Path
 from html import escape as esc
-from PIL import Image
-from lxml import html, etree
 import json
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://staywhiteswan.com'
@@ -10,7 +8,7 @@ from photography import legacy_image as image
 def head(lang,path,title,description,other,kind='home'):
  en=path if lang=='en' else other; es=other if lang=='en' else path
  schema={'@context':'https://schema.org','@type':'LodgingBusiness','@id':BASE+'/#villa','name':'White Swan Villa','url':BASE+path,'description':description,'telephone':'+50370528003','address':{'@type':'PostalAddress','addressLocality':'Tamanique','addressRegion':'La Libertad','addressCountry':'SV'},'image':BASE+'/assets/editorial/villa-light-1536.webp','sameAs':['https://www.airbnb.com/rooms/47911834']} if kind=='home' else {'@context':'https://schema.org','@type':'WebPage','name':title,'url':BASE+path,'inLanguage':lang}
- return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+en}"><link rel="alternate" hreflang="es" href="{BASE+es}"><link rel="alternate" hreflang="x-default" href="{BASE+en}"><meta name="theme-color" content="#2e3b36"><meta property="og:image" content="https://staywhiteswan.com/assets/editorial/villa-light-1536.webp"><meta name="twitter:card" content="summary_large_image"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE+path}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><link rel="stylesheet" href="/assets/editorial.css"><link rel="stylesheet" href="/assets/retreat.css"><script src="/assets/retreat.js" defer></script><script src="/assets/gallery.js" defer></script><script src="/assets/config.js" defer></script><script src="/assets/site.js" defer></script></head>'''
+ return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+en}"><link rel="alternate" hreflang="es" href="{BASE+es}"><link rel="alternate" hreflang="x-default" href="{BASE+en}"><meta name="theme-color" content="#2e3b36"><meta property="og:image" content="https://staywhiteswan.com/assets/editorial/villa-light-1536.webp"><meta name="twitter:card" content="summary_large_image"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE+path}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><link rel="stylesheet" href="/assets/editorial.css"><link rel="stylesheet" href="/assets/retreat.css"><link rel="stylesheet" href="/assets/guide.css"><script src="/assets/retreat.js" defer></script><script src="/assets/gallery.js" defer></script><script src="/assets/config.js" defer></script><script src="/assets/site.js" defer></script></head>'''
 from homepage import home as render_home, gallery as render_gallery, stay as render_stay
 
 def render(lang):
@@ -23,36 +21,11 @@ def components(lang):
 
 for lang in ['en','es']:
  path=ROOT/('es' if lang=='es' else '');path.mkdir(exist_ok=True);(path/'index.html').write_text(render(lang))
- # Retain the complete guest guide, publishing one language per URL.
- doc=html.fromstring((ROOT/'content/guide.html.template').read_text())
- opposite='en' if lang=='es' else 'es'
- for element in doc.xpath(f'//*[contains(concat(" ",normalize-space(@class)," ")," {opposite} ")]'):
-  element.drop_tree()
- doc.set('lang',lang);body=doc.find('body');body.set('class','es' if lang=='es' else '')
- for script in doc.xpath('//script'):script.drop_tree()
- oldHead=doc.find('head');style=oldHead.find('style').text
- title='White Swan Villa — Guía del huésped' if lang=='es' else 'White Swan Villa — Guest guide'
- target='/es/guia/' if lang=='es' else '/guide/'; other='/guide/' if lang=='es' else '/es/guia/'
- desc='Llegada, servicios y guía de la casa White Swan, Xanadu, El Salvador.' if lang=='es' else 'Arrival, services and the house guide for White Swan Villa in Xanadu, El Salvador.'
- newHead=html.fromstring(head(lang,target,title,desc,other,'guide')).find('head')
- newHead.append(etree.Element('style'));newHead[-1].text=style+'\n.reveal{opacity:1;transform:none}.langs a{padding:8px;color:inherit}.langs{font-size:14px}.guide-home{display:block;padding:14px;text-align:center} .hero img{animation:none} @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}'
- doc.replace(oldHead,newHead)
- for el in doc.xpath('//img[@src]'):
-  filename=Path(el.get('src')).stem
-  if (ROOT/f'website-photos/{filename}.jpg').exists():
-   replacement=html.fragment_fromstring(image(filename,el.get('alt',''),filename=='hero',lang=lang))
-   for key in ['src','srcset','sizes','width','height','alt','loading','fetchpriority','decoding']:
-    if key in replacement.attrib:el.set(key,replacement.get(key))
-    elif key in el.attrib:del el.attrib[key]
- for langs in doc.xpath('//*[@class="langs"]'):
-  langs.clear();langs.set('class','langs');a=etree.SubElement(langs,'a',href=other);a.text='EN' if lang=='es' else 'ES'
- for a in doc.xpath('//a[@href]'):
-  if a.get('target')=='_blank':a.set('rel','noopener')
-  if 'wa.me/' in a.get('href',''):a.set('data-placement','guide')
- home=etree.Element('a',href='/es/' if lang=='es' else '/',attrib={'class':'guide-home'});home.text='← Conoce White Swan' if lang=='es' else '← Discover White Swan';body.insert(1,home)
- body.append(html.fragment_fromstring(components(lang),create_parent='div'))
- for src in ['/assets/config.js','/assets/site.js']:etree.SubElement(body,'script',src=src,defer='defer')
- out=ROOT/target.strip('/');out.mkdir(parents=True,exist_ok=True);(out/'index.html').write_text('<!doctype html>\n'+html.tostring(doc,encoding='unicode'))
+ # The original template supplies content, never the retired layout.
+ from guestguide import guide as render_guide
+ target='/es/guia/' if lang=='es' else '/guide/'
+ out=ROOT/target.strip('/');out.mkdir(parents=True,exist_ok=True)
+ (out/'index.html').write_text(render_guide(lang,head,components))
  privacy='/es/privacidad/' if lang=='es' else '/privacy/';other='/privacy/' if lang=='es' else '/es/privacidad/'
  T=lambda en,sp:sp if lang=='es' else en
  privacybody=f'''<body><main class="section privacy"><a class="brand" href="{('/es/' if lang=='es' else '/')}">White <i>Swan</i></a><h1>{T('Privacy & your choices','Privacidad y tus decisiones')}</h1><p>{T('When you send an enquiry, White Swan uses your name, contact details, dates and message to respond and coordinate your requested stay or services. This form does not subscribe you to marketing.','Al enviar una consulta, White Swan usa tu nombre, contacto, fechas y mensaje para responder y coordinar tu estadía o servicios. Este formulario no te suscribe a marketing.')}</p><h2>{T('Your enquiry','Tu consulta')}</h2><p>{T('Enquiries are stored in our intake service and private operations workspace, hosted on OpenAI Sites and Cloudflare infrastructure. Only authorized operators can read the intake feed. Relevant service details may be shared with a supplier when coordinating a service you request. Do not include identity documents, card details or access codes.','Las consultas se guardan en nuestro servicio de recepción y espacio privado de operaciones, alojados en infraestructura de OpenAI Sites y Cloudflare. Solo operadores autorizados pueden leer las consultas. Los detalles pertinentes pueden compartirse con un proveedor al coordinar un servicio solicitado. No incluyas documentos de identidad, datos de tarjetas ni códigos de acceso.')}</p><h2>{T('Optional analytics','Analítica opcional')}</h2><p>{T('With your permission, we record page views, enquiry opens and outbound WhatsApp/Airbnb clicks, with the page, service, language and limited campaign labels. These events exclude your name, email, phone and message. We remember your analytics choice on this device. We do not currently load a Google Analytics tag.','Con tu permiso registramos vistas de página, apertura de consultas y clics hacia WhatsApp/Airbnb, con página, servicio, idioma y etiquetas limitadas de campaña. Los eventos excluyen tu nombre, correo, teléfono y mensaje. Guardamos tu preferencia en este dispositivo. Actualmente no cargamos una etiqueta de Google Analytics.')}</p><button class="button" data-cookie-settings>{T('Change analytics preference','Cambiar preferencia de analítica')}</button><h2>{T('External services','Servicios externos')}</h2><p>{T('This website is hosted on GitHub Pages and loads fonts from Google Fonts. Airbnb and WhatsApp operate under their own privacy policies when you follow their links. Concierge links prefill the topic, website page and preferred language in WhatsApp for you to review. A WhatsApp click does not automatically send a message. Technical hosting logs may be retained by infrastructure providers.','Esta web se aloja en GitHub Pages y carga fuentes de Google Fonts. Airbnb y WhatsApp aplican sus propias políticas al seguir sus enlaces. Los enlaces de concierge preparan el tema, la página web y el idioma preferido en WhatsApp para que los revises. Un clic en WhatsApp no envía un mensaje automáticamente. Los proveedores de infraestructura pueden conservar registros técnicos.')}</p><h2>{T('Questions or deletion requests','Consultas o solicitudes de eliminación')}</h2><p>{T('Contact White Swan to request access, correction or deletion of enquiry information. We retain enquiries for follow-up and service records; a fixed automated retention schedule is not yet configured.','Contacta a White Swan para solicitar acceso, corrección o eliminación de tus datos. Conservamos consultas para seguimiento y registros de servicio; aún no hay un plazo automatizado de eliminación configurado.')}</p><a class="text-link" href="https://wa.me/50370528003">{T('Contact White Swan on WhatsApp','Contactar a White Swan por WhatsApp')} ↗</a><p class="fine">{T('Updated 15 September 2026','Actualizado el 15 de septiembre de 2026')}</p></main>{components(lang)}</body></html>'''

@@ -15,11 +15,11 @@ Public discovery and guest experience for White Swan Villa / Xanadu Beach House,
 |---|---|---|
 | `/` | `/es/` | Villa discovery, experiences and enquiry |
 | `/stay/` | `/es/reservar/` | On-site stay planning and future Hospitable Direct widget |
-| `/guide/` | `/es/guia/` | Existing guest guide |
+| `/guide/` | `/es/guia/` | Integrated guest handbook |
 | `/photos/` | `/es/fotos/` | Full photo tour with filters and accessible viewer |
 | `/privacy/` | `/es/privacidad/` | Data and analytics choices |
 
-The root remains English, with explicit language links and reciprocal hreflang. Both languages render without JavaScript. Legacy root links to arrival, house, rules and checkout redirect to the guest guide when JavaScript is available. The guest guide preserves the existing operational content and contacts; it is not automatically promoted to verified AI knowledge.
+The root remains English, with explicit language links and reciprocal hreflang. Both languages render without JavaScript. Legacy root links to arrival, house, rules and checkout redirect to the guest guide when JavaScript is available. The integrated guest guide preserves operational content, destination details, deep links and both existing contacts; it is not automatically promoted to verified AI knowledge.
 
 ## Editing and local preview
 
@@ -52,7 +52,7 @@ See [growth architecture](docs/GROWTH_ENGINE.md), [launch checklist](docs/LAUNCH
 
 ## Editorial design and current listing photos
 
-The public homepage and photo tour use a curated 35-photo tour from the 36-photo collection retrieved from the current Airbnb listing on September 15, 2026. See [photography provenance, asset preparation and design maintenance](docs/PHOTOGRAPHY.md). The homepage renderer is in `scripts/homepage.py`, separate from the original guest guide. The public deployment remains pending the upstream website PR merge.
+The public homepage and photo tour use a curated 35-photo tour from the 36-photo collection retrieved from the current Airbnb listing on September 15, 2026. See [photography provenance, asset preparation and design maintenance](docs/PHOTOGRAPHY.md). The homepage renderer is in `scripts/homepage.py`. `scripts/guestguide.py` renders the complete handbook with the same header, footer, concierge and booking flow. Its destination cards are shared with the homepage; `content/guide.html.template` supplies bilingual content only, never the retired styling or scripts. The public deployment remains pending the upstream website PR merge.
 
 ## Guest reviews and booking integration
 
@@ -67,3 +67,7 @@ Villa questions and service interests can start directly in WhatsApp through the
 ## Coastal editorial finish
 
 The September 18 visual pass introduces a warm editorial hero treatment, a bronze swan mark, fine serif type, deeper pine service panels and a combined mobile booking/concierge dock. All displayed photographs now receive the same editorial treatment, across the homepage, 35-photo tour, stay page and guest guide. The owner-rejected poolside daybed photograph is excluded everywhere. [Selected assets, exact edit prompts and provenance](docs/EDITORIAL_RETOUCH.md) document the built-in image edit. Motion is progressive enhancement with reduced-motion support; no content depends on animations to appear.
+
+### Integrated guest handbook
+
+`assets/guide.css` styles the shared destination cards and handbook. All eight guide chapters remain available at their existing anchors, with a desktop chapter rail and a mobile topic strip. EN/ES switching retains the selected chapter. Six destinations are also rendered directly on the homepage, so coastal discovery stays on-page. Service links carry their topic and source section into WhatsApp; the original on-site number and directions link are preserved. Booking calls to action use the existing on-site planning flow. Imported operating policies and indicative service prices still need owner validation before launch; this visual migration does not verify or change them.
