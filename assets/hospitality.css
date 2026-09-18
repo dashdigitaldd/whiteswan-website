@@ -171,3 +171,32 @@
 .stay-at-a-glance .essential-card:hover{background:#f0ecdf80;transform:none}
 @media(max-width:1050px){.villa-diptych .story-main img,.villa-diptych .story-inset img{height:340px}.villa-diptych{gap:18px}.editorial .faq-suite{gap:5%}}
 @media(max-width:700px){.editorial .villa-story{padding-top:52px;padding-bottom:38px}.villa-story .intro{display:block;margin-bottom:27px}.villa-story .intro>h2{margin-bottom:20px}.villa-story .intro .lead-copy{font-size:22px}.villa-story .intro .muted{font-size:13px}.villa-diptych{grid-template-columns:1fr;gap:24px}.villa-diptych .story-main img{height:auto;aspect-ratio:3/2}.villa-diptych .story-inset img{height:auto;aspect-ratio:4/3;object-position:50% 76%}.villa-diptych a>span{font-size:20px;padding-top:10px}.editorial .space-section{padding-top:15px;padding-bottom:40px}.editorial .experience-story{padding-top:50px;padding-bottom:40px}.experience-story .curated-card>img{aspect-ratio:3/2}.experience-story .curated-card p{min-height:0}.experience-story .curated-card h3{font-size:32px}.experience-story .more-services>span{flex-basis:100%}.editorial .destination-section{padding-top:50px;padding-bottom:45px}.editorial .faq-suite{padding-top:50px;padding-bottom:45px}.stay-at-a-glance{margin-top:20px}.stay-at-a-glance .essential-card{grid-template-columns:105px 1fr;padding:12px 0!important}.stay-at-a-glance .essential-card strong{font-size:24px}.faq-library{margin-top:30px}}
+
+/* A quiet day-to-night cover; its layout stays fixed throughout each dissolve. */
+.resort-hero .cinematic-cover{isolation:isolate;background:#d9d3c3}
+.cinematic-cover .hero-frame{position:absolute;inset:0;overflow:hidden}
+.cinematic-cover .hero-night{opacity:0;transition:opacity 3.2s cubic-bezier(.4,0,.2,1);z-index:1}
+.cinematic-cover[data-scene="night"] .hero-night{opacity:1}
+.resort-hero .cinematic-cover .hero-frame img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:50% 50%;transform-origin:50% 55%}
+.cinematic-cover[data-ready="true"] .hero-frame img{animation:hero-breathe 24s ease-in-out infinite alternate;animation-play-state:paused}
+.cinematic-cover[data-running="true"] .hero-frame img{animation-play-state:running}
+@keyframes hero-breathe{from{transform:scale(1)}to{transform:scale(1.045)}}
+.resort-hero .cinematic-cover:after{z-index:2;background:linear-gradient(0deg,#11231966,transparent 30%);pointer-events:none}
+.cinematic-cover .retouch-note{z-index:3}
+.hero-scene-controls{position:absolute;left:25px;bottom:67px;z-index:4;display:flex;align-items:center;background:#f9f6ecef;border:1px solid #fff5;color:#334435;padding:3px 5px 3px 13px;gap:7px}
+.hero-scene-controls[hidden]{display:none}
+.hero-scene-options{display:flex;gap:15px}
+.hero-scene-options button{position:relative;display:flex;align-items:center;gap:7px;padding:10px 0;border:0;background:none;color:#596250;font:10px/1.5 Inter,sans-serif;letter-spacing:.02em;min-height:40px;white-space:nowrap}
+.hero-scene-options button>span{font-size:8px;opacity:.7}
+.hero-scene-options button:after{content:'';position:absolute;left:0;right:0;bottom:5px;height:1px;background:#927a4e;transform:scaleX(0);transform-origin:left;transition:transform .5s}
+.hero-scene-options button[aria-pressed="true"]{color:#26392f}
+.hero-scene-options button[aria-pressed="true"]:after{transform:scaleX(1)}
+.hero-motion-toggle{display:grid;place-items:center;width:40px;height:40px;padding:0;margin-left:7px;border:0;border-left:1px solid #b4a98b66;background:none;color:#334435}
+.hero-motion-toggle[hidden]{display:none}
+.hero-motion-toggle svg{fill:none;stroke:currentColor;stroke-width:1.4}
+.hero-motion-toggle .motion-play{display:none}
+.cinematic-cover[data-playing="false"] .motion-pause{display:none}
+.cinematic-cover[data-playing="false"] .motion-play{display:block}
+.hero-scene-controls button:focus-visible{outline-offset:0}
+@media(max-width:700px){.resort-hero .cinematic-cover{aspect-ratio:3/2;flex-shrink:0}.hero-scene-controls{left:12px;bottom:12px;padding:1px 3px 1px 10px;gap:5px}.hero-scene-options{gap:12px}.hero-scene-options button{font-size:9px}.hero-motion-toggle{margin-left:3px}.resort-hero .cinematic-cover:after{display:block;background:linear-gradient(0deg,#11231933,transparent 32%)}.resort-hero .cinematic-cover .hero-night img{object-position:50% 55%}}
+@media(prefers-reduced-motion:reduce){.cinematic-cover .hero-night{transition:none}.cinematic-cover .hero-frame img{animation:none!important;transform:none!important}.hero-scene-options button:after{transition:none}}

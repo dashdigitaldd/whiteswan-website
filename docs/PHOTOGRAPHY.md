@@ -39,3 +39,5 @@ The Airbnb listing reports 8 guests while the existing operational sources repor
 The upstream owner must merge the website PR to update `staywhiteswan.com`; the current GitHub account has read-only upstream access. DNS, CNAME and WhatsApp numbers are unchanged. Local checks do not constitute production performance or search-ranking results.
 
 Three homepage service illustrations are maintained separately; see [SERVICE_IMAGERY.md](SERVICE_IMAGERY.md) for saved assets, provenance and final prompts. These are excluded from the 35-photo property tour.
+
+The homepage cover now rotates between the existing daylight and closing night photographs, with a static-first fallback and motion controls. See [HERO_MOTION.md](HERO_MOTION.md) for timing and accessibility behavior.
