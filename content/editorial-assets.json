@@ -1,0 +1,1040 @@
+{
+  "edited_at": "2026-09-18",
+  "assets": {
+    "listing-1685140620": {
+      "source": "assets/listing/1685140620-1920.webp",
+      "description": "Living room opening to the pool",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1685140620-960.webp",
+      "full": "/assets/enhanced/listing-1685140620-1086.webp",
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1685140620-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1685140620-960.webp"
+        },
+        {
+          "width": 1086,
+          "url": "/assets/enhanced/listing-1685140620-1086.webp"
+        }
+      ]
+    },
+    "listing-2569987642": {
+      "source": "assets/listing/2569987642-1920.webp",
+      "description": "Light-filled living room",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569987642-960.webp",
+      "full": "/assets/enhanced/listing-2569987642-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569987642-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569987642-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569987642-1536.webp"
+        }
+      ]
+    },
+    "listing-2569987644": {
+      "source": "assets/listing/2569987644-1920.webp",
+      "description": "Open-plan living and dining",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569987644-960.webp",
+      "full": "/assets/enhanced/listing-2569987644-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569987644-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569987644-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569987644-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961413": {
+      "source": "assets/listing/2569961413-1920.webp",
+      "description": "Kitchen and breakfast bar",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961413-960.webp",
+      "full": "/assets/enhanced/listing-2569961413-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961413-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961413-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961413-1536.webp"
+        }
+      ]
+    },
+    "listing-1852228438": {
+      "source": "assets/listing/1852228438-1920.webp",
+      "description": "Kitchen with ocean views",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1852228438-960.webp",
+      "full": "/assets/enhanced/listing-1852228438-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1852228438-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1852228438-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-1852228438-1536.webp"
+        }
+      ]
+    },
+    "listing-1852232843": {
+      "source": "assets/listing/1852232843-1920.webp",
+      "description": "Coffee and tea corner",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1852232843-960.webp",
+      "full": "/assets/enhanced/listing-1852232843-1024.webp",
+      "width": 1024,
+      "height": 1536,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1852232843-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1852232843-960.webp"
+        },
+        {
+          "width": 1024,
+          "url": "/assets/enhanced/listing-1852232843-1024.webp"
+        }
+      ]
+    },
+    "listing-2569961436": {
+      "source": "assets/listing/2569961436-1920.webp",
+      "description": "Kitchen and dining table",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961436-960.webp",
+      "full": "/assets/enhanced/listing-2569961436-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961436-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961436-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961436-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961410": {
+      "source": "assets/listing/2569961410-1920.webp",
+      "description": "Space to gather around the table",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961410-960.webp",
+      "full": "/assets/enhanced/listing-2569961410-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961410-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961410-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961410-1536.webp"
+        }
+      ]
+    },
+    "listing-2580025731": {
+      "source": "assets/listing/2580025731-1920.webp",
+      "description": "Primary bedroom facing the ocean",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2580025731-960.webp",
+      "full": "/assets/enhanced/listing-2580025731-1536.webp",
+      "width": 1536,
+      "height": 864,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2580025731-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2580025731-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2580025731-1536.webp"
+        }
+      ]
+    },
+    "listing-2580025730": {
+      "source": "assets/listing/2580025730-1920.webp",
+      "description": "Ocean views from the primary bedroom",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2580025730-960.webp",
+      "full": "/assets/enhanced/listing-2580025730-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2580025730-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2580025730-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2580025730-1536.webp"
+        }
+      ]
+    },
+    "listing-2580025741": {
+      "source": "assets/listing/2580025741-1920.webp",
+      "description": "Primary bedroom and sitting area",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2580025741-960.webp",
+      "full": "/assets/enhanced/listing-2580025741-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2580025741-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2580025741-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2580025741-1536.webp"
+        }
+      ]
+    },
+    "listing-1852230521": {
+      "source": "assets/listing/1852230521-1920.webp",
+      "description": "Sunrise from the balcony",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1852230521-960.webp",
+      "full": "/assets/enhanced/listing-1852230521-1086.webp",
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1852230521-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1852230521-960.webp"
+        },
+        {
+          "width": 1086,
+          "url": "/assets/enhanced/listing-1852230521-1086.webp"
+        }
+      ]
+    },
+    "listing-2569961498": {
+      "source": "assets/listing/2569961498-1920.webp",
+      "description": "Second bedroom with ocean view",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961498-960.webp",
+      "full": "/assets/enhanced/listing-2569961498-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961498-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961498-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961498-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961475": {
+      "source": "assets/listing/2569961475-1920.webp",
+      "description": "Second bedroom beside the Pacific",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961475-960.webp",
+      "full": "/assets/enhanced/listing-2569961475-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961475-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961475-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961475-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961569": {
+      "source": "assets/listing/2569961569-1920.webp",
+      "description": "Third bedroom with two beds",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961569-960.webp",
+      "full": "/assets/enhanced/listing-2569961569-1536.webp",
+      "width": 1536,
+      "height": 864,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961569-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961569-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961569-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961551": {
+      "source": "assets/listing/2569961551-1920.webp",
+      "description": "Third bedroom and workspace",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961551-960.webp",
+      "full": "/assets/enhanced/listing-2569961551-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961551-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961551-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961551-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961576": {
+      "source": "assets/listing/2569961576-1920.webp",
+      "description": "Fourth bedroom beside the palms",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961576-960.webp",
+      "full": "/assets/enhanced/listing-2569961576-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961576-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961576-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961576-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961572": {
+      "source": "assets/listing/2569961572-1920.webp",
+      "description": "Fourth bedroom and desk",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961572-960.webp",
+      "full": "/assets/enhanced/listing-2569961572-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961572-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961572-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961572-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961584": {
+      "source": "assets/listing/2569961584-1920.webp",
+      "description": "Balcony framed by palms",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961584-960.webp",
+      "full": "/assets/enhanced/listing-2569961584-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961584-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961584-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961584-1536.webp"
+        }
+      ]
+    },
+    "listing-1856102816": {
+      "source": "assets/listing/1856102816-1920.webp",
+      "description": "Bathroom with rainfall shower",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1856102816-960.webp",
+      "full": "/assets/enhanced/listing-1856102816-1086.webp",
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1856102816-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1856102816-960.webp"
+        },
+        {
+          "width": 1086,
+          "url": "/assets/enhanced/listing-1856102816-1086.webp"
+        }
+      ]
+    },
+    "listing-2570005062": {
+      "source": "assets/listing/2570005062-1920.webp",
+      "description": "Bathroom with stone basin",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2570005062-960.webp",
+      "full": "/assets/enhanced/listing-2570005062-1024.webp",
+      "width": 1024,
+      "height": 1536,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2570005062-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2570005062-960.webp"
+        },
+        {
+          "width": 1024,
+          "url": "/assets/enhanced/listing-2570005062-1024.webp"
+        }
+      ]
+    },
+    "listing-1852228371": {
+      "source": "assets/listing/1852228371-1920.webp",
+      "description": "Bath amenities",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1852228371-960.webp",
+      "full": "/assets/enhanced/listing-1852228371-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1852228371-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1852228371-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-1852228371-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961468": {
+      "source": "assets/listing/2569961468-1920.webp",
+      "description": "Bathroom with walk-in shower",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961468-960.webp",
+      "full": "/assets/enhanced/listing-2569961468-1024.webp",
+      "width": 1024,
+      "height": 1536,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961468-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961468-960.webp"
+        },
+        {
+          "width": 1024,
+          "url": "/assets/enhanced/listing-2569961468-1024.webp"
+        }
+      ]
+    },
+    "listing-1856102817": {
+      "source": "assets/listing/1856102817-1920.webp",
+      "description": "Guest half bathroom",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1856102817-960.webp",
+      "full": "/assets/enhanced/listing-1856102817-1086.webp",
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1856102817-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1856102817-960.webp"
+        },
+        {
+          "width": 1086,
+          "url": "/assets/enhanced/listing-1856102817-1086.webp"
+        }
+      ]
+    },
+    "listing-2569996360": {
+      "source": "assets/listing/2569996360-1920.webp",
+      "description": "Covered outdoor dining and lounge",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569996360-960.webp",
+      "full": "/assets/enhanced/listing-2569996360-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569996360-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569996360-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569996360-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961464": {
+      "source": "assets/listing/2569961464-1920.webp",
+      "description": "Outdoor bar and dining area",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961464-960.webp",
+      "full": "/assets/enhanced/listing-2569961464-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961464-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961464-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961464-1536.webp"
+        }
+      ]
+    },
+    "listing-2569961465": {
+      "source": "assets/listing/2569961465-1920.webp",
+      "description": "Outdoor cooking area",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961465-960.webp",
+      "full": "/assets/enhanced/listing-2569961465-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961465-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961465-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961465-1536.webp"
+        }
+      ]
+    },
+    "listing-2569998613": {
+      "source": "assets/listing/2569998613-1920.webp",
+      "description": "Lunch with an ocean view",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569998613-960.webp",
+      "full": "/assets/enhanced/listing-2569998613-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569998613-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569998613-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569998613-1536.webp"
+        }
+      ]
+    },
+    "listing-1685140810": {
+      "source": "assets/listing/1685140810-1920.webp",
+      "description": "Infinity pool overlooking the Pacific",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1685140810-960.webp",
+      "full": "/assets/enhanced/listing-1685140810-1086.webp",
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1685140810-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1685140810-960.webp"
+        },
+        {
+          "width": 1086,
+          "url": "/assets/enhanced/listing-1685140810-1086.webp"
+        }
+      ]
+    },
+    "listing-1685140634": {
+      "source": "assets/listing/1685140634-1920.webp",
+      "description": "White Swan illuminated at dusk",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1685140634-960.webp",
+      "full": "/assets/enhanced/listing-1685140634-1086.webp",
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1685140634-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1685140634-960.webp"
+        },
+        {
+          "width": 1086,
+          "url": "/assets/enhanced/listing-1685140634-1086.webp"
+        }
+      ]
+    },
+    "listing-2569961540": {
+      "source": "assets/listing/2569961540-1920.webp",
+      "description": "The villa, garden and pool",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-2569961540-960.webp",
+      "full": "/assets/enhanced/listing-2569961540-1536.webp",
+      "width": 1536,
+      "height": 864,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-2569961540-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-2569961540-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-2569961540-1536.webp"
+        }
+      ]
+    },
+    "listing-1852228366": {
+      "source": "assets/listing/1852228366-1920.webp",
+      "description": "Private parking and entrance",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1852228366-960.webp",
+      "full": "/assets/enhanced/listing-1852228366-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1852228366-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1852228366-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-1852228366-1536.webp"
+        }
+      ]
+    },
+    "listing-1852228465": {
+      "source": "assets/listing/1852228465-1920.webp",
+      "description": "Upstairs hallway",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1852228465-960.webp",
+      "full": "/assets/enhanced/listing-1852228465-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1852228465-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1852228465-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/listing-1852228465-1536.webp"
+        }
+      ]
+    },
+    "listing-1852230572": {
+      "source": "assets/listing/1852230572-1920.webp",
+      "description": "The beach below Xanadu",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/listing-1852230572-960.webp",
+      "full": "/assets/enhanced/listing-1852230572-1086.webp",
+      "width": 1086,
+      "height": 1448,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/listing-1852230572-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/listing-1852230572-960.webp"
+        },
+        {
+          "width": 1086,
+          "url": "/assets/enhanced/listing-1852230572-1086.webp"
+        }
+      ]
+    },
+    "guide-celebration": {
+      "source": "website-photos/celebration.jpg",
+      "description": "celebration photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-celebration-960.webp",
+      "full": "/assets/enhanced/guide-celebration-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-celebration-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-celebration-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/guide-celebration-1536.webp"
+        }
+      ]
+    },
+    "guide-chef": {
+      "source": "website-photos/chef.jpg",
+      "description": "chef photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-chef-960.webp",
+      "full": "/assets/enhanced/guide-chef-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-chef-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-chef-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/guide-chef-1536.webp"
+        }
+      ]
+    },
+    "guide-coatepeque": {
+      "source": "website-photos/coatepeque.jpg",
+      "description": "coatepeque photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-coatepeque-960.webp",
+      "full": "/assets/enhanced/guide-coatepeque-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-coatepeque-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-coatepeque-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/guide-coatepeque-1536.webp"
+        }
+      ]
+    },
+    "guide-eltunco": {
+      "source": "website-photos/eltunco.jpg",
+      "description": "eltunco photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-eltunco-960.webp",
+      "full": "/assets/enhanced/guide-eltunco-1448.webp",
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-eltunco-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-eltunco-960.webp"
+        },
+        {
+          "width": 1448,
+          "url": "/assets/enhanced/guide-eltunco-1448.webp"
+        }
+      ]
+    },
+    "guide-elzonte": {
+      "source": "website-photos/elzonte.jpg",
+      "description": "elzonte photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-elzonte-960.webp",
+      "full": "/assets/enhanced/guide-elzonte-1024.webp",
+      "width": 1024,
+      "height": 1536,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-elzonte-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-elzonte-960.webp"
+        },
+        {
+          "width": 1024,
+          "url": "/assets/enhanced/guide-elzonte-1024.webp"
+        }
+      ]
+    },
+    "guide-lalibertad": {
+      "source": "website-photos/lalibertad.jpg",
+      "description": "lalibertad photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-lalibertad-960.webp",
+      "full": "/assets/enhanced/guide-lalibertad-1536.webp",
+      "width": 1536,
+      "height": 1022,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-lalibertad-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-lalibertad-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/guide-lalibertad-1536.webp"
+        }
+      ]
+    },
+    "guide-restaurants": {
+      "source": "website-photos/restaurants.jpg",
+      "description": "restaurants photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-restaurants-960.webp",
+      "full": "/assets/enhanced/guide-restaurants-1449.webp",
+      "width": 1449,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-restaurants-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-restaurants-960.webp"
+        },
+        {
+          "width": 1449,
+          "url": "/assets/enhanced/guide-restaurants-1449.webp"
+        }
+      ]
+    },
+    "guide-transfer": {
+      "source": "website-photos/transfer.jpg",
+      "description": "transfer photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-transfer-960.webp",
+      "full": "/assets/enhanced/guide-transfer-1536.webp",
+      "width": 1536,
+      "height": 864,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-transfer-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-transfer-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/guide-transfer-1536.webp"
+        }
+      ]
+    },
+    "guide-waterfalls": {
+      "source": "website-photos/waterfalls.jpg",
+      "description": "waterfalls photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-waterfalls-960.webp",
+      "full": "/assets/enhanced/guide-waterfalls-1536.webp",
+      "width": 1536,
+      "height": 1022,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-waterfalls-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-waterfalls-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/enhanced/guide-waterfalls-1536.webp"
+        }
+      ]
+    },
+    "guide-welcome": {
+      "source": "website-photos/welcome.jpg",
+      "description": "welcome photograph from the supplied guest website",
+      "method": "built-in-image-edit",
+      "src": "/assets/enhanced/guide-welcome-960.webp",
+      "full": "/assets/enhanced/guide-welcome-1024.webp",
+      "width": 1024,
+      "height": 1536,
+      "variants": [
+        {
+          "width": 480,
+          "url": "/assets/enhanced/guide-welcome-480.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/enhanced/guide-welcome-960.webp"
+        },
+        {
+          "width": 1024,
+          "url": "/assets/enhanced/guide-welcome-1024.webp"
+        }
+      ]
+    },
+    "listing-2569961419": {
+      "source": "assets/listing/2569961419-1920.webp",
+      "description": "The sunlit villa and private pool",
+      "method": "built-in-image-edit",
+      "src": "/assets/editorial/villa-light-960.webp",
+      "full": "/assets/editorial/villa-light-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "variants": [
+        {
+          "width": 640,
+          "url": "/assets/editorial/villa-light-640.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/editorial/villa-light-960.webp"
+        },
+        {
+          "width": 1536,
+          "url": "/assets/editorial/villa-light-1536.webp"
+        }
+      ]
+    }
+  }
+}

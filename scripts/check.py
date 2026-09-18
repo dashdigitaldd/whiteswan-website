@@ -42,3 +42,26 @@ for file in ['index.html','es/index.html','photos/index.html','es/fotos/index.ht
   if a.get('data-placement') in ['hero','navigation','sticky','facts']:
    assert a.get('href')==('/es/reservar/' if file.startswith('es/') else '/stay/'),(file,a)
 print('Curated public review fields and on-site booking entry points passed.')
+
+# Every rendered photograph must use the curated treatment, including srcset and viewer links.
+assets=json.loads((root/'content/editorial-assets.json').read_text())['assets']
+allowed={v['url'] for asset in assets.values() for v in asset['variants']}
+seen=set()
+for file in pages:
+ p=Page();p.feed((root/file).read_text())
+ for tag,a in p.tags:
+  if tag=='img' and a.get('src','').endswith('.webp'):
+   assert a['src'] in allowed,(file,'uncurated image',a['src'])
+   seen.add(a['src'])
+   for variant in a.get('srcset','').split(','):
+    url=variant.strip().split()[0]
+    assert url in allowed and (root/url.lstrip('/')).exists(),(file,url)
+  if 'data-photo-open' in a:assert a['href'] in allowed,(file,a)
+ text=(root/file).read_text()
+ for rejected in ['2569999123','/assets/photos/daybed-','/assets/photos/massage-','/assets/photos/early-']:
+  assert rejected not in text,(file,'excluded image',rejected)
+for file in ['photos/index.html','es/fotos/index.html']:
+ p=Page();p.feed((root/file).read_text())
+ assert sum('data-photo-open' in a for t,a in p.tags)==35
+assert len(seen)==45,('curated coverage',len(seen))
+print('All 45 editorial photographs are used; excluded daybed imagery is absent on every route.')

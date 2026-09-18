@@ -6,25 +6,11 @@ from lxml import html, etree
 import json
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://staywhiteswan.com'
-PHOTO=ROOT/'assets/photos'; PHOTO.mkdir(parents=True,exist_ok=True)
-for path in (ROOT/'website-photos').glob('*.jpg'):
- for width in [640,1280,1920]:
-  out=PHOTO/f'{path.stem}-{width}.webp'
-  if not out.exists():
-   with Image.open(path) as im:
-    im.thumbnail((width,width*2)); im.convert('RGB').save(out,'WEBP',quality=80,method=6)
-def image(name,alt,hero=False):
- with Image.open(ROOT/f'website-photos/{name}.jpg') as im: w,h=im.size
- variants={}
- for size in [640,1280,1920]:
-  with Image.open(PHOTO/f'{name}-{size}.webp') as variant:
-   variants.setdefault(variant.width,f'/assets/photos/{name}-{size}.webp')
- srcset=', '.join(f'{url} {width}w' for width,url in variants.items())
- return f'<img src="/assets/photos/{name}-1280.webp" srcset="{srcset}" sizes="{("100vw" if hero else "(max-width: 700px) 100vw, 50vw")}" width="{w}" height="{h}" alt="{esc(alt)}" {("fetchpriority=high" if hero else "loading=lazy")} decoding="async">'
+from photography import legacy_image as image
 def head(lang,path,title,description,other,kind='home'):
  en=path if lang=='en' else other; es=other if lang=='en' else path
- schema={'@context':'https://schema.org','@type':'LodgingBusiness','@id':BASE+'/#villa','name':'White Swan Villa','url':BASE+path,'description':description,'telephone':'+50370528003','address':{'@type':'PostalAddress','addressLocality':'Tamanique','addressRegion':'La Libertad','addressCountry':'SV'},'image':BASE+'/assets/listing/2569961419-1920.webp','sameAs':['https://www.airbnb.com/rooms/47911834']} if kind=='home' else {'@context':'https://schema.org','@type':'WebPage','name':title,'url':BASE+path,'inLanguage':lang}
- return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+en}"><link rel="alternate" hreflang="es" href="{BASE+es}"><link rel="alternate" hreflang="x-default" href="{BASE+en}"><meta name="theme-color" content="#2e3b36"><meta property="og:image" content="https://staywhiteswan.com/assets/listing/2569961419-1920.webp"><meta name="twitter:card" content="summary_large_image"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE+path}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><link rel="stylesheet" href="/assets/editorial.css"><link rel="stylesheet" href="/assets/retreat.css"><script src="/assets/retreat.js" defer></script><script src="/assets/gallery.js" defer></script><script src="/assets/config.js" defer></script><script src="/assets/site.js" defer></script></head>'''
+ schema={'@context':'https://schema.org','@type':'LodgingBusiness','@id':BASE+'/#villa','name':'White Swan Villa','url':BASE+path,'description':description,'telephone':'+50370528003','address':{'@type':'PostalAddress','addressLocality':'Tamanique','addressRegion':'La Libertad','addressCountry':'SV'},'image':BASE+'/assets/editorial/villa-light-1536.webp','sameAs':['https://www.airbnb.com/rooms/47911834']} if kind=='home' else {'@context':'https://schema.org','@type':'WebPage','name':title,'url':BASE+path,'inLanguage':lang}
+ return f'''<!doctype html><html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><link rel="canonical" href="{BASE+path}"><link rel="alternate" hreflang="en" href="{BASE+en}"><link rel="alternate" hreflang="es" href="{BASE+es}"><link rel="alternate" hreflang="x-default" href="{BASE+en}"><meta name="theme-color" content="#2e3b36"><meta property="og:image" content="https://staywhiteswan.com/assets/editorial/villa-light-1536.webp"><meta name="twitter:card" content="summary_large_image"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE+path}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/site.css"><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False)}</script><link rel="stylesheet" href="/assets/editorial.css"><link rel="stylesheet" href="/assets/retreat.css"><script src="/assets/retreat.js" defer></script><script src="/assets/gallery.js" defer></script><script src="/assets/config.js" defer></script><script src="/assets/site.js" defer></script></head>'''
 from homepage import home as render_home, gallery as render_gallery, stay as render_stay
 
 def render(lang):
@@ -54,10 +40,10 @@ for lang in ['en','es']:
  for el in doc.xpath('//img[@src]'):
   filename=Path(el.get('src')).stem
   if (ROOT/f'website-photos/{filename}.jpg').exists():
-   with Image.open(ROOT/f'website-photos/{filename}.jpg') as im:w,h=im.size
-   el.set('src',f'/assets/photos/{filename}-1280.webp');el.set('width',str(w));el.set('height',str(h));el.set('decoding','async')
-   if filename=='hero':el.set('fetchpriority','high')
-   else:el.set('loading','lazy')
+   replacement=html.fragment_fromstring(image(filename,el.get('alt',''),filename=='hero',lang=lang))
+   for key in ['src','srcset','sizes','width','height','alt','loading','fetchpriority','decoding']:
+    if key in replacement.attrib:el.set(key,replacement.get(key))
+    elif key in el.attrib:del el.attrib[key]
  for langs in doc.xpath('//*[@class="langs"]'):
   langs.clear();langs.set('class','langs');a=etree.SubElement(langs,'a',href=other);a.text='EN' if lang=='es' else 'ES'
  for a in doc.xpath('//a[@href]'):
