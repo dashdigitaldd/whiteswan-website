@@ -16,7 +16,7 @@ These are owner-authorized generative edits of existing photographs. They retain
 | 01 — This is White Swan | 2569961540, elevated exterior; 2580025730, ocean-view bedroom inset | Connect the whole property with the experience of waking to the Pacific. |
 | Bedrooms and shared spaces | 2580025730, 2569987642, 2569961410 | A distinct view of sleeping, relaxing and dining. |
 | A day at White Swan | 1852230521, 2569998613, 1685140634 | First light, terrace lunch, illuminated house after sunset. |
-| Experiences | Chef table, ocean-view bedroom 2569961498, celebration place setting | Real settings; no staged massage or included-service implication. |
+| Experiences | Kitchen 2569961413, ocean-view bedroom 2569961498, dining area 2569961410 | Real settings; no staged massage or included-service implication. |
 | Coast | 1852230572 | The actual beach below Xanadu. |
 | Closing | Existing `transfer` aerial photograph | Whole-property view after dusk; the legacy filename describes no vehicle. |
 | Guest guide | Shared edited listing assets plus ten existing guide photos | Same finish throughout, including destination cards. |
@@ -38,6 +38,6 @@ The Airbnb listing reports 8 guests while the existing operational sources repor
 
 The upstream owner must merge the website PR to update `staywhiteswan.com`; the current GitHub account has read-only upstream access. DNS, CNAME and WhatsApp numbers are unchanged. Local checks do not constitute production performance or search-ranking results.
 
-Three homepage service illustrations are maintained separately; see [SERVICE_IMAGERY.md](SERVICE_IMAGERY.md) for saved assets, provenance and final prompts. These are excluded from the 35-photo property tour.
+The three generated service illustrations are retired and excluded from publication. Section 03 uses existing villa photographs. [SERVICE_IMAGERY.md](SERVICE_IMAGERY.md) records the historical assets and the replacement selections.
 
 The homepage cover now rotates between the existing daylight and closing night photographs, with a static-first fallback and motion controls. See [HERO_MOTION.md](HERO_MOTION.md) for timing and accessibility behavior.

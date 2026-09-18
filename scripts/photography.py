@@ -23,8 +23,7 @@ def listing_key(index):
     return f'listing-{identifier}'
 
 def registry():
-    return {**json.loads((ROOT / 'content/editorial-assets.json').read_text())['assets'],
-            **json.loads((ROOT / 'content/service-imagery.json').read_text())['assets']}
+    return json.loads((ROOT / 'content/editorial-assets.json').read_text())['assets']
 
 def full_photo(index):
     return registry()[listing_key(index)]['full']
@@ -46,12 +45,3 @@ def legacy_image(name, alt, hero=False, lang=None):
             alt = PHOTOS[index]['alt'][lang]
         return markup(listing_key(index), alt, hero)
     return markup(f'guide-{name}', alt, hero)
-
-
-def service_image(name, lang):
-    alts = {
-        'chef': ('Illustrative scene: a private chef finishing a plated meal', 'Escena ilustrativa: chef privado preparando un plato'),
-        'massage': ('Illustrative scene: a massage table with fresh linen and towels', 'Escena ilustrativa: camilla de masaje con sábanas y toallas'),
-        'celebration': ('Illustrative scene: champagne, flowers and celebration balloons', 'Escena ilustrativa: champán, flores y globos de celebración'),
-    }
-    return markup('service-'+name, alts[name][lang=='es'], sizes='(max-width: 700px) 100vw, 33vw')

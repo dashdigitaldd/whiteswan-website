@@ -200,3 +200,20 @@
 .hero-scene-controls button:focus-visible{outline-offset:0}
 @media(max-width:700px){.resort-hero .cinematic-cover{aspect-ratio:3/2;flex-shrink:0}.hero-scene-controls{left:12px;bottom:12px;padding:1px 3px 1px 10px;gap:5px}.hero-scene-options{gap:12px}.hero-scene-options button{font-size:9px}.hero-motion-toggle{margin-left:3px}.resort-hero .cinematic-cover:after{display:block;background:linear-gradient(0deg,#11231933,transparent 32%)}.resort-hero .cinematic-cover .hero-night img{object-position:50% 55%}}
 @media(prefers-reduced-motion:reduce){.cinematic-cover .hero-night{transition:none}.cinematic-cover .hero-frame img{animation:none!important;transform:none!important}.hero-scene-options button:after{transition:none}}
+
+/* Real villa settings, three concise offers, and a single next step per card. */
+.editorial .services-simple{padding-top:55px;padding-bottom:35px}
+.services-simple .section-heading{align-items:end;margin-bottom:28px}
+.services-simple .section-heading h2{font-size:clamp(39px,4.2vw,60px);margin-bottom:0}
+.services-simple .section-heading .eyebrow{margin-bottom:14px}
+.editorial .services-simple .section-heading>p{font-size:13px;line-height:1.8;max-width:35ch;margin:0}
+.services-simple .curated-card>img{aspect-ratio:3/2}
+.services-simple .curated-card>div{display:flex;flex-direction:column;align-items:start;padding-top:20px}
+.services-simple .curated-card h3{font-size:30px;margin-bottom:10px}
+.editorial .services-simple .curated-card p{font-size:13px;line-height:1.8;min-height:3.6em;margin:0 0 18px;max-width:34ch}
+.editorial .services-simple .service-cta{width:100%;justify-content:space-between;gap:12px;background:#faf8f0;color:#293d32;border:1px solid #faf8f0;border-radius:0;font-size:12px;padding:13px 17px;min-height:48px;text-decoration:none}
+.editorial .services-simple .service-cta:hover{background:#e7dfce;border-color:#e7dfce}
+.services-foot{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:28px;padding-top:20px;border-top:1px solid #81907766}
+.services-foot p{font-size:11px;line-height:1.8;color:#c5cbbb;margin:0;max-width:none}
+.services-foot .text-link{font-size:11px;white-space:nowrap}
+@media(max-width:700px){.editorial .services-simple{padding-top:40px;padding-bottom:28px}.services-simple .section-heading{margin-bottom:26px}.services-simple .section-heading h2{font-size:43px;margin-bottom:16px}.services-simple .curated-experiences{gap:30px}.services-simple .curated-card>img{aspect-ratio:16/9}.services-simple .curated-card>div{padding-top:16px}.services-simple .curated-card h3{font-size:29px}.editorial .services-simple .curated-card p{min-height:0;max-width:none;margin-bottom:15px}.services-foot{display:block;margin-top:28px}.services-foot .text-link{display:inline-flex;margin-top:12px}.services-foot p{max-width:34ch}}

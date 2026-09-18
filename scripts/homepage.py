@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 from concierge import link as whatsapp_link, section as concierge_section, widget as concierge_widget
 from guestguide import destinations
-from hospitality import faq_section, service_detail, extra_details
-from photography import photo, full_photo, GALLERY_ORDER, PHOTO_COUNT, service_image, markup
+from hospitality import faq_section
+from photography import photo, full_photo, GALLERY_ORDER, PHOTO_COUNT, markup
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = json.loads((ROOT / 'content/listing-photos.json').read_text())
 PHOTOS = CATALOG['photos']
@@ -59,10 +59,15 @@ def home(lang, head, image, components):
         s+=f'<a class="space-card" href="{gallery}#{"bedrooms" if i==9 else "living"}"><div>{photo(i,lang,sizes="(max-width: 700px) 170vw, 66vw")}<span class="space-number">{number}</span><span class="photo-open" aria-hidden="true">↗</span></div><h3>{title}</h3><p>{copy}</p></a>'
     s+='</div></section>'+guest_reviews(lang)
     s+=f'''
-<section class="section experiences experience-story" id="services"><div class="section-heading"><div><span class="eyebrow">03 — {T('A LITTLE SOMETHING EXTRA','UN POCO MÁS PARA DISFRUTAR')}</span><h2>{T('Your stay.<br><em>With a personal touch.</em>','Tu estadía.<br><em>Con un toque personal.</em>')}</h2></div><p>{T('Tell us what would make it special. We’ll help coordinate the details with our local partners.','Cuéntanos qué la haría especial. Te ayudamos a coordinar los detalles con nuestros aliados locales.')}</p></div><div class="curated-experiences">'''
-    for n,service,pic,title,copy in [('01','private_chef','chef',T('Private chef','Chef privado'),T('A meal made for you. Leave the cooking to your private chef.','Una comida a tu medida. Deja la cocina en manos de tu chef privado.')),('02','in_home_massage','massage',T('In-villa massage','Masajes en la villa'),T('An in-villa massage, arranged around your day. Nothing to do but unwind.','Un masaje en la villa, coordinado a tu ritmo. Solo tienes que relajarte.')),('03','decoration','celebration',T('Celebrations','Celebraciones'),T('Flowers, balloons or a toast for two. Let’s plan your occasion.','Flores, globos o un brindis para dos. Planeemos tu celebración.'))]:
-        s+=f'<article class="curated-card">{service_image(pic,lang)}<div><h3>{title}</h3><p>{copy}</p>{service_detail(lang,service)}{whatsapp_link(lang,service,home+"#services",label=T("Ask on WhatsApp","Consultar por WhatsApp"))}</div></article>'
-    s+=f'''</div><div class="more-services"><span>{T('And the little things, taken care of.','Y los pequeños detalles, resueltos.')}</span>{whatsapp_link(lang,"airport_transfer",home+"#services",label=T("Airport transfers","Traslados del aeropuerto"))}{whatsapp_link(lang,"grocery_shopping",home+"#services",label=T("Grocery shopping","Compras de supermercado"))}{whatsapp_link(lang,"guided_tours",home+"#services",label=T("Local adventures","Aventuras locales"))}</div>{extra_details(lang)}<a class="text-link" href="{guide}#services">{T('Explore every service & detail','Descubre todos los servicios y detalles')} →</a><p class="fine">{T('Arranged on request, subject to availability and an agreed quote. AI-generated service images are illustrative.','Por solicitud, sujeto a disponibilidad y cotización acordada. Las imágenes de servicios son ilustrativas, generadas con IA.')}</p></section>
+<section class="section experiences experience-story services-simple" id="services"><div class="section-heading"><div><span class="eyebrow">03 — {T('A LITTLE SOMETHING EXTRA','UN POCO MÁS PARA DISFRUTAR')}</span><h2>{T('Make it <em>yours.</em>','Hazla <em>tuya.</em>')}</h2></div><p>{T('Choose a service. Tell us your plans on WhatsApp. We’ll take care of the details.','Elige un servicio. Cuéntanos tus planes por WhatsApp. Coordinamos los detalles.')}</p></div><div class="curated-experiences">'''
+    services=[
+        ('private_chef',3,T('Private chef','Chef privado'),T('A freshly prepared meal, enjoyed here at the villa.','Una comida recién preparada, aquí en la villa.'),T('Ask about a chef','Consultar por un chef')),
+        ('in_home_massage',12,T('In-villa massage','Masajes en la villa'),T('Take time for yourself. We’ll help arrange your massage.','Un momento para ti. Te ayudamos a coordinar tu masaje.'),T('Ask about a massage','Consultar por un masaje')),
+        ('decoration',7,T('Celebrations','Celebraciones'),T('A birthday, an anniversary, a moment worth celebrating.','Un cumpleaños, un aniversario, un momento para celebrar.'),T('Plan a celebration','Planear una celebración')),
+    ]
+    for service,pic,title,copy,cta in services:
+        s+=f'<article class="curated-card">{photo(pic,lang,sizes="(max-width: 700px) 100vw, 40vw")}<div><h3>{title}</h3><p>{copy}</p>{whatsapp_link(lang,service,home+"#services",label=cta,classes="button light service-cta")}</div></article>'
+    s+=f'''</div><div class="services-foot"><p>{T('On request. Price and availability confirmed before booking.','Por solicitud. Precio y disponibilidad confirmados antes de reservar.')}</p><a class="text-link" href="{guide}#services">{T('All services & prices','Todos los servicios y precios')} →</a></div></section>
 {destinations(lang,home,embedded=True)}{faq_section(lang)}{concierge_section(lang)}<section class="invitation final-invitation" id="book"><div class="final-photo">{image('transfer',T('White Swan illuminated above its pool and garden at night','White Swan iluminada junto a su piscina y jardín de noche'))}</div><div><span class="eyebrow">{T('THE BEST PART? MAKING IT YOURS.','LO MEJOR: HACERLA TUYA.')}</span><h2>{T('See you<br><em>by the Pacific.</em>','Nos vemos<br><em>junto al Pacífico.</em>')}</h2><div class="actions"><a class="button light" href="{booking_path(lang)}" data-placement="footer">{T('Plan your stay','Planea tu estadía')} →</a><button class="hero-link" data-enquire="stay" data-placement="footer">{T('Ask us about your stay','Consúltanos sobre tu estadía')} →</button></div></div></section></main>{footer(lang)}{concierge_widget(lang,home)}{components(lang)}</body></html>'''
     return s
 

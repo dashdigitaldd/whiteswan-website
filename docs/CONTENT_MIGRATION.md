@@ -7,8 +7,8 @@ The template is the retained bilingual content source. Its old page shell, style
 | Original section | Content retained | Where guests find it now |
 | --- | --- | --- |
 | Arrival | Three-stage registration timeline, arrival instructions, welcome gift, early check-in options/prices, directions | Homepage Your stay and arrival FAQs; `/guide/#arrive` |
-| Services | Chef, massage, airport transfer/driver, tours, celebrations, late checkout; original prices and notice periods | Homepage experiences, expandable price/notice details and `/guide/#services` |
-| Also available | Car rental, extra guests, complimentary housekeeping, crib | Homepage expandable extras, FAQs, full services chapter |
+| Services | Chef, massage, airport transfer/driver, tours, celebrations, late checkout; original prices and notice periods | Three concise homepage cards with service-specific WhatsApp buttons; all original prices/notice periods at `/guide/#services` |
+| Also available | Car rental, extra guests, complimentary housekeeping, crib | Homepage all-services link, FAQs, full services chapter |
 | Villa | Bedroom/bathroom/capacity summary, interior and outdoor spaces | Homepage villa/spaces, 35-photo tour, `/guide/#villa` |
 | House guide | All ten topics: pool, beach, AC, Wi-Fi, laundry, TV, water, BBQ/outdoors, housekeeping, help | Homepage combined stay/FAQ chapter and house-guide link; `/guide/#house` with individual topic anchors |
 | Rules | All eight community essentials, including noise, capacity, visitors, smoking, pets, parking, damage reporting | Homepage Your stay, relevant FAQs, `/guide/#rules` |
@@ -26,7 +26,7 @@ Spanish uses `/es/` and `/es/guia/` with matching anchors. Language switching re
 - The old “200+ groups” promotional claim and static aggregate rating are not repeated; selected source-backed public guest reviews remain on the homepage.
 - The old Airbnb-only booking/instant-confirmation copy is replaced by the truthful request flow. No online availability, payment or confirmation is claimed by the date-request form.
 - Early/late checkout can be discussed through the shared WhatsApp concierge. All original price and availability conditions remain; optional Airbnb messaging is restored in the contact chapter.
-- The rejected daybed photograph remains excluded; all property photographs use the curated enhancement registry. Three clearly labeled illustrative service scenes use a separate registry.
+- The rejected daybed photograph remains excluded; all property photographs use the curated enhancement registry. The generated service scenes are retired; section 03 uses existing villa photographs.
 - Old emoji ornamentation and duplicate navigation are superseded by the new design. The underlying service and operational information remains.
 
 This audit verifies migration completeness, not current operational policy. Existing owner-supplied prices, transit estimates, terms and instructions still need the normal owner review before a public release. No access credentials are published.
@@ -37,4 +37,4 @@ This audit verifies migration completeness, not current operational policy. Exis
 
 ## Shorter homepage, 18 September 2026
 
-Section 01 pairs the owner-selected covered dining terrace photograph (listing 2569998613) with the infinity pool and Pacific view. The separate day-at-the-villa panel was removed; the 35-photo tour retains every accepted listing image. Section 03 has three clear service cards (private chef, in-villa massage, celebrations), original expandable prices/notice periods, contextual WhatsApp links and labeled illustrative imagery. Section 04 combines the former coast introduction with all six discovery cards. Section 05 combines arrival, departure, quiet hours and the house guide with all 18 searchable FAQs. Both `#local-discoveries` and `#stay-details` remain valid. No original handbook content was removed.
+Section 01 pairs the owner-selected covered dining terrace photograph (listing 2569998613) with the infinity pool and Pacific view. The separate day-at-the-villa panel was removed; the 35-photo tour retains every accepted listing image. Section 03 has three clear service cards (private chef, in-villa massage, celebrations), short descriptions, prominent service-specific WhatsApp buttons and existing villa photographs; its single all-services link preserves access to all original prices, notice periods and smaller extras. Section 04 combines the former coast introduction with all six discovery cards. Section 05 combines arrival, departure, quiet hours and the house guide with all 18 searchable FAQs. Both `#local-discoveries` and `#stay-details` remain valid. No original handbook content was removed.

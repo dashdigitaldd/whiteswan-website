@@ -57,7 +57,11 @@ class GuestGuide(unittest.TestCase):
             self.assertTrue(published.xpath('//header//a[contains(@href,"#faq")]'))
             self.assertTrue(published.xpath('//footer//a[contains(@href,"#faq")]'))
             self.assertEqual(len(published.xpath('//*[@class="essential-card"]')),4)
-            self.assertEqual(len(published.xpath('//*[@class="service-detail"]')),3)
+            services=published.get_element_by_id('services')
+            guide='/es/guia/' if lang=='es' else '/guide/'
+            self.assertTrue(services.xpath('.//a[@href=$href]',href=guide+'#services'))
+            for topic in ['private_chef','in_home_massage','decoration']:
+                self.assertTrue(services.xpath('.//a[@data-topic=$topic and starts-with(@href,"https://wa.me/")]',topic=topic))
 
     def test_operational_details_and_all_chapters_survive(self):
         for lang,path in [('en','guide/index.html'),('es','es/guia/index.html')]:
