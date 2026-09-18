@@ -45,3 +45,38 @@ class GuestGuide(unittest.TestCase):
             for card in source(lang).get_element_by_id('explore').xpath('.//div[@class="card"]'):
                 for p in card.xpath('.//p'):
                     self.assertIn(normalized(p),normalized(homepage.get_element_by_id('local-discoveries')))
+
+    def test_original_faqs_are_complete_on_homepage(self):
+        for lang,path in [('en','index.html'),('es','es/index.html')]:
+            published=html.parse(str(ROOT/path)).getroot()
+            faq=published.get_element_by_id('faq')
+            for detail in source(lang).get_element_by_id('faq').xpath('./details'):
+                self.assertIn(normalized(detail.find('summary')),normalized(faq))
+                self.assertIn(normalized(detail.xpath('.//p')[0]),normalized(faq))
+            self.assertEqual(len(faq.xpath('.//details')),18)
+            self.assertTrue(published.xpath('//header//a[contains(@href,"#faq")]'))
+            self.assertTrue(published.xpath('//footer//a[contains(@href,"#faq")]'))
+            self.assertEqual(len(published.xpath('//*[@class="essential-card"]')),4)
+            self.assertEqual(len(published.xpath('//*[@class="service-detail"]')),3)
+
+    def test_operational_details_and_all_chapters_survive(self):
+        for lang,path in [('en','guide/index.html'),('es','es/guia/index.html')]:
+            published=html.parse(str(ROOT/path)).getroot()
+            original=source(lang)
+            # Beyond paragraph coverage: prices, lead times, all rules and checkout steps.
+            for key in ['arrive','services','villa','house','rules','checkout','explore','faq']:
+                old=original.get_element_by_id(key)
+                new=published.get_element_by_id(key)
+                for item in old.xpath('.//h3|.//summary|.//div[@class="price"]|.//div[contains(@class,"notice")]|.//li[not(.//a)]'):
+                    self.assertIn(normalized(item),normalized(new),(lang,key))
+            for key in ['book','contact']:
+                self.assertIsNotNone(published.get_element_by_id(key))
+            self.assertIn('airbnb.com/inbox',str(html.tostring(published.get_element_by_id('contact'))))
+
+    def test_homepage_anchors_and_ids_are_valid(self):
+        for path in ['index.html','es/index.html','guide/index.html','es/guia/index.html']:
+            published=html.parse(str(ROOT/path)).getroot()
+            ids=published.xpath('//@id')
+            self.assertEqual(len(ids),len(set(ids)),path)
+            for href in published.xpath('//a[starts-with(@href,"#")]/@href'):
+                self.assertIn(href[1:],ids,(path,href))

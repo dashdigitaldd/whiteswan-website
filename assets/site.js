@@ -48,7 +48,7 @@ form?.addEventListener('submit',async e=>{
 });
 document.addEventListener('click',e=>{const a=e.target.closest?.('a[href]');if(!a)return;let u;try{u=new URL(a.href);}catch{return;}if(u.hostname==='wa.me')void track('whatsapp_click',a.dataset.service||'other',a.dataset.placement||'guide');if(['airbnb.com','www.airbnb.com'].includes(u.hostname)&&u.pathname.startsWith('/rooms/'))void track('airbnb_click','stay',a.dataset.placement||'guide');});
 // Preserve old guest-guide deep links without forcing search visitors into a language redirect.
-if(location.pathname==='/'&&['#arrive','#house','#rules','#checkout'].includes(location.hash))location.replace('/guide/'+location.hash);
+if(['/', '/es/'].includes(location.pathname)&&['#arrive','#house','#rules','#checkout'].includes(location.hash))location.replace((location.pathname==='/es/'?'/es/guia/':'/guide/')+location.hash);
 })();
 
 // Native details works without JavaScript; Escape/outside click adds convenience.

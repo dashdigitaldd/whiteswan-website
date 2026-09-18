@@ -25,7 +25,7 @@ for file in pages:
  assert 'googletagmanager.com' not in (root/file).read_text()
 assert (root/'CNAME').read_text().strip()=='staywhiteswan.com'
 ET.parse(root/'sitemap.xml')
-for file in ['assets/site.js','assets/config.js','assets/gallery.js','assets/booking.js','assets/retreat.js']:subprocess.run(['node','--check',str(root/file)],check=True)
+for file in ['assets/site.js','assets/config.js','assets/gallery.js','assets/booking.js','assets/retreat.js','assets/guest-experience.js']:subprocess.run(['node','--check',str(root/file)],check=True)
 print('Ten localized pages, local assets, metadata, sitemap, CNAME and JavaScript checks passed.')
 
 # Published testimonials contain only explicitly selected public review fields.

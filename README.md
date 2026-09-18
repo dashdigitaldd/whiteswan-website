@@ -71,3 +71,7 @@ The September 18 visual pass introduces a warm editorial hero treatment, a bronz
 ### Integrated guest handbook
 
 `assets/guide.css` styles the shared destination cards and handbook. All eight guide chapters remain available at their existing anchors, with a desktop chapter rail and a mobile topic strip. EN/ES switching retains the selected chapter. Six destinations are also rendered directly on the homepage, so coastal discovery stays on-page. Service links carry their topic and source section into WhatsApp; the original on-site number and directions link are preserved. Booking calls to action use the existing on-site planning flow. Imported operating policies and indicative service prices still need owner validation before launch; this visual migration does not verify or change them.
+
+### Complete content and final guest experience
+
+[The migration audit](docs/CONTENT_MIGRATION.md) maps every substantive section from the live original site to the current experience and records intentional replacements. The homepage now includes all six original FAQs within an 18-answer library, search/topic filters, arrival/house/rules/departure shortcuts, smaller service extras and planning details. `scripts/hospitality.py` renders this from the same retained guide content; `assets/guest-experience.js` adds local search, deep-linked answers and section navigation. All content remains accessible without JavaScript. FAQ searches never leave the page. The privacy pages now use the shared site shell as well.
