@@ -2,14 +2,17 @@
   "use strict";
   const menuButton = document.querySelector(".menu-toggle");
   const menu = document.querySelector("#mobile-menu");
+  const menuLanguage = document.documentElement.lang === "es";
   const closeMenu = () => {
     if (!menu) return;
     menu.hidden = true;
     menuButton?.setAttribute("aria-expanded", "false");
+    menuButton?.setAttribute("aria-label", menuLanguage ? "Abrir menú" : "Open menu");
   };
   menuButton?.addEventListener("click", () => {
     menu.hidden = !menu.hidden;
     menuButton.setAttribute("aria-expanded", String(!menu.hidden));
+    menuButton.setAttribute("aria-label", menu.hidden ? (menuLanguage ? "Abrir menú" : "Open menu") : (menuLanguage ? "Cerrar menú" : "Close menu"));
   });
   menu?.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
   document.addEventListener("keydown", (e) => {
@@ -18,6 +21,10 @@
       menuButton.focus();
     }
   });
+  document.addEventListener("click", event => {
+    if (menu && !menu.hidden && !menu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+  });
+  window.matchMedia("(min-width: 1151px)").addEventListener("change", event => { if (event.matches) closeMenu(); });
   const dayTabs = [...document.querySelectorAll("[data-day-tab]")];
   function chooseDay(tab, focus = false) {
     dayTabs.forEach((button) => {
@@ -59,6 +66,7 @@
     figures.forEach((f) => {
       f.hidden = category !== "all" && f.dataset.photoCategory !== category;
     });
+    document.querySelector(".photo-tour-grid").dataset.galleryLayout = category;
     visible = all.filter((a) => !a.closest("figure").hidden);
     document.querySelector(".photo-results").textContent =
       `${visible.length} ${es ? "fotos" : "photos"}`;

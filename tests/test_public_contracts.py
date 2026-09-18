@@ -26,6 +26,7 @@ class PublicContracts(unittest.TestCase):
                 page=homepage.stay(lang,lambda *a:'',lambda *a:'')
             self.assertIn('id="synthetic-provider-widget"',page)
             self.assertNotIn('id="stay-request"',page)
+            self.assertNotIn('class="stay-steps"',page)
             self.assertNotIn('Online booking is being connected',page)
 
     def test_comments_alone_do_not_enable_booking(self):

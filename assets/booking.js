@@ -26,13 +26,25 @@
     date.setUTCDate(date.getUTCDate() + 1);
     return date.toISOString().slice(0, 10);
   };
+  const duration = document.querySelector(".stay-duration");
+  const updateDuration = () => {
+    if (!duration) return;
+    const start = day(arrival.value), end = day(departure.value);
+    const valid = start && end && arrival.value >= today && end > start;
+    duration.hidden = !valid;
+    if (!valid) { duration.textContent = ""; return; }
+    const nights = Math.round((end - start) / 86400000);
+    duration.textContent = `${nights} ${T(nights === 1 ? "night at White Swan" : "nights at White Swan", nights === 1 ? "noche en White Swan" : "noches en White Swan")} · ${T("Entire private villa", "Villa privada completa")}`;
+  };
   arrival.min = today;
   departure.min = nextDay(today);
   arrival.addEventListener("change", () => {
-    if (day(arrival.value)) departure.min = nextDay(arrival.value);
+    departure.min = day(arrival.value) ? nextDay(arrival.value) : nextDay(today);
     if (departure.value && departure.value <= arrival.value) departure.value = "";
     error.textContent = "";
+    updateDuration();
   });
+  departure.addEventListener("change", updateDuration);
   form.hidden = false;
   form.addEventListener("submit", (event) => {
     event.preventDefault();
