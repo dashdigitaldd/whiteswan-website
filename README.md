@@ -63,3 +63,7 @@ The booking page supports the exact property-specific Hospitable embed through `
 ## One shared concierge
 
 Villa questions and service interests can start directly in WhatsApp through the bilingual concierge launcher and contextual service links. The main portal remains the intended source of agent configurations, verified knowledge, learning and approvals. WhatsApp receiving and automatic replies are **not connected yet**. See [shared concierge implementation and activation contract](docs/SHARED_CONCIERGE.md).
+
+## Coastal editorial finish
+
+The September 18 visual pass introduces a warm editorial hero treatment, a bronze swan mark, fine serif type, deeper pine service panels and a combined mobile booking/concierge dock. The original 36-photo gallery is preserved. [Selected image, exact edit prompt and provenance](docs/EDITORIAL_RETOUCH.md) document the built-in image edit. Motion is progressive enhancement with reduced-motion support; no content depends on animations to appear.

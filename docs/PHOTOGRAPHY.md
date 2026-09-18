@@ -54,3 +54,7 @@ Homepage/social preview imagery follows the house-and-pool opening. The full 36-
 The owner requested that the first impression show the architecture as well as the pool. The opening now uses listing photo **2569961419**: the sunlit house, private pool and palms. The previous ocean-only hero is retained in the gallery. A sand-toned copy panel sits beside the photograph on desktop; on mobile the complete 3:2 photograph appears first, followed by the copy. No headline covers the house. The social preview uses the same house photograph.
 
 The visual direction uses restrained serif type, ivory/sand surfaces, pine buttons, fine bronze rules and natural property photography. It takes cues from luxury coastal hospitality without borrowing hotel branding or suggesting affiliation, resort staffing or unverified amenities.
+
+## Editorial enhancement — September 18, 2026
+
+The homepage now uses an owner-authorized editorial treatment of the house-and-pool photograph. The original photo tour and source image are unchanged. A visible caption identifies the enhanced opening photograph and links to the original gallery. The first generated treatment was discarded in favor of a subtler second version. As a generative edit it is not pixel-identical to the source; see `EDITORIAL_RETOUCH.md` for the exact prompt, asset paths and limitations. New CSS presentation and a bronze swan emblem complete the visual treatment.
