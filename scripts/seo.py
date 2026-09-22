@@ -6,13 +6,13 @@ from photography import registry, listing_key, GALLERY_ORDER
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://staywhiteswan.com'
 PAGES={
- 'home': {'en':'/','es':'/es/','label':('The villa','La villa'),'updated':'2026-09-18',
+ 'home': {'en':'/','es':'/es/','label':('The villa','La villa'),'updated':'2026-09-22',
   'title':('White Swan | Ocean-View Villa in Xanadu, El Salvador','Casa de playa en Xanadu, El Salvador | White Swan'),
   'description':('Stay at White Swan, a private four-bedroom villa in Xanadu, El Salvador, with an infinity pool and Pacific views. Explore the house and plan your stay.','White Swan, tu casa de playa privada en Xanadu, El Salvador: cuatro habitaciones, piscina infinita y vista al Pacífico. Conoce la casa y planea tu estadía.')},
- 'gallery': {'en':'/photos/','es':'/es/fotos/','label':('Villa photos','Fotos de la villa'),'updated':'2026-09-18',
+ 'gallery': {'en':'/photos/','es':'/es/fotos/','label':('Villa photos','Fotos de la villa'),'updated':'2026-09-22',
   'title':('White Swan Villa Photos | Pool, Bedrooms & Ocean Views','Fotos de White Swan | Piscina, habitaciones y vista al mar'),
   'description':('Explore 35 photos of White Swan Villa in Xanadu, El Salvador: four bedrooms, a private infinity pool, kitchen, terrace and Pacific Ocean views.','Explora 35 fotos de White Swan en Xanadu, El Salvador: cuatro habitaciones, piscina infinita privada, cocina, terraza y vistas al océano Pacífico.')},
- 'stay': {'en':'/stay/','es':'/es/reservar/','label':('Plan your stay','Planea tu estadía'),'updated':'2026-09-18',
+ 'stay': {'en':'/stay/','es':'/es/reservar/','label':('Plan your stay','Planea tu estadía'),'updated':'2026-09-22',
   'title':('Plan Your Stay at White Swan Villa | Xanadu, El Salvador','Planea tu estadía en White Swan | Xanadu, El Salvador'),
   'description':('Plan a private villa stay at White Swan in Xanadu. Share your dates and group size on WhatsApp; your host confirms availability, price and booking terms.','Planea tu estadía en White Swan, Xanadu. Comparte fechas y número de huéspedes por WhatsApp; el anfitrión confirma disponibilidad, precio y condiciones.')},
  'guide': {'en':'/guide/','es':'/es/guia/','label':('Guest guide','Guía del huésped'),'updated':'2026-09-18',

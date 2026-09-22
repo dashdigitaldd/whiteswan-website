@@ -83,3 +83,7 @@ The final editorial pass gives the photo tour a full-width opening photograph, n
 See [docs/SEO.md](docs/SEO.md) for the page/keyword map, structured facts, local audit measurements, Search Console verification and the production launch checklist. Public verification tokens belong in `content/search-verification.json`; leave blank until supplied by the corresponding account.
 
 Install `requirements-dev.txt` before rebuilding. The generator now also compiles source CSS into `assets/site.min.css`, writes the image sitemap and creates the bilingual recovery page. Font licenses and provenance are in `assets/fonts/`. `python3 scripts/prepare_cover_formats.py` mechanically regenerates the cover AVIF files if the selected source photography changes. Commit generated HTML, CSS and discovery files together; CI checks they are reproducible.
+
+## September 22 experience refinement
+
+The latest pass improves supporting text and touch targets across the public site, brings date selection forward, preserves valid stay details when switching languages, and adds gallery loading/retry states. See [experience changes and QA](docs/EXPERIENCE_QA.md). The WhatsApp request remains explicitly host-reviewed; no payment or instant booking is implied.

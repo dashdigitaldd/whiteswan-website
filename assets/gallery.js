@@ -80,15 +80,45 @@
   filter(location.hash.slice(1) || "all");
   window.addEventListener("hashchange", () => filter(location.hash.slice(1)));
   const img = viewer.querySelector(".viewer-stage img");
+  const feedback = viewer.querySelector(".viewer-feedback");
+  const retry = viewer.querySelector("[data-photo-retry]");
+  let request = 0;
   function show(next) {
     if (!visible.length) return;
     index = (next + visible.length) % visible.length;
     const a = visible[index];
-    img.src = a.href;
+    const version = ++request;
+    img.style.visibility = "hidden";
+    img.setAttribute("aria-busy", "true");
+    feedback.hidden = false;
+    retry.hidden = true;
+    feedback.querySelector("p").textContent = es ? "Preparando tu vista…" : "Bringing your view into focus…";
+    // Load separately so a slow previous request cannot replace the selected view.
+    const preload = new Image();
+    preload.onload = () => {
+      if (version !== request) return;
+      img.src = a.href;
+      img.style.visibility = "visible";
+      img.setAttribute("aria-busy", "false");
+      feedback.hidden = true;
+    };
+    preload.onerror = () => {
+      if (version !== request) return;
+      img.setAttribute("aria-busy", "false");
+      feedback.querySelector("p").textContent = es ? "Esta foto no se pudo cargar. Intenta de nuevo o explora la siguiente." : "This photo couldn’t load. Try again or explore the next one.";
+      retry.hidden = false;
+    };
+    preload.src = a.href;
     img.alt = a.dataset.caption;
     viewer.querySelector(".viewer-caption p").textContent = a.dataset.caption;
     viewer.querySelector(".viewer-caption span").textContent = `${index + 1} / ${visible.length}`;
   }
+  retry.addEventListener("click", () => {
+    show(index);
+    // Keep keyboard navigation in the dialog when the retry button disappears.
+    viewer.querySelector("[data-photo-next]").focus();
+  });
+  viewer.addEventListener("close", () => { request++; });
   all.forEach((a) =>
     a.addEventListener("click", (e) => {
       e.preventDefault();

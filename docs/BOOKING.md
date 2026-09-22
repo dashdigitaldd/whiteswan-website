@@ -31,3 +31,9 @@ Sources checked September 16, 2026:
 ## Validation
 
 Static checks cover all ten localized pages, local links, metadata, sitemap, JavaScript syntax, public review field allowlisting and internal booking CTA destinations. Browser checks cover 320/390/768/1440px, both languages, keyboard/menu controls, date validation, night counts, group labels, editing a prepared request, the unsent WhatsApp handoff and no-JavaScript behavior. No live messages, reservations or payments are used in tests.
+
+## September 22 guest experience refinement
+
+Date selection sits beside the villa introduction on desktop and before the property photo on phones. The shorter layout retains the explicit host-confirmed request model. A three-part summary separates arrival, departure and group size, with a night count and an editable WhatsApp handoff. Switching EN/ES carries valid dates and group size through allowlisted query parameters; invalid or past dates are discarded. No guest identity, contact details or free text are stored in those links.
+
+The duplicate mobile booking dock is omitted on the stay page. Its separate concierge control hides while a date/group field has focus, keeping the form unobstructed. The steps below the form explain what happens next and remain omitted when a real Hospitable embed is configured.
