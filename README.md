@@ -87,3 +87,7 @@ Install `requirements-dev.txt` before rebuilding. The generator now also compile
 ## September 22 experience refinement
 
 The latest pass improves supporting text and touch targets across the public site, brings date selection forward, preserves valid stay details when switching languages, and adds gallery loading/retry states. See [experience changes and QA](docs/EXPERIENCE_QA.md). The WhatsApp request remains explicitly host-reviewed; no payment or instant booking is implied.
+
+## Owner brand identity
+
+The September 25 update uses the supplied White Swan Beach House logo in all ten page headers and footers. Navy actions and gold accents coordinate with the private app while retaining ivory reading surfaces and the existing villa photographs. See [brand provenance and usage](docs/BRAND.md). Changes remain in the fork until the upstream owner merges them.

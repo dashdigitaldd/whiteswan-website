@@ -1,0 +1,48 @@
+/* White Swan owner identity, 25 September 2026. Original artwork, never recreated. */
+:root, .editorial {
+  --brand-navy: #041839;
+  --brand-gold: #d6b14c;
+  --brand-bronze: #806018;
+  --ivory: #faf8f2;
+  --pine: var(--brand-navy);
+  --ink: #172d48;
+  --muted: #5d6774;
+  --gold: var(--brand-bronze);
+  --line: #e3ddcf;
+}
+.white-swan-logo { display: block; position: relative; width: 132px; aspect-ratio: 1116 / 844; overflow: hidden; flex-shrink: 0; }
+.white-swan-logo img { position: absolute; width: 112.366%; max-width: none; height: auto; left: -5.735%; top: -27.488%; }
+.editorial-header { padding-block: 10px; border-bottom: 1px solid #e4d7b5; }
+.owner-brand { display: block; padding: 0; flex-shrink: 0; }
+.editorial-footer .owner-brand { display: inline-block; margin-bottom: 18px; }
+.editorial-footer .white-swan-logo { width: 156px; }
+.editorial .button { background: var(--brand-navy); border-color: var(--brand-navy); color: #fffdf6; }
+.editorial .button:not(.light):hover { background: #20395a; border-color: #20395a; }
+.editorial .button.light { background: #f7edcf; color: var(--brand-navy); border-color: #e7d39b; }
+.editorial .button.light:hover { background: #efdda7; color: var(--brand-navy); }
+.editorial .button.outline { background: transparent; color: var(--brand-navy); border-color: #a99a78; }
+.editorial .button.outline:hover { background: #eee8d9; }
+.editorial .eyebrow { color: var(--brand-bronze); }
+.editorial .resort-hero { background: #f1ebdc; }
+.editorial .resort-hero h1, .editorial .resort-hero h1 em { color: var(--brand-navy); }
+.editorial .text-link { color: var(--brand-navy); }
+.editorial .essential-number, .editorial .essential-number small { color: var(--brand-bronze); }
+.editorial-footer, .editorial .booking-card { background: #f1ebdc; }
+.editorial-footer .footer-bottom { border-color: #dbceaf; }
+.editorial .photo-viewer, .editorial .photo-viewer::backdrop { background: var(--brand-navy); }
+.concierge-launcher > summary { border-color: #b99b4e; color: var(--brand-navy); }
+.concierge-panel { border-color: #ddcfa9; }
+.journey-nav a[aria-current], .journey-nav a:hover, .handbook-index a[aria-current] { color: var(--brand-bronze); border-color: var(--brand-bronze); }
+@media (max-width: 700px) {
+  .editorial-header { padding: 8px 18px; min-height: 94px; }
+  .editorial-header .white-swan-logo { width: 105px; }
+  .editorial .header-actions { gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { .owner-brand { transition: none; } }
+.editorial .experience-story { background: var(--brand-navy); }
+.editorial .experience-story .eyebrow { color: #efd485; }
+.editorial .experience-story .section-heading > p, .editorial .experience-story .curated-card p, .experience-story > .fine, .services-foot p { color: #d6ddeb; }
+.editorial .services-simple .service-cta { color: var(--brand-navy); background: #f7edcf; border-color: #e7d39b; }
+.editorial .services-simple .service-cta:hover { background: #efdda7; border-color: #efdda7; }
+.editorial .resort-hero p, .villa-story .lead-copy { color: #596577; }
+.stay-facts strong { color: var(--brand-bronze); }

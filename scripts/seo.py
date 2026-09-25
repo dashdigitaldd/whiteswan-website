@@ -6,19 +6,19 @@ from photography import registry, listing_key, GALLERY_ORDER
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://staywhiteswan.com'
 PAGES={
- 'home': {'en':'/','es':'/es/','label':('The villa','La villa'),'updated':'2026-09-22',
+ 'home': {'en':'/','es':'/es/','label':('The villa','La villa'),'updated':'2026-09-25',
   'title':('White Swan | Ocean-View Villa in Xanadu, El Salvador','Casa de playa en Xanadu, El Salvador | White Swan'),
   'description':('Stay at White Swan, a private four-bedroom villa in Xanadu, El Salvador, with an infinity pool and Pacific views. Explore the house and plan your stay.','White Swan, tu casa de playa privada en Xanadu, El Salvador: cuatro habitaciones, piscina infinita y vista al Pacífico. Conoce la casa y planea tu estadía.')},
- 'gallery': {'en':'/photos/','es':'/es/fotos/','label':('Villa photos','Fotos de la villa'),'updated':'2026-09-22',
+ 'gallery': {'en':'/photos/','es':'/es/fotos/','label':('Villa photos','Fotos de la villa'),'updated':'2026-09-25',
   'title':('White Swan Villa Photos | Pool, Bedrooms & Ocean Views','Fotos de White Swan | Piscina, habitaciones y vista al mar'),
   'description':('Explore 35 photos of White Swan Villa in Xanadu, El Salvador: four bedrooms, a private infinity pool, kitchen, terrace and Pacific Ocean views.','Explora 35 fotos de White Swan en Xanadu, El Salvador: cuatro habitaciones, piscina infinita privada, cocina, terraza y vistas al océano Pacífico.')},
- 'stay': {'en':'/stay/','es':'/es/reservar/','label':('Plan your stay','Planea tu estadía'),'updated':'2026-09-22',
+ 'stay': {'en':'/stay/','es':'/es/reservar/','label':('Plan your stay','Planea tu estadía'),'updated':'2026-09-25',
   'title':('Plan Your Stay at White Swan Villa | Xanadu, El Salvador','Planea tu estadía en White Swan | Xanadu, El Salvador'),
   'description':('Plan a private villa stay at White Swan in Xanadu. Share your dates and group size on WhatsApp; your host confirms availability, price and booking terms.','Planea tu estadía en White Swan, Xanadu. Comparte fechas y número de huéspedes por WhatsApp; el anfitrión confirma disponibilidad, precio y condiciones.')},
- 'guide': {'en':'/guide/','es':'/es/guia/','label':('Guest guide','Guía del huésped'),'updated':'2026-09-18',
+ 'guide': {'en':'/guide/','es':'/es/guia/','label':('Guest guide','Guía del huésped'),'updated':'2026-09-25',
   'title':('White Swan Guest Guide | Villa Services & Surf City','Guía de White Swan | Servicios de la villa y Surf City'),
   'description':('Your White Swan guest guide: arrival, villa amenities, private chef, massages, house rules and places to explore near Xanadu on El Salvador’s coast.','Tu guía de White Swan: llegada, comodidades, chef privado, masajes, reglas de la casa y lugares para descubrir cerca de Xanadu, en la costa salvadoreña.')},
- 'privacy': {'en':'/privacy/','es':'/es/privacidad/','label':('Privacy','Privacidad'),'updated':'2026-09-18',
+ 'privacy': {'en':'/privacy/','es':'/es/privacidad/','label':('Privacy','Privacidad'),'updated':'2026-09-25',
   'title':('Privacy & Cookies | White Swan Villa','Privacidad y cookies | White Swan'),
   'description':('How White Swan handles guest enquiries, contact details, optional analytics and privacy requests.','Cómo White Swan gestiona consultas, datos de contacto, analítica opcional y solicitudes de privacidad.'),'index':False},
 }
@@ -92,4 +92,4 @@ def build_discovery():
 
 
 def build_not_found():
-    (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found | White Swan</title><meta name="robots" content="noindex,follow"><link rel="stylesheet" href="/assets/site.min.css"><link rel="icon" href="/assets/favicon.svg"></head><body class="editorial"><main class="section"><span class="eyebrow">WHITE SWAN · 404</span><h1>Let’s get you back<br>to the villa.</h1><p>This page may have moved. Your next stay is still waiting.</p><div class="actions"><a class="button" href="/">White Swan home →</a><a class="text-link" href="/stay/">Plan your stay →</a></div><hr><div lang="es"><h2>Volvamos a la villa.</h2><p>Esta página no está disponible. Continúa explorando White Swan.</p><a class="text-link" href="/es/">Ver White Swan en español →</a></div></main></body></html>\n''')
+    (ROOT/'404.html').write_text('''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found | White Swan</title><meta name="robots" content="noindex,follow"><link rel="stylesheet" href="/assets/site.min.css"><link rel="icon" href="/assets/brand/white-swan-logo.png" type="image/png"></head><body class="editorial"><main class="section"><span class="eyebrow">WHITE SWAN · 404</span><h1>Let’s get you back<br>to the villa.</h1><p>This page may have moved. Your next stay is still waiting.</p><div class="actions"><a class="button" href="/">White Swan home →</a><a class="text-link" href="/stay/">Plan your stay →</a></div><hr><div lang="es"><h2>Volvamos a la villa.</h2><p>Esta página no está disponible. Continúa explorando White Swan.</p><a class="text-link" href="/es/">Ver White Swan en español →</a></div></main></body></html>\n''')
