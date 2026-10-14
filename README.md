@@ -99,3 +99,7 @@ The September 25 update uses the supplied White Swan Beach House logo in all ten
 ## Calendar refinement, October 14, 2026
 
 The bilingual stay planner uses arrival/departure selectors, visible range highlighting and a clear-dates action. Native date fields remain in a manual-entry disclosure; keyboard arrows move among enabled dates and selection preserves focus. Availability remains provider-backed and rechecked by the server before continuing. No payment, inventory hold or booking confirmation is implied.
+
+### Overnight selection rules
+
+Available dates represent nights in the villa. Checkout is exclusive: an arrival on the 10th can depart on the 11th even when the 11th is booked, but cannot depart on the 12th. The picker disables crossing an occupied night, missing/unverified nights and provider check-in/check-out or minimum-stay restrictions. Month navigation loads the bounded adjacent calendar windows needed for a maximum 30-night range; expired month data is not treated as available. Manual entry is checked against known constraints and the server always rechecks before continuing. Run `node --test tests/calendar.test.cjs` for synthetic range regression tests.

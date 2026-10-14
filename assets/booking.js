@@ -34,6 +34,7 @@
     days = [],
     picking = "arrival",
     sequence = 0,
+    calendarLoading = false,
     selection = null,
     session = null,
     sent = false,
@@ -95,13 +96,19 @@
     }
     document.querySelector("#clear-dates").hidden = !arrival.value && !departure.value;
     document.querySelector(".calendar-instruction").textContent = picking === "departure"
-      ? T("Now choose your departure.", "Ahora elige tu fecha de salida.")
+      ? T("Choose departure. Your last night must be available.", "Elige salida. Tu última noche debe estar disponible.")
       : arrival.value && departure.value
         ? T("Your dates are selected.", "Tus fechas, listas para consultar.")
         : T("Choose your arrival date.", "Elige tu fecha de llegada.");
     renderDays();
   }
+  function knownDays() {
+    return new Map([...months.values()]
+      .filter((result) => Date.parse(result.expiresAt) > Date.now())
+      .flatMap((result) => result.days.map((day) => [day.date, day])));
+  }
   function renderDays() {
+    const known = knownDays();
     const focusedDate = grid.contains(document.activeElement) ? document.activeElement.dataset.date : null;
     grid.replaceChildren();
     for (let i = 0; i < 7; i++) {
@@ -124,26 +131,34 @@
         state = d?.status || "unknown",
         button = document.createElement("button");
       const pickingEnd = picking === "departure" && date(arrival.value) && value > arrival.value;
+      const endState = (pickingEnd || (date(arrival.value) && value === departure.value))
+        ? WhiteSwanCalendar.departureState(arrival.value, value, known)
+        : null;
+      const checkoutOnly = (pickingEnd || value === departure.value) && endState === "available" && state === "unavailable";
       button.type = "button";
+      button.dataset.checkoutOnly = String(checkoutOnly);
       button.className = "calendar-day";
       button.dataset.state = state;
       button.dataset.date = value;
       if (value === today) button.setAttribute("aria-current", "date");
       button.textContent = String(n);
       button.disabled =
-        value < today ||
-        value > horizon ||
+        calendarLoading || !d || value < today || value > horizon ||
         (picking === "departure" && date(arrival.value) && value < arrival.value) ||
-        (!pickingEnd && (state === "unavailable" || d?.closedCheckin === true)) ||
-        (pickingEnd && d?.closedCheckout === true);
-      const meaning =
-        state === "available"
-          ? T("available", "disponible")
-          : state === "unavailable"
-            ? pickingEnd
-              ? T("departure only", "solo salida")
-              : T("unavailable", "no disponible")
-            : T("not yet verified", "sin verificar");
+        (pickingEnd ? endState !== "available" : state !== "available" || d?.closedCheckin !== false);
+      const meaning = checkoutOnly
+        ? T("checkout only, no overnight stay", "solo salida, no se puede pasar la noche")
+        : pickingEnd && endState === "unavailable_nights"
+          ? T("stay crosses unavailable nights", "la estadía incluye noches no disponibles")
+          : pickingEnd && endState === "minimum_stay"
+            ? T("minimum stay not met", "no cumple la estadía mínima")
+            : pickingEnd && endState === "closed_departure"
+              ? T("departure not permitted", "salida no permitida")
+              : state === "available"
+                ? T("available", "disponible")
+                : state === "unavailable"
+                  ? T("unavailable", "no disponible")
+                  : T("not yet verified", "sin verificar");
       button.setAttribute("aria-label", `${fmt.format(new Date(value))}, ${meaning}`);
       button.setAttribute(
         "aria-pressed",
@@ -154,6 +169,7 @@
       if (arrival.value && departure.value && value > arrival.value && value < departure.value)
         button.classList.add("in-range");
       button.addEventListener("click", () => {
+        if (button.disabled) return;
         if (pickingEnd) {
           departure.value = value;
           picking = "arrival";
@@ -179,6 +195,7 @@
       });
       grid.append(button);
     }
+    document.querySelector(".legend-checkout").hidden = !grid.querySelector('[data-checkout-only="true"]:not(:disabled)');
     if (focusedDate) {
       const target = grid.querySelector(`[data-date="${focusedDate}"]:not(:disabled)`)
         || document.querySelector(`[data-pick="${picking}"]`);
@@ -193,23 +210,26 @@
     ).format(new Date(month + "-01"));
     document.querySelector("#previous-month").disabled = month <= today.slice(0, 7);
     document.querySelector("#next-month").disabled = month >= horizon.slice(0, 7);
+    calendarLoading = true;
     days = [];
     renderDays();
     calendarStatus.textContent = T("Checking the calendar…", "Consultando el calendario…");
     document.querySelector("#retry-calendar").hidden = true;
     grid.setAttribute("aria-busy", "true");
     try {
-      let result = months.get(month);
-      if (force || !result || Date.parse(result.expiresAt) <= Date.now())
-        result = await api("/v1/availability?month=" + month);
+      const requestedMonth = month;
+      const results = await Promise.all(WhiteSwanCalendar.requiredMonths(month, arrival.value).map(async (key) => {
+        let result = months.get(key);
+        if (force || !result || Date.parse(result.expiresAt) <= Date.now())
+          result = await api("/v1/availability?month=" + key);
+        if (!Array.isArray(result.days) || !Number.isFinite(Date.parse(result.expiresAt)) || Date.parse(result.expiresAt) <= Date.now())
+          throw new Error("stale");
+        return [key, result];
+      }));
       if (current !== sequence) return;
-      if (
-        !Array.isArray(result.days) ||
-        !Number.isFinite(Date.parse(result.expiresAt)) ||
-        Date.parse(result.expiresAt) <= Date.now()
-      )
-        throw new Error("stale");
-      months.set(month, result);
+      for (const [key, result] of results) months.set(key, result);
+      const result = months.get(requestedMonth);
+      calendarLoading = false;
       days = result.days;
       renderDays();
       calendarStatus.textContent =
@@ -231,7 +251,11 @@
       );
       document.querySelector("#retry-calendar").hidden = false;
     } finally {
-      if (current === sequence) grid.setAttribute("aria-busy", "false");
+      if (current === sequence) {
+        calendarLoading = false;
+        renderDays();
+        grid.setAttribute("aria-busy", "false");
+      }
     }
   }
   for (const [id, delta] of [
@@ -289,7 +313,7 @@
   if (/^(?:[1-9]|10)$/.test(params.get("guests") || ""))
     form.elements.guests.value = params.get("guests");
   arrival.addEventListener("change", () => {
-    if (departure.value < arrival.value) departure.value = "";
+    if (departure.value <= arrival.value) departure.value = "";
     if (date(arrival.value) && arrival.value >= today && arrival.value <= horizon) {
       month = arrival.value.slice(0, 7);
       void loadMonth();
@@ -333,6 +357,13 @@
         "Choose 1 to 30 nights within the next year.",
         "Elige de 1 a 30 noches dentro del próximo año.",
       );
+      return;
+    }
+    const rangeState = WhiteSwanCalendar.departureState(arrival.value, departure.value, knownDays());
+    if (issues[rangeState]) {
+      error.textContent = issues[rangeState] + (rangeState === "minimum_stay" ? knownDays().get(arrival.value).minStay : "");
+      picking = "departure";
+      update();
       return;
     }
     pending = true;
