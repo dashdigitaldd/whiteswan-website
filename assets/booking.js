@@ -424,8 +424,10 @@
       row(labels[line.code],cash(line.amount));
     }
     row(T("Airbnb service fee", "Cargo de servicio de Airbnb"),cash(0),"price-no-channel-fee");
-    row(T("Subtotal before taxes", "Subtotal antes de impuestos"),cash(pricing.subtotal),"price-subtotal");
-    row(T("Taxes", "Impuestos"),T("To be confirmed", "Por confirmar"));
+    const taxesIncluded = pricing.taxStatus === "included";
+    if (taxesIncluded) row(T("Taxes", "Impuestos"),T("Included in your rates", "Incluidos en las tarifas"));
+    row(taxesIncluded ? T("Estimated total", "Total estimado") : T("Subtotal before taxes", "Subtotal antes de impuestos"),cash(taxesIncluded ? pricing.estimatedTotal : pricing.subtotal),"price-subtotal");
+    if (!taxesIncluded) row(T("Taxes", "Impuestos"),T("To be confirmed", "Por confirmar"));
     panel.append(list);
     const nightly = el("details",null,"nightly-breakdown");
     nightly.append(el("summary",T("See each nightly rate", "Ver el precio de cada noche")));
@@ -437,7 +439,7 @@
     }
     nightly.append(nightList);
     panel.append(nightly);
-    panel.append(el("p", T("An estimate from the current nightly rates and property fees. Taxes, any eligible discounts and the final total will be confirmed before payment. No Airbnb service fee is added.","Estimación según las tarifas por noche y los cargos actuales de la propiedad. Confirmaremos impuestos, descuentos que apliquen y el total final antes del pago. No agregamos cargos de servicio de Airbnb."),"price-note"));
+    panel.append(el("p", taxesIncluded ? T("Based on current nightly rates and property fees, with taxes included. No Airbnb service fee is added. Your host will confirm any eligible discounts and the final quote before payment.","Según las tarifas por noche y los cargos actuales de la propiedad, con impuestos incluidos. No agregamos cargos de servicio de Airbnb. Tu anfitrión confirmará los descuentos que apliquen y la cotización final antes del pago.") : T("An estimate from the current nightly rates and property fees. Taxes, any eligible discounts and the final total will be confirmed before payment. No Airbnb service fee is added.","Estimación según las tarifas por noche y los cargos actuales de la propiedad. Confirmaremos impuestos, descuentos que apliquen y el total final antes del pago. No agregamos cargos de servicio de Airbnb."),"price-note"));
     const optional = el("details",null,"price-optional");
     optional.append(el("summary",T("Pets, extras & payment", "Mascotas, extras y pago")));
     if (pricing.petFee != null) optional.append(el("p",T(`Bringing a pet? The configured pet fee is ${cash(pricing.petFee)} per stay, subject to host approval. It is not included above. Mention your pet in your request.`,`¿Traes mascota? El cargo configurado es de ${cash(pricing.petFee)} por estadía, sujeto a aprobación del anfitrión. No está incluido arriba. Menciona tu mascota en la solicitud.`)));
