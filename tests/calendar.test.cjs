@@ -1,6 +1,6 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-require('../assets/calendar-policy.js');
+require('../assets/booking.js');
 const { departureState, requiredMonths } = globalThis.WhiteSwanCalendar;
 const day = (date, status = 'available', extra = {}) => [date, {date, status, minStay:1, closedCheckin:false, closedCheckout:false, ...extra}];
 test('an occupied checkout day is allowed, but its night cannot be crossed', () => {
