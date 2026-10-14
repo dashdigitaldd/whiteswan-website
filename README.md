@@ -95,3 +95,7 @@ The latest pass improves supporting text and touch targets across the public sit
 ## Owner brand identity
 
 The September 25 update uses the supplied White Swan Beach House logo in all ten page headers and footers. Navy actions and gold accents coordinate with the private app while retaining ivory reading surfaces and the existing villa photographs. See [brand provenance and usage](docs/BRAND.md). Changes remain in the fork until the upstream owner merges them.
+
+## Calendar refinement, October 14, 2026
+
+The bilingual stay planner uses arrival/departure selectors, visible range highlighting and a clear-dates action. Native date fields remain in a manual-entry disclosure; keyboard arrows move among enabled dates and selection preserves focus. Availability remains provider-backed and rechecked by the server before continuing. No payment, inventory hold or booking confirmation is implied.

@@ -32,6 +32,7 @@
     languageLink = document.querySelector(".header-actions .language");
   let month = today.slice(0, 7),
     days = [],
+    picking = "arrival",
     sequence = 0,
     selection = null,
     session = null,
@@ -84,9 +85,24 @@
       url.searchParams.set("guests", form.elements.guests.value);
       languageLink.href = url.pathname + url.search;
     }
+    for (const control of document.querySelectorAll(".date-choice")) {
+      const field = control.dataset.pick;
+      control.dataset.active = String(field === picking);
+      control.setAttribute("aria-pressed", String(field === picking));
+      control.querySelector("strong").textContent = date(form.elements[field].value)
+        ? fmt.format(new Date(form.elements[field].value))
+        : T("Choose date", "Elige fecha");
+    }
+    document.querySelector("#clear-dates").hidden = !arrival.value && !departure.value;
+    document.querySelector(".calendar-instruction").textContent = picking === "departure"
+      ? T("Now choose your departure.", "Ahora elige tu fecha de salida.")
+      : arrival.value && departure.value
+        ? T("Your dates are selected.", "Tus fechas, listas para consultar.")
+        : T("Choose your arrival date.", "Elige tu fecha de llegada.");
     renderDays();
   }
   function renderDays() {
+    const focusedDate = grid.contains(document.activeElement) ? document.activeElement.dataset.date : null;
     grid.replaceChildren();
     for (let i = 0; i < 7; i++) {
       const label = document.createElement("span");
@@ -107,14 +123,17 @@
         d = days.find((x) => x.date === value),
         state = d?.status || "unknown",
         button = document.createElement("button");
-      const pickingEnd = date(arrival.value) && !departure.value && value > arrival.value;
+      const pickingEnd = picking === "departure" && date(arrival.value) && value > arrival.value;
       button.type = "button";
       button.className = "calendar-day";
       button.dataset.state = state;
+      button.dataset.date = value;
+      if (value === today) button.setAttribute("aria-current", "date");
       button.textContent = String(n);
       button.disabled =
         value < today ||
         value > horizon ||
+        (picking === "departure" && date(arrival.value) && value < arrival.value) ||
         (!pickingEnd && (state === "unavailable" || d?.closedCheckin === true)) ||
         (pickingEnd && d?.closedCheckout === true);
       const meaning =
@@ -130,18 +149,40 @@
         "aria-pressed",
         String(value === arrival.value || value === departure.value),
       );
+      if (value === arrival.value) button.classList.add("range-start");
+      if (value === departure.value) button.classList.add("range-end");
       if (arrival.value && departure.value && value > arrival.value && value < departure.value)
         button.classList.add("in-range");
       button.addEventListener("click", () => {
-        if (pickingEnd) departure.value = value;
+        if (pickingEnd) {
+          departure.value = value;
+          picking = "arrival";
+        }
         else {
           arrival.value = value;
           departure.value = "";
+          picking = "departure";
         }
         error.textContent = "";
         update();
       });
+      button.addEventListener("keydown", (event) => {
+        const delta = { ArrowLeft: -1, ArrowRight: 1, ArrowUp: -7, ArrowDown: 7 }[event.key];
+        if (!delta) return;
+        event.preventDefault();
+        let next = shift(value, delta);
+        while (next.slice(0, 7) === month) {
+          const target = grid.querySelector(`[data-date="${next}"]`);
+          if (target && !target.disabled) { target.focus(); return; }
+          next = shift(next, delta > 0 ? 1 : -1);
+        }
+      });
       grid.append(button);
+    }
+    if (focusedDate) {
+      const target = grid.querySelector(`[data-date="${focusedDate}"]:not(:disabled)`)
+        || document.querySelector(`[data-pick="${picking}"]`);
+      target?.focus({ preventScroll: true });
     }
   }
   async function loadMonth(force = false) {
@@ -204,6 +245,30 @@
       void loadMonth();
     });
   document.querySelector("#retry-calendar").addEventListener("click", () => void loadMonth(true));
+  for (const control of document.querySelectorAll(".date-choice")) {
+    control.addEventListener("click", () => {
+      picking = control.dataset.pick;
+      if (picking === "departure" && !date(arrival.value)) picking = "arrival";
+      const value = form.elements[picking].value || arrival.value || today;
+      const nextMonth = value.slice(0, 7);
+      const changed = month !== nextMonth;
+      month = nextMonth;
+      update();
+      if (changed) void loadMonth();
+    });
+  }
+  document.querySelector("#clear-dates").addEventListener("click", () => {
+    arrival.value = "";
+    departure.value = "";
+    picking = "arrival";
+    error.textContent = "";
+    update();
+    document.querySelector('[data-pick="arrival"]').focus();
+  });
+  // Reveal native date fields if browser validation needs one of them.
+  for (const field of [arrival, departure]) field.addEventListener("invalid", () => {
+    document.querySelector(".manual-dates").open = true;
+  });
   arrival.min = today;
   arrival.max = horizon;
   departure.max = horizon;
@@ -224,15 +289,18 @@
   if (/^(?:[1-9]|10)$/.test(params.get("guests") || ""))
     form.elements.guests.value = params.get("guests");
   arrival.addEventListener("change", () => {
-    if (departure.value <= arrival.value) departure.value = "";
+    if (departure.value < arrival.value) departure.value = "";
     if (date(arrival.value) && arrival.value >= today && arrival.value <= horizon) {
       month = arrival.value.slice(0, 7);
       void loadMonth();
     }
+    picking = departure.value ? "arrival" : "departure";
     error.textContent = "";
     update();
   });
+  departure.addEventListener("change", () => { picking = "arrival"; });
   form.addEventListener("change", update);
+  picking = arrival.value && !departure.value ? "departure" : "arrival";
   update();
   form.hidden = false;
   calendar.hidden = false;
@@ -357,7 +425,7 @@
     summary.hidden = true;
     form.hidden = false;
     progress(0);
-    arrival.focus();
+    document.querySelector('[data-pick="arrival"]').focus();
   });
   contact.addEventListener("submit", async (event) => {
     event.preventDefault();
