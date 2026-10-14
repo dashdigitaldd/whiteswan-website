@@ -1,39 +1,13 @@
-# Booking within the White Swan website
+# Public availability and stay requests
 
-## Implemented now
+Updated 14 October 2026. The website owns the booking journey. Hospitable provides channel calendar data through a private service; no provider credentials belong in this repository.
 
-Primary navigation, hero, villa-facts, mobile and closing CTAs route to **`/stay/`** or **`/es/reservar/`**. The bilingual pages have a property photograph, date/group selection, a stay summary with a correct night count, edit controls and an explicit host-reviewed request handoff to the existing WhatsApp number. Dates are validated against the current date in America/El_Salvador; departure must follow arrival. Larger groups must ask the host rather than being advertised as automatically permitted.
+The hosted Cloudflare pilot supports EN/ES calendar browsing, current date checks and an inline, consented stay request with a persistent reference. Public availability contains no guest details or private notes. Calendar browsing caches for up to 60 seconds and shows its check time in El Salvador. Date checks and request submission re-read the provider. Unknown coverage never appears available. Arrival/minimum-stay/checkout restrictions are enforced; checkout night is not an occupied night.
 
-The default mode makes no availability, price, inventory hold, booking, payment or message-delivery claim. Preparing the request only creates a local summary; the guest must send it in WhatsApp. Dates remain editable and no card details are collected. No-JavaScript visitors can contact the host directly. Airbnb remains a secondary alternative, not the main CTA destination.
+This release saves an enquiry for host review, not a reservation or payment. It does not hold inventory. Group capacity, full price, taxes, fees and cancellation/payment terms still need host confirmation. Requests reuse the existing private intake feed and its idempotency. WhatsApp remains an alternative, with unchanged contact numbers.
 
-## Hospitable Direct activation dependency
+The previous optional Hospitable widget insertion is retired from the active renderer. Direct checkout will use a merchant-approved hosted payment page owned by our booking workflow. n1coBusiness is the first onboarding candidate, pending confirmation for the owner's personal-name Promerica account and lodging business. No card form or fake confirmation is published.
 
-The public API is authenticated and reviews are connected. The returned property object does **not** supply the account-specific booking-widget code or prove Direct activation. No Direct site, paid plan, payment method or live reservation was created by this release.
+Production GitHub Pages keeps intake disabled until the production service and origin are approved. `scripts/prepare-staging.py` sets the existing pilot intake origin only in the generated preview package. The live domain and CNAME remain unchanged. The admin repository's `docs/PUBLIC_BOOKING.md` records the integration contract and the quote/hold/payment/reconciliation activation requirements.
 
-Hospitable’s current plan comparison lists **Direct Lite** for non-Stripe markets, with an embedded booking widget and booking requests, but without payment processing, Instant Book or custom quotes. This is the candidate for on-site booking requests in El Salvador while an external Promerica payment arrangement is assessed. Eligibility and widget availability must still be verified in this account; the generic widget article is less explicit about Lite than the plan comparison.
-
-The owner/account operator should open **Direct Bookings → Website**, set up the White Swan property as a self-hosted site, and use **Copy widget code**. Confirm any subscription/add-on charges before activating a paid plan. Use the website property URL `https://staywhiteswan.com/stay/`; verify the Spanish equivalent works with the same property widget. No DNS change is needed.
-
-Paste the exact exported public embed into `content/hospitable-widget.html.template` and regenerate. `scripts/homepage.py` detects a non-comment embed and replaces the temporary request form with the actual widget in both languages. Never put an API/MCP token in that file. Do not manufacture a widget URL from the API property UUID. Use the current dynamic loader exported by Hospitable (August 2026 onward), not an old iframe recipe.
-
-Before release, verify the correct property, live availability, full quote/fees/taxes, mobile layout, language, booking terms, error states and the request status in Hospitable. Use an explicitly authorized test booking; the preview checks do not create one. For Lite, distinguish a booking request, acceptance and externally verified payment. Verify booking events enter the private app via its existing integration; page navigation alone is not CRM ingestion.
-
-## Payments
-
-Direct Premium payouts currently support US/UK/Australian bank accounts; Direct Basic relies on Stripe-supported merchant countries. Neither establishes a payout route to this owner’s Salvadoran Promerica personal account. Use the separate Promerica onboarding and payment architecture in `PAYMENTS.md`. Accommodation advance, remaining balance and damage deposits need distinct records and agreed terms. Hosted checkout and verified payment events are required before showing a paid/confirmed state.
-
-Sources checked September 16, 2026:
-
-- [Direct plans, including Lite](https://help.hospitable.com/en/articles/14509386-all-about-direct-bookings)
-- [Bank accounts and supported regions](https://help.hospitable.com/en/articles/14849116-set-up-a-bank-account-for-direct-bookings)
-- [Generate and embed the booking widget](https://help.hospitable.com/en/articles/14804519-how-to-add-a-booking-widget-to-your-website)
-
-## Validation
-
-Static checks cover all ten localized pages, local links, metadata, sitemap, JavaScript syntax, public review field allowlisting and internal booking CTA destinations. Browser checks cover 320/390/768/1440px, both languages, keyboard/menu controls, date validation, night counts, group labels, editing a prepared request, the unsent WhatsApp handoff and no-JavaScript behavior. No live messages, reservations or payments are used in tests.
-
-## September 22 guest experience refinement
-
-Date selection sits beside the villa introduction on desktop and before the property photo on phones. The shorter layout retains the explicit host-confirmed request model. A three-part summary separates arrival, departure and group size, with a night count and an editable WhatsApp handoff. Switching EN/ES carries valid dates and group size through allowlisted query parameters; invalid or past dates are discarded. No guest identity, contact details or free text are stored in those links.
-
-The duplicate mobile booking dock is omitted on the stay page. Its separate concierge control hides while a date/group field has focus, keeping the form unobstructed. The steps below the form explain what happens next and remain omitted when a real Hospitable embed is configured.
+Validate with `python3 scripts/build.py`, `python3 scripts/check.py`, `python3 -m unittest discover -s tests`, and browser EN/ES desktop/mobile checks. Only synthetic personal information may be used for form testing.

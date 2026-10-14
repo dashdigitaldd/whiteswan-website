@@ -1,3 +1,7 @@
+## Latest pilot: public availability and stay requests
+
+The Cloudflare preview now has a lighter header, homepage date entry, bilingual availability calendar and inline stay request. It reads Hospitable through a private service behind the isolated intake API. Requests enter the existing platform enquiry feed; they do not hold dates, charge a card or confirm a reservation. n1coBusiness is the proposed payment onboarding candidate, subject to approval for the owner and Promerica settlement. See [current booking contract](docs/BOOKING.md). The older widget-first notes below are historical and superseded by that contract.
+
 # White Swan public website
 
 Public discovery and guest experience for White Swan Villa / Xanadu Beach House, El Salvador. This repository is the **public marketing surface** of the platform. It must never contain app credentials, guest conversations, identity documents or door/Wi-Fi/safe codes.

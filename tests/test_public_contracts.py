@@ -20,22 +20,14 @@ class Response:
     def read(self,*args): return json.dumps(self.data).encode()
 
 class PublicContracts(unittest.TestCase):
-    def test_widget_replaces_temporary_request_in_both_languages(self):
+    def test_platform_owned_booking_in_both_languages(self):
         for lang in ['en','es']:
-            with patch.object(Path,'read_text',return_value='<!-- integration -->\n<div id="synthetic-provider-widget"></div>'),patch.object(homepage,'photo',return_value=''):
-                page=homepage.stay(lang,lambda *a:'',lambda *a:'')
-            self.assertIn('id="synthetic-provider-widget"',page)
-            self.assertNotIn('id="stay-request"',page)
-            self.assertNotIn('class="stay-steps"',page)
-            self.assertNotIn('Online booking is being connected',page)
-
-    def test_comments_alone_do_not_enable_booking(self):
-        with patch.object(Path,'read_text',return_value='<!-- not configured -->'),patch.object(homepage,'photo',return_value=''):
-            page=homepage.stay('en',lambda *a:'',lambda *a:'')
-        self.assertIn('id="stay-request" hidden',page)
-        self.assertIn('Nothing has been sent or reserved yet.',page)
-        self.assertIn('href="#booking" data-placement="sticky"',page)
-        self.assertNotIn('data-booking-provider="hospitable"',page)
+            page=homepage.stay(lang,lambda *a:'',lambda *a:'')
+            for identifier in ['stay-request','stay-contact','availability-days','stay-received']:
+                self.assertIn('id="'+identifier+'"', page)
+            self.assertNotIn('data-booking-provider="hospitable"',page)
+            self.assertNotIn('type="password"',page)
+            self.assertIn('name="contactConsent"',page)
 
     def sync_fixture(self,rating=5,text='A lovely stay.',accept=False):
         prior={'source_id':'public-1','platform':'airbnb','rating':5,'date':'2026-01-01','text':'A lovely stay.'}

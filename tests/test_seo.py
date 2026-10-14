@@ -1,3 +1,4 @@
+from urllib.parse import urlsplit
 """Search contracts: facts, crawlable routes, language pairs and discovery files."""
 import json,sys,unittest
 from pathlib import Path
@@ -22,7 +23,7 @@ class SearchContracts(unittest.TestCase):
                 self.assertTrue(doc.xpath('//meta[@name="twitter:image"]/@content'))
                 self.assertFalse(doc.xpath('//a[not(@href)]'),path)
                 self.assertFalse(doc.xpath('//link[contains(@href,"fonts.googleapis.com")]'))
-                self.assertEqual(doc.xpath('//link[@rel="stylesheet"]/@href'),['/assets/site.min.css'])
+                self.assertEqual([urlsplit(href).path for href in doc.xpath('//link[@rel="stylesheet"]/@href')],['/assets/site.min.css'])
                 if kind=='home':
                     preload=doc.xpath('//link[@rel="preload" and @as="image"]')[0]
                     source=doc.xpath('//div[@data-hero-frame="day"]//source')[0]
