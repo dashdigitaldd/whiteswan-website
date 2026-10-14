@@ -557,7 +557,8 @@
     form.hidden = true;
     summary.hidden = false;
     progress(1);
-    summary.focus();
+    summary.focus({preventScroll:true});
+    summary.scrollIntoView({block:"start"});
   });
   document.querySelector("#edit-stay").addEventListener("click", () => {
     if (sent || pending || submission) return;

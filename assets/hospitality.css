@@ -272,6 +272,7 @@
 .stay-next-steps .stay-steps li{padding:0;border:0}
 .stay-next-steps .stay-steps h3{font-size:24px}
 .stay-next-steps .stay-steps p{font-size:13px;line-height:1.8;margin:8px 0 0}
+#stay-summary{scroll-margin-top:24px}
 #stay-summary .stay-selection{font-size:14px;line-height:1.8}
 .stay-summary-details{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0}
 .stay-summary-details>div:last-child{grid-column:1/-1}
