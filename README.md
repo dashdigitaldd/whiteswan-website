@@ -103,3 +103,7 @@ The bilingual stay planner uses arrival/departure selectors, visible range highl
 ### Overnight selection rules
 
 Available dates represent nights in the villa. Checkout is exclusive: an arrival on the 10th can depart on the 11th even when the 11th is booked, but cannot depart on the 12th. The picker disables crossing an occupied night, missing/unverified nights and provider check-in/check-out or minimum-stay restrictions. Month navigation loads the bounded adjacent calendar windows needed for a maximum 30-night range; expired month data is not treated as available. Manual entry is checked against known constraints and the server always rechecks before continuing. Run `node --test tests/calendar.test.cjs` for synthetic range regression tests.
+
+## Stay price breakdown
+
+The stay-check response supplies a server-calculated USD nightly and property-fee estimate. The guest sees the subtotal before taxes, individual nightly rates, cleaning and applicable additional-guest charges. Airbnb service fees are excluded. Missing prices are marked for confirmation, never replaced with zero. Optional pets/services and damage guarantees are separate; taxes, discounts, payment and cancellation terms require the final host quote. The public client never calculates an authoritative price, accepts a payment, or confirms a reservation.

@@ -370,6 +370,7 @@
   calendar.hidden = false;
   void loadMonth();
   const issues = {
+    capacity: T("This group exceeds the property’s configured capacity. Please contact White Swan.", "El grupo supera la capacidad configurada. Por favor contacta a White Swan."),
     unavailable_nights: T(
       "One or more nights are unavailable. Please choose different dates.",
       "Una o más noches no están disponibles. Elige otras fechas.",
@@ -381,6 +382,72 @@
       "Estas fechas requieren una estadía más larga. Mínimo de noches: ",
     ),
   };
+  function renderPricing(pricing) {
+    let panel = document.querySelector("#stay-price-breakdown");
+    if (!panel) {
+      panel = document.createElement("section");
+      panel.id = "stay-price-breakdown";
+      panel.setAttribute("aria-labelledby", "stay-price-title");
+      contact.before(panel);
+    }
+    panel.replaceChildren();
+    const el = (tag, text, cls) => {
+      const node = document.createElement(tag);
+      if (text != null) node.textContent = text;
+      if (cls) node.className = cls;
+      return node;
+    };
+    const cash = value => Number.isSafeInteger(value) && value >= 0
+      ? new Intl.NumberFormat(es ? "es-SV" : "en-US", {style:"currency",currency:"USD"}).format(value / 100)
+      : T("To be confirmed", "Por confirmar");
+    const title = el("h3", T("Your stay, item by item", "El precio de tu estadía"));
+    title.id = "stay-price-title";
+    panel.append(title);
+    if (!pricing) {
+      panel.append(el("p",T("We couldn’t retrieve the price breakdown. Send your request or contact White Swan for a complete quote before paying.","No pudimos consultar el desglose. Envía tu solicitud o contacta a White Swan para recibir una cotización completa antes de pagar."),"price-note"));
+      return;
+    }
+    const labels = {
+      accommodation:T("Accommodation", "Hospedaje"),cleaning:T("Cleaning", "Limpieza"),
+      linens:T("Linens", "Ropa de cama"),management:T("Property management", "Administración"),
+      community:T("Community fee", "Cargo de la comunidad"),resort:T("Resort fee", "Cargo del complejo"),
+      extra_guests:T("Additional guests", "Huéspedes adicionales"),
+    };
+    const list = el("dl",null,"price-lines");
+    const row = (label,value,cls) => {
+      const line = el("div",null,cls);
+      line.append(el("dt",label),el("dd",value));
+      list.append(line);
+    };
+    for(const line of pricing.lines || []) {
+      if (!labels[line.code]) continue;
+      row(labels[line.code],cash(line.amount));
+    }
+    row(T("Airbnb service fee", "Cargo de servicio de Airbnb"),cash(0),"price-no-channel-fee");
+    row(T("Subtotal before taxes", "Subtotal antes de impuestos"),cash(pricing.subtotal),"price-subtotal");
+    row(T("Taxes", "Impuestos"),T("To be confirmed", "Por confirmar"));
+    panel.append(list);
+    const nightly = el("details",null,"nightly-breakdown");
+    nightly.append(el("summary",T("See each nightly rate", "Ver el precio de cada noche")));
+    const nightList = el("dl",null,"price-lines");
+    for(const night of pricing.nights || []) {
+      const line = el("div");
+      line.append(el("dt",fmt.format(new Date(night.date))),el("dd",cash(night.amount)));
+      nightList.append(line);
+    }
+    nightly.append(nightList);
+    panel.append(nightly);
+    panel.append(el("p", T("An estimate from the current nightly rates and property fees. Taxes, any eligible discounts and the final total will be confirmed before payment. No Airbnb service fee is added.","Estimación según las tarifas por noche y los cargos actuales de la propiedad. Confirmaremos impuestos, descuentos que apliquen y el total final antes del pago. No agregamos cargos de servicio de Airbnb."),"price-note"));
+    const optional = el("details",null,"price-optional");
+    optional.append(el("summary",T("Pets, extras & payment", "Mascotas, extras y pago")));
+    if (pricing.petFee != null) optional.append(el("p",T(`Bringing a pet? The configured pet fee is ${cash(pricing.petFee)} per stay, subject to host approval. It is not included above. Mention your pet in your request.`,`¿Traes mascota? El cargo configurado es de ${cash(pricing.petFee)} por estadía, sujeto a aprobación del anfitrión. No está incluido arriba. Menciona tu mascota en la solicitud.`)));
+    optional.append(el("p",T("Chef, massage, transport and other services are optional and quoted separately.","Chef, masajes, transporte y otros servicios son opcionales y se cotizan por separado.")));
+    optional.append(el("p",pricing.depositAmount != null
+      ? T(`Security deposit: ${cash(pricing.depositAmount)}, separate from the stay subtotal. Your host confirms how it is handled.`,`Garantía por daños: ${cash(pricing.depositAmount)}, aparte del subtotal. Tu anfitrión confirmará cómo se maneja.`)
+      : T("Your host will confirm any damage guarantee, payment schedule and cancellation terms in the final quote.","Tu anfitrión confirmará cualquier garantía por daños, fechas de pago y condiciones de cancelación en la cotización final.")));
+    optional.append(el("p",T("Nothing is charged when you send this request. Dates are not held until the booking is confirmed.","No se cobra nada al enviar esta solicitud. Las fechas no se apartan hasta confirmar la reserva.")));
+    panel.append(optional);
+  }
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (pending) return;
@@ -409,7 +476,7 @@
     pending = true;
     const submit = form.querySelector('[type="submit"]');
     submit.disabled = true;
-    submit.textContent = T("Checking your dates…", "Consultando tus fechas…");
+    submit.textContent = T("Checking dates & prices…", "Consultando fechas y precios…");
     error.textContent = "";
     selection = {
       arrival: arrival.value,
@@ -457,13 +524,14 @@
       row.append(dt, dd);
       details.append(row);
     }
+    renderPricing(result.pricing);
     const check = document.querySelector("#stay-check-status");
     check.dataset.state = result.status;
     check.textContent =
       result.status === "available"
         ? T(
-            "Your dates are currently open. Your host will confirm the permitted group size, total price and terms.",
-            "Tus fechas están disponibles por ahora. Tu anfitrión confirmará el grupo permitido, precio total y condiciones.",
+            "Your dates are currently available. Review the cost breakdown below, then send your request.",
+            "Tus fechas están disponibles por ahora. Revisa el desglose del precio y envía tu solicitud.",
           )
         : T(
             "We couldn’t fully verify these dates. Ask your host to check availability and price.",
