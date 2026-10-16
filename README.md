@@ -1,5 +1,7 @@
 ## Latest pilot: public availability and stay requests
 
+Canonical owner source: [dashdigitaldd/whiteswan-website](https://github.com/dashdigitaldd/whiteswan-website), branch `main`. The [complete platform source guide](https://github.com/dashdigitaldd/xanadu-platform/blob/main/docs/SOURCE_GUIDE.md) links the admin, booking backend, intake service and deployment instructions. The owner fork's `main` contains the latest application source; it is separate from the upstream repository serving the custom domain.
+
 The Cloudflare preview now has a lighter header, homepage date entry, bilingual availability calendar and inline stay request. It reads Hospitable through a private service behind the isolated intake API. Requests enter the existing platform enquiry feed; they do not hold dates, charge a card or confirm a reservation. n1coBusiness is the proposed payment onboarding candidate, subject to approval for the owner and Promerica settlement. See [current booking contract](docs/BOOKING.md). The older widget-first notes below are historical and superseded by that contract.
 
 # White Swan public website
