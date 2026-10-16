@@ -52,5 +52,13 @@ for kind,config in PAGES.items():
 build_css()
 build_discovery()
 build_not_found()
+# A release must not mix new HTML with a visitor's cached scripts or styles.
+import hashlib, re
+for output in [ROOT/'index.html', ROOT/'404.html', *[ROOT/p/'index.html' for p in ['es','stay','es/reservar','guide','es/guia','privacy','es/privacidad','photos','es/fotos']]]:
+ html=output.read_text()
+ def version_asset(match):
+  path=match.group(1); asset=ROOT/path.lstrip('/')
+  return path+'?v='+hashlib.sha256(asset.read_bytes()).hexdigest()[:12]+'"'
+ output.write_text(re.sub(r'(/assets/[^"?]+\.(?:css|js))"',version_asset,html))
 (ROOT/'.nojekyll').touch()
 print('Generated ten localized pages, sitemap and responsive photographs.')

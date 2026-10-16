@@ -1,3 +1,9 @@
+## Latest pilot: public availability and stay requests
+
+Canonical owner source: [dashdigitaldd/whiteswan-website](https://github.com/dashdigitaldd/whiteswan-website), branch `main`. The [complete platform source guide](https://github.com/dashdigitaldd/xanadu-platform/blob/main/docs/SOURCE_GUIDE.md) links the admin, booking backend, intake service and deployment instructions. The owner fork's `main` contains the latest application source; it is separate from the upstream repository serving the custom domain.
+
+The Cloudflare preview now has a lighter header, homepage date entry, bilingual availability calendar and inline stay request. It reads Hospitable through a private service behind the isolated intake API. Requests enter the existing platform enquiry feed; they do not hold dates, charge a card or confirm a reservation. n1coBusiness is the proposed payment onboarding candidate, subject to approval for the owner and Promerica settlement. See [current booking contract](docs/BOOKING.md). The older widget-first notes below are historical and superseded by that contract.
+
 # White Swan public website
 
 Public discovery and guest experience for White Swan Villa / Xanadu Beach House, El Salvador. This repository is the **public marketing surface** of the platform. It must never contain app credentials, guest conversations, identity documents or door/Wi-Fi/safe codes.
@@ -91,3 +97,15 @@ The latest pass improves supporting text and touch targets across the public sit
 ## Owner brand identity
 
 The September 25 update uses the supplied White Swan Beach House logo in all ten page headers and footers. Navy actions and gold accents coordinate with the private app while retaining ivory reading surfaces and the existing villa photographs. See [brand provenance and usage](docs/BRAND.md). Changes remain in the fork until the upstream owner merges them.
+
+## Calendar refinement, October 14, 2026
+
+The bilingual stay planner uses arrival/departure selectors, visible range highlighting and a clear-dates action. Native date fields remain in a manual-entry disclosure; keyboard arrows move among enabled dates and selection preserves focus. Availability remains provider-backed and rechecked by the server before continuing. No payment, inventory hold or booking confirmation is implied.
+
+### Overnight selection rules
+
+Available dates represent nights in the villa. Checkout is exclusive: an arrival on the 10th can depart on the 11th even when the 11th is booked, but cannot depart on the 12th. The picker disables crossing an occupied night, missing/unverified nights and provider check-in/check-out or minimum-stay restrictions. Month navigation loads the bounded adjacent calendar windows needed for a maximum 30-night range; expired month data is not treated as available. Manual entry is checked against known constraints and the server always rechecks before continuing. Run `node --test tests/calendar.test.cjs` for synthetic range regression tests.
+
+## Stay price breakdown
+
+The stay-check response supplies a server-calculated USD nightly and property-fee estimate. The guest sees individual nightly rates, cleaning and applicable additional-guest charges. With the owner-confirmed tax-inclusive server policy, the summary shows Taxes included and Estimated total; otherwise taxes remain for confirmation. Airbnb service fees are excluded. Missing prices are marked for confirmation, never replaced with zero. Optional pets/services and damage guarantees are separate; discounts, payment and cancellation terms require the final host quote. The public client never calculates an authoritative price, accepts a payment, or confirms a reservation.

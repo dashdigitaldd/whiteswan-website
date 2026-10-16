@@ -3,14 +3,14 @@
   --brand-navy: #041839;
   --brand-gold: #d6b14c;
   --brand-bronze: #806018;
-  --ivory: #faf8f2;
+  --ivory: #fdfcf9;
   --pine: var(--brand-navy);
   --ink: #172d48;
   --muted: #5d6774;
   --gold: var(--brand-bronze);
   --line: #e3ddcf;
 }
-.white-swan-logo { display: block; position: relative; width: 132px; aspect-ratio: 1116 / 844; overflow: hidden; flex-shrink: 0; }
+.white-swan-logo { display: block; position: relative; width: 98px; aspect-ratio: 1116 / 844; overflow: hidden; flex-shrink: 0; }
 .white-swan-logo img { position: absolute; width: 112.366%; max-width: none; height: auto; left: -5.735%; top: -27.488%; }
 .editorial-header { padding-block: 10px; border-bottom: 1px solid #e4d7b5; }
 .owner-brand { display: block; padding: 0; flex-shrink: 0; }
@@ -23,19 +23,19 @@
 .editorial .button.outline { background: transparent; color: var(--brand-navy); border-color: #a99a78; }
 .editorial .button.outline:hover { background: #eee8d9; }
 .editorial .eyebrow { color: var(--brand-bronze); }
-.editorial .resort-hero { background: #f1ebdc; }
+.editorial .resort-hero { background: #f5f3ed; }
 .editorial .resort-hero h1, .editorial .resort-hero h1 em { color: var(--brand-navy); }
 .editorial .text-link { color: var(--brand-navy); }
 .editorial .essential-number, .editorial .essential-number small { color: var(--brand-bronze); }
-.editorial-footer, .editorial .booking-card { background: #f1ebdc; }
+.editorial-footer { background: #f4f1e9; }
 .editorial-footer .footer-bottom { border-color: #dbceaf; }
 .editorial .photo-viewer, .editorial .photo-viewer::backdrop { background: var(--brand-navy); }
 .concierge-launcher > summary { border-color: #b99b4e; color: var(--brand-navy); }
 .concierge-panel { border-color: #ddcfa9; }
 .journey-nav a[aria-current], .journey-nav a:hover, .handbook-index a[aria-current] { color: var(--brand-bronze); border-color: var(--brand-bronze); }
 @media (max-width: 700px) {
-  .editorial-header { padding: 8px 18px; min-height: 94px; }
-  .editorial-header .white-swan-logo { width: 105px; }
+  .editorial-header { padding: 8px 18px; min-height: 78px; }
+  .editorial-header .white-swan-logo { width: 80px; }
   .editorial .header-actions { gap: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { .owner-brand { transition: none; } }
