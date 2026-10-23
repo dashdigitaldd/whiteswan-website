@@ -55,3 +55,9 @@ python3 scripts/prepare-staging.py
 ```
 
 The release was checked on desktop, 390px and 320px phone viewports, including EN/ES switching, search, topic sheets, image loading and horizontal overflow. Synthetic backend tests cover link creation, rotation, revocation, expiry, cancellation, cross-stay isolation and stale reads. No real guest or supplier message is part of validation. See [Cloudflare deployment](CLOUDFLARE_STAGING.md) for release ordering.
+
+## Hosted release, October 23, 2026
+
+The companion is live on the independent [Cloudflare preview](https://white-swan-website-staging.dashdigitaldd.workers.dev/guest/?preview=1), website version `aeb76ca4-fa57-4260-8bf5-1e6f2d29cfd1`. The private service and admin controls are deployed alongside additive migration 0018. Hosted checks confirmed the guide's restrictive privacy headers and the actual service binding's generic rejection of a synthetic invalid token. The browser loaded the sample app without console errors, broken photographs or horizontal overflow.
+
+Previous website version: `eaeda2e0-21ae-4d37-81ca-204db6847b58`. Coordinate rollback with the admin controls. The custom-domain GitHub Pages site, CNAME and DNS were not changed; actual private links must use the Cloudflare origin until a future domain cutover is explicitly completed.
