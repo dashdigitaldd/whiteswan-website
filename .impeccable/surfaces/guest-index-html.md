@@ -23,9 +23,9 @@ The public marketing pages retain their own Inter/Cormorant typography, editoria
 
 ## Composition and responsive behavior
 
-The opening view pairs a real villa photograph and personal welcome with a readable stay itinerary. Arrival and access actions follow immediately. On phones the photograph, itinerary and actions form one vertical reading order; the five labelled destinations remain fixed at the bottom with safe-area spacing. Desktop uses a centred content frame and a compact floating navigation bar.
+The opening view pairs a real villa photograph and personal welcome with a readable stay itinerary. Wi-Fi, restaurants and host-contact actions follow immediately. A first-visit welcome popup from Wendy and Sergio opens once per tab/stay, with the original photograph and letter; guests can reopen it from the home view. On phones the photograph, itinerary and actions form one vertical reading order; the five labelled destinations remain fixed at the bottom with safe-area spacing. Desktop uses a centred content frame and a compact floating navigation bar.
 
-The house area is a searchable directory with concise summaries. Selecting a topic opens a native dialog, presented as a bottom sheet on phones. Experiences uses one property photograph and a list of service enquiries; Explore uses destination photography and explicit map links. Help puts host contact ahead of FAQs and the departure checklist. White panels, thin separators and rounded corners group related information; photographic welcome content and the navy contact panels provide emphasis.
+The house area is a searchable directory with concise summaries. Selecting a topic opens a native dialog, presented as a bottom sheet on phones. Experiences restores four original service photographs, their source prices and chef menu choices, followed by six transport rows. Explore separates seven restaurants, eight outings and four nearby essentials, retaining the original images and correctly labelled venue, menu, article and map links. Help puts hosts, address and emergency contacts ahead of FAQs, departure, review guidance and the original thank-you. White panels, thin separators and rounded corners group related information; photographic welcome content and the navy contact panels provide emphasis.
 
 The primary responsive transition is at 700px, with narrower adjustments at 360px and intermediate layout changes at 1000px. The current styles also adapt the opening view above 1500px. Preserve the phone reading order, navigation clearance, visible focus and reduced-motion treatment when editing.
 
@@ -33,7 +33,7 @@ The primary responsive transition is at 700px, with narrower adjustments at 360p
 
 Show one selected language at a time, remembering the guest's EN/ES preference independently from the admin. Dates and stay times use El Salvador context. Missing stay details remain unknown. Keep the sample-preview notice and missing, expired and temporarily unavailable link states distinct from an authenticated stay.
 
-A service action prepares a WhatsApp message that the guest sends. It does not book, charge, confirm a provider or create a receipt. Checklist ticks do not notify the host. Access instructions refer guests to the existing Airbnb arrival message; credentials and private operational knowledge do not belong in the companion content or visual states.
+A service action prepares a WhatsApp message that the guest sends. It does not book, charge, confirm a provider or create a receipt. Checklist ticks do not notify the host. Door and safe instructions refer guests to the existing Airbnb arrival message. The owner explicitly permits Wi-Fi credentials, a locally generated QR and personal host contacts after private stay verification. These values must come from the protected Worker secret and never enter static content, preview data, browser storage or third-party QR services. Other private operational knowledge stays excluded.
 
 ## Evidence checked
 

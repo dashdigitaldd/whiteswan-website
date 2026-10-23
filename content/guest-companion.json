@@ -1,22 +1,28 @@
 {
-  "version": "2026-10-23.1",
+  "version": "2026-10-23.2",
   "updatedAt": "2026-10-23",
   "propertyName": "White Swan Beach House",
   "timeZone": "America/El_Salvador",
   "welcome": {
     "title": {
-      "en": "Make yourself at home.",
-      "es": "Siéntase como en casa."
+      "en": "Welcome to White Swan",
+      "es": "Bienvenido a White Swan"
+    },
+    "subtitle": {
+      "en": "We’re happy to have you here!",
+      "es": "¡Nos alegra mucho tenerle aquí!"
     },
     "body": {
-      "en": "A slower morning. One more swim. Everything you need for your time at White Swan, in one place.",
-      "es": "Una mañana sin prisa. Un chapuzón más. Todo lo que necesita para disfrutar White Swan, en un solo lugar."
+      "en": "We know you must be ready to relax and start your stay in Surf City! Leave your worries at the door, come in and make yourself at home. Everything you need for an enjoyable stay is here in your guide.",
+      "es": "¡Sabemos que ya quiere relajarse y comenzar su estadía en Surf City! Deje sus preocupaciones en la puerta, pase y siéntase como en casa. En esta guía encontrará todo lo necesario para disfrutar su visita."
     },
     "signature": {
-      "en": "Wendy & Sergio",
-      "es": "Wendy y Sergio"
+      "en": "With love, Wendy & Sergio",
+      "es": "Con cariño, Wendy y Sergio"
     },
-    "image": "/assets/editorial/villa-light-960.webp"
+    "image": "/assets/guest-guide-source/welcome.webp",
+    "sourcePage": 3,
+    "sourceUrl": "https://whiteswan.my.canva.site/"
   },
   "arrival": {
     "title": {
@@ -27,7 +33,7 @@
       "en": "Your host helps coordinate arrival with Xanadu community security. Share your expected arrival time and confirm the people and vehicles in your group before you travel.",
       "es": "Su anfitrión le ayuda a coordinar la llegada con la seguridad de Xanadu. Antes de viajar, comparta su hora estimada de llegada y confirme las personas y vehículos de su grupo."
     },
-    "directionsUrl": "https://maps.app.goo.gl/yr366aJLwmnjH1g9A",
+    "directionsUrl": "https://google.com/maps/place/@13.4970361,-89.4128537,17z/data=!4m8!1m7!3m6!1s0x8f7d2a6241ab8bdd:0xfd11e771f0c44f3!2sXanadu+Beach+House!8m2!3d13.4970361!4d-89.4102788!16s%2Fg%2F11cspvtnjl?entry=ttu&g_ep=EgoyMDI0MTIwMS4wIKXMDSoASAFQAw%3D%3D",
     "address": {
       "en": "Residencial Xanadu, Casa F-2, Tamanique, La Libertad, El Salvador",
       "es": "Residencial Xanadu, Casa F-2, Tamanique, La Libertad, El Salvador"
@@ -56,8 +62,8 @@
           "es": "Tenga a mano su mensaje de llegada"
         },
         "body": {
-          "en": "Private access instructions are shared through Airbnb three days before arrival. Open that conversation for your door, Wi-Fi and other access details.",
-          "es": "Las instrucciones privadas de acceso se comparten por Airbnb tres días antes de la llegada. Abra esa conversación para ver los datos de la puerta, Wi-Fi y otros accesos."
+          "en": "Your keyless-entry code is shared before check-in through your Airbnb arrival message. Wi-Fi details and a connection QR code are available in this guide when you open your private stay link.",
+          "es": "Su código de entrada se comparte antes de la llegada por su mensaje de Airbnb. Los datos del Wi-Fi y su código QR están en esta guía cuando la abre con su enlace privado de estadía."
         }
       },
       {
@@ -71,7 +77,24 @@
           "es": "Tenga listo su documento para la caseta de seguridad. Una vez confirmado el registro, continúe a la Casa F-2 y siga las instrucciones de su anfitrión. La entrada es desde las 4:00 p. m., hora de El Salvador."
         }
       }
-    ]
+    ],
+    "links": [
+      {
+        "label": {
+          "en": "Open directions",
+          "es": "Cómo llegar"
+        },
+        "url": "https://google.com/maps/place/@13.4970361,-89.4128537,17z/data=!4m8!1m7!3m6!1s0x8f7d2a6241ab8bdd:0xfd11e771f0c44f3!2sXanadu+Beach+House!8m2!3d13.4970361!4d-89.4102788!16s%2Fg%2F11cspvtnjl?entry=ttu&g_ep=EgoyMDI0MTIwMS4wIKXMDSoASAFQAw%3D%3D"
+      },
+      {
+        "label": {
+          "en": "Open Airbnb messages",
+          "es": "Abrir mensajes de Airbnb"
+        },
+        "url": "https://www.airbnb.com/inbox"
+      }
+    ],
+    "sourcePage": 7
   },
   "houseTopics": [
     {
@@ -151,20 +174,19 @@
         "es": "Conéctese al Wi-Fi"
       },
       "summary": {
-        "en": "Your access details stay in your arrival message.",
-        "es": "Los datos están en su mensaje de llegada."
+        "en": "Connect with one scan, or copy the password.",
+        "es": "Conéctese con un escaneo o copie la contraseña."
       },
       "body": {
         "en": [
-          "The network name and password are in your private Airbnb arrival message.",
-          "If the connection stops working, follow the instructions placed by the router or contact your host for help."
+          "Open your private stay link to see the network name, password and Wi-Fi QR code. If you need help connecting, Wendy and Sergio are a message away."
         ],
         "es": [
-          "El nombre de la red y la contraseña están en su mensaje privado de llegada en Airbnb.",
-          "Si la conexión deja de funcionar, siga las instrucciones junto al router o pídale ayuda a su anfitrión."
+          "Abra su enlace privado de estadía para ver el nombre de la red, la contraseña y el código QR del Wi-Fi. Si necesita ayuda para conectarse, Wendy y Sergio están a un mensaje."
         ]
       },
-      "action": "airbnb"
+      "action": "wifi",
+      "sourcePage": 5
     },
     {
       "id": "kitchen-outdoors",
@@ -271,15 +293,16 @@
       },
       "body": {
         "en": [
-          "There is parking at the house. Please confirm the number of vehicles before arrival so your host can coordinate community entry and any applicable charges.",
-          "Transport, airport transfers and car rental can be requested through our local contacts. Ask ahead rather than relying on a ride being immediately available."
+          "The guide lists space for 2 to 3 cars at the house. Street parking may carry a community charge of $30 per day. Confirm your vehicles and any charge with Wendy or Sergio before arrival.",
+          "The original guide lists Uber as an option. Check availability in the app for your trip. We can also help arrange a rental car or private transportation."
         ],
         "es": [
-          "La casa tiene estacionamiento. Confirme cuántos vehículos trae antes de llegar para coordinar la entrada y cualquier cargo que aplique.",
-          "Podemos ayudarle a contactar transporte, traslados al aeropuerto y renta de vehículos. Consulte con anticipación para organizarse bien."
+          "La guía indica espacio para 2 a 3 vehículos en la casa. Estacionarse en la calle puede tener un cargo de la comunidad de $30 por día. Confirme sus vehículos y cualquier cargo con Wendy o Sergio antes de llegar.",
+          "La guía original incluye Uber como opción. Revise la disponibilidad en la aplicación para su viaje. También podemos ayudarle con renta de vehículo o transporte privado."
         ]
       },
-      "action": "host"
+      "action": "host",
+      "sourcePage": 9
     },
     {
       "id": "housekeeping",
@@ -295,14 +318,17 @@
       "body": {
         "en": [
           "Trash bins are in the parking area. Place tied bags inside the bins during your stay.",
+          "Trash pickup is listed in the guide for Mondays and Thursdays. Ask your host if you need an extra collection or if a holiday changes the schedule.",
           "For cleaning arrangements or extra supplies, message your host. Pool and garden staff may visit; tell us if you would like to discuss the timing."
         ],
         "es": [
           "Los basureros están en el estacionamiento. Durante su estadía, coloque las bolsas cerradas dentro de los botes.",
+          "La guía indica recolección de basura los lunes y jueves. Consulte con su anfitrión si necesita una recolección extra o si un feriado cambia el horario.",
           "Para coordinar limpieza o pedir algo que haga falta, escríbale a su anfitrión. El personal de piscina y jardín puede llegar; avísenos si desea coordinar el horario."
         ]
       },
-      "action": "host"
+      "action": "host",
+      "sourcePage": 9
     },
     {
       "id": "community",
@@ -317,15 +343,29 @@
       },
       "body": {
         "en": [
-          "Quiet hours begin at 10:00 PM. Parties, loud music and indoor smoking are not permitted. Only registered guests may enter; daily visitors are not allowed.",
-          "Tell your host in advance about pets or changes to your group. Please clean up after pets. Your host will confirm registration, capacity and any applicable charges."
+          "Quiet hours are 10:00 PM to 8:00 AM. Excessive noise is not permitted at any time and can result in community charges. Parties are not allowed.",
+          "All guests must be registered on arrival. Daily visitors are not allowed. Please look after everyone in your group, including children.",
+          "Smoking is permitted outside only. Dispose of cigarette butts respectfully. Evidence or smell of smoking inside the house can result in additional charges.",
+          "The original guide allows pets with a $30 pet fee. Please confirm your pet with Wendy or Sergio and clean up after it. Stains or damage can result in additional charges."
         ],
         "es": [
-          "El horario de silencio empieza a las 10:00 p. m. No se permiten fiestas, música alta ni fumar adentro. Solo pueden entrar los huéspedes registrados; no se permiten visitas por el día.",
-          "Avísele a su anfitrión con anticipación si lleva mascotas o cambia su grupo. Por favor, recoja lo que ensucien las mascotas. Su anfitrión confirmará el registro, la capacidad y los cargos que correspondan."
+          "El horario de silencio es de 10:00 p. m. a 8:00 a. m. No se permite ruido excesivo en ningún momento y puede generar cargos de la comunidad. No se permiten fiestas.",
+          "Todos los huéspedes deben registrarse al llegar. No se permiten visitas por el día. Por favor, cuide la seguridad de su grupo, incluyendo a los niños.",
+          "Solo se permite fumar afuera. Deseche las colillas de forma responsable. La evidencia o el olor a cigarrillo dentro de la casa puede generar cargos adicionales.",
+          "La guía original permite mascotas con un cargo de $30. Confirme su mascota con Wendy o Sergio y recoja lo que ensucie. Las manchas o los daños pueden generar cargos adicionales."
         ]
       },
-      "action": "host"
+      "action": "host",
+      "sourcePage": 8,
+      "links": [
+        {
+          "label": {
+            "en": "Ask about a house rule",
+            "es": "Consultar una regla de la casa"
+          },
+          "url": "https://www.airbnb.com/inbox"
+        }
+      ]
     },
     {
       "id": "help-at-home",
@@ -348,7 +388,7 @@
           "Si hay una fuga, una falla en un aparato, un problema de luz o algo más en la casa, contacte a su anfitrión. Una descripción breve y una foto del problema ayudan al equipo a entender qué necesita. Si es una emergencia inmediata, contacte primero a los servicios de emergencia locales."
         ]
       },
-      "action": "host"
+      "action": "contacts"
     }
   ],
   "faqs": [
@@ -381,8 +421,8 @@
         "es": "¿Dónde están los datos de la puerta y del Wi-Fi?"
       },
       "answer": {
-        "en": "They are in your private Airbnb arrival message, shared three days before arrival. This guide does not display access codes.",
-        "es": "Están en su mensaje privado de llegada en Airbnb, que se comparte tres días antes. Esta guía no muestra códigos de acceso."
+        "en": "Your Wi-Fi network, password and QR code appear in this guide through your private stay link. Your door code continues to arrive through your Airbnb check-in message. If you cannot find either, contact Wendy or Sergio.",
+        "es": "La red, contraseña y código QR del Wi-Fi aparecen en esta guía mediante su enlace privado de estadía. El código de la puerta sigue llegando por el mensaje de entrada de Airbnb. Si no encuentra alguno, contacte a Wendy o Sergio."
       }
     },
     {
@@ -392,8 +432,8 @@
         "es": "¿Podemos agregar huéspedes, visitas o mascotas?"
       },
       "answer": {
-        "en": "Only registered guests can enter and day visitors are not permitted. Speak with your host before changing the booked group or bringing a pet so registration and any charges can be confirmed.",
-        "es": "Solo pueden entrar los huéspedes registrados y no se permiten visitas por el día. Hable con su anfitrión antes de cambiar el grupo reservado o llevar una mascota para confirmar el registro y cualquier cargo."
+        "en": "All guests must be registered and day visitors are not permitted. The guide lists a $30 pet fee. Please confirm pets or changes to your group with Wendy or Sergio before arrival, including any applicable charges.",
+        "es": "Todos los huéspedes deben estar registrados y no se permiten visitas por el día. La guía indica un cargo de $30 por mascota. Confirme mascotas o cambios de grupo con Wendy o Sergio antes de llegar, incluyendo los cargos que correspondan."
       }
     },
     {
@@ -475,164 +515,168 @@
   ],
   "experiences": [
     {
-      "id": "private-chef",
+      "id": "breakfast",
       "title": {
-        "en": "A chef at home",
-        "es": "Chef en casa"
+        "en": "Home-prepared breakfast",
+        "es": "Desayuno preparado en casa"
       },
       "description": {
-        "en": "Breakfast, lunch or a special dinner in your own space. Ask about set menus, flexible dishes and dietary preferences.",
-        "es": "Desayuno, almuerzo o una cena especial en la casa. Consulte por menús, platillos y preferencias de alimentación."
+        "en": "A traditional Salvadoran breakfast prepared by a member of the White Swan team. American breakfast and dietary modifications can be requested.",
+        "es": "Un desayuno tradicional salvadoreño preparado por una persona del equipo de White Swan. También puede pedir desayuno americano y adaptaciones de alimentación."
       },
-      "image": "/assets/enhanced/listing-1852228438-960.webp",
+      "priceLabel": {
+        "en": "$10 per plate · minimum 10 plates",
+        "es": "$10 por plato · mínimo 10 platos"
+      },
+      "priceNote": {
+        "en": "Price printed in your welcome book. Confirm availability and the final quote with Wendy or Sergio.",
+        "es": "Precio publicado en su guía. Confirme disponibilidad y cotización final con Wendy o Sergio."
+      },
+      "image": "/assets/guest-guide-source/breakfast.webp",
       "service": "private_chef",
       "actionLabel": {
-        "en": "Ask about this",
-        "es": "Consultar"
-      }
+        "en": "Ask Wendy & Sergio",
+        "es": "Consultar a Wendy y Sergio"
+      },
+      "menus": [],
+      "sourcePage": 16,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
     },
     {
       "id": "massage",
       "title": {
-        "en": "A moment to unwind",
-        "es": "Un momento para relajarse"
+        "en": "Traditional massage",
+        "es": "Masaje tradicional"
       },
       "description": {
-        "en": "Ask about an in-home massage and the session length that suits you. Availability and your quote are confirmed with the provider.",
-        "es": "Consulte por un masaje a domicilio y la duración que prefiere. La disponibilidad y la cotización se confirman con el proveedor."
+        "en": "Relax with ocean views. A professional massage therapist can tailor the session to your needs and preferences.",
+        "es": "Relájese con vista al mar. Una masajista profesional puede adaptar la sesión a sus necesidades y preferencias."
       },
-      "image": "/assets/enhanced/listing-2580025730-960.webp",
+      "priceLabel": {
+        "en": "30 min $25 · 60 min $35 · 90 min $65",
+        "es": "30 min $25 · 60 min $35 · 90 min $65"
+      },
+      "priceNote": {
+        "en": "Price printed in your welcome book. Confirm availability and the final quote with Wendy or Sergio.",
+        "es": "Precio publicado en su guía. Confirme disponibilidad y cotización final con Wendy o Sergio."
+      },
+      "image": "/assets/guest-guide-source/massage.webp",
       "service": "in_home_massage",
       "actionLabel": {
-        "en": "Ask about this",
-        "es": "Consultar"
-      }
+        "en": "Ask Wendy & Sergio",
+        "es": "Consultar a Wendy y Sergio"
+      },
+      "menus": [],
+      "sourcePage": 16,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
     },
     {
-      "id": "transport",
+      "id": "airport-transfer",
       "title": {
-        "en": "An easier journey",
-        "es": "Un viaje más tranquilo"
+        "en": "Airport & local transfers",
+        "es": "Traslados al aeropuerto y locales"
       },
       "description": {
-        "en": "Airport transfers, local trips and a driver when you need one. Share your route, time and group size.",
-        "es": "Traslados al aeropuerto, viajes locales y conductor cuando lo necesite. Comparta la ruta, la hora y el tamaño de su grupo."
+        "en": "Pre-arrange a transfer directly to the house. The guide describes a driver meeting you with a name sign, and you can request a supermarket stop. Ask about local trips too.",
+        "es": "Coordine un traslado directo a la casa. La guía indica que el conductor le espera con un rótulo con su nombre y puede pedir una parada en el supermercado. Consulte también por viajes locales."
       },
-      "image": "/assets/enhanced/listing-1852228366-960.webp",
+      "priceLabel": {
+        "en": "$50 per one-way airport trip",
+        "es": "$50 por traslado de aeropuerto, solo ida"
+      },
+      "priceNote": {
+        "en": "Price printed in your welcome book. Confirm availability and the final quote with Wendy or Sergio.",
+        "es": "Precio publicado en su guía. Confirme disponibilidad y cotización final con Wendy o Sergio."
+      },
+      "image": "/assets/guest-guide-source/airport-transfer.webp",
       "service": "airport_transfer",
       "actionLabel": {
-        "en": "Ask about this",
-        "es": "Consultar"
-      }
+        "en": "Ask Wendy & Sergio",
+        "es": "Consultar a Wendy y Sergio"
+      },
+      "menus": [],
+      "sourcePage": 16,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
     },
     {
-      "id": "tours",
+      "id": "private-chef",
       "title": {
-        "en": "Discover a little more",
-        "es": "Descubra un poco más"
+        "en": "Professional chef dinner",
+        "es": "Cena con chef profesional"
       },
       "description": {
-        "en": "Surf, waterfalls, coastal outings or a day in the hills. Ask for a local guide and a plan that suits your group.",
-        "es": "Surf, cascadas, paseos por la costa o un día en las montañas. Consulte por un guía local y un plan para su grupo."
+        "en": "A chef team comes to the house for a six-course dinner. The guide lists seafood, Mexican, Salvadoran and BBQ set menus.",
+        "es": "Un equipo de chefs llega a la casa para preparar una cena de seis tiempos. La guía incluye menús de mariscos, comida mexicana, salvadoreña y BBQ."
       },
-      "image": "/assets/enhanced/guide-waterfalls-960.webp",
-      "service": "guided_tours",
+      "priceLabel": {
+        "en": "$50 per person",
+        "es": "$50 por persona"
+      },
+      "priceNote": {
+        "en": "Price printed in your welcome book. Confirm availability and the final quote with Wendy or Sergio.",
+        "es": "Precio publicado en su guía. Confirme disponibilidad y cotización final con Wendy o Sergio."
+      },
+      "image": "/assets/guest-guide-source/private-chef.webp",
+      "service": "private_chef",
       "actionLabel": {
-        "en": "Ask about this",
-        "es": "Consultar"
-      }
-    },
-    {
-      "id": "car-rental",
-      "title": {
-        "en": "Explore at your pace",
-        "es": "Explore a su ritmo"
+        "en": "Ask Wendy & Sergio",
+        "es": "Consultar a Wendy y Sergio"
       },
-      "description": {
-        "en": "Ask for a car-rental introduction. The provider confirms the vehicle, insurance, collection details and full quote.",
-        "es": "Pida el contacto para rentar un vehículo. El proveedor confirma el modelo, el seguro, la entrega y la cotización completa."
-      },
-      "image": "/assets/editorial/villa-light-960.webp",
-      "service": "car_rental",
-      "actionLabel": {
-        "en": "Ask about this",
-        "es": "Consultar"
-      }
-    },
-    {
-      "id": "celebration",
-      "title": {
-        "en": "Mark a special moment",
-        "es": "Celebre un momento especial"
-      },
-      "description": {
-        "en": "A birthday, anniversary or thoughtful surprise. Ask about decoration and a dinner for your registered group, within the house rules.",
-        "es": "Un cumpleaños, aniversario o una sorpresa. Consulte por decoración y una cena para su grupo registrado, respetando las reglas de la casa."
-      },
-      "image": "/assets/enhanced/guide-celebration-960.webp",
-      "service": "decoration",
-      "actionLabel": {
-        "en": "Ask about this",
-        "es": "Consultar"
+      "menus": [],
+      "sourcePage": 16,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menuChoices": [
+        {
+          "en": "Seafood",
+          "es": "Mariscos"
+        },
+        {
+          "en": "Mexican",
+          "es": "Mexicana"
+        },
+        {
+          "en": "Salvadoran",
+          "es": "Salvadoreña"
+        },
+        {
+          "en": "BBQ",
+          "es": "BBQ"
+        }
+      ],
+      "menuNote": {
+        "en": "Ask Wendy or Sergio to send the current menu for your preferred dinner. The original guide names these menu choices but does not include a downloadable menu.",
+        "es": "Pídale a Wendy o Sergio el menú actual para la cena que prefiera. La guía original menciona estas opciones, pero no incluye un menú descargable."
       }
     }
   ],
   "serviceNote": {
-    "en": "We can share a trusted provider’s contact so you can arrange the service directly. Host coordination is available if you prefer. Availability, prices and payment are confirmed before a service is booked.",
-    "es": "Podemos compartirle el contacto de un proveedor de confianza para que coordine directamente. Si prefiere que le ayudemos, con gusto. La disponibilidad, el precio y el pago se confirman antes de reservar el servicio."
+    "en": "Check with Wendy or Sergio for availability and any questions. The original guide lists payment directly to the service provider or through the Airbnb app. Confirm the final price and payment method before booking.",
+    "es": "Consulte con Wendy o Sergio la disponibilidad y cualquier duda. La guía original indica pago directo al proveedor o mediante la aplicación de Airbnb. Confirme el precio final y la forma de pago antes de reservar."
   },
   "places": [
     {
       "id": "el-tunco",
       "title": {
-        "en": "El Tunco",
+        "en": "El Tunco Town",
         "es": "El Tunco"
       },
       "description": {
-        "en": "A coastal town for surf, cafés, shops and a sunset walk. Ask your host about lessons or transport.",
-        "es": "Un pueblo costero para disfrutar surf, cafés, tiendas y el atardecer. Consulte por clases o transporte."
+        "en": "A laid-back Pacific beach town with surfing, sunsets, distinctive rock formations, shops, lively bars and restaurants. A place for both adventure and an easy afternoon.",
+        "es": "Un pueblo del Pacífico de ambiente relajado, con surf, atardeceres, formaciones rocosas, tiendas, bares y restaurantes. Un lugar para la aventura o para pasar una tarde tranquila."
       },
-      "image": "/assets/enhanced/guide-eltunco-960.webp",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=El%20Tunco%20El%20Salvador"
-    },
-    {
-      "id": "el-zonte",
-      "title": {
-        "en": "El Zonte",
-        "es": "El Zonte"
-      },
-      "description": {
-        "en": "A relaxed beach day with surf and restaurants. Also known as Bitcoin Beach.",
-        "es": "Un día de playa con ambiente relajado, surf y restaurantes. También se conoce como Bitcoin Beach."
-      },
-      "image": "/assets/enhanced/guide-elzonte-960.webp",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=El%20Zonte%20El%20Salvador"
-    },
-    {
-      "id": "la-libertad",
-      "title": {
-        "en": "La Libertad & Sunset Park",
-        "es": "La Libertad y Sunset Park"
-      },
-      "description": {
-        "en": "Explore the waterfront, local seafood and Sunset Park. Check current opening hours before heading out.",
-        "es": "Conozca el malecón, disfrute mariscos y visite Sunset Park. Revise los horarios actuales antes de salir."
-      },
-      "image": "/assets/enhanced/guide-lalibertad-960.webp",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sunset%20Park%20La%20Libertad%20El%20Salvador"
-    },
-    {
-      "id": "restaurants",
-      "title": {
-        "en": "A table by the ocean",
-        "es": "Una mesa frente al mar"
-      },
-      "description": {
-        "en": "Beto’s, Olor de Mar and Puerto Vikingo are among the restaurants in our guide. Ask about reservations and confirm dietary needs with the restaurant.",
-        "es": "Beto’s, Olor de Mar y Puerto Vikingo están entre los restaurantes de nuestra guía. Consulte por reservas y confirme sus necesidades de alimentación con el restaurante."
-      },
-      "image": "/assets/enhanced/guide-restaurants-960.webp",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Restaurants%20Tamanique%20El%20Salvador"
+      "image": "/assets/guest-guide-source/el-tunco.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://sallysees.com/el-tunco-el-salvador/"
+        }
+      ],
+      "sourceUrl": "https://sallysees.com/el-tunco-el-salvador/",
+      "mapUrl": "https://sallysees.com/el-tunco-el-salvador/",
+      "sourcePage": 13
     },
     {
       "id": "tamanique",
@@ -641,27 +685,71 @@
         "es": "Cascadas de Tamanique"
       },
       "description": {
-        "en": "A hike through the hills to the waterfalls. Ask for a local guide and discuss the route and conditions for your group.",
-        "es": "Una caminata por las montañas hasta las cascadas. Consulte por un guía local y revise la ruta y las condiciones para su grupo."
+        "en": "A series of waterfalls surrounded by lush greenery. Explore trails, natural pools and a quieter side of the coast with a local guide.",
+        "es": "Un conjunto de cascadas rodeadas de vegetación. Explore senderos, pozas naturales y un lado más tranquilo de la costa con un guía local."
       },
-      "image": "/assets/enhanced/guide-waterfalls-960.webp",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cascadas%20de%20Tamanique%20El%20Salvador"
+      "image": "/assets/guest-guide-source/tamanique.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://paradisecatchers.com/tamanique-waterfalls-el-salvador/"
+        }
+      ],
+      "sourceUrl": "https://paradisecatchers.com/tamanique-waterfalls-el-salvador/",
+      "mapUrl": "https://paradisecatchers.com/tamanique-waterfalls-el-salvador/",
+      "sourcePage": 13
+    },
+    {
+      "id": "sunset-park",
+      "title": {
+        "en": "Sunset Park Pier Walk",
+        "es": "Paseo por el muelle y Sunset Park"
+      },
+      "description": {
+        "en": "A coastal stroll with views across the water and a lovely sunset. Enjoy the pier, take photos and slow down by the sea.",
+        "es": "Un paseo costero con vista al agua y un lindo atardecer. Disfrute el muelle, tome fotos y descanse junto al mar."
+      },
+      "image": "/assets/guest-guide-source/sunset-park.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://elsalvador.travel/destination/parque-de-diversiones-sunset-park/en/"
+        }
+      ],
+      "sourceUrl": "https://elsalvador.travel/destination/parque-de-diversiones-sunset-park/en/",
+      "mapUrl": "https://elsalvador.travel/destination/parque-de-diversiones-sunset-park/en/",
+      "sourcePage": 13
     },
     {
       "id": "coatepeque",
       "title": {
-        "en": "Coatepeque & Santa Ana",
-        "es": "Coatepeque y Santa Ana"
+        "en": "Lago Coatepeque & Santa Ana Volcano",
+        "es": "Lago de Coatepeque y volcán de Santa Ana"
       },
       "description": {
-        "en": "Plan a day around the crater lake or ask about a guided Santa Ana volcano hike. Confirm travel arrangements and activity requirements before going.",
-        "es": "Planee un día en el lago de cráter o consulte por una caminata guiada al volcán de Santa Ana. Confirme el transporte y los requisitos de las actividades antes de salir."
+        "en": "Spend time by the crater lake and plan a hike up Santa Ana Volcano. The guide pairs a lake visit with the rewarding volcano trail and its broad views.",
+        "es": "Pase un rato junto al lago de cráter y planee una caminata al volcán de Santa Ana. La guía combina una visita al lago con el sendero del volcán y sus amplias vistas."
       },
-      "image": "/assets/enhanced/guide-coatepeque-960.webp",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lago%20de%20Coatepeque%20El%20Salvador"
-    }
-  ],
-  "moreIdeas": [
+      "image": "/assets/guest-guide-source/coatepeque.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://everythingelsalvador.com/hiking-santa-ana-volcano-el-salvador/"
+        }
+      ],
+      "sourceUrl": "https://everythingelsalvador.com/hiking-santa-ana-volcano-el-salvador/",
+      "mapUrl": "https://everythingelsalvador.com/hiking-santa-ana-volcano-el-salvador/",
+      "sourcePage": 13
+    },
     {
       "id": "ruta-flores",
       "title": {
@@ -669,20 +757,22 @@
         "es": "Ruta de las Flores y Ataco"
       },
       "description": {
-        "en": "Colorful streets, local cafés and mountain towns. Ask about a day trip.",
-        "es": "Calles coloridas, cafés y pueblos de montaña. Consulte por un paseo de un día."
-      }
-    },
-    {
-      "id": "san-salvador",
-      "title": {
-        "en": "San Salvador",
-        "es": "San Salvador"
+        "en": "Explore highland villages, landscapes, cafés and local shops. Ataco adds colorful murals, cobblestone streets and scenic viewpoints.",
+        "es": "Recorra pueblos de montaña, paisajes, cafés y tiendas locales. Ataco ofrece murales coloridos, calles empedradas y miradores."
       },
-      "description": {
-        "en": "Explore the historic center and plan a Salvadoran meal along the way.",
-        "es": "Conozca el centro histórico y disfrute comida salvadoreña en el camino."
-      }
+      "image": "/assets/guest-guide-source/ruta-flores.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://sallysees.com/ruta-de-las-flores-el-salvador/"
+        }
+      ],
+      "sourceUrl": "https://sallysees.com/ruta-de-las-flores-el-salvador/",
+      "mapUrl": "https://sallysees.com/ruta-de-las-flores-el-salvador/",
+      "sourcePage": 14
     },
     {
       "id": "nawi",
@@ -691,58 +781,129 @@
         "es": "Nawi Beach Club"
       },
       "description": {
-        "en": "A beach-club day is another option. Ask the venue about current day passes and availability.",
-        "es": "Otra opción es pasar el día en un club de playa. Consulte con el lugar por pases y disponibilidad."
-      }
+        "en": "A day-pass beach escape with ocean views, lounge areas, pools, bars and dining. Check the club’s current pass options before your visit.",
+        "es": "Un paseo con pase de día para disfrutar vista al mar, áreas de descanso, piscinas, bares y comida. Revise las opciones actuales antes de visitar."
+      },
+      "image": "/assets/guest-guide-source/nawi.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://nawibeachhouse.com/"
+        }
+      ],
+      "sourceUrl": "https://nawibeachhouse.com/",
+      "mapUrl": "https://nawibeachhouse.com/",
+      "sourcePage": 14
+    },
+    {
+      "id": "san-salvador",
+      "title": {
+        "en": "San Salvador & La Doña",
+        "es": "San Salvador y La Doña"
+      },
+      "description": {
+        "en": "Explore the historic center, including the Metropolitan Cathedral and Plaza Barrios, then make time for a meal at La Doña. The guide links directly to the restaurant’s reservation page.",
+        "es": "Explore el centro histórico, incluyendo la Catedral Metropolitana y la Plaza Barrios, y luego reserve tiempo para comer en La Doña. La guía incluye el enlace de reservas del restaurante."
+      },
+      "image": "/assets/guest-guide-source/san-salvador.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://opentable.com/r/la-dona-steak-house-san-salvador?originId=c9da47ba-c347-45bb-b16a-27d319ab08ef&corrid=c9da47ba-c347-45bb-b16a-27d319ab08ef&avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ"
+        }
+      ],
+      "sourceUrl": "https://opentable.com/r/la-dona-steak-house-san-salvador?originId=c9da47ba-c347-45bb-b16a-27d319ab08ef&corrid=c9da47ba-c347-45bb-b16a-27d319ab08ef&avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ",
+      "mapUrl": "https://opentable.com/r/la-dona-steak-house-san-salvador?originId=c9da47ba-c347-45bb-b16a-27d319ab08ef&corrid=c9da47ba-c347-45bb-b16a-27d319ab08ef&avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ",
+      "sourcePage": 14
     },
     {
       "id": "coffee",
       "title": {
-        "en": "Coffee & highland outings",
-        "es": "Café y paseos por las montañas"
+        "en": "Coffee tour",
+        "es": "Tour de café"
       },
       "description": {
-        "en": "Ask about a coffee tour or an outing to the highlands, tailored to your group.",
-        "es": "Consulte por un tour de café o un paseo a las montañas, según los intereses de su grupo."
-      }
+        "en": "Learn how Salvadoran coffee is grown and made, then enjoy a freshly brewed cup. The guide’s tour link combines coffee with a Ruta de las Flores outing.",
+        "es": "Conozca cómo se cultiva y prepara el café salvadoreño y disfrute una taza recién hecha. El enlace de la guía combina café con un paseo por la Ruta de las Flores."
+      },
+      "image": "/assets/guest-guide-source/coffee.webp",
+      "links": [
+        {
+          "label": {
+            "en": "Explore this recommendation",
+            "es": "Ver esta recomendación"
+          },
+          "url": "https://tuncolife.com/ruta-de-las-flores-tour-el-salvador/"
+        }
+      ],
+      "sourceUrl": "https://tuncolife.com/ruta-de-las-flores-tour-el-salvador/",
+      "mapUrl": "https://tuncolife.com/ruta-de-las-flores-tour-el-salvador/",
+      "sourcePage": 14
     }
   ],
+  "moreIdeas": [],
   "essentialsNearby": [
+    {
+      "id": "fuel",
+      "title": {
+        "en": "Texaco",
+        "es": "Texaco"
+      },
+      "description": {
+        "en": "The nearest gas station listed in the guide, about 13 minutes from the house.",
+        "es": "La gasolinera más cercana indicada en la guía, a unos 13 minutos de la casa."
+      },
+      "mapUrl": "https://google.com/maps/place/Texaco/@13.497015,-89.3870553,14.15z/data=!4m11!1m3!2m2!1sgasolinera!6e2!3m6!1s0x8f7cd5e02da7dccf:0x51d3c0c8c76821c3!8m2!3d13.4883603!4d-89.3481994!15sCgpnYXNvbGluZXJhkgELZ2FzX3N0YXRpb27gAQA!16s%2Fg%2F11jzpy4dyd?entry=ttu&g_ep=EgoyMDI0MTIwMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourcePage": 10,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
     {
       "id": "groceries",
       "title": {
-        "en": "Groceries",
-        "es": "Supermercado"
+        "en": "Super Selectos El Encuentro",
+        "es": "Super Selectos El Encuentro"
       },
       "description": {
-        "en": "Super Selectos at El Encuentro is listed in our guide for everyday supplies. Check opening hours before going.",
-        "es": "Super Selectos en El Encuentro está en nuestra guía para las compras del día. Revise el horario antes de ir."
+        "en": "Everyday essentials and groceries, about 12 minutes from the house.",
+        "es": "Compras de supermercado y artículos básicos, a unos 12 minutos de la casa."
       },
-      "mapUrl": "https://maps.app.goo.gl/EYCVDdkhZqDxTrJJA"
+      "mapUrl": "https://maps.app.goo.gl/EYCVDdkhZqDxTrJJA",
+      "sourcePage": 10,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
     },
     {
       "id": "cash",
       "title": {
-        "en": "Cash withdrawal",
-        "es": "Retiro de efectivo"
+        "en": "ATMs in El Tunco",
+        "es": "Cajeros en El Tunco"
       },
       "description": {
-        "en": "Our guide lists ATMs in El Tunco. Availability, accepted cards and fees vary.",
-        "es": "Nuestra guía señala cajeros en El Tunco. La disponibilidad, las tarjetas aceptadas y los cargos pueden variar."
+        "en": "The guide points to two ATMs in town that work with international banks. Check card acceptance and fees before withdrawing.",
+        "es": "La guía señala dos cajeros en el pueblo que trabajan con bancos internacionales. Revise la aceptación de su tarjeta y los cargos antes de retirar."
       },
-      "mapUrl": "https://maps.app.goo.gl/k5WNaK6dtVKRwwh98"
+      "mapUrl": "https://maps.app.goo.gl/k5WNaK6dtVKRwwh98",
+      "sourcePage": 10,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
     },
     {
-      "id": "fuel",
+      "id": "fast-food",
       "title": {
-        "en": "Fuel & everyday stops",
-        "es": "Gasolina y paradas útiles"
+        "en": "El Encuentro Mall",
+        "es": "El Encuentro Mall"
       },
       "description": {
-        "en": "Ask your host about the most convenient fuel stop or supplies for your route.",
-        "es": "Consulte con su anfitrión la gasolinera o parada más conveniente para su ruta."
+        "en": "Wendy’s, Pizza Hut, Starbucks and Pollo Campestre are listed in the guide, within about a 15-minute drive.",
+        "es": "La guía incluye Wendy’s, Pizza Hut, Starbucks y Pollo Campestre, a unos 15 minutos en vehículo."
       },
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gasolinera%20La%20Libertad%20El%20Salvador"
+      "mapUrl": "https://google.com/maps/place/El+Encuentro+La+Libertad+Mall/data=!4m2!3m1!1s0x0:0xc4258414526bd239?sa=X&ved=1t:2428&ictx=111",
+      "sourcePage": 10,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
     }
   ],
   "help": {
@@ -760,7 +921,734 @@
     }
   },
   "contentNotice": {
-    "en": "Your booking and any arrangements confirmed by your host take priority. Ask us if something here differs from your stay details.",
-    "es": "Su reserva y los acuerdos confirmados por su anfitrión tienen prioridad. Consúltenos si algo aquí no coincide con los detalles de su estadía."
+    "en": "This is Wendy and Sergio’s welcome book, restored with its original recommendations and guide prices. Your booking and arrangements confirmed by your host take priority. Please ask if anything differs from your stay.",
+    "es": "Esta es la guía de Wendy y Sergio, con sus recomendaciones y precios originales. Su reserva y los acuerdos confirmados por su anfitrión tienen prioridad. Consúltenos si algo no coincide con su estadía."
+  },
+  "sourceGuide": {
+    "title": "White Swan Welcome Book",
+    "url": "https://whiteswan.my.canva.site/",
+    "pages": 18,
+    "restoredAt": "2026-10-23"
+  },
+  "aboutHome": {
+    "title": {
+      "en": "A little about our home",
+      "es": "Un poco sobre nuestra casa"
+    },
+    "body": {
+      "en": [
+        "White Swan is our place to unwind after a day exploring Tamanique. With four bedrooms and three-and-a-half bathrooms, the house brings comfort, thoughtful details and room to spend time together.",
+        "An equipped kitchen, comfortable furnishings, free Wi-Fi and a dedicated workspace make it easy to settle in. Enjoy ocean views and access to the Xanadu community’s private beach, then come back to the peaceful house.",
+        "Tamanique’s hills, green trails and waterfalls are made for an adventurous day out. Nearby El Tunco brings surf, lively cafés and unforgettable sunsets. Explore the friendly streets, try Salvadoran food and make yourself part of the coast for a little while."
+      ],
+      "es": [
+        "White Swan es nuestro lugar para descansar después de un día explorando Tamanique. Sus cuatro habitaciones y tres baños y medio ofrecen comodidad, detalles cuidados y espacio para compartir.",
+        "La cocina equipada, los muebles cómodos, el Wi-Fi y un espacio de trabajo hacen que sea fácil sentirse en casa. Disfrute la vista al mar y el acceso a la playa privada de la comunidad Xanadu, y luego regrese a la tranquilidad de la casa.",
+        "Las montañas, los senderos verdes y las cascadas de Tamanique invitan a pasar un día de aventura. Cerca, El Tunco ofrece surf, cafés con vida y atardeceres inolvidables. Recorra sus calles, pruebe la comida salvadoreña y disfrute la costa a su ritmo."
+      ]
+    },
+    "image": "/assets/guest-guide-source/home-villa.webp",
+    "facts": [
+      {
+        "en": "4 bedrooms",
+        "es": "4 habitaciones"
+      },
+      {
+        "en": "3½ bathrooms",
+        "es": "3½ baños"
+      },
+      {
+        "en": "Ocean views",
+        "es": "Vista al mar"
+      },
+      {
+        "en": "Dedicated workspace",
+        "es": "Espacio de trabajo"
+      }
+    ],
+    "sourcePage": 4,
+    "sourceUrl": "https://whiteswan.my.canva.site/",
+    "images": [
+      {
+        "src": "/assets/guest-guide-source/home-villa.webp",
+        "alt": {
+          "en": "White Swan’s original living and dining room photograph",
+          "es": "Foto original de la sala y comedor de White Swan"
+        }
+      },
+      {
+        "src": "/assets/guest-guide-source/home-ocean.webp",
+        "alt": {
+          "en": "White Swan’s original kitchen photograph",
+          "es": "Foto original de la cocina de White Swan"
+        }
+      }
+    ]
+  },
+  "hostProfiles": [
+    {
+      "id": "wendy",
+      "name": "Wendy",
+      "intro": {
+        "en": "Your host at White Swan. Please reach out if something needs attention at the house.",
+        "es": "Su anfitriona en White Swan. Escríbale si algo en la casa necesita atención."
+      },
+      "sourcePage": 6,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "sergio",
+      "name": "Sergio",
+      "intro": {
+        "en": "Your host for questions, arrival plans and arrangements during your stay.",
+        "es": "Su anfitrión para consultas, planes de llegada y coordinación durante su estadía."
+      },
+      "sourcePage": 6,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "ola-betos",
+      "title": {
+        "en": "Ola Beto’s",
+        "es": "Ola Beto’s"
+      },
+      "description": {
+        "en": "Fresh seafood, traditional Salvadoran dishes and ocean views in a relaxed seaside setting.",
+        "es": "Mariscos frescos, platillos salvadoreños y vista al mar en un ambiente relajado frente a la costa."
+      },
+      "image": "/assets/guest-guide-source/ola-betos.webp",
+      "phone": "+50377219513",
+      "address": {
+        "en": "Carretera El Litoral, km 45.9, Tamanique, El Salvador",
+        "es": "Carretera El Litoral, km 45.9, Tamanique, El Salvador"
+      },
+      "distance": {
+        "en": "4.39 km from the house",
+        "es": "4.39 km de la casa"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Restaurant page",
+            "es": "Página del restaurante"
+          },
+          "url": "https://facebook.com/BetosRestauranteLaLibertad/"
+        }
+      ],
+      "menuNote": {
+        "en": "Use the restaurant’s original page for its menu and current opening hours.",
+        "es": "Abra la página original del restaurante para consultar su menú y horario actual."
+      },
+      "sourcePage": 11,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menus": []
+    },
+    {
+      "id": "olor-de-mar",
+      "title": {
+        "en": "Olor de Mar",
+        "es": "Olor de Mar"
+      },
+      "description": {
+        "en": "Fresh seafood, gourmet Salvadoran dishes and beautiful ocean views.",
+        "es": "Mariscos frescos, cocina salvadoreña gourmet y una linda vista al mar."
+      },
+      "image": "/assets/guest-guide-source/olor-de-mar.webp",
+      "phone": "+50364531712",
+      "address": {
+        "en": "Km 45 Carretera El Litoral, Lote #6, Tamanique 1522, El Salvador",
+        "es": "Km 45 Carretera El Litoral, Lote #6, Tamanique 1522, El Salvador"
+      },
+      "distance": {
+        "en": "1.06 km from the house",
+        "es": "1.06 km de la casa"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Restaurant page",
+            "es": "Página del restaurante"
+          },
+          "url": "https://facebook.com/olordemarrestaurante/?locale=cy_GB"
+        }
+      ],
+      "menuNote": {
+        "en": "Use the restaurant’s original page for its menu and current opening hours.",
+        "es": "Abra la página original del restaurante para consultar su menú y horario actual."
+      },
+      "sourcePage": 11,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menus": []
+    },
+    {
+      "id": "vikingos",
+      "title": {
+        "en": "Vikingos / Puerto Vikingo",
+        "es": "Vikingos / Puerto Vikingo"
+      },
+      "description": {
+        "en": "A charming seaside restaurant with fresh seafood, Salvadoran-inspired dishes and a relaxed atmosphere.",
+        "es": "Un restaurante frente al mar con mariscos frescos, platillos de inspiración salvadoreña y ambiente tranquilo."
+      },
+      "image": "/assets/guest-guide-source/vikingos.webp",
+      "phone": "+50323353588",
+      "address": {
+        "en": "Calle del Litoral, Local 8-9, Lotificación The Cliff, Tamanique, El Salvador",
+        "es": "Calle del Litoral, Local 8-9, Lotificación The Cliff, Tamanique, El Salvador"
+      },
+      "distance": {
+        "en": "2.58 km from the house",
+        "es": "2.58 km de la casa"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Restaurant page",
+            "es": "Página del restaurante"
+          },
+          "url": "https://facebook.com/reel/488364723741096/"
+        }
+      ],
+      "menuNote": {
+        "en": "Use the restaurant’s original page for its menu and current opening hours.",
+        "es": "Abra la página original del restaurante para consultar su menú y horario actual."
+      },
+      "sourcePage": 11,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menus": []
+    },
+    {
+      "id": "pelicanos",
+      "title": {
+        "en": "Pelicanos Restaurant",
+        "es": "Pelicanos Restaurant"
+      },
+      "description": {
+        "en": "Fresh seafood and traditional Salvadoran dishes in a relaxed setting. A casual option for a family meal with scenic views.",
+        "es": "Mariscos frescos y platillos salvadoreños en un ambiente relajado. Una opción casual para comer en familia y disfrutar la vista."
+      },
+      "image": "/assets/guest-guide-source/pelicanos.webp",
+      "phone": "+50376014601",
+      "address": {
+        "en": "Km 49 Carretera del Litoral, Residencial Atami, Av. Flor de Fuego, Tamanique, El Salvador",
+        "es": "Km 49 Carretera del Litoral, Residencial Atami, Av. Flor de Fuego, Tamanique, El Salvador"
+      },
+      "distance": {
+        "en": "4.6 km from the house",
+        "es": "4.6 km de la casa"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Restaurant page",
+            "es": "Página del restaurante"
+          },
+          "url": "https://pelicanosrestaurante.com/"
+        }
+      ],
+      "menuNote": {
+        "en": "Food and drinks menus linked from Pelicanos’ official website. Confirm current prices and availability with the restaurant.",
+        "es": "Menús de comida y bebidas enlazados desde el sitio oficial de Pelicanos. Confirme precios y disponibilidad con el restaurante."
+      },
+      "sourcePage": 12,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menus": [
+        {
+          "label": {
+            "en": "Food menu",
+            "es": "Menú de comida"
+          },
+          "url": "https://player.flipsnack.com/?hash=NThFRUY4Q0Y4RDYrN3U4d3BwbnZ4bg%3D%3D",
+          "verifiedFrom": "https://www.pelicanosrestaurante.com/",
+          "verifiedAt": "2026-10-23",
+          "source": "official-restaurant-website"
+        },
+        {
+          "label": {
+            "en": "Drinks menu",
+            "es": "Menú de bebidas"
+          },
+          "url": "https://player.flipsnack.com/?hash=NThFRUY4Q0Y4RDYrZDE5MHVuajd0OQ%3D%3D",
+          "verifiedFrom": "https://www.pelicanosrestaurante.com/",
+          "verifiedAt": "2026-10-23",
+          "source": "official-restaurant-website"
+        }
+      ]
+    },
+    {
+      "id": "beach-break",
+      "title": {
+        "en": "Beach Breakers Restaurant",
+        "es": "Beach Breakers Restaurant"
+      },
+      "description": {
+        "en": "The Beach Break Hotel restaurant in El Zonte serves Mexican, seafood and Latin American dishes. The guide lists it as family-friendly, with vegetarian options, close to the beach.",
+        "es": "El restaurante del Beach Break Hotel en El Zonte ofrece comida mexicana, mariscos y platos latinoamericanos. La guía lo describe como familiar, con opciones vegetarianas y cerca de la playa."
+      },
+      "image": "/assets/guest-guide-source/beach-break.webp",
+      "phone": "+50364203740",
+      "address": {
+        "en": "CP 151, Calle El Litoral, km 53½, Playa El Zonte, Lote #3, Chiltiupán, El Salvador",
+        "es": "CP 151, Calle El Litoral, km 53½, Playa El Zonte, Lote #3, Chiltiupán, El Salvador"
+      },
+      "distance": {
+        "en": "7.6 km from the house",
+        "es": "7.6 km de la casa"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Restaurant page",
+            "es": "Página del restaurante"
+          },
+          "url": "https://facebook.com/191821346072396/"
+        }
+      ],
+      "menuNote": {
+        "en": "The restaurant’s menu, linked from its official dining page. Confirm current prices and availability with the restaurant.",
+        "es": "Menú del restaurante enlazado desde su página oficial. Confirme precios y disponibilidad con el restaurante."
+      },
+      "sourcePage": 12,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menus": [
+        {
+          "label": {
+            "en": "Restaurant menu · PDF",
+            "es": "Menú del restaurante · PDF"
+          },
+          "url": "https://www.thebeachbreakhotels.com/_files/ugd/d20227_bfc6147cefdb4618be567b730d4dbb5e.pdf",
+          "verifiedFrom": "https://www.thebeachbreakhotels.com/dining",
+          "verifiedAt": "2026-10-23",
+          "source": "official-restaurant-website"
+        }
+      ]
+    },
+    {
+      "id": "coyote",
+      "title": {
+        "en": "Coyote",
+        "es": "Coyote"
+      },
+      "description": {
+        "en": "A casual El Tunco spot for burgers, pizzas and seafood pasta. The guide lists air-conditioned seating, breakfast, lunch and dinner, and a family-friendly atmosphere.",
+        "es": "Un lugar casual en El Tunco para hamburguesas, pizzas y pasta con mariscos. La guía indica mesas con aire acondicionado, desayuno, almuerzo y cena, y un ambiente familiar."
+      },
+      "image": "/assets/guest-guide-source/coyote.webp",
+      "phone": "+50323896037",
+      "address": {
+        "en": "Km 42½, entrada peatonal a Playa El Tunco, Local #4, Tamanique, El Salvador",
+        "es": "Km 42½, entrada peatonal a Playa El Tunco, Local #4, Tamanique, El Salvador"
+      },
+      "distance": {
+        "en": "5.2 km from the house",
+        "es": "5.2 km de la casa"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Restaurant page",
+            "es": "Página del restaurante"
+          },
+          "url": "https://instagram.com/coyote_sv/"
+        }
+      ],
+      "menuNote": {
+        "en": "Use the restaurant’s original page for its menu and current opening hours.",
+        "es": "Abra la página original del restaurante para consultar su menú y horario actual."
+      },
+      "sourcePage": 12,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menus": []
+    },
+    {
+      "id": "captain-cook",
+      "title": {
+        "en": "Captain Cook",
+        "es": "Captain Cook"
+      },
+      "description": {
+        "en": "Fresh fish, ceviche and other seafood at Tunco Town Plaza, in the heart of the coastal area.",
+        "es": "Pescado fresco, ceviches y otros mariscos en Tunco Town Plaza, en el corazón de la zona costera."
+      },
+      "image": "/assets/guest-guide-source/captain-cook.webp",
+      "phone": "+50378624007",
+      "address": {
+        "en": "Centro Comercial Tunco Town Plaza, Calle Principal, Carretera Tamanique, Tamanique CP 1522, El Salvador",
+        "es": "Centro Comercial Tunco Town Plaza, Calle Principal, Carretera Tamanique, Tamanique CP 1522, El Salvador"
+      },
+      "distance": {
+        "en": "4.7 km from the house",
+        "es": "4.7 km de la casa"
+      },
+      "links": [
+        {
+          "label": {
+            "en": "Directions",
+            "es": "Cómo llegar"
+          },
+          "url": "https://maps.app.goo.gl/MLSFC4L2cbtiPYWK6"
+        },
+        {
+          "label": {
+            "en": "Restaurant page",
+            "es": "Página del restaurante"
+          },
+          "url": "https://facebook.com/p/Capt-Cook-100064152423135/"
+        }
+      ],
+      "menuNote": {
+        "en": "Use the restaurant’s original page for its menu and current opening hours.",
+        "es": "Abra la página original del restaurante para consultar su menú y horario actual."
+      },
+      "sourcePage": 12,
+      "sourceUrl": "https://whiteswan.my.canva.site/",
+      "menus": []
+    }
+  ],
+  "restaurantNote": {
+    "en": "Wendy and Sergio’s original restaurant list. Distances are approximate as printed in the welcome book. Menus, opening hours and dietary options can change; contact the restaurant to confirm.",
+    "es": "La lista original de restaurantes de Wendy y Sergio. Las distancias son aproximadas, según la guía. Los menús, horarios y opciones de alimentación pueden cambiar; confirme con el restaurante."
+  },
+  "contacts": [
+    {
+      "id": "emergency",
+      "title": {
+        "en": "Emergency",
+        "es": "Emergencias"
+      },
+      "description": {
+        "en": "For an immediate emergency, call 911. Tell the operator you are at Residencial Xanadu, Casa F-2, Tamanique, La Libertad.",
+        "es": "Si hay una emergencia inmediata, llame al 911. Indique que está en Residencial Xanadu, Casa F-2, Tamanique, La Libertad."
+      },
+      "phone": "911",
+      "links": [
+        {
+          "label": {
+            "en": "Official 911 information",
+            "es": "Información oficial del 911"
+          },
+          "url": "https://www.pnc.gob.sv/servicios/sistema-911/"
+        }
+      ],
+      "sourcePage": 6,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "hospital",
+      "title": {
+        "en": "Hospital Nacional San Rafael",
+        "es": "Hospital Nacional San Rafael"
+      },
+      "description": {
+        "en": "Hospital contact in Santa Tecla. This is the hospital associated with the phone number and address in your original guide. For an immediate emergency, call 911 first.",
+        "es": "Contacto del hospital en Santa Tecla. Este es el hospital al que corresponden el teléfono y la dirección de la guía original. Si es una emergencia inmediata, llame primero al 911."
+      },
+      "phone": "+50325944000",
+      "address": {
+        "en": "4ª Calle Oriente No. 9-2, Santa Tecla, La Libertad, El Salvador",
+        "es": "4ª Calle Oriente No. 9-2, Santa Tecla, La Libertad, El Salvador"
+      },
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Hospital+Nacional+San+Rafael+Santa+Tecla+El+Salvador",
+      "links": [
+        {
+          "label": {
+            "en": "Official health directory",
+            "es": "Directorio oficial de Salud"
+          },
+          "url": "https://www.salud.gob.sv/directorio/"
+        }
+      ],
+      "verificationNote": {
+        "en": "Hospital name corrected using the Ministry of Health directory.",
+        "es": "Nombre del hospital corregido con el directorio del Ministerio de Salud."
+      },
+      "sourcePage": 6,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "pharmacy",
+      "title": {
+        "en": "Farmacia Camila",
+        "es": "Farmacia Camila"
+      },
+      "description": {
+        "en": "At The Spot, Surf City. The guide lists 7:00 AM to 6:00 PM; confirm today’s hours before travelling.",
+        "es": "En The Spot, Surf City. La guía indica de 7:00 a. m. a 6:00 p. m.; confirme el horario de hoy antes de salir."
+      },
+      "address": {
+        "en": "The Spot, Surf City, La Libertad, El Salvador",
+        "es": "The Spot, Surf City, La Libertad, El Salvador"
+      },
+      "hours": {
+        "en": "7:00 AM to 6:00 PM in the guide",
+        "es": "De 7:00 a. m. a 6:00 p. m. según la guía"
+      },
+      "mapUrl": "https://google.com/maps/place/Farmacias+Camila+%E2%80%A2+The+Spot+Surf+City/@13.5832455,-89.4486367,11z/data=!4m11!1m3!2m2!1sfarmacia!6e2!3m6!1s0x8f7cd568ec67bd25:0xa2c4ae65ea842653!8m2!3d13.4863898!4d-89.3439981!15sCghmYXJtYWNpYVoKIghmYXJtYWNpYZIBCHBoYXJtYWN54AEA!16s%2Fg%2F11kb7msnj9?entry=ttu&g_ep=EgoyMDI0MTIwMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourcePage": 6,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "police",
+      "title": {
+        "en": "National Civil Police",
+        "es": "Policía Nacional Civil"
+      },
+      "description": {
+        "en": "The original guide lists this contact for less urgent situations. It has not been independently reverified. For an emergency, use 911.",
+        "es": "La guía original incluye este contacto para situaciones menos urgentes. No se ha vuelto a verificar de forma independiente. Para emergencias, llame al 911."
+      },
+      "phone": "+50325214545",
+      "sourcePage": 6,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    }
+  ],
+  "review": {
+    "title": {
+      "en": "A note about reviews",
+      "es": "Una nota sobre las reseñas"
+    },
+    "intro": {
+      "en": "Your feedback helps us look after this home and welcome the next guests. A review is about your experience here, rather than a hotel’s facilities or star category.",
+      "es": "Sus comentarios nos ayudan a cuidar esta casa y recibir a los próximos huéspedes. Una reseña refleja su experiencia aquí, no la categoría o las instalaciones de un hotel."
+    },
+    "hostNote": {
+      "en": "In our welcome book, we explain our perspective on the stars below. Please choose the rating that honestly reflects your stay.",
+      "es": "En nuestra guía explicamos cómo interpretamos las estrellas. Elija la calificación que refleje honestamente su estadía."
+    },
+    "ratings": [
+      {
+        "stars": 5,
+        "label": {
+          "en": "We enjoyed our stay",
+          "es": "Disfrutamos nuestra estadía"
+        }
+      },
+      {
+        "stars": 4,
+        "label": {
+          "en": "Several things could be improved",
+          "es": "Hay varias cosas que mejorar"
+        }
+      },
+      {
+        "stars": 3,
+        "label": {
+          "en": "Several major issues need attention",
+          "es": "Hay varios problemas importantes que atender"
+        }
+      },
+      {
+        "stars": 2,
+        "label": {
+          "en": "The home did not meet our expectations",
+          "es": "La casa no cumplió nuestras expectativas"
+        }
+      },
+      {
+        "stars": 1,
+        "label": {
+          "en": "A seriously disappointing stay",
+          "es": "Una estadía muy decepcionante"
+        }
+      }
+    ],
+    "note": {
+      "en": "These descriptions are Wendy and Sergio’s guide, not Airbnb’s official rating definitions. You are always welcome to leave honest feedback. If something needs attention during your stay, please tell us so we can help.",
+      "es": "Estas descripciones son la orientación de Wendy y Sergio, no las definiciones oficiales de Airbnb. Siempre puede dejar una reseña honesta. Si algo necesita atención durante su estadía, avísenos para poder ayudarle."
+    },
+    "links": [
+      {
+        "label": {
+          "en": "Open Airbnb",
+          "es": "Abrir Airbnb"
+        },
+        "url": "https://www.airbnb.com/inbox"
+      }
+    ],
+    "sourcePage": 17,
+    "sourceUrl": "https://whiteswan.my.canva.site/"
+  },
+  "thankYou": {
+    "title": {
+      "en": "Thank you for staying with us",
+      "es": "Gracias por quedarse con nosotros"
+    },
+    "body": {
+      "en": [
+        "Thank you again for choosing White Swan during your time in El Salvador. We hope you had a wonderful stay and made some lovely memories here.",
+        "If you have a few minutes, we would love to hear your feedback. If you enjoyed your stay, a five-star review means so much to us. If anything needed attention, please tell us too, so we can keep improving.",
+        "We hope to welcome you back soon."
+      ],
+      "es": [
+        "Gracias de nuevo por elegir White Swan durante su visita a El Salvador. Esperamos que haya disfrutado su estadía y se lleve lindos recuerdos.",
+        "Si tiene unos minutos, nos encantaría conocer su experiencia. Si disfrutó su estadía, una reseña de cinco estrellas significa mucho para nosotros. Si algo necesitaba atención, cuéntenos también para seguir mejorando.",
+        "Esperamos recibirle de nuevo pronto."
+      ]
+    },
+    "signature": {
+      "en": "Wendy & Sergio",
+      "es": "Wendy y Sergio"
+    },
+    "image": "/assets/guest-guide-source/thank-you.webp",
+    "sourcePage": 18,
+    "sourceUrl": "https://whiteswan.my.canva.site/"
+  },
+  "transportRates": [
+    {
+      "id": "airport",
+      "title": {
+        "en": "Airport transfer",
+        "es": "Traslado al aeropuerto"
+      },
+      "description": {
+        "en": "Taxi pickup and drop-off.",
+        "es": "Recogida y regreso en taxi."
+      },
+      "groupSize": {
+        "en": "4 to 8 people",
+        "es": "4 a 8 personas"
+      },
+      "priceLabel": {
+        "en": "$100 round trip",
+        "es": "$100 ida y vuelta"
+      },
+      "schedule": {
+        "en": "Confirm pickup times with Wendy or Sergio.",
+        "es": "Confirme las horas de recogida con Wendy o Sergio."
+      },
+      "sourcePage": 15,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "volcano-lake",
+      "title": {
+        "en": "Ilamatepeque Volcano & Coatepeque Lake",
+        "es": "Volcán Ilamatepeque y lago de Coatepeque"
+      },
+      "description": {
+        "en": "Hike with crater views, followed by time for swimming at the lake.",
+        "es": "Caminata con vista al cráter y después tiempo para nadar en el lago."
+      },
+      "groupSize": {
+        "en": "4 to 8 people",
+        "es": "4 a 8 personas"
+      },
+      "priceLabel": {
+        "en": "$80 per person",
+        "es": "$80 por persona"
+      },
+      "schedule": {
+        "en": "The original table prints 6:00 AM departure and 2:00 AM return. The return time needs confirmation with Wendy or Sergio.",
+        "es": "La tabla original indica salida a las 6:00 a. m. y regreso a las 2:00 a. m. Es necesario confirmar la hora de regreso con Wendy o Sergio."
+      },
+      "sourcePage": 15,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "cafe-albania",
+      "title": {
+        "en": "Café Albania & hot springs",
+        "es": "Café Albania y aguas termales"
+      },
+      "description": {
+        "en": "Zipline, labyrinth and rainbow slide activities, followed by hot springs with warm pools and a spa.",
+        "es": "Actividades de canopy, laberinto y tobogán arcoíris, seguidas de aguas termales con piscinas cálidas y spa."
+      },
+      "groupSize": {
+        "en": "4 to 8 people",
+        "es": "4 a 8 personas"
+      },
+      "priceLabel": {
+        "en": "$80 per person",
+        "es": "$80 por persona"
+      },
+      "schedule": {
+        "en": "8:00 AM departure · 3:00 PM return in the guide.",
+        "es": "Salida 8:00 a. m. · regreso 3:00 p. m. según la guía."
+      },
+      "sourcePage": 15,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "surf",
+      "title": {
+        "en": "Surf lessons",
+        "es": "Clases de surf"
+      },
+      "description": {
+        "en": "An instructor for each person, with 1½ hours of theory and practice. Surfboard included.",
+        "es": "Un instructor por persona, con 1½ horas de teoría y práctica. Tabla incluida."
+      },
+      "groupSize": {
+        "en": "4 to 8 people",
+        "es": "4 a 8 personas"
+      },
+      "priceLabel": {
+        "en": "$40 per person",
+        "es": "$40 por persona"
+      },
+      "schedule": {
+        "en": "Timing depends on the tides.",
+        "es": "El horario depende de las mareas."
+      },
+      "sourcePage": 15,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "waterfalls",
+      "title": {
+        "en": "Tamanique Waterfalls",
+        "es": "Cascadas de Tamanique"
+      },
+      "description": {
+        "en": "Explore the river and natural pools. The source mentions swimming and cliff jumping; discuss conditions and suitable activities with your guide.",
+        "es": "Explore el río y las pozas naturales. La guía menciona natación y saltos desde rocas; confirme las condiciones y actividades adecuadas con su guía."
+      },
+      "groupSize": {
+        "en": "4 to 8 people",
+        "es": "4 a 8 personas"
+      },
+      "priceLabel": {
+        "en": "$35 per person",
+        "es": "$35 por persona"
+      },
+      "schedule": {
+        "en": "The table lists 09:00 departure and 01:00 return without AM/PM. Confirm the exact times before booking.",
+        "es": "La tabla indica salida 09:00 y regreso 01:00 sin especificar a. m. o p. m. Confirme las horas antes de reservar."
+      },
+      "sourcePage": 15,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    },
+    {
+      "id": "mayan-ruins",
+      "title": {
+        "en": "Mayan ruins",
+        "es": "Ruinas mayas"
+      },
+      "description": {
+        "en": "Visit Joya de Cerén and San Andrés.",
+        "es": "Visite Joya de Cerén y San Andrés."
+      },
+      "groupSize": {
+        "en": "4 to 8 people",
+        "es": "4 a 8 personas"
+      },
+      "priceLabel": {
+        "en": "$60 per person",
+        "es": "$60 por persona"
+      },
+      "schedule": {
+        "en": "The table lists 08:00 departure and 02:00 return without AM/PM. Confirm the exact times before booking.",
+        "es": "La tabla indica salida 08:00 y regreso 02:00 sin especificar a. m. o p. m. Confirme las horas antes de reservar."
+      },
+      "sourcePage": 15,
+      "sourceUrl": "https://whiteswan.my.canva.site/"
+    }
+  ],
+  "transportNote": {
+    "en": "These are the transport prices printed in the original guide. Admission fees are not included. Confirm availability, the exact schedule, what is included and the final price with Wendy or Sergio. Payment can be arranged with the provider or through the Airbnb app.",
+    "es": "Estos son los precios de transporte publicados en la guía original. No incluyen las entradas. Confirme disponibilidad, horario exacto, lo que incluye y el precio final con Wendy o Sergio. El pago se puede coordinar con el proveedor o por la aplicación de Airbnb."
   }
 }
