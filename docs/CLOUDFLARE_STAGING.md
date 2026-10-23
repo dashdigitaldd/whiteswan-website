@@ -7,3 +7,9 @@ Run the existing content checks and tests, then `python3 scripts/prepare-staging
 From an authenticated Cloudflare CLI, deploy with `wrangler deploy --config artifacts/cloudflare-staging/wrangler.json`. Verify EN/ES navigation, mobile layout, date validation, booking-request semantics, consent and failure handling on the hosted origin. Configure a staging intake origin in the **generated asset copy** only when its separate service is deployed and tested. Keep analytics disabled until the owner coordinates the approved tag.
 
 The booking planner now reads calendar availability from the isolated intake facade and saves host-reviewed stay requests. It does not create an inventory hold, process payment or confirm a booking. See BOOKING.md. The staging packager writes the existing pilot intake origin into the generated public config; production config remains disabled.
+
+## Private guest companion
+
+The packager now includes a small Worker, binding the existing static assets as `ASSETS` and the private `white-swan-admin-staging-guest-companion` service as `GUEST_COMPANION`. Only `/guest`, `/guest/*` and `/api/guest-companion` run through the Worker first. Existing marketing and booking routes retain their asset behavior.
+
+Before publishing, deploy the admin's additive `0018_guest_access_links.sql` migration and private companion service, then its authenticated link controls. Deploy this website last. The private service has no public Worker URL and needs no browser credential. A missing binding or unhealthy booking read fails closed. See [guest companion usage and boundaries](GUEST_COMPANION.md).

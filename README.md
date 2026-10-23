@@ -17,6 +17,8 @@ Public discovery and guest experience for White Swan Villa / Xanadu Beach House,
 
 ## Routes
 
+The separate [private guest companion](docs/GUEST_COMPANION.md) at `/guest/` offers a bilingual, mobile-first guide personalised to an eligible saved stay. Hosts create expiring, revocable links from the admin's Guest profile. Private stay data requires the Cloudflare service binding; GitHub Pages can serve only the shell and clearly labelled sample preview.
+
 | English | Spanish | Purpose |
 |---|---|---|
 | `/` | `/es/` | Villa discovery, experiences and enquiry |

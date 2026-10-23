@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "sourceGuide": "https://whiteswan.my.canva.site/",
+  "retrievedAt": "2026-10-23",
+  "items": [
+    {
+      "id": "welcome",
+      "sourcePage": 3,
+      "sourceMediaId": "MAGX15tj41M",
+      "image": "/assets/guest-guide-source/welcome.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/ed313747d1bb6f871cbb31a01e5743a4.png",
+      "width": 720,
+      "height": 403,
+      "sourceSha256": "1dd9d3c96f502adb6341cffe78653acf3c16cb807b20cf2f266514cfb9221d67",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits."
+    },
+    {
+      "id": "home-ocean",
+      "sourcePage": 4,
+      "sourceMediaId": "MAGX163i4Ak",
+      "image": "/assets/guest-guide-source/home-ocean.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/e63c79f92b29cf2fd0f7d021ae05ee8c.png",
+      "width": 720,
+      "height": 480,
+      "sourceSha256": "e10313d5e6cd0b163c0562dee118bbcba1f136c2457e02c1dd3b9d3077a265e9",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "description": "Original kitchen photograph from About the Home; filename retained for compatibility."
+    },
+    {
+      "id": "home-villa",
+      "sourcePage": 4,
+      "sourceMediaId": "MAGX1-ngKQ4",
+      "image": "/assets/guest-guide-source/home-villa.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/9295f3d2c24315be48c1fa75d584814f.png",
+      "width": 1200,
+      "height": 800,
+      "sourceSha256": "6495672d295b6e55ba5c9a2a88254430e99769afcbef5e13fc38f626cf81c555",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "description": "Original living/dining photograph from About the Home; filename retained for compatibility."
+    },
+    {
+      "id": "ola-betos",
+      "sourcePage": 11,
+      "sourceMediaId": "MAGX4FbFnw4",
+      "image": "/assets/guest-guide-source/ola-betos.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/fd87ff3b04bcbc35f7f379b6b4ddfcd2.png",
+      "width": 768,
+      "height": 960,
+      "sourceSha256": "e12e9d8b94ae4fa0686df4ae042ba4d9384219e5f176d76a6dbe7ee49d56e183",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.facebook.com/BetosRestauranteLaLibertad/",
+      "publicBusinessPhone": "+50377219513"
+    },
+    {
+      "id": "olor-de-mar",
+      "sourcePage": 11,
+      "sourceMediaId": "MAGX4KCfIFw",
+      "image": "/assets/guest-guide-source/olor-de-mar.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/9b3a15ee21dc882ca0240541acce80e0.png",
+      "width": 900,
+      "height": 500,
+      "sourceSha256": "f1aab01fb38a4d7d3ec242ae20a44bedfa6c14b0d963736a275eb1a9858d646b",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.facebook.com/olordemarrestaurante/?locale=cy_GB",
+      "publicBusinessPhone": "+50364531712"
+    },
+    {
+      "id": "vikingos",
+      "sourcePage": 11,
+      "sourceMediaId": "MAGX4EnRnZs",
+      "image": "/assets/guest-guide-source/vikingos.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/2c2531a7230e5f1b668adc1dc2293149.png",
+      "width": 450,
+      "height": 450,
+      "sourceSha256": "25f238044cfdf0c53504fc5961e66f4af9fdf070f3c14e3078ed503068218110",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.facebook.com/reel/488364723741096/",
+      "publicBusinessPhone": "+50323353588"
+    },
+    {
+      "id": "captain-cook",
+      "sourcePage": 12,
+      "sourceMediaId": "MAGZlH_7Gys",
+      "image": "/assets/guest-guide-source/captain-cook.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/91a5d4dc0305a1580035c35be77692b4.jpg",
+      "width": 1290,
+      "height": 1149,
+      "sourceSha256": "6c8069fc80f90cb8542b9d0cf73e4c94ba520ee3d3cc5bb9bcbc2a6899026e5f",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.facebook.com/p/Capt-Cook-100064152423135/",
+      "publicBusinessPhone": "+50378624007",
+      "originalMapUrl": "https://maps.app.goo.gl/MLSFC4L2cbtiPYWK6"
+    },
+    {
+      "id": "pelicanos",
+      "sourcePage": 12,
+      "sourceMediaId": "MAGX4jZncN4",
+      "image": "/assets/guest-guide-source/pelicanos.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/611ade5538b56664a87789e42f45ab1e.png",
+      "width": 1063,
+      "height": 645,
+      "sourceSha256": "3fe09cbca4c6f65d17c23452fadcd925ad331b23bd273bcc982d270c1b5c1987",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.pelicanosrestaurante.com",
+      "publicBusinessPhone": "+50376014601"
+    },
+    {
+      "id": "beach-break",
+      "sourcePage": 12,
+      "sourceMediaId": "MAGX4oNRIHw",
+      "image": "/assets/guest-guide-source/beach-break.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/aaf5d9816232ee4f78a86e3cfa917180.png",
+      "width": 907,
+      "height": 661,
+      "sourceSha256": "2aa8acbb44a1fa5642cc04dc01bcf7aa52727bbe38286e00c4a4b216e1e2b3c9",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.facebook.com/191821346072396/",
+      "publicBusinessPhone": "+50364203740"
+    },
+    {
+      "id": "coyote",
+      "sourcePage": 12,
+      "sourceMediaId": "MAGX4jTjORg",
+      "image": "/assets/guest-guide-source/coyote.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/84658971e5bca80f958d824a1a7762c4.png",
+      "width": 573,
+      "height": 411,
+      "sourceSha256": "acffbe5a1e0eb3a4a5fbb0dc0091d14e32fef61689aa060fd95ea2ae51e4937d",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.instagram.com/coyote_sv/",
+      "publicBusinessPhone": "+50323896037"
+    },
+    {
+      "id": "el-tunco",
+      "sourcePage": 13,
+      "sourceMediaId": "MAGX2Nl2gyU",
+      "image": "/assets/guest-guide-source/el-tunco.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/0205220910a2532784ef4e38dfca9b26.png",
+      "width": 580,
+      "height": 1024,
+      "sourceSha256": "53e929f212d05b04742c42dbc42d6fb64b4375827afca61c11e1f7f05d06bede",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://sallysees.com/el-tunco-el-salvador/"
+    },
+    {
+      "id": "tamanique",
+      "sourcePage": 13,
+      "sourceMediaId": "MAGX2KczY7I",
+      "image": "/assets/guest-guide-source/tamanique.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/df288dd9692d2c5049015cadad581f14.png",
+      "width": 275,
+      "height": 183,
+      "sourceSha256": "81407cd65ebeeb9d7c3a00b93216abc0addeba10e7ba98f5b9c3815c59b503ae",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.paradisecatchers.com/tamanique-waterfalls-el-salvador/"
+    },
+    {
+      "id": "sunset-park",
+      "sourcePage": 13,
+      "sourceMediaId": "MAGX2Flw5vQ",
+      "image": "/assets/guest-guide-source/sunset-park.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/095378bf67085a505d33816000c81e42.png",
+      "width": 275,
+      "height": 183,
+      "sourceSha256": "44b2c48ccb827b10a63a2fade9bbcba27c691aaef54bfcb69c8811a88caa1337",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://elsalvador.travel/destination/parque-de-diversiones-sunset-park/en/"
+    },
+    {
+      "id": "coatepeque",
+      "sourcePage": 13,
+      "sourceMediaId": "MAGX2DK7tqI",
+      "image": "/assets/guest-guide-source/coatepeque.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/6ff89fae31eda5494fe4df3faf41b9e0.png",
+      "width": 275,
+      "height": 183,
+      "sourceSha256": "7f7ebe40704afe887f4d7ff07c4aa7a0dfead9aff2c6316c7949cac83b14aaa2",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://everythingelsalvador.com/hiking-santa-ana-volcano-el-salvador/"
+    },
+    {
+      "id": "ruta-flores",
+      "sourcePage": 14,
+      "sourceMediaId": "MAGX2BHtCsg",
+      "image": "/assets/guest-guide-source/ruta-flores.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/20c3fd1aca75385047451158c85f4a78.png",
+      "width": 275,
+      "height": 183,
+      "sourceSha256": "d05c9a64ca779760c7a13b4d6114fed47b5b66753dee4e845fc845167a360459",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://sallysees.com/ruta-de-las-flores-el-salvador/"
+    },
+    {
+      "id": "nawi",
+      "sourcePage": 14,
+      "sourceMediaId": "MAGX2MaMvq0",
+      "image": "/assets/guest-guide-source/nawi.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/571e14097f1bdadc445c933c52355733.png",
+      "width": 275,
+      "height": 183,
+      "sourceSha256": "233d5134a61dd8c61a99cef0434dbedf27d4737b2e038c9c90a6c2fe4045b8b8",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.nawibeachhouse.com"
+    },
+    {
+      "id": "san-salvador",
+      "sourcePage": 14,
+      "sourceMediaId": "MAGX2BZoPcc",
+      "image": "/assets/guest-guide-source/san-salvador.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/115639c3fb093f660ba7afdac7f4ed10.png",
+      "width": 300,
+      "height": 168,
+      "sourceSha256": "522dc4f9d26f68e44e2cf7220bea57b31051741b03c7c429dcdf29be3967aecd",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://www.opentable.com/r/la-dona-steak-house-san-salvador?originId=c9da47ba-c347-45bb-b16a-27d319ab08ef&corrid=c9da47ba-c347-45bb-b16a-27d319ab08ef&avt=eyJ2IjoyLCJtIjoxLCJwIjowLCJzIjowLCJuIjowfQ"
+    },
+    {
+      "id": "coffee",
+      "sourcePage": 14,
+      "sourceMediaId": "MAGX4cZnIHo",
+      "image": "/assets/guest-guide-source/coffee.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/e28a1fd787bc195fef7f99f78af4598e.png",
+      "width": 674,
+      "height": 446,
+      "sourceSha256": "d19f45b72faeb6276b3b42c6af111fe93f3dcd2463f98fc78d5c1dbc04c7ff4a",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits.",
+      "originalGuideUrl": "https://tuncolife.com/ruta-de-las-flores-tour-el-salvador/"
+    },
+    {
+      "id": "breakfast",
+      "sourcePage": 16,
+      "sourceMediaId": "MAGZlyfmID8",
+      "image": "/assets/guest-guide-source/breakfast.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/05145aaa2afe9a7fababefbc4863c0d4.jpg",
+      "width": 1440,
+      "height": 810,
+      "sourceSha256": "fe9f513cd2d5acc8d3adab02aaf2f1e1fdd1d090cb76a5e3ce2343c829363c20",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits."
+    },
+    {
+      "id": "massage",
+      "sourcePage": 16,
+      "sourceMediaId": "MAGZl_DXxac",
+      "image": "/assets/guest-guide-source/massage.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/63c7ff9ad0e6432abf77fc321ddb3355.jpg",
+      "width": 1080,
+      "height": 1440,
+      "sourceSha256": "7078387bfe5ecbe7cc86259a1146ceaf579c6ed6003fbd350a6c61c789e74896",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits."
+    },
+    {
+      "id": "airport-transfer",
+      "sourcePage": 16,
+      "sourceMediaId": "MAGZmMPWGfg",
+      "image": "/assets/guest-guide-source/airport-transfer.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/d9c363567467d6b199c9083cfa1cdb8e.jpg",
+      "width": 1232,
+      "height": 1440,
+      "sourceSha256": "25c78b4465000171bd2f269e66684c4460a295f32487f7fc24e861d0103e918a",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits."
+    },
+    {
+      "id": "private-chef",
+      "sourcePage": 16,
+      "sourceMediaId": "MAGZmEdKz2E",
+      "image": "/assets/guest-guide-source/private-chef.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/4b642a9d6d2dfed199c6493fb3ab75e6.jpg",
+      "width": 1166,
+      "height": 1440,
+      "sourceSha256": "f691530153e79f4d2f6b0b7e62f26b77fab369335192b1cb42eb51774b75e0ba",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits."
+    },
+    {
+      "id": "thank-you",
+      "sourcePage": 18,
+      "sourceMediaId": "MAGX4Bct3ek",
+      "image": "/assets/guest-guide-source/thank-you.webp",
+      "sourceUrl": "https://whiteswan.my.canva.site/_assets/media/27ff5e2d53c4a7a2bbbe9d0d8affe94e.png",
+      "width": 720,
+      "height": 480,
+      "sourceSha256": "2d42c4e48af064af38677429f913ee21df9f8f931330f0cdd743977c7914bc7c",
+      "transformation": "Responsive resize and WebP compression only. No retouching or generative edits."
+    }
+  ],
+  "notes": [
+    "Page numbers follow the 18 visible Canva guide pages. The hidden social-media page is excluded.",
+    "Wi-Fi QR and credentials are excluded from these public assets.",
+    "Original images restored at the property owner’s explicit request."
+  ],
+  "supplementalMenus": [
+    {
+      "venueId": "pelicanos",
+      "sourcePage": "https://www.pelicanosrestaurante.com/",
+      "verifiedAt": "2026-10-23",
+      "provenance": "Directly linked from the official restaurant website, supplemental to the original Canva guide.",
+      "links": [
+        {
+          "kind": "food",
+          "url": "https://player.flipsnack.com/?hash=NThFRUY4Q0Y4RDYrN3U4d3BwbnZ4bg%3D%3D"
+        },
+        {
+          "kind": "drinks",
+          "url": "https://player.flipsnack.com/?hash=NThFRUY4Q0Y4RDYrZDE5MHVuajd0OQ%3D%3D"
+        }
+      ]
+    },
+    {
+      "venueId": "beach-break",
+      "sourcePage": "https://www.thebeachbreakhotels.com/",
+      "verifiedAt": "2026-10-23",
+      "provenance": "Official hotel website navigation links to its menu page; public phone matches the original guide.",
+      "links": [
+        {
+          "kind": "menu",
+          "url": "https://www.thebeachbreakhotels.com/dining"
+        },
+        {
+          "kind": "pdf",
+          "url": "https://www.thebeachbreakhotels.com/_files/ugd/d20227_bfc6147cefdb4618be567b730d4dbb5e.pdf",
+          "validation": "Original official menu button resolved successfully to a nine-page PDF."
+        }
+      ]
+    }
+  ],
+  "excludedSourceLinks": [
+    {
+      "url": "http://jessiessupperclub.com",
+      "reason": "Repeated template hyperlink attached to restaurant address text. Unrelated to the Salvadoran venues."
+    }
+  ]
+}

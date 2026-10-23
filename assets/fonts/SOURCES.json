@@ -4,5 +4,9 @@
   "cormorant-garamond-normal-latin-ext": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYp3tKky2F7i6C.woff2",
   "cormorant-garamond-normal-latin": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtKky2F7g.woff2",
   "inter-normal-latin-ext": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2",
-  "inter-normal-latin": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2"
+  "inter-normal-latin": "https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+  "dubai-300": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Light.woff2",
+  "dubai-400": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Regular.woff2",
+  "dubai-500": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Medium.woff2",
+  "dubai-700": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Bold.woff2"
 }
