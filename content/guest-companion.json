@@ -1,0 +1,766 @@
+{
+  "version": "2026-10-23.1",
+  "updatedAt": "2026-10-23",
+  "propertyName": "White Swan Beach House",
+  "timeZone": "America/El_Salvador",
+  "welcome": {
+    "title": {
+      "en": "Make yourself at home.",
+      "es": "Siéntase como en casa."
+    },
+    "body": {
+      "en": "A slower morning. One more swim. Everything you need for your time at White Swan, in one place.",
+      "es": "Una mañana sin prisa. Un chapuzón más. Todo lo que necesita para disfrutar White Swan, en un solo lugar."
+    },
+    "signature": {
+      "en": "Wendy & Sergio",
+      "es": "Wendy y Sergio"
+    },
+    "image": "/assets/editorial/villa-light-960.webp"
+  },
+  "arrival": {
+    "title": {
+      "en": "An easy arrival",
+      "es": "Una llegada tranquila"
+    },
+    "intro": {
+      "en": "Your host helps coordinate arrival with Xanadu community security. Share your expected arrival time and confirm the people and vehicles in your group before you travel.",
+      "es": "Su anfitrión le ayuda a coordinar la llegada con la seguridad de Xanadu. Antes de viajar, comparta su hora estimada de llegada y confirme las personas y vehículos de su grupo."
+    },
+    "directionsUrl": "https://maps.app.goo.gl/yr366aJLwmnjH1g9A",
+    "address": {
+      "en": "Residencial Xanadu, Casa F-2, Tamanique, La Libertad, El Salvador",
+      "es": "Residencial Xanadu, Casa F-2, Tamanique, La Libertad, El Salvador"
+    },
+    "timing": {
+      "checkIn": "16:00",
+      "checkOut": "12:00",
+      "timeZone": "America/El_Salvador"
+    },
+    "steps": [
+      {
+        "id": "before-you-travel",
+        "title": {
+          "en": "Before you travel",
+          "es": "Antes de salir"
+        },
+        "body": {
+          "en": "Confirm your arrival time, group and vehicles with your host. Let us know if you need transport or have a specific access requirement.",
+          "es": "Confirme con su anfitrión la hora de llegada, su grupo y los vehículos. Avísenos si necesita transporte o tiene alguna necesidad de acceso."
+        }
+      },
+      {
+        "id": "arrival-instructions",
+        "title": {
+          "en": "Keep your arrival message handy",
+          "es": "Tenga a mano su mensaje de llegada"
+        },
+        "body": {
+          "en": "Private access instructions are shared through Airbnb three days before arrival. Open that conversation for your door, Wi-Fi and other access details.",
+          "es": "Las instrucciones privadas de acceso se comparten por Airbnb tres días antes de la llegada. Abra esa conversación para ver los datos de la puerta, Wi-Fi y otros accesos."
+        }
+      },
+      {
+        "id": "at-the-gate",
+        "title": {
+          "en": "Arriving at Xanadu",
+          "es": "Al llegar a Xanadu"
+        },
+        "body": {
+          "en": "Have identification ready for the community security checkpoint. Once registration is confirmed, continue to Casa F-2 and follow your host’s arrival instructions. Check-in begins at 4:00 PM, El Salvador time.",
+          "es": "Tenga listo su documento para la caseta de seguridad. Una vez confirmado el registro, continúe a la Casa F-2 y siga las instrucciones de su anfitrión. La entrada es desde las 4:00 p. m., hora de El Salvador."
+        }
+      }
+    ]
+  },
+  "houseTopics": [
+    {
+      "id": "pool",
+      "icon": "waves",
+      "title": {
+        "en": "Your private pool",
+        "es": "Su piscina privada"
+      },
+      "summary": {
+        "en": "A quiet moment by the Pacific.",
+        "es": "Un momento de calma frente al Pacífico."
+      },
+      "body": {
+        "en": [
+          "The infinity pool is private for your group. It is not heated.",
+          "If you need help with the pool, its lights or water, message your host. Pool and garden staff may visit during your stay; ask us if you would like to discuss a visit."
+        ],
+        "es": [
+          "La piscina infinita es privada para su grupo. No es climatizada.",
+          "Si necesita ayuda con la piscina, sus luces o el agua, escríbale a su anfitrión. El personal de piscina y jardín puede visitarnos durante su estadía; avísenos si desea coordinar una visita."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "beach",
+      "icon": "sun",
+      "title": {
+        "en": "Down to the beach",
+        "es": "Camino a la playa"
+      },
+      "summary": {
+        "en": "Your coastal walk starts here.",
+        "es": "La costa está cerca."
+      },
+      "body": {
+        "en": [
+          "The Xanadu community beach is downhill from the house. Follow the road down, take the first right and look for the stairs on the left leading to the beach.",
+          "Beach equipment is stored in the plastic bench in the parking area. Ask your host for help with the route or if steps and the slope are a concern for your group."
+        ],
+        "es": [
+          "La playa de la comunidad Xanadu está cuesta abajo de la casa. Baje por la calle, tome la primera a la derecha y busque las gradas a la izquierda que llevan a la playa.",
+          "El equipo de playa está en la banca plástica del estacionamiento. Consulte a su anfitrión si necesita ayuda con la ruta o si las gradas y la pendiente son una dificultad para su grupo."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "air-conditioning",
+      "icon": "wind",
+      "title": {
+        "en": "Stay cool",
+        "es": "Un ambiente fresco"
+      },
+      "summary": {
+        "en": "Bedroom remotes and living-room units.",
+        "es": "Controles en los cuartos y aires en la sala."
+      },
+      "body": {
+        "en": [
+          "Each bedroom has a mini-split AC unit and remote. There are also two AC units in the living area. Keep doors and windows closed while the AC is running.",
+          "If a unit is not cooling, check the mode on its remote, then message your host if you still need help. Turn AC units off when you leave."
+        ],
+        "es": [
+          "Cada habitación tiene aire acondicionado y control remoto. También hay dos aires en la sala. Mantenga cerradas las puertas y ventanas mientras estén encendidos.",
+          "Si un aire no enfría, revise el modo del control. Si sigue igual, escríbale a su anfitrión. Apague los aires al salir."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "wifi",
+      "icon": "wifi",
+      "title": {
+        "en": "Connect to Wi-Fi",
+        "es": "Conéctese al Wi-Fi"
+      },
+      "summary": {
+        "en": "Your access details stay in your arrival message.",
+        "es": "Los datos están en su mensaje de llegada."
+      },
+      "body": {
+        "en": [
+          "The network name and password are in your private Airbnb arrival message.",
+          "If the connection stops working, follow the instructions placed by the router or contact your host for help."
+        ],
+        "es": [
+          "El nombre de la red y la contraseña están en su mensaje privado de llegada en Airbnb.",
+          "Si la conexión deja de funcionar, siga las instrucciones junto al router o pídale ayuda a su anfitrión."
+        ]
+      },
+      "action": "airbnb"
+    },
+    {
+      "id": "kitchen-outdoors",
+      "icon": "utensils",
+      "title": {
+        "en": "Kitchen & outdoor dining",
+        "es": "Cocina y comedor al aire libre"
+      },
+      "summary": {
+        "en": "Cook, gather and enjoy the view.",
+        "es": "Cocine, comparta y disfrute la vista."
+      },
+      "body": {
+        "en": [
+          "The house has an equipped kitchen and outdoor dining area. The gas BBQ and its utensils are beside the outdoor bar.",
+          "If the BBQ gas runs out or an appliance is not working as expected, let your host know. Tell us which appliance needs attention so we can help."
+        ],
+        "es": [
+          "La casa tiene cocina equipada y comedor al aire libre. La parrilla de gas y sus utensilios están junto al bar exterior.",
+          "Si se acaba el gas de la parrilla o un aparato no funciona bien, avísele a su anfitrión. Cuéntenos cuál es el problema para poder ayudarle."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "laundry",
+      "icon": "shirt",
+      "title": {
+        "en": "Laundry & extra towels",
+        "es": "Lavandería y toallas extra"
+      },
+      "summary": {
+        "en": "A little help during your stay.",
+        "es": "Un apoyo durante su estadía."
+      },
+      "body": {
+        "en": [
+          "The laundry area is next to the front door. Ask your host about laundry access, use and extra towels for your stay.",
+          "Any private access instructions remain in your Airbnb messages."
+        ],
+        "es": [
+          "La lavandería está junto a la puerta principal. Consulte con su anfitrión el acceso, el uso y las toallas extra para su estadía.",
+          "Las instrucciones privadas de acceso se mantienen en sus mensajes de Airbnb."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "drinking-water",
+      "icon": "glass-water",
+      "title": {
+        "en": "Drinking water",
+        "es": "Agua para tomar"
+      },
+      "summary": {
+        "en": "Refills without the guesswork.",
+        "es": "Sepa dónde encontrar más agua."
+      },
+      "body": {
+        "en": [
+          "The drinking-water dispenser is under the stairs. Extra water bottles are kept in the laundry area.",
+          "When you need a refill, leave the empty bottles in the parking area and message your host."
+        ],
+        "es": [
+          "El dispensador de agua para tomar está bajo las gradas. Hay botellas extra en la lavandería.",
+          "Cuando necesite un recambio, deje las botellas vacías en el estacionamiento y avísele a su anfitrión."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "tv",
+      "icon": "tv",
+      "title": {
+        "en": "A night in",
+        "es": "Una noche en casa"
+      },
+      "summary": {
+        "en": "Make time for a film or the game.",
+        "es": "Disfrute una película o un partido."
+      },
+      "body": {
+        "en": [
+          "The house has TVs for relaxing indoors and an outdoor TV.",
+          "Ask your host if you need help with a remote, streaming app or language setting. Current app and sports availability may vary."
+        ],
+        "es": [
+          "La casa tiene televisores adentro y uno en el exterior.",
+          "Si necesita ayuda con un control, una aplicación o el idioma, consulte a su anfitrión. Las aplicaciones y transmisiones deportivas disponibles pueden variar."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "parking",
+      "icon": "car",
+      "title": {
+        "en": "Parking & getting around",
+        "es": "Estacionamiento y transporte"
+      },
+      "summary": {
+        "en": "Let us know about your vehicles.",
+        "es": "Avísenos cuántos vehículos trae."
+      },
+      "body": {
+        "en": [
+          "There is parking at the house. Please confirm the number of vehicles before arrival so your host can coordinate community entry and any applicable charges.",
+          "Transport, airport transfers and car rental can be requested through our local contacts. Ask ahead rather than relying on a ride being immediately available."
+        ],
+        "es": [
+          "La casa tiene estacionamiento. Confirme cuántos vehículos trae antes de llegar para coordinar la entrada y cualquier cargo que aplique.",
+          "Podemos ayudarle a contactar transporte, traslados al aeropuerto y renta de vehículos. Consulte con anticipación para organizarse bien."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "housekeeping",
+      "icon": "sparkles",
+      "title": {
+        "en": "Keeping things comfortable",
+        "es": "Para estar a gusto"
+      },
+      "summary": {
+        "en": "Trash, cleaning and property visits.",
+        "es": "Basura, limpieza y visitas del personal."
+      },
+      "body": {
+        "en": [
+          "Trash bins are in the parking area. Place tied bags inside the bins during your stay.",
+          "For cleaning arrangements or extra supplies, message your host. Pool and garden staff may visit; tell us if you would like to discuss the timing."
+        ],
+        "es": [
+          "Los basureros están en el estacionamiento. Durante su estadía, coloque las bolsas cerradas dentro de los botes.",
+          "Para coordinar limpieza o pedir algo que haga falta, escríbale a su anfitrión. El personal de piscina y jardín puede llegar; avísenos si desea coordinar el horario."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "community",
+      "icon": "moon",
+      "title": {
+        "en": "A considerate stay",
+        "es": "Una estadía en armonía"
+      },
+      "summary": {
+        "en": "Small courtesies make a difference.",
+        "es": "Los pequeños cuidados hacen la diferencia."
+      },
+      "body": {
+        "en": [
+          "Quiet hours begin at 10:00 PM. Parties, loud music and indoor smoking are not permitted. Only registered guests may enter; daily visitors are not allowed.",
+          "Tell your host in advance about pets or changes to your group. Please clean up after pets. Your host will confirm registration, capacity and any applicable charges."
+        ],
+        "es": [
+          "El horario de silencio empieza a las 10:00 p. m. No se permiten fiestas, música alta ni fumar adentro. Solo pueden entrar los huéspedes registrados; no se permiten visitas por el día.",
+          "Avísele a su anfitrión con anticipación si lleva mascotas o cambia su grupo. Por favor, recoja lo que ensucien las mascotas. Su anfitrión confirmará el registro, la capacidad y los cargos que correspondan."
+        ]
+      },
+      "action": "host"
+    },
+    {
+      "id": "help-at-home",
+      "icon": "heart-handshake",
+      "title": {
+        "en": "If something needs attention",
+        "es": "Si algo necesita atención"
+      },
+      "summary": {
+        "en": "We are a message away.",
+        "es": "Estamos a un mensaje."
+      },
+      "body": {
+        "en": [
+          "The first-aid kit is in the bottom kitchen drawer to the right of the refrigerator. The house guide identifies a video-only security camera in the outdoor parking area.",
+          "For a leak, appliance issue, power problem or anything else at the house, contact your host. A short description and a photo of the issue can help the team understand what is needed. For an immediate emergency, contact local emergency services first."
+        ],
+        "es": [
+          "El botiquín está en la gaveta inferior de la cocina, a la derecha del refrigerador. La guía de la casa indica que hay una cámara de seguridad de video, sin audio, en el estacionamiento exterior.",
+          "Si hay una fuga, una falla en un aparato, un problema de luz o algo más en la casa, contacte a su anfitrión. Una descripción breve y una foto del problema ayudan al equipo a entender qué necesita. Si es una emergencia inmediata, contacte primero a los servicios de emergencia locales."
+        ]
+      },
+      "action": "host"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "arrival-times",
+      "question": {
+        "en": "What time can we arrive and leave?",
+        "es": "¿A qué hora podemos llegar y salir?"
+      },
+      "answer": {
+        "en": "Check-in begins at 4:00 PM and check-out is at noon, El Salvador time. If you have a different time agreed in writing with your host, follow that confirmation.",
+        "es": "La entrada es desde las 4:00 p. m. y la salida a las 12 del mediodía, hora de El Salvador. Si acordó otro horario por escrito con su anfitrión, siga esa confirmación."
+      }
+    },
+    {
+      "id": "early-late",
+      "question": {
+        "en": "Can we arrive earlier or stay a little longer?",
+        "es": "¿Podemos llegar antes o quedarnos un poco más?"
+      },
+      "answer": {
+        "en": "Ask your host before making plans. Availability depends on the surrounding bookings and house preparation. Your host confirms the time and any charge in writing.",
+        "es": "Consulte con su anfitrión antes de hacer planes. Depende de las reservas cercanas y de la preparación de la casa. Su anfitrión confirma por escrito el horario y cualquier cargo."
+      }
+    },
+    {
+      "id": "access",
+      "question": {
+        "en": "Where are the door and Wi-Fi details?",
+        "es": "¿Dónde están los datos de la puerta y del Wi-Fi?"
+      },
+      "answer": {
+        "en": "They are in your private Airbnb arrival message, shared three days before arrival. This guide does not display access codes.",
+        "es": "Están en su mensaje privado de llegada en Airbnb, que se comparte tres días antes. Esta guía no muestra códigos de acceso."
+      }
+    },
+    {
+      "id": "guests-pets",
+      "question": {
+        "en": "Can we add guests, visitors or pets?",
+        "es": "¿Podemos agregar huéspedes, visitas o mascotas?"
+      },
+      "answer": {
+        "en": "Only registered guests can enter and day visitors are not permitted. Speak with your host before changing the booked group or bringing a pet so registration and any charges can be confirmed.",
+        "es": "Solo pueden entrar los huéspedes registrados y no se permiten visitas por el día. Hable con su anfitrión antes de cambiar el grupo reservado o llevar una mascota para confirmar el registro y cualquier cargo."
+      }
+    },
+    {
+      "id": "services",
+      "question": {
+        "en": "How do we arrange a chef, massage or transport?",
+        "es": "¿Cómo coordinamos chef, masaje o transporte?"
+      },
+      "answer": {
+        "en": "Tell your host which service you want and when. We can introduce you to the local provider so you can arrange it directly. If you prefer help coordinating, just ask. Availability, the quote and payment arrangements need confirmation.",
+        "es": "Dígale a su anfitrión qué servicio desea y para cuándo. Podemos compartirle el contacto para que lo coordine directamente. Si prefiere que le ayudemos a coordinar, con gusto. Se debe confirmar disponibilidad, cotización y forma de pago."
+      }
+    },
+    {
+      "id": "access-needs",
+      "question": {
+        "en": "Is the beach route suitable for everyone?",
+        "es": "¿El camino a la playa es adecuado para todos?"
+      },
+      "answer": {
+        "en": "The route from the house goes downhill and includes steps. Ask your host about your group’s access needs before setting out.",
+        "es": "El camino desde la casa es cuesta abajo e incluye gradas. Consulte con su anfitrión sobre las necesidades de su grupo antes de salir."
+      }
+    },
+    {
+      "id": "checkout",
+      "question": {
+        "en": "What do we need to do before leaving?",
+        "es": "¿Qué debemos hacer antes de salir?"
+      },
+      "answer": {
+        "en": "Switch off lights and AC, gather used towels, put trash in a bin and check your belongings. You do not need to strip beds or wash dishes. Send your host a quick message when you leave.",
+        "es": "Apague luces y aires, junte las toallas usadas, deje la basura en un bote y revise sus pertenencias. No necesita quitar las sábanas ni lavar los platos. Envíele un mensaje a su anfitrión cuando salga."
+      }
+    },
+    {
+      "id": "help",
+      "question": {
+        "en": "Something is missing or not working. What should we do?",
+        "es": "¿Qué hacemos si falta algo o no funciona?"
+      },
+      "answer": {
+        "en": "Message your host with a short description. A photo of the issue can help. We would rather know during your stay so the team can help.",
+        "es": "Escríbale a su anfitrión con una descripción breve. Una foto del problema puede ayudar. Preferimos saberlo durante su estadía para poder apoyarle."
+      }
+    }
+  ],
+  "checkout": [
+    {
+      "id": "lights-ac",
+      "en": "Switch off lights and AC units.",
+      "es": "Apague las luces y los aires acondicionados."
+    },
+    {
+      "id": "towels",
+      "en": "Leave used towels in the blue hallway bin.",
+      "es": "Deje las toallas usadas en el bote azul del pasillo."
+    },
+    {
+      "id": "trash",
+      "en": "Put trash in a bin. No need to take it outside at checkout.",
+      "es": "Deje la basura en un bote. No necesita sacarla al salir."
+    },
+    {
+      "id": "food",
+      "en": "Unopened food and drinks can stay. No need to strip beds or wash dishes.",
+      "es": "Puede dejar comida y bebidas sin abrir. No necesita quitar las sábanas ni lavar los platos."
+    },
+    {
+      "id": "belongings",
+      "en": "Take one last look for your belongings.",
+      "es": "Revise una última vez que lleva todas sus cosas."
+    },
+    {
+      "id": "departure-message",
+      "en": "Send your host a quick message when you leave.",
+      "es": "Avísele a su anfitrión cuando salga."
+    }
+  ],
+  "experiences": [
+    {
+      "id": "private-chef",
+      "title": {
+        "en": "A chef at home",
+        "es": "Chef en casa"
+      },
+      "description": {
+        "en": "Breakfast, lunch or a special dinner in your own space. Ask about set menus, flexible dishes and dietary preferences.",
+        "es": "Desayuno, almuerzo o una cena especial en la casa. Consulte por menús, platillos y preferencias de alimentación."
+      },
+      "image": "/assets/enhanced/listing-1852228438-960.webp",
+      "service": "private_chef",
+      "actionLabel": {
+        "en": "Ask about this",
+        "es": "Consultar"
+      }
+    },
+    {
+      "id": "massage",
+      "title": {
+        "en": "A moment to unwind",
+        "es": "Un momento para relajarse"
+      },
+      "description": {
+        "en": "Ask about an in-home massage and the session length that suits you. Availability and your quote are confirmed with the provider.",
+        "es": "Consulte por un masaje a domicilio y la duración que prefiere. La disponibilidad y la cotización se confirman con el proveedor."
+      },
+      "image": "/assets/enhanced/listing-2580025730-960.webp",
+      "service": "in_home_massage",
+      "actionLabel": {
+        "en": "Ask about this",
+        "es": "Consultar"
+      }
+    },
+    {
+      "id": "transport",
+      "title": {
+        "en": "An easier journey",
+        "es": "Un viaje más tranquilo"
+      },
+      "description": {
+        "en": "Airport transfers, local trips and a driver when you need one. Share your route, time and group size.",
+        "es": "Traslados al aeropuerto, viajes locales y conductor cuando lo necesite. Comparta la ruta, la hora y el tamaño de su grupo."
+      },
+      "image": "/assets/enhanced/listing-1852228366-960.webp",
+      "service": "airport_transfer",
+      "actionLabel": {
+        "en": "Ask about this",
+        "es": "Consultar"
+      }
+    },
+    {
+      "id": "tours",
+      "title": {
+        "en": "Discover a little more",
+        "es": "Descubra un poco más"
+      },
+      "description": {
+        "en": "Surf, waterfalls, coastal outings or a day in the hills. Ask for a local guide and a plan that suits your group.",
+        "es": "Surf, cascadas, paseos por la costa o un día en las montañas. Consulte por un guía local y un plan para su grupo."
+      },
+      "image": "/assets/enhanced/guide-waterfalls-960.webp",
+      "service": "guided_tours",
+      "actionLabel": {
+        "en": "Ask about this",
+        "es": "Consultar"
+      }
+    },
+    {
+      "id": "car-rental",
+      "title": {
+        "en": "Explore at your pace",
+        "es": "Explore a su ritmo"
+      },
+      "description": {
+        "en": "Ask for a car-rental introduction. The provider confirms the vehicle, insurance, collection details and full quote.",
+        "es": "Pida el contacto para rentar un vehículo. El proveedor confirma el modelo, el seguro, la entrega y la cotización completa."
+      },
+      "image": "/assets/editorial/villa-light-960.webp",
+      "service": "car_rental",
+      "actionLabel": {
+        "en": "Ask about this",
+        "es": "Consultar"
+      }
+    },
+    {
+      "id": "celebration",
+      "title": {
+        "en": "Mark a special moment",
+        "es": "Celebre un momento especial"
+      },
+      "description": {
+        "en": "A birthday, anniversary or thoughtful surprise. Ask about decoration and a dinner for your registered group, within the house rules.",
+        "es": "Un cumpleaños, aniversario o una sorpresa. Consulte por decoración y una cena para su grupo registrado, respetando las reglas de la casa."
+      },
+      "image": "/assets/enhanced/guide-celebration-960.webp",
+      "service": "decoration",
+      "actionLabel": {
+        "en": "Ask about this",
+        "es": "Consultar"
+      }
+    }
+  ],
+  "serviceNote": {
+    "en": "We can share a trusted provider’s contact so you can arrange the service directly. Host coordination is available if you prefer. Availability, prices and payment are confirmed before a service is booked.",
+    "es": "Podemos compartirle el contacto de un proveedor de confianza para que coordine directamente. Si prefiere que le ayudemos, con gusto. La disponibilidad, el precio y el pago se confirman antes de reservar el servicio."
+  },
+  "places": [
+    {
+      "id": "el-tunco",
+      "title": {
+        "en": "El Tunco",
+        "es": "El Tunco"
+      },
+      "description": {
+        "en": "A coastal town for surf, cafés, shops and a sunset walk. Ask your host about lessons or transport.",
+        "es": "Un pueblo costero para disfrutar surf, cafés, tiendas y el atardecer. Consulte por clases o transporte."
+      },
+      "image": "/assets/enhanced/guide-eltunco-960.webp",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=El%20Tunco%20El%20Salvador"
+    },
+    {
+      "id": "el-zonte",
+      "title": {
+        "en": "El Zonte",
+        "es": "El Zonte"
+      },
+      "description": {
+        "en": "A relaxed beach day with surf and restaurants. Also known as Bitcoin Beach.",
+        "es": "Un día de playa con ambiente relajado, surf y restaurantes. También se conoce como Bitcoin Beach."
+      },
+      "image": "/assets/enhanced/guide-elzonte-960.webp",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=El%20Zonte%20El%20Salvador"
+    },
+    {
+      "id": "la-libertad",
+      "title": {
+        "en": "La Libertad & Sunset Park",
+        "es": "La Libertad y Sunset Park"
+      },
+      "description": {
+        "en": "Explore the waterfront, local seafood and Sunset Park. Check current opening hours before heading out.",
+        "es": "Conozca el malecón, disfrute mariscos y visite Sunset Park. Revise los horarios actuales antes de salir."
+      },
+      "image": "/assets/enhanced/guide-lalibertad-960.webp",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sunset%20Park%20La%20Libertad%20El%20Salvador"
+    },
+    {
+      "id": "restaurants",
+      "title": {
+        "en": "A table by the ocean",
+        "es": "Una mesa frente al mar"
+      },
+      "description": {
+        "en": "Beto’s, Olor de Mar and Puerto Vikingo are among the restaurants in our guide. Ask about reservations and confirm dietary needs with the restaurant.",
+        "es": "Beto’s, Olor de Mar y Puerto Vikingo están entre los restaurantes de nuestra guía. Consulte por reservas y confirme sus necesidades de alimentación con el restaurante."
+      },
+      "image": "/assets/enhanced/guide-restaurants-960.webp",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Restaurants%20Tamanique%20El%20Salvador"
+    },
+    {
+      "id": "tamanique",
+      "title": {
+        "en": "Tamanique Waterfalls",
+        "es": "Cascadas de Tamanique"
+      },
+      "description": {
+        "en": "A hike through the hills to the waterfalls. Ask for a local guide and discuss the route and conditions for your group.",
+        "es": "Una caminata por las montañas hasta las cascadas. Consulte por un guía local y revise la ruta y las condiciones para su grupo."
+      },
+      "image": "/assets/enhanced/guide-waterfalls-960.webp",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cascadas%20de%20Tamanique%20El%20Salvador"
+    },
+    {
+      "id": "coatepeque",
+      "title": {
+        "en": "Coatepeque & Santa Ana",
+        "es": "Coatepeque y Santa Ana"
+      },
+      "description": {
+        "en": "Plan a day around the crater lake or ask about a guided Santa Ana volcano hike. Confirm travel arrangements and activity requirements before going.",
+        "es": "Planee un día en el lago de cráter o consulte por una caminata guiada al volcán de Santa Ana. Confirme el transporte y los requisitos de las actividades antes de salir."
+      },
+      "image": "/assets/enhanced/guide-coatepeque-960.webp",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Lago%20de%20Coatepeque%20El%20Salvador"
+    }
+  ],
+  "moreIdeas": [
+    {
+      "id": "ruta-flores",
+      "title": {
+        "en": "Ruta de las Flores & Ataco",
+        "es": "Ruta de las Flores y Ataco"
+      },
+      "description": {
+        "en": "Colorful streets, local cafés and mountain towns. Ask about a day trip.",
+        "es": "Calles coloridas, cafés y pueblos de montaña. Consulte por un paseo de un día."
+      }
+    },
+    {
+      "id": "san-salvador",
+      "title": {
+        "en": "San Salvador",
+        "es": "San Salvador"
+      },
+      "description": {
+        "en": "Explore the historic center and plan a Salvadoran meal along the way.",
+        "es": "Conozca el centro histórico y disfrute comida salvadoreña en el camino."
+      }
+    },
+    {
+      "id": "nawi",
+      "title": {
+        "en": "Nawi Beach Club",
+        "es": "Nawi Beach Club"
+      },
+      "description": {
+        "en": "A beach-club day is another option. Ask the venue about current day passes and availability.",
+        "es": "Otra opción es pasar el día en un club de playa. Consulte con el lugar por pases y disponibilidad."
+      }
+    },
+    {
+      "id": "coffee",
+      "title": {
+        "en": "Coffee & highland outings",
+        "es": "Café y paseos por las montañas"
+      },
+      "description": {
+        "en": "Ask about a coffee tour or an outing to the highlands, tailored to your group.",
+        "es": "Consulte por un tour de café o un paseo a las montañas, según los intereses de su grupo."
+      }
+    }
+  ],
+  "essentialsNearby": [
+    {
+      "id": "groceries",
+      "title": {
+        "en": "Groceries",
+        "es": "Supermercado"
+      },
+      "description": {
+        "en": "Super Selectos at El Encuentro is listed in our guide for everyday supplies. Check opening hours before going.",
+        "es": "Super Selectos en El Encuentro está en nuestra guía para las compras del día. Revise el horario antes de ir."
+      },
+      "mapUrl": "https://maps.app.goo.gl/EYCVDdkhZqDxTrJJA"
+    },
+    {
+      "id": "cash",
+      "title": {
+        "en": "Cash withdrawal",
+        "es": "Retiro de efectivo"
+      },
+      "description": {
+        "en": "Our guide lists ATMs in El Tunco. Availability, accepted cards and fees vary.",
+        "es": "Nuestra guía señala cajeros en El Tunco. La disponibilidad, las tarjetas aceptadas y los cargos pueden variar."
+      },
+      "mapUrl": "https://maps.app.goo.gl/k5WNaK6dtVKRwwh98"
+    },
+    {
+      "id": "fuel",
+      "title": {
+        "en": "Fuel & everyday stops",
+        "es": "Gasolina y paradas útiles"
+      },
+      "description": {
+        "en": "Ask your host about the most convenient fuel stop or supplies for your route.",
+        "es": "Consulte con su anfitrión la gasolinera o parada más conveniente para su ruta."
+      },
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Gasolinera%20La%20Libertad%20El%20Salvador"
+    }
+  ],
+  "help": {
+    "intro": {
+      "en": "Tell us what you need. We’ll help you find the answer or connect you with the right person.",
+      "es": "Cuéntenos qué necesita. Le ayudamos a encontrar la respuesta o a contactar a la persona indicada."
+    },
+    "contactNote": {
+      "en": "Your host helps with your stay, requests and plans. The on-site team helps with issues at the house. For an immediate emergency, contact local emergency services first.",
+      "es": "Su anfitrión le ayuda con su estadía, solicitudes y planes. El equipo en sitio le ayuda con los problemas de la casa. Si es una emergencia inmediata, contacte primero a los servicios de emergencia locales."
+    },
+    "feedback": {
+      "en": "We would love to hear how your stay went. If something needs attention, tell us while you are here so we can help.",
+      "es": "Nos gustaría saber cómo estuvo su estadía. Si algo necesita atención, avísenos mientras esté aquí para poder ayudarle."
+    }
+  },
+  "contentNotice": {
+    "en": "Your booking and any arrangements confirmed by your host take priority. Ask us if something here differs from your stay details.",
+    "es": "Su reserva y los acuerdos confirmados por su anfitrión tienen prioridad. Consúltenos si algo aquí no coincide con los detalles de su estadía."
+  }
+}
