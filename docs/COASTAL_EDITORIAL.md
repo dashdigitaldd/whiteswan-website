@@ -42,3 +42,19 @@ The paired terrace and pool photographs have one coordinated entrance. The closi
 There is no new runtime dependency, scroll listener or per-frame JavaScript loop. The changes add about 1.6 KB compressed across the two scripts and stylesheet. The horizon moves through the Web Animations API; the image dissolve and slow zoom use the existing CSS animation.
 
 Desktop English and 390px Spanish mobile were checked in Chrome. The photo controls have 44px touch targets. The page had no horizontal overflow or console errors. Both booking languages passed the local consent, failure and retry checks using synthetic responses. All 16 Python and 20 Node tests passed, including five new photo-clock tests. The design checker reported only the two previously documented warnings.
+
+## Mobile refinement
+
+27 October 2026
+
+The phone layout has a shorter masthead, a taller villa photograph and larger photo controls. Dates and concierge help remain available in a bottom bar with safe-area padding. The concierge opens above that bar in a scrollable panel. Services use compact rows with a photograph beside each description.
+
+The mobile menu fills the available screen and locks background scrolling. It keeps keyboard focus inside the navigation and returns focus to the menu button on Escape. Background elements regain their previous interaction state when the menu closes.
+
+Room photographs use native horizontal scrolling with a visible next card, previous/next controls and a position count. IntersectionObserver keeps the count in step with scrolling. Reduced-motion preferences disable smooth scrolling for the buttons. Without JavaScript, the photographs and links remain available. Corrected image sizes avoid downloading desktop-sized photographs for phone cards.
+
+The changes are in `assets/mobile-public.css`, `assets/gallery.js` and the public page generators. There are no new dependencies or per-frame JavaScript loops. The booking page has wider usable calendar space and 16px form fields to avoid input zoom on iPhones.
+
+Chrome checks covered 320px and 390px portrait layouts, 844px landscape navigation and the desktop layout. Menu focus, dismissal, room controls, concierge bounds and FAQ filtering passed. There was no horizontal page overflow. English and Spanish booking forms passed consent, simulated failure and retry checks. No live enquiry was sent. All 36 existing tests passed. Physical iPhone and Safari checks remain outstanding.
+
+The design checker flagged the existing photo-viewer image with no initial source. The viewer assigns that source when opened; this warning is unchanged. New interface labels passed the humaniser checker with no hard or soft findings.
