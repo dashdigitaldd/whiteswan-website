@@ -1,0 +1,151 @@
+/* Public villa experience. Photography and typography lead; booking remains familiar. */
+.residence-home { background: #fcfcf9; }
+.residence-hero { padding: 0 24px; }
+.residence-masthead { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 32px; padding: 48px 2.4vw 45px; }
+.residence-location, .residence-intro-link { margin: 0 0 7px; font-size: 12px; line-height: 1.7; color: var(--ink); }
+.residence-intro-link { justify-self: end; text-align: right; max-width: 17ch; }
+.residence-intro-link span { display: block; margin-top: 10px; font-size: 20px; }
+.residence-name { position: relative; text-align: center; }
+.residence-name h1 { font-family: var(--serif); font-size: clamp(88px, 11.7vw, 196px); font-weight: 400; line-height: .82; letter-spacing: -.035em; text-transform: uppercase; white-space: nowrap; margin: 0; }
+.residence-signature { position: relative; display: block; font-family: 'Pinyon Script', Georgia, serif; font-size: clamp(36px, 4.6vw, 72px); line-height: .8; color: #83652e; margin: -2px 0 -22px; transform: rotate(-5deg); }
+.residence-hero .cinematic-cover { position: relative; overflow: hidden; width: 100%; height: clamp(480px, 55vw, 800px); background: #c9dce4; isolation: isolate; }
+.residence-hero .hero-frame img { display: block; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center 52%; }
+.residence-hero .hero-night img { object-position: center 57%; }
+.residence-hero .cinematic-cover::after { content: ''; position: absolute; inset: 65% 0 0; background: linear-gradient(transparent, #061b314d); pointer-events: none; z-index: 2; }
+.residence-hero .hero-scene-controls { left: 24px; bottom: 22px; padding: 4px; gap: 4px; background: #fffffff5; color: var(--ink); border: 1px solid #fff; border-radius: 4px; }
+.residence-hero .hero-scene-options { gap: 2px; }
+.residence-hero .hero-scene-options button { padding: 10px 16px; min-height: 44px; border-radius: 2px; font-size: 12px; color: var(--muted); }
+.residence-hero .hero-scene-options button[aria-pressed='true'] { background: #eaf0f3; color: var(--brand-navy); }
+.residence-hero .hero-scene-options button::after { display: none; }
+.residence-hero .hero-motion-toggle { min-width: 44px; height: 44px; color: var(--brand-navy); }
+.residence-hero .retouch-note { position: absolute; z-index: 3; left: auto; right: 24px; top: auto; bottom: 27px; padding: 12px 16px; border-radius: 3px; background: #ffffffed; color: var(--brand-navy); font-size: 12px; letter-spacing: 0; line-height: 1.5; }
+.residence-caption { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 18px 2.4vw 24px; border-bottom: 1px solid var(--line); }
+.residence-caption p { margin: 0; font-family: var(--serif); font-size: clamp(24px, 2.5vw, 36px); line-height: 1.25; }
+.residence-caption .text-link { white-space: nowrap; }
+.residence-home .home-date-search { margin: 0 24px; padding: 32px 2.4vw; grid-template-columns: 1.3fr 1fr 1fr auto; gap: 32px; background: transparent; }
+.residence-home .home-date-search h2 { font-size: 36px; line-height: 1.1; margin: 0 0 8px; }
+.residence-home .home-date-search p { font-size: 13px; }
+.residence-home .home-date-search label { font-size: 13px; gap: 10px; }
+.residence-home .home-date-search input { border-color: #c6cdd0; border-radius: 3px; height: 52px; }
+.residence-home .home-date-search .button { min-height: 52px; }
+.residence-home .stay-facts { margin: 0 24px; padding: 28px 2.4vw; background: transparent; }
+.residence-home .stay-facts strong { font-family: var(--serif); font-weight: 400; font-size: 38px; line-height: 1; color: var(--ink); }
+.residence-home .stay-facts span, .residence-home .stay-facts > a { font-size: 12px; }
+.residence-home .journey-nav { background: #fcfcf9f5; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.residence-home .journey-nav > span { font-family: var(--serif); font-size: 20px; letter-spacing: -.02em; }
+.residence-home .section { max-width: 1600px; padding-inline: 6vw; }
+.residence-home .section h2 { font-size: clamp(44px, 5.1vw, 78px); line-height: 1.06; }
+.residence-home .eyebrow { font-size: 11px; letter-spacing: .12em; }
+.residence-home .villa-story { padding-top: 100px; padding-bottom: 80px; }
+.residence-home .villa-story .intro { grid-template-columns: 1.1fr 1fr; gap: 0 10%; margin-bottom: 50px; }
+.residence-home .villa-story .intro .lead-copy { font-family: var(--serif); font-size: clamp(26px, 2.4vw, 36px); line-height: 1.3; color: var(--ink); margin-bottom: 20px; }
+.residence-home .villa-story .intro .muted { font-size: 15px; line-height: 1.8; }
+.residence-home .villa-diptych { grid-template-columns: 1.25fr 1fr; gap: 32px; }
+.residence-home .villa-diptych .story-main img { height: 530px; object-position: 46% center; }
+.residence-home .villa-diptych .story-inset { margin-top: 92px; }
+.residence-home .villa-diptych .story-inset img { height: 400px; }
+.residence-home .villa-diptych a > span { font-family: Inter, sans-serif; font-style: normal; font-size: 13px; padding-top: 16px; }
+.residence-home .space-section { padding-top: 65px; padding-bottom: 90px; }
+.residence-home .section-heading > div:last-child > p { font-size: 15px; line-height: 1.8; }
+.residence-home .space-grid { gap: 28px; }
+.residence-home .space-card h3 { font-size: 30px; margin-top: 22px; line-height: 1.15; }
+.residence-home .space-card p { font-size: 13px; line-height: 1.6; }
+.residence-home .guest-stories { padding-top: 80px; padding-bottom: 90px; border-top: 1px solid var(--line); }
+.residence-home .guest-review-grid { gap: 32px 6%; }
+.residence-home .guest-review.review-featured { background: #f0f3f3; padding: 40px; }
+.residence-home .guest-review.review-featured blockquote p { font-size: clamp(30px, 3vw, 44px); line-height: 1.25; }
+.residence-home .guest-review:not(.review-featured) blockquote p { font-size: 28px; line-height: 1.35; }
+.residence-home .guest-review figcaption, .residence-home .guest-review time { font-size: 11px; letter-spacing: .03em; }
+.residence-home .experience-story { margin: 0 24px; max-width: none; padding: 75px max(24px, calc(6vw - 24px)); background: #eaf0f2; color: var(--ink); }
+.residence-home .experience-story .eyebrow { color: var(--brand-bronze); }
+.residence-home .services-simple .section-heading > p, .residence-home .services-simple .curated-card p, .residence-home .services-foot p { color: var(--muted); font-size: 15px; }
+.residence-home .curated-card h3 { color: var(--ink); font-size: 34px; }
+.residence-home .curated-card img { aspect-ratio: 4 / 3; }
+.residence-home .services-simple .service-cta { background: transparent; border: 1px solid #a8b7bf; color: var(--brand-navy); border-radius: 3px; font-size: 13px; }
+.residence-home .services-simple .service-cta:hover { background: #fff; border-color: var(--brand-navy); }
+.residence-home .services-foot { border-color: #cdd7dc; }
+.residence-home .destination-section { padding-top: 95px; padding-bottom: 90px; }
+.residence-home .destination-card { background: transparent; border: 0; border-bottom: 1px solid var(--line); }
+.residence-home .destination-card h3 { font-size: 30px; }
+.residence-home .faq-suite { background: #f3f5f5; }
+.residence-home .conversation-section { background: transparent; }
+.residence-home .final-invitation { min-height: 660px; margin: 0 24px; }
+.residence-home .final-invitation h2 { font-size: clamp(64px, 7.5vw, 112px); line-height: 1; }
+.residence-home .editorial-footer { background: #fcfcf9; }
+
+@media (min-width: 1700px) {
+  .residence-masthead { grid-template-columns: 1fr auto 1fr; padding-block: 60px; }
+}
+@media (min-width: 1101px) and (max-height: 760px) {
+  .residence-masthead { padding-top: 30px; padding-bottom: 38px; }
+  .residence-name h1 { font-size: 10vw; }
+  .residence-signature { font-size: 4vw; }
+}
+@media (max-width: 1100px) {
+  .residence-masthead { grid-template-columns: 1fr auto; padding-top: 40px; gap: 22px; }
+  .residence-name { grid-column: 1 / -1; grid-row: 1; }
+  .residence-name h1 { font-size: 16vw; }
+  .residence-signature { font-size: 7vw; margin-bottom: 0; }
+  .residence-location, .residence-intro-link { margin: 8px 0 -20px; max-width: none; font-size: 11px; }
+  .residence-intro-link span { display: inline; margin-left: 10px; }
+  .residence-home .home-date-search { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .residence-home .home-date-search > div { grid-column: 1 / -1; }
+  .residence-home .home-date-search > .button { grid-column: 1 / -1; }
+  .residence-home .villa-diptych .story-main img { height: 420px; }
+  .residence-home .villa-diptych .story-inset img { height: 330px; }
+  .residence-home .section-heading { gap: 30px; }
+}
+@media (max-width: 700px) {
+  .residence-hero { padding: 0 12px; }
+  .residence-masthead { padding: 32px 6px 36px; gap: 20px; }
+  .residence-name h1 { font-size: 17vw; letter-spacing: -.035em; }
+  .residence-signature { font-size: 10vw; margin-top: 1px; }
+  .residence-location, .residence-intro-link { font-size: 10px; margin-top: 4px; }
+  .residence-intro-link span { margin-left: 4px; font-size: 14px; }
+  .residence-hero .cinematic-cover { height: clamp(300px, 94vw, 520px); }
+  .residence-hero .hero-frame img { object-position: 43% center; }
+  .residence-hero .hero-night img { object-position: 50% 55%; }
+  .residence-hero .hero-scene-controls { left: 10px; bottom: 10px; padding: 2px; }
+  .residence-hero .hero-scene-options button { min-height: 42px; padding-inline: 10px; font-size: 11px; }
+  .residence-hero .hero-motion-toggle { min-width: 40px; height: 42px; }
+  .residence-hero .retouch-note { right: 10px; bottom: auto; top: 10px; max-width: 180px; padding: 8px 10px; font-size: 10px; }
+  .residence-caption { display: block; padding: 22px 8px; }
+  .residence-caption p { max-width: 25ch; font-size: 28px; }
+  .residence-caption .text-link { font-size: 12px; margin-top: 8px; }
+  .residence-home .home-date-search { margin: 0 12px; padding: 28px 8px; gap: 20px 14px; }
+  .residence-home .home-date-search h2 { font-size: 36px; }
+  .residence-home .home-date-search label { font-size: 12px; }
+  .residence-home .home-date-search input { font-size: 16px; padding-inline: 8px; }
+  .residence-home .stay-facts { margin: 0 12px; padding: 24px 8px; gap: 24px 12px; }
+  .residence-home .stay-facts strong { font-size: 32px; }
+  .residence-home .stay-facts span { font-size: 11px; }
+  .residence-home .section { padding-inline: 24px; }
+  .residence-home .section h2 { font-size: clamp(40px, 10.5vw, 58px); line-height: 1.08; }
+  .residence-home .villa-story { padding-block: 60px 45px; }
+  .residence-home .villa-story .intro { display: block; margin-bottom: 30px; }
+  .residence-home .villa-story .intro h2 { margin-bottom: 24px; }
+  .residence-home .villa-story .intro .lead-copy { font-size: 26px; }
+  .residence-home .villa-story .intro .muted { font-size: 14px; }
+  .residence-home .villa-diptych { grid-template-columns: 1fr; gap: 28px; }
+  .residence-home .villa-diptych .story-inset { margin: 0; }
+  .residence-home .villa-diptych .story-main img { height: auto; aspect-ratio: 4 / 3; }
+  .residence-home .villa-diptych .story-inset img { height: auto; aspect-ratio: 3 / 2; }
+  .residence-home .space-section { padding-top: 35px; padding-bottom: 50px; }
+  .residence-home .section-heading { padding-right: 0; }
+  .residence-home .space-grid { gap: 18px; margin-right: -24px; padding-right: 24px; }
+  .residence-home .space-card { flex-basis: 86%; min-width: 0; }
+  .residence-home .space-card h3 { font-size: 30px; }
+  .residence-home .guest-stories { padding-block: 55px; }
+  .residence-home .guest-review.review-featured { padding: 28px; }
+  .residence-home .guest-review.review-featured blockquote p { font-size: 32px; }
+  .residence-home .experience-story { margin: 0 12px; padding: 48px 20px; }
+  .residence-home .services-simple .section-heading > p { font-size: 14px; }
+  .residence-home .services-simple .curated-card p { font-size: 14px; }
+  .residence-home .curated-card h3 { font-size: 32px; }
+  .residence-home .destination-section { padding-block: 60px; }
+  .residence-home .final-invitation { margin: 0 12px; min-height: 540px; padding: 40px 24px; }
+  .residence-home .final-invitation h2 { font-size: 62px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .residence-home *, .residence-home *::before, .residence-home *::after { scroll-behavior: auto; }
+}

@@ -9,10 +9,19 @@
   --muted: #5d6774;
   --gold: var(--brand-bronze);
   --line: #e3ddcf;
+  --serif: 'Instrument Serif', Georgia, serif;
 }
 .white-swan-logo { display: block; position: relative; width: 98px; aspect-ratio: 1116 / 844; overflow: hidden; flex-shrink: 0; }
 .white-swan-logo img { position: absolute; width: 112.366%; max-width: none; height: auto; left: -5.735%; top: -27.488%; }
-.editorial-header { padding-block: 10px; border-bottom: 1px solid #e4d7b5; }
+.editorial-header { padding: 12px 4vw; min-height: 88px; border-bottom: 1px solid var(--line); background: #fff; }
+.editorial-header .white-swan-logo { width: 76px; }
+.editorial-header nav { font-size: 13px; gap: 32px; }
+.editorial-header nav a { padding-block: 12px; }
+.editorial .language { font-size: 12px; padding-block: 12px; }
+.editorial .button { font-size: 13px; letter-spacing: .01em; min-height: 48px; padding: 14px 22px; border-radius: 3px; }
+.editorial .text-link { font-size: 14px; }
+.editorial h1, .editorial h2, .editorial h3 { letter-spacing: -.025em; }
+.editorial .menu-toggle { width: 44px; height: 44px; }
 .owner-brand { display: block; padding: 0; flex-shrink: 0; }
 .editorial-footer .owner-brand { display: inline-block; margin-bottom: 18px; }
 .editorial-footer .white-swan-logo { width: 156px; }
@@ -35,8 +44,9 @@
 .journey-nav a[aria-current], .journey-nav a:hover, .handbook-index a[aria-current] { color: var(--brand-bronze); border-color: var(--brand-bronze); }
 @media (max-width: 700px) {
   .editorial-header { padding: 8px 18px; min-height: 78px; }
-  .editorial-header .white-swan-logo { width: 80px; }
-  .editorial .header-actions { gap: 14px; }
+  .editorial-header .white-swan-logo { width: 64px; }
+  .editorial .header-actions { gap: 12px; }
+  .editorial-header .button { padding: 12px 14px; min-height: 44px; font-size: 12px; gap: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { .owner-brand { transition: none; } }
 .editorial .experience-story { background: var(--brand-navy); }

@@ -68,7 +68,7 @@ def extra_meta(lang,path,title,description,kind):
             assert re.fullmatch(r'[A-Za-z0-9_-]+',value),'Invalid public site-verification token'
             s+=f'<meta name="{key}" content="{value}">'
     if kind=='home':
-        s+='<link rel="preload" as="image" type="image/avif" href="/assets/editorial/villa-light-960.avif" imagesrcset="/assets/editorial/villa-light-640.avif 640w, /assets/editorial/villa-light-960.avif 960w, /assets/editorial/villa-light-1536.avif 1536w" imagesizes="(max-width: 700px) 100vw, 65vw" fetchpriority="high">'
+        s+='<link rel="preload" as="image" type="image/avif" href="/assets/editorial/villa-light-960.avif" imagesrcset="/assets/editorial/villa-light-640.avif 640w, /assets/editorial/villa-light-960.avif 960w, /assets/editorial/villa-light-1536.avif 1536w" imagesizes="100vw" fetchpriority="high">'
     return s
 
 def build_discovery():

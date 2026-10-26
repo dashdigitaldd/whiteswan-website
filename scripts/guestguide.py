@@ -62,7 +62,7 @@ def destinations(lang, path, embedded=False):
     intro = el.find('p')
     intro.text = T('Salt-air mornings, little coastal towns and a day out in the hills. A few places to make your own.', 'Mañanas de brisa marina, pueblos costeros y un día entre montañas. Lugares para descubrir a tu ritmo.')
     if embedded:
-        el.find('span').text = T('04 — THE COAST & BEYOND', '04 — LA COSTA Y MÁS ALLÁ')
+        el.find('span').text = T('THE COAST & BEYOND', 'LA COSTA Y MÁS ALLÁ')
         alias = html.Element('div', id='local-discoveries')
         # Wrap the retained destination content so both historical anchors still work.
         for child in list(el):

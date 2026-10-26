@@ -8,5 +8,8 @@
   "dubai-300": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Light.woff2",
   "dubai-400": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Regular.woff2",
   "dubai-500": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Medium.woff2",
-  "dubai-700": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Bold.woff2"
+  "dubai-700": "https://cdn.jsdelivr.net/npm/@ahmedhamdan/dubai-font@1.0.0/fonts/DubaiW23-Bold.woff2",
+  "instrument-serif-italic-latin": "https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7M.woff2",
+  "instrument-serif-normal-latin": "https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjg.woff2",
+  "pinyon-script-normal-latin": "https://fonts.gstatic.com/s/pinyonscript/v24/6xKpdSJbL9-e9LuoeQiDRQR8WOXaOg.woff2"
 }
