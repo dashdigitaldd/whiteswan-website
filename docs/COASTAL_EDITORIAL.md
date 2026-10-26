@@ -58,3 +58,5 @@ The changes are in `assets/mobile-public.css`, `assets/gallery.js` and the publi
 Chrome checks covered 320px and 390px portrait layouts, 844px landscape navigation and the desktop layout. Menu focus, dismissal, room controls, concierge bounds and FAQ filtering passed. There was no horizontal page overflow. English and Spanish booking forms passed consent, simulated failure and retry checks. No live enquiry was sent. All 36 existing tests passed. Physical iPhone and Safari checks remain outstanding.
 
 The design checker flagged the existing photo-viewer image with no initial source. The viewer assigns that source when opened; this warning is unchanged. New interface labels passed the humaniser checker with no hard or soft findings.
+
+The hosted check found that rotating the viewport during image loading could interrupt decoding and permanently hide the day/night controls. The photo loader now waits for the replacement image. A regression test covers both an already-loaded replacement and one still loading; all 37 tests pass.

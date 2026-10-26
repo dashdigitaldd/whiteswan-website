@@ -9,10 +9,11 @@ class Element {
   constructor(dataset = {}) { this.dataset = dataset; this.attributes = {}; this.events = {}; this.hidden = false; }
   setAttribute(key, value) { this.attributes[key] = value; }
   addEventListener(key, callback) { this.events[key] = callback; }
+  removeEventListener(key, callback) { if (this.events[key] === callback) delete this.events[key]; }
   fire(key, data = {}) { this.events[key]?.(data); }
   contains() { return false; }
 }
-async function fixture({reduce = false, saveData = false, decodeFails = false, language = 'en'} = {}) {
+async function fixture({reduce = false, saveData = false, decodeFails = false, sourceSwap = '', language = 'en'} = {}) {
   const cover = new Element({scene: 'day'}), controls = new Element(), toggle = new Element();
   controls.hidden = true;
   const buttons = ['day','night'].map(heroScene => new Element({heroScene}));
@@ -25,7 +26,11 @@ async function fixture({reduce = false, saveData = false, decodeFails = false, l
     animations.push(animation);
     return animation;
   };
-  const night = {decode: () => decodeFails ? Promise.reject(Error('Missing image')) : Promise.resolve(), closest: () => frames[1]};
+  const night = new Element();
+  night.complete = sourceSwap !== 'loading';
+  night.naturalWidth = decodeFails ? 0 : 960;
+  night.decode = () => decodeFails || sourceSwap ? Promise.reject(Error('Decode interrupted')) : Promise.resolve();
+  night.closest = () => frames[1];
   cover.querySelector = selector => ({'.hero-scene-controls': controls, '[data-hero-motion]': toggle,
     '.hero-night img': night, '.horizon-traveller': traveller})[selector];
   cover.querySelectorAll = selector => ({'[data-hero-scene]': buttons, '[data-hero-frame]': frames,
@@ -57,7 +62,7 @@ async function fixture({reduce = false, saveData = false, decodeFails = false, l
     now = target;
   }
   visibility(1);
-  return {cover, controls, toggle, buttons, frames, reduced, connection, document, window, animations, visibility, advance, timers};
+  return {cover, controls, toggle, buttons, frames, night, reduced, connection, document, window, animations, visibility, advance, timers};
 }
 
 test('the photo clock changes both photograph and accessible selection after a full hold', async () => {
@@ -126,4 +131,22 @@ test('a missing evening photo leaves daylight visible and hides unavailable cont
   assert.equal(f.frames[1].hidden, true);
   assert.equal(f.frames[0].hidden, false);
   assert.equal(f.timers.size, 0);
+});
+
+test('a responsive image source change during decode preserves photo controls', async () => {
+  for (const sourceSwap of ['complete', 'loading']) {
+    const f = await fixture({sourceSwap});
+    if (sourceSwap === 'loading') {
+      assert.equal(f.controls.hidden, true);
+      assert.equal(f.frames[1].hidden, false);
+      f.night.complete = true;
+      f.night.fire('load');
+      await new Promise(resolve => setImmediate(resolve));
+      assert.deepEqual(f.night.events, {});
+    }
+    assert.equal(f.controls.hidden, false);
+    assert.equal(f.frames[1].hidden, false);
+    f.buttons[1].fire('click');
+    assert.equal(f.cover.dataset.scene, 'night');
+  }
 });

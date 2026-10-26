@@ -91,8 +91,29 @@
       sync();
     }, {threshold: [0, 0.15]}).observe(cover);
   } else visible = true;
+  async function decodePhoto(img) {
+    try { await img.decode(); }
+    catch (error) {
+      // Rotation can replace a srcset candidate while decode is pending.
+      // Its aborted decode is not a failed photograph; wait for the new source.
+      if (img.complete) {
+        if (img.naturalWidth > 0) return;
+        throw error;
+      }
+      await new Promise((resolve, reject) => {
+        const cleanup = () => {
+          img.removeEventListener('load', loaded);
+          img.removeEventListener('error', failed);
+        };
+        const loaded = () => { cleanup(); resolve(); };
+        const failed = () => { cleanup(); reject(error); };
+        img.addEventListener('load', loaded, {once: true});
+        img.addEventListener('error', failed, {once: true});
+      });
+    }
+  }
   // Failure leaves the daylight photograph and gallery link available.
-  Promise.all([...cover.querySelectorAll('img')].map(img => img.decode())).then(() => {
+  Promise.all([...cover.querySelectorAll('img')].map(decodePhoto)).then(() => {
     ready = true;
     cover.dataset.ready = 'true';
     controls.hidden = false;
