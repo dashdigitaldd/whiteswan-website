@@ -7,6 +7,7 @@
 .residence-intro-link span { display: block; margin-top: 10px; font-size: 20px; }
 .residence-name { position: relative; text-align: center; }
 .residence-name h1 { font-family: var(--serif); font-size: clamp(88px, 11.7vw, 196px); font-weight: 400; line-height: .82; letter-spacing: -.035em; text-transform: uppercase; white-space: nowrap; margin: 0; }
+.residence-word { display: inline-block; }
 .residence-signature { position: relative; display: block; font-family: 'Pinyon Script', Georgia, serif; font-size: clamp(36px, 4.6vw, 72px); line-height: .8; color: #83652e; margin: -2px 0 -22px; transform: rotate(-5deg); }
 .residence-hero .cinematic-cover { position: relative; overflow: hidden; width: 100%; height: clamp(480px, 55vw, 800px); background: #c9dce4; isolation: isolate; }
 .residence-hero .hero-frame img { display: block; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: center 52%; }
@@ -148,4 +149,43 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .residence-home *, .residence-home *::before, .residence-home *::after { scroll-behavior: auto; }
+}
+
+/* A small horizon follows the photographic day. The scene remains the focal point. */
+.residence-hero .hero-scene-controls { left: 50%; bottom: 24px; transform: translateX(-50%); padding: 7px 8px 7px 18px; gap: 10px; width: max-content; max-width: calc(100% - 32px); border: 0; border-radius: 999px; background: #fffffff5; box-shadow: 0 6px 24px #0418391a; }
+.hero-horizon { display: block; flex: 0 0 132px; color: #94702e; fill: none; stroke: currentColor; stroke-width: 1.4; overflow: visible; }
+.horizon-arc { stroke: #c3b797; stroke-dasharray: 1 5; stroke-linecap: round; }
+.horizon-line { stroke: #d7dbdc; stroke-width: 1; }
+.horizon-traveller { transform-origin: 0 0; transform-box: view-box; }
+.horizon-sun circle { fill: #b28c43; stroke: #b28c43; }
+.horizon-sun path { stroke-linecap: round; }
+.horizon-moon { display: none; fill: #304f6c; stroke: #304f6c; }
+[data-scene='night'] .horizon-sun { display: none; }
+[data-scene='night'] .horizon-moon { display: block; }
+.residence-hero .hero-scene-options button { border-radius: 999px; transition: background-color .25s, color .25s; }
+.residence-hero .hero-scene-options button[aria-pressed='true'] { background: #eaf0f3; }
+.residence-hero .hero-motion-toggle { margin-left: 0; border-radius: 50%; border-left: 0; background: #f0f3f4; }
+.residence-hero .hero-motion-toggle:hover { background: #e3eaed; }
+.residence-hero .retouch-note { top: 24px; bottom: auto; }
+.residence-home .text-link > span, .residence-intro-link > span { display: inline-block; transition: transform .35s cubic-bezier(.16,1,.3,1); }
+.residence-intro-link > span { display: block; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .residence-home .text-link:hover > span { transform: translate(3px,-3px); }
+  .residence-intro-link:hover > span { transform: translateY(4px); }
+}
+@media (max-width: 1100px) {
+  .residence-intro-link > span { display: inline-block; }
+}
+@media (max-width: 700px) {
+  .residence-hero .hero-scene-controls { bottom: 14px; padding: 5px 6px 5px 10px; gap: 4px; max-width: calc(100% - 20px); }
+  .hero-horizon { width: 92px; height: 34px; flex-basis: 92px; }
+  .residence-hero .hero-scene-options button { min-height: 44px; padding-inline: 11px; }
+  .residence-hero .hero-motion-toggle { width: 44px; min-width: 44px; height: 44px; }
+  .residence-hero .retouch-note { top: 10px; }
+}
+@media (max-width: 350px) {
+  .hero-horizon { width: 62px; flex-basis: 62px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .residence-home .text-link > span, .residence-intro-link > span { transition: none; }
 }

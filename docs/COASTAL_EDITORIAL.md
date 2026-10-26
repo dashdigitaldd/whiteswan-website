@@ -28,3 +28,17 @@ Source styling is in `assets/brand.css` and `assets/residence.css`. The latter i
 - New English and Spanish copy passed the humaniser checker with no hard findings.
 
 The deployment target is `white-swan-website-staging`. The custom-domain GitHub Pages release remains a separate review step on the protected main branch.
+
+## Coastal motion
+
+27 October 2026
+
+The opening now pairs a short title reveal with a photographic aperture that opens to the full cover. The El Salvador signature follows the title. A small sun travels along a dotted horizon in the photo controls; it becomes a moon when the evening photograph appears. The marker shows progress through the photo sequence.
+
+Each photograph holds for 16 seconds, including the existing dissolve. Manual selection stops autoplay. Pausing, scrolling away, hiding the tab and leaving the page preserve the remaining hold. Keyboard focus also pauses the sequence. Reduced motion and data saving disable autoplay and the opening sequence; visitors can still choose either photograph.
+
+The paired terrace and pool photographs have one coordinated entrance. The closing evening image has a short reveal. Other homepage sections remain still. All content is visible if JavaScript fails. An unavailable evening image leaves the daylight image and gallery link intact.
+
+There is no new runtime dependency, scroll listener or per-frame JavaScript loop. The changes add about 1.6 KB compressed across the two scripts and stylesheet. The horizon moves through the Web Animations API; the image dissolve and slow zoom use the existing CSS animation.
+
+Desktop English and 390px Spanish mobile were checked in Chrome. The photo controls have 44px touch targets. The page had no horizontal overflow or console errors. Both booking languages passed the local consent, failure and retry checks using synthetic responses. All 16 Python and 20 Node tests passed, including five new photo-clock tests. The design checker reported only the two previously documented warnings.
