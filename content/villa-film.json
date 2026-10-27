@@ -1,9 +1,9 @@
 {
   "title": "White Swan, from day to night",
   "duration_seconds": 21.8,
-  "fps": 24,
+  "fps": 30,
   "audio": false,
-  "technique": "A motion composition of approved property photographs. No simulated people, amenities or live-action footage.",
+  "technique": "Fixed property photographs with cross-dissolves. No camera zoom, pan, sliding transition or simulated live-action footage.",
   "sources": [
     "/assets/editorial/villa-light-1536.webp",
     "/assets/enhanced/listing-1685140810-1086.webp",
@@ -14,16 +14,16 @@
   ],
   "variants": {
     "desktop": {
-      "url": "/assets/film/white-swan-desktop.mp4",
-      "width": 1440,
-      "height": 810,
-      "bytes": 4172033
+      "url": "/assets/film/white-swan-desktop-f70ee00c802e.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 8554240
     },
     "mobile": {
-      "url": "/assets/film/white-swan-mobile.mp4",
-      "width": 640,
-      "height": 800,
-      "bytes": 1777135
+      "url": "/assets/film/white-swan-mobile-8bc0ea608791.mp4",
+      "width": 960,
+      "height": 1200,
+      "bytes": 4411201
     }
   },
   "chapters": [

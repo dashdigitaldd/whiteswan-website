@@ -1,6 +1,6 @@
 /* The film owns the motion. Supporting details follow the villa's window frames. */
 .residence-home .villa-film{background:#172725;isolation:isolate}
-.villa-film .hero-frame img{animation:none!important}
+.residence-home .villa-film .hero-frame img{animation:none!important;transform:none;object-position:center}
 .villa-film .hero-night{transition:opacity .6s ease}
 .villa-film-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;transition:opacity .6s ease}
 .villa-film[data-mode="film"][data-loaded="true"] .villa-film-video{opacity:1;z-index:2}
@@ -49,20 +49,13 @@
 .villa-film[data-mode="photos"] .film-console button:focus-visible{outline-color:#173033}
 .film-feedback{position:absolute;bottom:102px;left:16px;right:16px;z-index:6;margin:0 auto;width:fit-content;max-width:calc(100% - 32px);background:#fffffff5;color:#173033;padding:10px 14px;font:12px/1.5 Inter,sans-serif}
 .film-feedback[hidden]{display:none}
-/* Hover reveals more of each photographic frame without moving adjacent text. */
+/* Keep photographic details fixed; motion belongs to the titles and controls. */
+.residence-home .space-card>div img,.residence-home .story-photos a img,.residence-home .final-photo img{animation:none;transform:none;transition:none}
+.residence-home .space-card:hover>div img,.residence-home .story-photos a:hover img{transform:none}
 @media(hover:hover) and (prefers-reduced-motion:no-preference){
- .residence-home .space-card>div img,.residence-home .story-photos a img{transition:transform .9s cubic-bezier(.2,.7,.1,1)}
- .residence-home .space-card:hover>div img,.residence-home .story-photos a:hover img{transform:scale(1.025)}
  .residence-home .text-link>span{display:inline-block;transition:transform .25s ease}
  .residence-home .text-link:hover>span{transform:translate(3px,-3px)}
 }
-/* The final photograph opens as the visitor reaches the invitation. Text stays put. */
-@supports(animation-timeline:view()){
- @media(prefers-reduced-motion:no-preference) and (min-width:701px){
-  .residence-home .final-photo img{animation:villa-window-open linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
- }
-}
-@keyframes villa-window-open{from{transform:scale(1.045)}to{transform:scale(1)}}
 @media(max-width:1000px){
  .film-console{gap:16px;left:20px;right:20px;bottom:20px}
  .film-chapters{gap:9px}

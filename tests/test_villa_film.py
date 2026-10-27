@@ -1,4 +1,5 @@
 """Shipping contracts for the local, deferred public-home film."""
+import hashlib
 import json
 import struct
 import unittest
@@ -17,7 +18,8 @@ class VillaFilmContracts(unittest.TestCase):
         for kind,variant in film['variants'].items():
             data=(ROOT/variant['url'].lstrip('/')).read_bytes()
             self.assertEqual(len(data),variant['bytes'])
-            self.assertLess(len(data),(5 if kind=='desktop' else 2)*1024*1024)
+            self.assertIn(hashlib.sha256(data).hexdigest()[:12],variant['url'])
+            self.assertLess(len(data),(9 if kind=='desktop' else 5)*1024*1024)
             # The browser receives metadata before video samples and can start early.
             boxes=[];offset=0
             while offset+8<=len(data):

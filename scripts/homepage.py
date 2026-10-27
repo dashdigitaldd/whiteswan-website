@@ -9,6 +9,7 @@ from photography import photo, full_photo, GALLERY_ORDER, PHOTO_COUNT, markup
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = json.loads((ROOT / 'content/listing-photos.json').read_text())
 PHOTOS = CATALOG['photos']
+FILM = json.loads((ROOT / 'content/villa-film.json').read_text())
 SERVICE_IMAGES = {item['key']: item for item in json.loads((ROOT / 'content/service-imagery.json').read_text())['assets']}
 AIRBNB = 'https://www.airbnb.com/rooms/47911834'
 def booking_path(lang):
@@ -34,7 +35,7 @@ def hero_scene(lang):
     copy=''.join(f'<p class="film-title" data-film-title="{i}" data-active="{str(i==0).lower()}">{words}</p>' for i,(_,_,words) in enumerate(scenes))
     return f'''<div class="hero-photo cinematic-cover villa-film" data-scene="day" data-mode="photos" data-playing="false" data-chapter="0" role="group" aria-label="{T('White Swan, from day to night','White Swan, del día a la noche')}">
  <div class="hero-frame hero-day" data-hero-frame="day">{editorial_photo(lang)}</div><div class="hero-frame hero-night" data-hero-frame="night" aria-hidden="true">{night}</div>
- <video class="villa-film-video" muted playsinline preload="none" aria-hidden="true" disablepictureinpicture data-desktop="/assets/film/white-swan-desktop.mp4" data-mobile="/assets/film/white-swan-mobile.mp4"></video>
+ <video class="villa-film-video" muted playsinline preload="none" aria-hidden="true" disablepictureinpicture data-desktop="{FILM['variants']['desktop']['url']}" data-mobile="{FILM['variants']['mobile']['url']}"></video>
  <div class="film-art" aria-hidden="true"><div class="film-corner film-corner-top"></div><div class="film-corner film-corner-bottom"></div><span class="film-location">WHITE SWAN <span>EL SALVADOR</span></span><div class="film-titles">{copy}</div><div class="film-scene-mark"><span data-film-number>01</span><svg viewBox="0 0 100 100" width="70" height="70"><circle cx="50" cy="50" r="44"/><circle class="film-scene-ring" cx="50" cy="50" r="44" pathLength="1"/></svg><span>/ 05</span></div></div>
  <p class="sr-only">{T('A 22-second photo film of White Swan, from the pool and terrace to the villa at night. The film has no sound.','Un recorrido de 22 segundos con fotografías de White Swan, desde la piscina y la terraza hasta la villa de noche. El video no tiene sonido.')}</p>
  <a class="retouch-note" href="{gallery}"><span class="photo-label-wide">{T(f'Explore the villa · {PHOTO_COUNT} photos',f'Explora la villa · {PHOTO_COUNT} fotos')}</span><span class="photo-label-phone">{T(f'{PHOTO_COUNT} photos',f'{PHOTO_COUNT} fotos')}</span><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a>
