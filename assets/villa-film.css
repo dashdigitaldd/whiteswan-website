@@ -1,0 +1,102 @@
+/* The film owns the motion. Supporting details follow the villa's window frames. */
+.residence-home .villa-film{background:#172725;isolation:isolate}
+.villa-film .hero-frame img{animation:none!important}
+.villa-film .hero-night{transition:opacity .6s ease}
+.villa-film-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;transition:opacity .6s ease}
+.villa-film[data-mode="film"][data-loaded="true"] .villa-film-video{opacity:1;z-index:2}
+.residence-home .villa-film::after{inset:0;z-index:3;opacity:0;background:linear-gradient(180deg,rgba(4,20,25,.2),transparent 22%,rgba(4,20,25,.05) 40%,rgba(4,20,25,.8) 100%);transition:opacity .6s ease;pointer-events:none}
+.residence-home .villa-film[data-mode="film"][data-loaded="true"]::after{opacity:1}
+.film-art{position:absolute;inset:0;z-index:4;color:#fff;pointer-events:none;opacity:0;transition:opacity .5s ease}
+[data-mode="film"][data-loaded="true"] .film-art{opacity:1}
+.film-location{position:absolute;top:36px;left:40px;font:500 11px/1.5 Inter,sans-serif;letter-spacing:.2em}
+.film-location>span{display:block;font-size:8px;letter-spacing:.24em;margin-top:8px;opacity:.85}
+.film-corner{position:absolute;width:60px;height:60px;border-color:#ffffff6b;border-style:solid;border-width:0}
+.film-corner-top{top:22px;left:22px;border-top-width:1px;border-left-width:1px}
+.film-corner-bottom{right:22px;bottom:116px;border-bottom-width:1px;border-right-width:1px}
+.film-titles{position:absolute;left:4.3%;right:17%;bottom:clamp(106px,11vw,160px);height:2.05em;font:400 clamp(52px,6.3vw,106px)/.98 'Instrument Serif',Georgia,serif;letter-spacing:-.025em;text-shadow:0 2px 24px #071b2540}
+.film-title{position:absolute;inset:0;margin:0;color:#fff;opacity:0;transform:translateY(16px);transition:opacity .32s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.film-title[data-active="true"]{opacity:1;transform:none;transition-delay:.18s}
+.film-title em{font-family:inherit;font-weight:400;color:inherit}
+.film-scene-mark{position:absolute;right:4%;bottom:145px;display:grid;place-items:center;font:400 16px/1 Inter,sans-serif}
+.film-scene-mark>svg{grid-area:1/1;width:76px;height:76px;transform:rotate(-90deg);fill:none;stroke:#ffffff40;stroke-width:.8}
+.film-scene-mark>span:first-child{grid-area:1/1;font-variant-numeric:tabular-nums}
+.film-scene-mark>span:last-child{font-size:9px;letter-spacing:.14em;margin-top:12px}
+.film-scene-mark .film-scene-ring{stroke:#ead7b3;stroke-width:1.6;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .25s linear}
+.residence-home .villa-film .retouch-note{top:26px;right:26px;bottom:auto;min-height:44px;border-radius:0;background:#fffffff2;color:#173033;font-size:11px;gap:14px}
+.film-console{position:absolute;z-index:5;bottom:24px;left:28px;right:28px;display:flex;align-items:center;gap:28px;color:#fff;padding:12px 0 0;border-top:1px solid #ffffff59}
+.film-console[hidden]{display:none}
+.film-console button{font:500 11px/1.4 Inter,sans-serif;color:inherit;background:transparent;border:0;min-height:44px;padding:8px;cursor:pointer}
+.film-console button:disabled{opacity:.45;cursor:default}
+.film-console button:focus-visible{outline:2px solid #fff;outline-offset:4px;border-radius:2px}
+.film-play{display:flex;align-items:center;gap:9px;min-width:118px;white-space:nowrap}
+.film-play svg{fill:none;stroke:currentColor;stroke-linejoin:round;stroke-width:1.2}
+.film-icon-pause{display:none}
+[data-playing="true"] .film-icon-play{display:none}
+[data-playing="true"] .film-icon-pause{display:block}
+.film-chapters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;flex:1}
+.film-chapters button{position:relative;text-align:left;opacity:.65;transition:opacity .2s ease}
+.film-chapters button:hover,.film-chapters button[aria-pressed="true"]{opacity:1}
+.film-chapter-number{font-size:9px;margin-right:8px;font-variant-numeric:tabular-nums}
+.film-track{position:absolute;bottom:2px;left:8px;right:8px;height:1px;background:#ffffff4a;overflow:hidden}
+.film-track i{display:block;width:100%;height:100%;background:#edd6a7;transform:scaleX(0);transform-origin:left;transition:transform .25s linear}
+.film-stills{display:flex;gap:5px;border:1px solid #ffffff4a;padding:2px}
+.film-stills button{min-width:46px}
+.film-stills button[aria-pressed="true"]{background:#f8f7f1;color:#1b3439}
+.villa-film[data-mode="photos"] .film-console{color:#163035;background:#fffffff5;left:50%;right:auto;transform:translateX(-50%);padding:4px 8px;border:1px solid #ffffffc9;gap:20px;width:max-content;max-width:calc(100% - 24px)}
+.villa-film[data-mode="photos"] .film-chapters{display:none}
+.villa-film[data-mode="photos"] .film-stills{border-color:#17303320}
+.villa-film[data-mode="photos"] .film-stills button[aria-pressed="true"]{background:#173033;color:#fff}
+.villa-film[data-mode="photos"] .film-console button:focus-visible{outline-color:#173033}
+.film-feedback{position:absolute;bottom:102px;left:16px;right:16px;z-index:6;margin:0 auto;width:fit-content;max-width:calc(100% - 32px);background:#fffffff5;color:#173033;padding:10px 14px;font:12px/1.5 Inter,sans-serif}
+.film-feedback[hidden]{display:none}
+/* Hover reveals more of each photographic frame without moving adjacent text. */
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .residence-home .space-card>div img,.residence-home .story-photos a img{transition:transform .9s cubic-bezier(.2,.7,.1,1)}
+ .residence-home .space-card:hover>div img,.residence-home .story-photos a:hover img{transform:scale(1.025)}
+ .residence-home .text-link>span{display:inline-block;transition:transform .25s ease}
+ .residence-home .text-link:hover>span{transform:translate(3px,-3px)}
+}
+/* The final photograph opens as the visitor reaches the invitation. Text stays put. */
+@supports(animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference) and (min-width:701px){
+  .residence-home .final-photo img{animation:villa-window-open linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
+ }
+}
+@keyframes villa-window-open{from{transform:scale(1.045)}to{transform:scale(1)}}
+@media(max-width:1000px){
+ .film-console{gap:16px;left:20px;right:20px;bottom:20px}
+ .film-chapters{gap:9px}
+ .film-chapter-name{font-size:9px}
+ .film-play{min-width:auto}
+ .film-play>span{display:none}
+ .film-scene-mark{bottom:125px}
+ .film-titles{bottom:115px}
+}
+@media(max-width:700px){
+ .residence-home .villa-film{height:clamp(390px,61svh,560px)}
+ .film-location{top:25px;left:25px;font-size:9px}
+ .film-location>span{font-size:7px;margin-top:6px}
+ .film-corner-top{top:14px;left:14px;width:40px;height:40px}
+ .film-corner-bottom{right:14px;bottom:130px;width:35px;height:35px}
+ .residence-home .villa-film .retouch-note{top:16px;right:16px;min-height:44px;padding:8px 10px;font-size:10px;gap:6px}
+ .film-titles{left:25px;right:14px;bottom:150px;font-size:clamp(40px,11.5vw,70px);height:2.12em}
+ .film-scene-mark{display:none}
+ .film-console{bottom:14px;left:14px;right:14px;display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding-top:6px}
+ .film-play{justify-self:start;padding:4px 6px!important}
+ .film-play>span{display:inline;font-size:10px}
+ .film-chapters{grid-row:2;grid-column:1/-1;gap:9px;width:100%}
+ .film-chapters button{padding:6px 2px;min-height:44px;opacity:.7}
+ .film-chapter-number{font-size:10px;margin:0}
+ .film-chapter-name{display:none}
+ .film-track{left:2px;right:2px;bottom:0;height:2px}
+ .film-stills{grid-row:1;grid-column:2;padding:0}
+ .film-stills button{min-height:44px;min-width:44px;font-size:10px}
+ .villa-film[data-mode="photos"] .film-console{display:flex;bottom:14px;gap:18px}
+ .villa-film[data-mode="photos"] .film-play{min-width:110px}
+ .film-feedback{bottom:85px;font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){
+ .villa-film-video,.villa-film .hero-night,.residence-home .villa-film::after,.film-art,.film-title,.film-track i,.film-scene-mark .film-scene-ring{transition:none}
+ .film-title{transform:none}
+ .residence-home .final-photo img{animation:none;transform:none}
+}

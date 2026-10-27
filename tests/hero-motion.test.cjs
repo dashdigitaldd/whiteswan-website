@@ -1,152 +1,111 @@
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
-const {readFileSync} = require('node:fs');
-const {runInNewContext} = require('node:vm');
-const source = readFileSync(require.resolve('../assets/hero-motion.js'), 'utf8');
+const {createVillaFilm} = require('../assets/hero-motion.js');
 
-// Exercise the actual script with a deterministic clock and DOM events.
 class Element {
-  constructor(dataset = {}) { this.dataset = dataset; this.attributes = {}; this.events = {}; this.hidden = false; }
-  setAttribute(key, value) { this.attributes[key] = value; }
-  addEventListener(key, callback) { this.events[key] = callback; }
-  removeEventListener(key, callback) { if (this.events[key] === callback) delete this.events[key]; }
-  fire(key, data = {}) { this.events[key]?.(data); }
-  contains() { return false; }
+  constructor(dataset={}) { this.dataset=dataset;this.attributes={};this.events={};this.style={}; }
+  setAttribute(key,value) { this.attributes[key]=value; }
+  getAttribute(key) { return this.attributes[key]??null; }
+  addEventListener(key,fn) { (this.events[key]??=[]).push(fn); }
+  fire(key,event={}) { this.events[key]?.forEach(fn=>fn(event)); }
 }
-async function fixture({reduce = false, saveData = false, decodeFails = false, sourceSwap = '', language = 'en'} = {}) {
-  const cover = new Element({scene: 'day'}), controls = new Element(), toggle = new Element();
-  controls.hidden = true;
-  const buttons = ['day','night'].map(heroScene => new Element({heroScene}));
-  const frames = ['day','night'].map(heroFrame => new Element({heroFrame}));
-  const traveller = new Element();
-  const animations = [];
-  traveller.animate = () => {
-    const animation = {state: 'running', currentTime: 0,
-      play() { this.state = 'running'; }, pause() { this.state = 'paused'; }, cancel() { this.state = 'cancelled'; }};
-    animations.push(animation);
-    return animation;
-  };
-  const night = new Element();
-  night.complete = sourceSwap !== 'loading';
-  night.naturalWidth = decodeFails ? 0 : 960;
-  night.decode = () => decodeFails || sourceSwap ? Promise.reject(Error('Decode interrupted')) : Promise.resolve();
-  night.closest = () => frames[1];
-  cover.querySelector = selector => ({'.hero-scene-controls': controls, '[data-hero-motion]': toggle,
-    '.hero-night img': night, '.horizon-traveller': traveller})[selector];
-  cover.querySelectorAll = selector => ({'[data-hero-scene]': buttons, '[data-hero-frame]': frames,
-    img: [{decode: () => Promise.resolve()}, night]})[selector];
-  const document = new Element(); document.documentElement = {lang: language}; document.hidden = false;
-  document.querySelector = () => cover;
-  const reduced = new Element(); reduced.matches = reduce;
-  const connection = new Element(); connection.saveData = saveData;
-  const window = new Element();
-  let observer, now = 0, nextId = 0;
-  const timers = new Map();
-  window.IntersectionObserver = class {
-    constructor(callback) { observer = callback; }
-    observe() {}
-  };
-  runInNewContext(source, {document, window, navigator: {connection}, matchMedia: () => reduced,
-    performance: {now: () => now}, IntersectionObserver: window.IntersectionObserver,
-    setTimeout: (callback, duration) => { const id = ++nextId; timers.set(id, {at: now + duration, callback}); return id; },
-    clearTimeout: id => timers.delete(id)});
-  await new Promise(resolve => setImmediate(resolve));
-  function visibility(ratio) { observer([{isIntersecting: ratio > 0, intersectionRatio: ratio}]); }
-  function advance(milliseconds) {
-    const target = now + milliseconds;
-    while (true) {
-      const next = [...timers].sort((a,b) => a[1].at - b[1].at)[0];
-      if (!next || next[1].at > target) break;
-      now = next[1].at; timers.delete(next[0]); next[1].callback();
-    }
-    now = target;
-  }
-  visibility(1);
-  return {cover, controls, toggle, buttons, frames, night, reduced, connection, document, window, animations, visibility, advance, timers};
+const tick=()=>new Promise(resolve=>setImmediate(resolve));
+function fixture({reduce=false,saveData=false,mobile=false,slow=false,posterReady=true,blocked=false,language='en'}={}) {
+  const root=new Element({scene:'day'}), controls=new Element(), play=new Element(), label=new Element(), feedback=new Element();
+  const ring=new Element(),number=new Element(),poster=new Element();
+  poster.complete=posterReady;poster.naturalWidth=posterReady?1536:0;
+  const photos=['day','night'].map(filmPhoto=>new Element({filmPhoto}));
+  const frames=['day','night'].map(heroFrame=>new Element({heroFrame}));
+  const titles=Array.from({length:5},(_,filmTitle)=>new Element({filmTitle}));
+  const chapters=Array.from({length:5},(_,filmChapter)=>{const el=new Element({filmChapter});el.track=new Element();el.querySelector=()=>el.track;return el;});
+  const video=new Element({desktop:'/desktop.mp4',mobile:'/mobile.mp4'});
+  video.paused=true;video.currentTime=0;video.duration=21.8;video.readyState=0;video.playCalls=0;
+  Object.defineProperty(video,'src',{get(){return this.attributes.src;},set(v){this.attributes.src=v;}});
+  video.load=()=>{video.loads=(video.loads||0)+1;};
+  video.play=()=>{video.playCalls++;if(blocked)return Promise.reject(Object.assign(new Error('Not allowed'),{name:'NotAllowedError'}));video.paused=false;video.ended=false;video.fire('play');return Promise.resolve();};
+  video.pause=()=>{if(!video.paused){video.paused=true;video.fire('pause');}};
+  root.querySelector=s=>({'video':video,'.film-console':controls,'[data-film-play]':play,'[data-film-play-label]':label,'[data-film-number]':number,'.film-scene-ring':ring,'.film-feedback':feedback,'[data-hero-frame="day"] img':poster})[s];
+  root.querySelectorAll=s=>({'[data-film-chapter]':chapters,'[data-film-photo]':photos,'[data-film-title]':titles,'[data-hero-frame]':frames})[s];
+  const doc=new Element();doc.documentElement={lang:language};doc.hidden=false;
+  const reduced=new Element();reduced.matches=reduce;
+  const connection=new Element();connection.saveData=saveData;connection.effectiveType=slow?'3g':'4g';
+  const env=new Element();env.document=doc;env.navigator={connection};env.matchMedia=q=>q.includes('reduced')?reduced:{matches:mobile};
+  let observer;const idle=[];
+  env.IntersectionObserver=class {constructor(fn){observer=fn;}observe(){}};
+  env.requestIdleCallback=fn=>{idle.push(fn);return idle.length;};
+  createVillaFilm(root,env);
+  return {root,controls,play,label,feedback,ring,number,poster,photos,frames,titles,chapters,video,doc,reduced,connection,env,
+    visible(ratio=1){observer([{isIntersecting:ratio>0,intersectionRatio:ratio}]);},
+    idle(){while(idle.length)idle.shift()();},
+    loaded(){video.readyState=4;video.fire('loadedmetadata');video.fire('loadeddata');}};
 }
 
-test('the photo clock changes both photograph and accessible selection after a full hold', async () => {
-  const f = await fixture();
-  assert.equal(f.controls.hidden, false);
-  f.advance(15999); assert.equal(f.cover.dataset.scene, 'day');
-  f.advance(1); assert.equal(f.cover.dataset.scene, 'night');
-  assert.equal(f.buttons[1].attributes['aria-pressed'], 'true');
-  assert.equal(f.frames[0].attributes['aria-hidden'], 'true');
-  assert.equal(f.frames[1].attributes['aria-hidden'], 'false');
-  assert.equal(f.timers.size, 1);
-  f.advance(16000); assert.equal(f.cover.dataset.scene, 'day');
+test('autoplay waits for poster, visibility and idle time; picks one responsive source',async()=>{
+  const f=fixture({posterReady:false,mobile:true});
+  assert.equal(f.video.src,undefined);f.visible();f.idle();assert.equal(f.video.src,undefined);
+  f.poster.fire('load');assert.equal(f.video.src,undefined);f.idle();await tick();
+  assert.equal(f.video.src,'/mobile.mp4');assert.equal(f.video.loads,1);assert.equal(f.video.muted,true);
+  f.loaded();assert.equal(f.root.dataset.mode,'film');assert.equal(f.root.dataset.loaded,'true');
+  f.visible(0);f.visible();await tick();assert.equal(f.video.loads,1);
 });
 
-test('scrolling away, hiding the tab and bfcache preserve the remaining hold', async () => {
-  const f = await fixture();
-  f.advance(6000);
-  f.visibility(.1); assert.equal(f.cover.dataset.running, 'false');
-  assert.equal(f.animations.at(-1).state, 'paused');
-  f.advance(60000); assert.equal(f.cover.dataset.scene, 'day');
-  f.visibility(1); f.advance(3000);
-  f.document.hidden = true; f.document.fire('visibilitychange');
-  f.advance(60000); f.document.hidden = false; f.document.fire('visibilitychange');
-  f.advance(3000); f.window.fire('pagehide');
-  f.advance(60000); assert.equal(f.timers.size, 0);
-  f.window.fire('pageshow'); f.advance(3999); assert.equal(f.cover.dataset.scene, 'day');
-  f.advance(1); assert.equal(f.cover.dataset.scene, 'night');
+test('offscreen, hidden tabs and bfcache pause and resume without losing the place',async()=>{
+  const f=fixture();f.visible();f.idle();await tick();f.loaded();f.video.currentTime=7;
+  f.visible(.1);assert.equal(f.video.paused,true);f.visible();await tick();assert.equal(f.video.paused,false);
+  f.doc.hidden=true;f.doc.fire('visibilitychange');assert.equal(f.video.paused,true);
+  f.doc.hidden=false;f.doc.fire('visibilitychange');await tick();assert.equal(f.video.currentTime,7);
+  f.env.fire('pagehide');assert.equal(f.video.paused,true);f.env.fire('pageshow');await tick();assert.equal(f.video.paused,false);
 });
 
-test('manual scene selection stops autoplay and the pause button resumes without resetting', async () => {
-  const f = await fixture({language: 'es'});
-  f.advance(5000); f.toggle.fire('click');
-  assert.equal(f.toggle.attributes['aria-label'], 'Reproducir animación de fotos');
-  f.advance(60000); f.toggle.fire('click');
-  f.advance(10999); assert.equal(f.cover.dataset.scene, 'day');
-  f.advance(1); assert.equal(f.cover.dataset.scene, 'night');
-  f.buttons[0].fire('click'); f.advance(60000);
-  assert.equal(f.cover.dataset.scene, 'day');
-  assert.equal(f.cover.dataset.playing, 'false');
-  f.toggle.fire('click');
-  f.controls.fire('focusin', {target: {matches: () => true}});
-  assert.equal(f.cover.dataset.playing, 'false');
+test('manual pause persists through visibility changes and end never loops',async()=>{
+  const f=fixture();f.visible();f.idle();await tick();f.loaded();f.play.fire('click');
+  f.visible(0);f.visible();await tick();assert.equal(f.video.paused,true);
+  f.play.fire('click');await tick();assert.equal(f.video.paused,false);
+  f.video.currentTime=21.8;f.video.paused=true;f.video.ended=true;f.video.fire('ended');
+  f.visible(0);f.visible();await tick();assert.equal(f.label.textContent,'Replay film');assert.equal(f.video.paused,true);
+  f.play.fire('click');await tick();assert.equal(f.video.currentTime,0);assert.equal(f.video.paused,false);
 });
 
-test('reduced motion and data saver keep manual controls without automatic movement', async () => {
-  for (const options of [{reduce: true}, {saveData: true}]) {
-    const f = await fixture(options);
-    assert.equal(f.toggle.hidden, true);
-    assert.equal(f.animations.length, 0);
-    f.advance(60000); assert.equal(f.cover.dataset.scene, 'day');
-    f.buttons[1].fire('click'); assert.equal(f.cover.dataset.scene, 'night');
-    assert.equal(f.timers.size, 0);
+test('reduced motion, data saver and slow connections request no video without an explicit play',async()=>{
+  for(const options of [{reduce:true},{saveData:true},{slow:true}]) {
+    const f=fixture(options);f.visible();f.idle();assert.equal(f.video.src,undefined);
+    f.photos[1].fire('click');assert.equal(f.root.dataset.scene,'night');assert.equal(f.video.src,undefined);
+    f.play.fire('click');await tick();assert.equal(f.video.src,'/desktop.mp4');
   }
-  const f = await fixture();
-  f.reduced.matches = true; f.reduced.fire('change');
-  assert.equal(f.animations.at(-1).state, 'cancelled');
-  assert.equal(f.timers.size, 0);
-  f.reduced.matches = false; f.reduced.fire('change');
-  assert.equal(f.cover.dataset.playing, 'false');
 });
 
-test('a missing evening photo leaves daylight visible and hides unavailable controls', async () => {
-  const f = await fixture({decodeFails: true});
-  assert.equal(f.cover.dataset.scene, 'day');
-  assert.equal(f.controls.hidden, true);
-  assert.equal(f.frames[1].hidden, true);
-  assert.equal(f.frames[0].hidden, false);
-  assert.equal(f.timers.size, 0);
+test('a changed motion preference stops playback and returns to the still',async()=>{
+  const f=fixture();f.visible();f.idle();await tick();f.reduced.matches=true;f.reduced.fire('change');
+  assert.equal(f.video.paused,true);assert.equal(f.root.dataset.mode,'photos');
+  f.reduced.matches=false;f.reduced.fire('change');assert.equal(f.video.paused,true);
 });
 
-test('a responsive image source change during decode preserves photo controls', async () => {
-  for (const sourceSwap of ['complete', 'loading']) {
-    const f = await fixture({sourceSwap});
-    if (sourceSwap === 'loading') {
-      assert.equal(f.controls.hidden, true);
-      assert.equal(f.frames[1].hidden, false);
-      f.night.complete = true;
-      f.night.fire('load');
-      await new Promise(resolve => setImmediate(resolve));
-      assert.deepEqual(f.night.events, {});
-    }
-    assert.equal(f.controls.hidden, false);
-    assert.equal(f.frames[1].hidden, false);
-    f.buttons[1].fire('click');
-    assert.equal(f.cover.dataset.scene, 'night');
-  }
+test('chapters seek after metadata, update the title and accessible selection',async()=>{
+  const f=fixture({reduce:true,language:'es'});f.visible();f.chapters[3].fire('click');await tick();f.loaded();
+  assert.equal(f.video.currentTime,13);assert.equal(f.root.dataset.chapter,'3');
+  assert.equal(f.titles[3].dataset.active,'true');assert.equal(f.chapters[3].attributes['aria-pressed'],'true');
+  assert.equal(f.label.textContent,'Pausar');f.photos[0].fire('click');assert.equal(f.root.dataset.mode,'photos');
+  assert.equal(f.frames[0].attributes['aria-hidden'],'false');assert.equal(f.chapters[3].attributes['aria-pressed'],'false');
+});
+
+test('failed media restores the daylight photo and keeps the still controls',async()=>{
+  const f=fixture();f.visible();f.idle();await tick();f.video.fire('error');
+  assert.equal(f.root.dataset.mode,'photos');assert.equal(f.video.paused,true);assert.equal(f.play.disabled,true);
+  assert.equal(f.feedback.hidden,false);f.photos[1].fire('click');assert.equal(f.root.dataset.scene,'night');
+});
+
+test('autoplay rejection exposes play without repeated background retries',async()=>{
+  const f=fixture({blocked:true});f.visible();f.idle();await tick();assert.equal(f.label.textContent,'Play film');
+  const calls=f.video.playCalls;f.visible(0);f.visible();await tick();assert.equal(f.video.playCalls,calls);
+});
+
+test('a manual still selection wins over a queued automatic start',async()=>{
+  const f=fixture();f.visible();f.photos[1].fire('click');f.idle();await tick();
+  assert.equal(f.video.src,undefined);assert.equal(f.root.dataset.scene,'night');
+});
+
+test('changing estimated network speed does not interrupt an explicitly started film',async()=>{
+  const f=fixture({slow:true});f.visible();f.play.fire('click');await tick();f.loaded();
+  f.connection.fire('change');assert.equal(f.root.dataset.mode,'film');assert.equal(f.video.paused,false);
+  f.connection.saveData=true;f.connection.fire('change');assert.equal(f.root.dataset.mode,'photos');assert.equal(f.video.paused,true);
 });
