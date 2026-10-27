@@ -1,17 +1,13 @@
-# Retired service illustrations
+# Service imagery
 
-Retired from the public page on 18 September 2026 at the owner’s request. Section 03 now uses existing photographs of the villa kitchen (2569961413), bedroom (2569961498) and dining area (2569961410), with accurate scene alt text. These show the villa’s settings, not staged services or supplier portraits.
+The owner commissioned three close-up service images on 27 October 2026: a chef finishing a fish dish, a hand massage, and a celebration table with sparkling wine and flowers. They appear on the English and Spanish homepages with an illustrative-image caption.
 
-The assets below remain as historical files but are no longer in the active renderer or publication allowlist.
+The images were created with the built-in image-generation tool. The exact prompts and source filenames are in `content/service-imagery.json`. The responsive files are registered in `content/editorial-assets.json`.
 
-Originally created with the built-in image generation tool on 18 September 2026. These three images illustrate services; they are not supplier portraits, property photographs or promises of a particular arrangement. They were labeled as illustrative while published.
+Each image has 320, 640, 960 and 1448 pixel WebP copies in `assets/services/`, with filenames starting `service-chef-closeup`, `service-massage-closeup` and `service-celebration-closeup`. Local PNG masters are in the ignored `artifacts/service-imagery/` folder. Run `scripts/prepare-service-images.py` to resize and compress those masters. A normal site build uses the committed WebP files and needs no model calls.
 
-## Assets
+Keep these images out of the property photo gallery. They illustrate the services; the people, dish and arrangement are generated. Existing supplier contacts, prices and availability rules still apply.
 
-- Chef: `assets/services/chef-{480,960,1536}.webp`
-- Massage table: `assets/services/massage-{480,960,1536}.webp`
-- Champagne, flowers and balloons: `assets/services/celebration-{480,960,1536}.webp`
+## Retired images
 
-All nine responsive files are committed. Only mechanical resizing and WebP compression were applied after generation. `content/service-imagery.json` registers sizes and provenance separately from the genuine listing/guide photographs. `content/service-imagery-prompts.json` contains the exact final prompt set. They are no longer rendered on any page; no model calls occur at runtime.
-
-Do not use these illustrations in the property's listing-photo gallery or describe the depicted chef as a real supplier. Keep on-request availability/quote wording and the public illustrative label.
+The earlier chef, massage table and celebration illustrations from 18 September 2026 remain as historical files. Their filenames are `chef-{480,960,1536}.webp`, `massage-{480,960,1536}.webp` and `celebration-{480,960,1536}.webp`. Their original prompts remain in `content/service-imagery-prompts.json`. They are no longer rendered on any page or included in the publication allowlist.

@@ -64,4 +64,4 @@ for file in ['photos/index.html','es/fotos/index.html']:
  p=Page();p.feed((root/file).read_text())
  assert sum('data-photo-open' in a for t,a in p.tags)==35
 assert seen=={asset['src'] for asset in assets.values()},('curated coverage',len(seen))
-print('All 45 editorial photographs are used; excluded daybed imagery is absent on every route.')
+print(f'All {len(assets)} curated images are used; excluded daybed imagery is absent on every route.')

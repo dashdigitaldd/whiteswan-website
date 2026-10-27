@@ -9,6 +9,7 @@ from photography import photo, full_photo, GALLERY_ORDER, PHOTO_COUNT, markup
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = json.loads((ROOT / 'content/listing-photos.json').read_text())
 PHOTOS = CATALOG['photos']
+SERVICE_IMAGES = {item['key']: item for item in json.loads((ROOT / 'content/service-imagery.json').read_text())['assets']}
 AIRBNB = 'https://www.airbnb.com/rooms/47911834'
 def booking_path(lang):
     return '/es/reservar/' if lang == 'es' else '/stay/'
@@ -68,13 +69,13 @@ def home(lang, head, image, components):
     s+=f'''
 <section class="section experiences experience-story services-simple" id="services"><div class="section-heading"><div><span class="eyebrow">{T('AT YOUR OWN PACE','A TU RITMO')}</span><h2>{T('Make it <em>yours.</em>','Hazla <em>tuya.</em>')}</h2></div><p>{T('Choose a service. Tell us your plans on WhatsApp. We’ll take care of the details.','Elige un servicio. Cuéntanos tus planes por WhatsApp. Coordinamos los detalles.')}</p></div><div class="curated-experiences">'''
     services=[
-        ('private_chef',3,T('Private chef','Chef privado'),T('A freshly prepared meal, enjoyed here at the villa.','Una comida recién preparada, aquí en la villa.'),T('Ask about a chef','Consultar por un chef')),
-        ('in_home_massage',12,T('In-villa massage','Masajes en la villa'),T('Take time for yourself. We’ll help arrange your massage.','Un momento para ti. Te ayudamos a coordinar tu masaje.'),T('Ask about a massage','Consultar por un masaje')),
-        ('decoration',7,T('Celebrations','Celebraciones'),T('A birthday, an anniversary, a moment worth celebrating.','Un cumpleaños, un aniversario, un momento para celebrar.'),T('Plan a celebration','Planear una celebración')),
+        ('private_chef','service-chef-closeup',T('Private chef','Chef privado'),T('A freshly prepared meal, enjoyed here at the villa.','Una comida recién preparada, aquí en la villa.'),T('Ask about a chef','Consultar por un chef')),
+        ('in_home_massage','service-massage-closeup',T('In-villa massage','Masajes en la villa'),T('Take time for yourself. We’ll help arrange your massage.','Un momento para ti. Te ayudamos a coordinar tu masaje.'),T('Ask about a massage','Consultar por un masaje')),
+        ('decoration','service-celebration-closeup',T('Celebrations','Celebraciones'),T('A birthday, an anniversary, a moment worth celebrating.','Un cumpleaños, un aniversario, un momento para celebrar.'),T('Plan a celebration','Planear una celebración')),
     ]
     for service,pic,title,copy,cta in services:
-        s+=f'<article class="curated-card">{photo(pic,lang,sizes="(max-width: 700px) 100vw, 40vw")}<div><h3>{title}</h3><p>{copy}</p>{whatsapp_link(lang,service,home+"#services",label=cta,classes="button light service-cta")}</div></article>'
-    s+=f'''</div><div class="services-foot"><p>{T('On request. Price and availability confirmed before booking.','Por solicitud. Precio y disponibilidad confirmados antes de reservar.')}</p><a class="text-link" href="{guide}#services">{T('All services & prices','Todos los servicios y precios')} →</a></div></section>
+        s+=f'<article class="curated-card" data-service="{service}">{markup(pic,SERVICE_IMAGES[pic]["alt"][lang],sizes="(max-width: 360px) 90px, (max-width: 700px) 34vw, (max-width: 1000px) 100vw, 30vw")}<div><h3>{title}</h3><p>{copy}</p>{whatsapp_link(lang,service,home+"#services",label=cta,classes="button light service-cta")}</div></article>'
+    s+=f'''</div><div class="services-foot"><p>{T('On request. Price and availability confirmed before booking.','Por solicitud. Precio y disponibilidad confirmados antes de reservar.')}<span class="service-imagery-note">{T('Service images are illustrative.','Las imágenes de los servicios son ilustrativas.')}</span></p><a class="text-link" href="{guide}#services">{T('All services & prices','Todos los servicios y precios')} →</a></div></section>
 {destinations(lang,home,embedded=True)}{faq_section(lang)}{concierge_section(lang)}<section class="invitation final-invitation" id="book"><div class="final-photo">{image('transfer',T('White Swan illuminated above its pool and garden at night','White Swan iluminada junto a su piscina y jardín de noche'))}</div><div><span class="eyebrow">{T('THE BEST PART? MAKING IT YOURS.','LO MEJOR: HACERLA TUYA.')}</span><h2>{T('See you<br><em>by the Pacific.</em>','Nos vemos<br><em>junto al Pacífico.</em>')}</h2><div class="actions"><a class="button light" href="{booking_path(lang)}" data-placement="footer">{T('Find your dates','Elige tus fechas')} →</a><button class="hero-link" data-enquire="stay" data-placement="footer">{T('Ask us about your stay','Consúltanos sobre tu estadía')} →</button></div></div></section></main>{footer(lang)}{concierge_widget(lang,home)}{components(lang)}</body></html>'''
     return s
 

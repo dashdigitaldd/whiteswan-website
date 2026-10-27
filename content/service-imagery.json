@@ -1,70 +1,37 @@
 {
-  "assets": {
-    "service-chef": {
-      "method": "built-in-image-generation",
-      "description": "Illustrative service scene, not an actual supplier or villa photograph.",
-      "src": "/assets/services/chef-960.webp",
-      "full": "/assets/services/chef-1536.webp",
-      "width": 1536,
-      "height": 1024,
-      "variants": [
-        {
-          "width": 480,
-          "url": "/assets/services/chef-480.webp"
-        },
-        {
-          "width": 960,
-          "url": "/assets/services/chef-960.webp"
-        },
-        {
-          "width": 1536,
-          "url": "/assets/services/chef-1536.webp"
-        }
-      ]
+  "generated_at": "2026-10-27",
+  "method": "built-in-image-generation",
+  "usage": "Illustrative service images commissioned by the owner. These do not depict the actual suppliers, a guaranteed menu or a documented event at the villa.",
+  "assets": [
+    {
+      "key": "service-chef-closeup",
+      "master": "artifacts/service-imagery/chef.png",
+      "original_file": "exec-51e8cf2a-fdca-443a-9922-2a61970d7d84.png",
+      "alt": {
+        "en": "A chef finishes a fish dish with fresh herbs and lime",
+        "es": "Un chef termina un plato de pescado con hierbas frescas y limón"
+      },
+      "prompt": "Use case: photorealistic-natural. Asset type: one service photograph for the White Swan beach-house website. Create a single professional editorial photograph, landscape 4:3 composition. Close-up, natural window light, warm wood, ivory textiles, soft neutral colors, realistic surface texture and gentle contrast. It must look photographed by a hospitality photographer, not rendered or heavily retouched. Sharp subject with shallow depth of field, restrained styling, no visible room or architecture. Keep the important action inside the central half of the frame so it also crops well to a narrow portrait card on phones. No text, typography, branding, watermark, collage or borders. This is illustrative service imagery, not a documentary image of the property or its actual suppliers.\nSubject: only a chef's hands and forearms, sleeves of a clean white chef jacket rolled just above the wrists, carefully finishing a freshly cooked fish dish on a simple ivory ceramic plate. One hand places a small fresh herb garnish on the fish; the other steadies the rim of the plate. Include a few cut lime halves and a small wooden prep board nearby, softly out of focus. View close at a gentle downward angle. Food looks freshly prepared, generous and natural rather than tiny molecular cuisine. Real skin creases, believable hands and finger anatomy, subtle steam at most. No face, torso or identifiable person. No ornate restaurant, no invented kitchen, no dramatic studio lighting."
     },
-    "service-massage": {
-      "method": "built-in-image-generation",
-      "description": "Illustrative service scene, not an actual supplier or villa photograph.",
-      "src": "/assets/services/massage-960.webp",
-      "full": "/assets/services/massage-1536.webp",
-      "width": 1536,
-      "height": 1024,
-      "variants": [
-        {
-          "width": 480,
-          "url": "/assets/services/massage-480.webp"
-        },
-        {
-          "width": 960,
-          "url": "/assets/services/massage-960.webp"
-        },
-        {
-          "width": 1536,
-          "url": "/assets/services/massage-1536.webp"
-        }
-      ]
+    {
+      "key": "service-massage-closeup",
+      "master": "artifacts/service-imagery/massage.png",
+      "original_file": "exec-afc26e1b-60b7-4c12-804b-a63a8824a6af.png",
+      "alt": {
+        "en": "A therapist massages a guest's hand over a soft cotton towel",
+        "es": "Una terapeuta masajea la mano de un huésped sobre una toalla de algodón"
+      },
+      "prompt": "Use case: photorealistic-natural. Create one professional editorial photograph for a beach-house massage service, 4:3 landscape. Extreme close-up of a therapist's two hands giving a careful hand and forearm massage to a fully clothed adult seated guest. The guest wears an ivory linen shirt with the sleeve rolled to the elbow and rests one arm comfortably on a folded white cotton towel. Only the therapist's hands, the guest's hand and forearm, fabric and towel are in frame. One therapist hand supports the wrist while the other gently massages the palm with a thumb. Anatomically correct hands, natural skin texture, soft diffuse window daylight, shallow depth of field, authentic tactile cotton and linen. Warm wood at the edge of the table. Neutral cream, soft olive background blur and warm skin tones, professional hospitality photography with restrained contrast. Keep the hands centered so a narrow portrait crop remains clear. No face, no room, no building, no extra limbs, no text, no logos, no border. An illustrative service photograph, not a photograph of an actual supplier."
     },
-    "service-celebration": {
-      "method": "built-in-image-generation",
-      "description": "Illustrative service scene, not an actual supplier or villa photograph.",
-      "src": "/assets/services/celebration-960.webp",
-      "full": "/assets/services/celebration-1536.webp",
-      "width": 1536,
-      "height": 1024,
-      "variants": [
-        {
-          "width": 480,
-          "url": "/assets/services/celebration-480.webp"
-        },
-        {
-          "width": 960,
-          "url": "/assets/services/celebration-960.webp"
-        },
-        {
-          "width": 1536,
-          "url": "/assets/services/celebration-1536.webp"
-        }
-      ]
+    {
+      "key": "service-celebration-closeup",
+      "master": "artifacts/service-imagery/celebration.png",
+      "original_file": "exec-bfd17ab8-4410-45f8-996d-1f9fa3b9d6b0.png",
+      "alt": {
+        "en": "Sparkling wine and white flowers on a celebration table",
+        "es": "Vino espumoso y flores blancas en una mesa de celebración"
+      },
+      "prompt": "Use case: photorealistic-natural. Asset type: one service photograph for the White Swan beach-house website. Create a single professional editorial photograph, landscape 4:3 composition. Close-up, natural window light, warm wood, ivory textiles, soft neutral colors, realistic surface texture and gentle contrast. It must look photographed by a hospitality photographer, not rendered or heavily retouched. Sharp subject with shallow depth of field, restrained styling, no visible room or architecture. Keep the important action inside the central half of the frame so it also crops well to a narrow portrait card on phones. No text, typography, branding, watermark, collage or borders. This is illustrative service imagery, not a documentary image of the property or its actual suppliers.\nSubject: beautiful close-up of an intimate celebration table arrangement on warm natural wood. Two elegant stemmed glasses of pale sparkling wine in the center, with fine real bubbles, alongside a compact arrangement of fresh ivory flowers and a softly tied champagne-colored fabric ribbon. A small lit candle in a clear glass votive gives a subtle warm point of light. An ivory linen runner, natural folds, delicate afternoon shadows. No people. Crop tightly so this feels like a thoughtful birthday or anniversary detail, not a staged wedding venue. A hint of blurred green outside is okay but no readable location, no pool, no building, no balloons with words, no confetti, no giant flower wall, no logos. Believable glass reflections and proportions."
     }
-  }
+  ]
 }

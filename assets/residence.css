@@ -65,6 +65,7 @@
 .residence-home .services-simple .service-cta { background: transparent; border: 1px solid #a8b7bf; color: var(--brand-navy); border-radius: 3px; font-size: 13px; }
 .residence-home .services-simple .service-cta:hover { background: #fff; border-color: var(--brand-navy); }
 .residence-home .services-foot { border-color: #cdd7dc; }
+.service-imagery-note { display: block; margin-top: 6px; font-size: 12px; line-height: 1.5; }
 .residence-home .destination-section { padding-top: 95px; padding-bottom: 90px; }
 .residence-home .destination-card { background: transparent; border: 0; border-bottom: 1px solid var(--line); }
 .residence-home .destination-card h3 { font-size: 30px; }

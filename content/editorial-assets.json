@@ -1035,6 +1035,90 @@
           "url": "/assets/editorial/villa-light-1536.webp"
         }
       ]
+    },
+    "service-chef-closeup": {
+      "source": "artifacts/service-imagery/chef.png",
+      "description": "A chef finishes a fish dish with fresh herbs and lime",
+      "method": "built-in-image-generation",
+      "provenance": "content/service-imagery.json",
+      "src": "/assets/services/service-chef-closeup-960.webp",
+      "full": "/assets/services/service-chef-closeup-1448.webp",
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 320,
+          "url": "/assets/services/service-chef-closeup-320.webp"
+        },
+        {
+          "width": 640,
+          "url": "/assets/services/service-chef-closeup-640.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/services/service-chef-closeup-960.webp"
+        },
+        {
+          "width": 1448,
+          "url": "/assets/services/service-chef-closeup-1448.webp"
+        }
+      ]
+    },
+    "service-massage-closeup": {
+      "source": "artifacts/service-imagery/massage.png",
+      "description": "A therapist massages a guest's hand over a soft cotton towel",
+      "method": "built-in-image-generation",
+      "provenance": "content/service-imagery.json",
+      "src": "/assets/services/service-massage-closeup-960.webp",
+      "full": "/assets/services/service-massage-closeup-1448.webp",
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 320,
+          "url": "/assets/services/service-massage-closeup-320.webp"
+        },
+        {
+          "width": 640,
+          "url": "/assets/services/service-massage-closeup-640.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/services/service-massage-closeup-960.webp"
+        },
+        {
+          "width": 1448,
+          "url": "/assets/services/service-massage-closeup-1448.webp"
+        }
+      ]
+    },
+    "service-celebration-closeup": {
+      "source": "artifacts/service-imagery/celebration.png",
+      "description": "Sparkling wine and white flowers on a celebration table",
+      "method": "built-in-image-generation",
+      "provenance": "content/service-imagery.json",
+      "src": "/assets/services/service-celebration-closeup-960.webp",
+      "full": "/assets/services/service-celebration-closeup-1448.webp",
+      "width": 1448,
+      "height": 1086,
+      "variants": [
+        {
+          "width": 320,
+          "url": "/assets/services/service-celebration-closeup-320.webp"
+        },
+        {
+          "width": 640,
+          "url": "/assets/services/service-celebration-closeup-640.webp"
+        },
+        {
+          "width": 960,
+          "url": "/assets/services/service-celebration-closeup-960.webp"
+        },
+        {
+          "width": 1448,
+          "url": "/assets/services/service-celebration-closeup-1448.webp"
+        }
+      ]
     }
   }
 }

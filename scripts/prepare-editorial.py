@@ -43,5 +43,11 @@ assets['listing-2569961419'] = {
     'full':'/assets/editorial/villa-light-1536.webp','width':1536,'height':1024,
     'variants':[{'width':w,'url':f'/assets/editorial/villa-light-{w}.webp'} for w in [640,960,1536]],
 }
-(ROOT/'content/editorial-assets.json').write_text(json.dumps({'edited_at':'2026-09-18','assets':assets},ensure_ascii=False,indent=2)+'\n')
+# Service illustrations are maintained separately from the property photo edits.
+registry_path = ROOT/'content/editorial-assets.json'
+if registry_path.exists():
+    for key, asset in json.loads(registry_path.read_text())['assets'].items():
+        if key.startswith('service-') and asset.get('method') == 'built-in-image-generation':
+            assets[key] = asset
+registry_path.write_text(json.dumps({'edited_at':'2026-09-18','assets':assets},ensure_ascii=False,indent=2)+'\n')
 print(f'Prepared {len(assets)} curated image assets.')
