@@ -34,8 +34,14 @@ reviews=json.loads((root/'content/guest-reviews.json').read_text())
 for lang,rows in reviews['reviews'].items():
  assert lang in ['en','es'] and len(rows)==3
  for r in rows:
-  assert set(r)=={'source_id','platform','rating','date','text'}
+  assert set(r) in [{'source_id','platform','rating','date','text'}, {'source_id','platform','rating','date','text','author'}]
   assert r['platform']=='airbnb' and r['rating']==5 and len(r['text'])>20
+  if 'author' in r:
+   a=r['author']
+   assert set(a)=={'first_name','image','profile_url','source_image_url','airbnb_review_id','verified_at'}
+   assert urlsplit(a['profile_url']).hostname in ['www.airbnb.com','www.airbnb.ae']
+   assert urlsplit(a['source_image_url']).hostname=='a0.muscache.com'
+   assert a['image'].startswith('/assets/reviewers/') and (root/a['image'].lstrip('/')).is_file()
 for file in ['index.html','es/index.html','photos/index.html','es/fotos/index.html']:
  p=Page();p.feed((root/file).read_text())
  for tag,a in p.tags:
@@ -47,10 +53,14 @@ print('Curated public review fields and on-site booking entry points passed.')
 assets=json.loads((root/'content/editorial-assets.json').read_text())['assets']
 allowed={v['url'] for asset in assets.values() for v in asset['variants']}
 seen=set()
+reviewer_images={r['author']['image'] for rows in reviews['reviews'].values() for r in rows if r.get('author')}
 for file in pages:
  p=Page();p.feed((root/file).read_text())
  for tag,a in p.tags:
   if tag=='img' and a.get('src','').endswith('.webp'):
+   if a.get('class')=='review-avatar':
+    assert a['src'] in reviewer_images and a.get('loading')=='lazy'
+    continue
    assert a['src'] in allowed,(file,'uncurated image',a['src'])
    seen.add(a['src'])
    for variant in a.get('srcset','').split(','):

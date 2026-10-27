@@ -57,6 +57,20 @@
 .residence-home .guest-review.review-featured blockquote p { font-size: clamp(30px, 3vw, 44px); line-height: 1.25; }
 .residence-home .guest-review:not(.review-featured) blockquote p { font-size: 28px; line-height: 1.35; }
 .residence-home .guest-review figcaption, .residence-home .guest-review time { font-size: 11px; letter-spacing: .03em; }
+.residence-home .guest-review figcaption { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; text-transform: none; }
+.review-person { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; text-decoration: none; color: var(--ink); }
+.review-person > span { display: grid; gap: 3px; }
+.review-person strong { font: 500 15px/1.3 Inter, sans-serif; letter-spacing: 0; }
+.review-person span span { color: var(--muted); font-size: 12px; letter-spacing: 0; }
+.review-person .review-avatar { flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.review-person:hover strong { text-decoration: underline; text-underline-offset: 4px; }
+.destination-card#restaurants img { object-position: center 66%; }
+.destination-credits { margin-top: 12px; color: var(--muted); font: 12px/1.7 Inter, sans-serif; }
+.destination-credits summary { cursor: pointer; width: fit-content; padding-block: 12px; min-height: 44px; }
+.destination-credits p { max-width: 72ch; }
+.destination-credits ul { margin-top: 12px; padding-left: 18px; }
+.destination-credits li { margin-bottom: 8px; }
+.destination-credits a { text-decoration: underline; text-underline-offset: 3px; }
 .residence-home .experience-story { margin: 0 24px; max-width: none; padding: 75px max(24px, calc(6vw - 24px)); background: #eaf0f2; color: var(--ink); }
 .residence-home .experience-story .eyebrow { color: var(--brand-bronze); }
 .residence-home .services-simple .section-heading > p, .residence-home .services-simple .curated-card p, .residence-home .services-foot p { color: var(--muted); font-size: 15px; }

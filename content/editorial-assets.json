@@ -853,48 +853,50 @@
       ]
     },
     "guide-eltunco": {
-      "source": "website-photos/eltunco.jpg",
-      "description": "eltunco photograph from the supplied guest website",
+      "source": "https://unsplash.com/photos/a-couple-of-people-that-are-standing-in-the-water-aA_FHF02PZQ",
+      "description": "El Tunco beach, photographed in July 2024",
       "method": "built-in-image-edit",
-      "src": "/assets/enhanced/guide-eltunco-960.webp",
-      "full": "/assets/enhanced/guide-eltunco-1448.webp",
-      "width": 1448,
-      "height": 1086,
+      "provenance": "content/destination-photography.json",
+      "src": "/assets/destinations/el-tunco-960.webp",
+      "full": "/assets/destinations/el-tunco-1536.webp",
+      "width": 1536,
+      "height": 1024,
       "variants": [
         {
           "width": 480,
-          "url": "/assets/enhanced/guide-eltunco-480.webp"
+          "url": "/assets/destinations/el-tunco-480.webp"
         },
         {
           "width": 960,
-          "url": "/assets/enhanced/guide-eltunco-960.webp"
+          "url": "/assets/destinations/el-tunco-960.webp"
         },
         {
-          "width": 1448,
-          "url": "/assets/enhanced/guide-eltunco-1448.webp"
+          "width": 1536,
+          "url": "/assets/destinations/el-tunco-1536.webp"
         }
       ]
     },
     "guide-elzonte": {
-      "source": "website-photos/elzonte.jpg",
-      "description": "elzonte photograph from the supplied guest website",
+      "source": "https://commons.wikimedia.org/wiki/File:El_Zonte_(11-2011)_-_Playa_-_panoramio.jpg",
+      "description": "El Zonte beach, photographed in November 2011",
       "method": "built-in-image-edit",
-      "src": "/assets/enhanced/guide-elzonte-960.webp",
-      "full": "/assets/enhanced/guide-elzonte-1024.webp",
-      "width": 1024,
-      "height": 1536,
+      "provenance": "content/destination-photography.json",
+      "src": "/assets/destinations/el-zonte-960.webp",
+      "full": "/assets/destinations/el-zonte-1460.webp",
+      "width": 1460,
+      "height": 1078,
       "variants": [
         {
           "width": 480,
-          "url": "/assets/enhanced/guide-elzonte-480.webp"
+          "url": "/assets/destinations/el-zonte-480.webp"
         },
         {
           "width": 960,
-          "url": "/assets/enhanced/guide-elzonte-960.webp"
+          "url": "/assets/destinations/el-zonte-960.webp"
         },
         {
-          "width": 1024,
-          "url": "/assets/enhanced/guide-elzonte-1024.webp"
+          "width": 1460,
+          "url": "/assets/destinations/el-zonte-1460.webp"
         }
       ]
     },
@@ -922,25 +924,26 @@
       ]
     },
     "guide-restaurants": {
-      "source": "website-photos/restaurants.jpg",
-      "description": "restaurants photograph from the supplied guest website",
+      "source": "https://whiteswan.my.canva.site/",
+      "description": "Ola Beto's ocean-view terrace",
       "method": "built-in-image-edit",
-      "src": "/assets/enhanced/guide-restaurants-960.webp",
-      "full": "/assets/enhanced/guide-restaurants-1449.webp",
-      "width": 1449,
-      "height": 1086,
+      "provenance": "content/destination-photography.json",
+      "src": "/assets/destinations/ola-betos-960.webp",
+      "full": "/assets/destinations/ola-betos-1122.webp",
+      "width": 1122,
+      "height": 1402,
       "variants": [
         {
           "width": 480,
-          "url": "/assets/enhanced/guide-restaurants-480.webp"
+          "url": "/assets/destinations/ola-betos-480.webp"
         },
         {
           "width": 960,
-          "url": "/assets/enhanced/guide-restaurants-960.webp"
+          "url": "/assets/destinations/ola-betos-960.webp"
         },
         {
-          "width": 1449,
-          "url": "/assets/enhanced/guide-restaurants-1449.webp"
+          "width": 1122,
+          "url": "/assets/destinations/ola-betos-1122.webp"
         }
       ]
     },

@@ -101,7 +101,11 @@ def guest_reviews(lang):
     s=f'''<section class="section guest-stories" id="guest-stories" aria-labelledby="reviews-heading"><div class="section-heading"><div><span class="eyebrow">{T('IN OUR GUESTS’ WORDS','EN PALABRAS DE NUESTROS HUÉSPEDES')}</span><h2 id="reviews-heading">{T('The memories<br><em>they took home.</em>','Los recuerdos<br><em>que se llevaron.</em>')}</h2></div><div><p>{T('A few favourite notes from guests who made White Swan their own.','Algunas de nuestras reseñas favoritas de quienes hicieron de White Swan su hogar.')}</p><a class="text-link" href="{data['source_url']}" target="_blank" rel="noopener">{T('Read reviews on Airbnb','Lee las reseñas en Airbnb')} ↗</a></div></div><div class="guest-review-grid">'''
     for review_index,r in enumerate(data['reviews'][lang]):
         year,month,_=r['date'].split('-');date=months[lang][int(month)-1]+' '+year
-        s+=f'''<figure class="guest-review {'review-featured' if review_index==0 else ''}"><div class="review-stars" aria-label="{T('5 out of 5 stars','5 de 5 estrellas')}"><span aria-hidden="true">★★★★★</span><span>5 / 5</span></div><blockquote><p lang="{lang}">“{escape(r['text'])}”</p></blockquote><figcaption><span>{T('Airbnb guest','Huésped de Airbnb')}</span><time datetime="{r['date']}">{date}</time></figcaption></figure>'''
+        author = r.get('author')
+        attribution = f'<span>{T("Airbnb guest", "Huésped de Airbnb")}</span>'
+        if author:
+            attribution = f'''<a class="review-person" href="{escape(author['profile_url'])}" target="_blank" rel="noopener"><img class="review-avatar" src="{escape(author['image'])}" width="48" height="48" alt="" loading="lazy" decoding="async"><span><strong>{escape(author['first_name'])}</strong><span>{T('Guest on Airbnb','Huésped en Airbnb')}</span></span></a>'''
+        s+=f'''<figure class="guest-review {'review-featured' if review_index==0 else ''}"><div class="review-stars" aria-label="{T('5 out of 5 stars','5 de 5 estrellas')}"><span aria-hidden="true">★★★★★</span><span>5 / 5</span></div><blockquote><p lang="{lang}">{escape(r['text'])}</p></blockquote><figcaption>{attribution}<time datetime="{r['date']}">{date}</time></figcaption></figure>'''
     from datetime import date
     refreshed=date.fromisoformat(data['retrieved_at'])
     stamp=f"{refreshed.day} {months[lang][refreshed.month-1]} {refreshed.year}"

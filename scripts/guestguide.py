@@ -4,7 +4,9 @@ The bilingual template is a content source only: its old shell, CSS and scripts
 are never published. Destination cards also render directly on the homepage.
 """
 from pathlib import Path
-from lxml import html
+import json
+from html import escape
+from lxml import html, etree
 from photography import legacy_image, photo
 from concierge import link, widget
 
@@ -76,7 +78,19 @@ def destinations(lang, path, embedded=False):
         card.tag = 'article'
         card.set('class', 'destination-card')
         card.set('id', slug)
+        if slug in ['el-tunco', 'el-zonte', 'restaurants']:
+            alt = {
+                'el-tunco': T('Surfers beside the rock formation at El Tunco beach', 'Surfistas junto a la formación rocosa de la playa El Tunco'),
+                'el-zonte': T('The beach and palm-lined shore at El Zonte', 'Playa y palmeras en la costa de El Zonte'),
+                'restaurants': T("White umbrellas and ocean-view tables at Ola Beto's", "Sombrillas blancas y mesas con vista al mar en Ola Beto's"),
+            }
+            card.find('.//img').set('alt', alt[slug])
         heading = card.find('.//h3').text_content()
+        if slug == 'restaurants':
+            cta = html.Element('a', href='https://www.facebook.com/BetosRestauranteLaLibertad/', target='_blank', rel='noopener', attrib={'class': 'text-link'})
+            cta.text = T('Visit the restaurant', 'Ver el restaurante') + ' ↗'
+            card.xpath('./div')[1].append(cta)
+            continue
         cta = html.fragment_fromstring(link(lang, 'guided_tours', path + '#' + slug, placement='guide', label=T('Plan a visit', 'Planea una visita')))
         # Keep the destination in the message so the concierge knows the guest's interest.
         from urllib.parse import urlsplit, parse_qs, urlencode
@@ -87,6 +101,23 @@ def destinations(lang, path, embedded=False):
     note = html.Element('p', attrib={'class': 'fine destination-note'})
     note.text = T('Driving times and activity prices are approximate. Ask your concierge about current arrangements before heading out.', 'Los tiempos de viaje y precios de actividades son aproximados. Consulta los detalles actuales con tu concierge antes de salir.')
     el.append(note)
+    credits = html.Element('details', attrib={'class': 'destination-credits'})
+    etree.SubElement(credits, 'summary').text = T('About these photographs', 'Sobre estas fotografías')
+    etree.SubElement(credits, 'p').text = T('Real photographs of El Tunco, El Zonte and Ola Beto\'s, lightly retouched for this site. Sources and credits below.', 'Fotografías reales de El Tunco, El Zonte y Ola Beto\'s, con retoques ligeros para este sitio. Fuentes y créditos a continuación.')
+    for item in json.loads((ROOT / 'content/destination-photography.json').read_text())['photos']:
+        names = {'el-tunco': 'El Tunco', 'el-zonte': 'El Zonte', 'ola-betos': "Ola Beto's"}
+        credit = item['credit'] if item['location'] != 'ola-betos' else T('From the White Swan guest guide', 'De la guía de White Swan')
+        text = f"<li><a href=\"{escape(item['source_url'])}\" target=\"_blank\" rel=\"noopener\">{names[item['location']]} · {escape(credit)}</a>"
+        if item['capture_date']:
+            text += ' · ' + item['capture_date'][:4]
+        if item['license_url']:
+            text += f" · <a href=\"{escape(item['license_url'])}\" target=\"_blank\" rel=\"noopener\">{escape(item['license'])}</a>"
+        if item['location'] == 'el-zonte':
+            text += f" · <a href=\"{item['published_files'][-1]}\" target=\"_blank\" rel=\"noopener\">{T('Retouched image, also CC BY-SA 3.0', 'Imagen retocada, también CC BY-SA 3.0')}</a>"
+        if credits.find('ul') is None:
+            etree.SubElement(credits, 'ul')
+        credits.find('ul').append(html.fragment_fromstring(text + '</li>'))
+    el.append(credits)
     return serialize(el.getparent() if embedded else el)
 
 

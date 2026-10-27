@@ -60,8 +60,12 @@ def refresh(accept_changes=False):
                 raise ValueError('A selected review no longer meets the published selection criteria.')
             if public['review'] != prior['text'] and not accept_changes:
                 raise ValueError('Selected review wording changed. Inspect the public review before using --accept-changes.')
-            # Explicit allowlist: never copy guest profiles, private feedback, reservations or host responses.
+            # Never import provider profiles or private fields. Keep separately verified
+            # public attribution only while its matched review text is unchanged.
             selected[i] = {'source_id':item['id'],'platform':'airbnb','rating':5,'date':item['reviewed_at'][:10],'text':public['review']}
+            if public['review'] == prior['text'] and prior.get('author'):
+                fields = ['first_name', 'image', 'profile_url', 'source_image_url', 'airbnb_review_id', 'verified_at']
+                selected[i]['author'] = {field: prior['author'][field] for field in fields}
     snapshot['retrieved_at'] = datetime.now(timezone.utc).date().isoformat()
     tmp = path.with_suffix('.json.tmp')
     tmp.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False)+'\n')

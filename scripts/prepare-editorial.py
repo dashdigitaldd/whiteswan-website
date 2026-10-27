@@ -49,5 +49,7 @@ if registry_path.exists():
     for key, asset in json.loads(registry_path.read_text())['assets'].items():
         if key.startswith('service-') and asset.get('method') == 'built-in-image-generation':
             assets[key] = asset
+        if asset.get('provenance') == 'content/destination-photography.json':
+            assets[key] = asset
 registry_path.write_text(json.dumps({'edited_at':'2026-09-18','assets':assets},ensure_ascii=False,indent=2)+'\n')
 print(f'Prepared {len(assets)} curated image assets.')

@@ -1,0 +1,62 @@
+{
+  "updated_at": "2026-10-27",
+  "photos": [
+    {
+      "key": "guide-eltunco",
+      "location": "el-tunco",
+      "source_url": "https://unsplash.com/photos/a-couple-of-people-that-are-standing-in-the-water-aA_FHF02PZQ",
+      "credit": "Luis Rodriguez",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "capture_date": "2024-07",
+      "verified_at": "2026-10-27",
+      "source_sha256": "331d4e3d24106ed7d2187d499b067a56b244769ecf5ccc16e2f2f387c109b9a2",
+      "method": "built-in-image-edit",
+      "edit": "Light tonal and color retouch from a real photograph. No intentional changes to the location.",
+      "prompt": "Use case: lighting-weather. Edit target: the supplied real location photograph for a hospitality website. Apply only restrained photographic color grading and tonal cleanup: gently lift deep shadows, control bright highlights, slightly clarify natural detail, keep realistic restrained color. This must remain the exact original scene, same framing, viewpoint, geometry, coastline, buildings, plants, objects, people, expressions and positions. Do not generate or replace any object, change weather or time of day, replace sky, remove people, add architecture, add text, smooth textures artificially, or enlarge the scene. Keep natural photographic imperfection. Preserve original aspect ratio. This is a real-world location and accuracy takes priority over drama. Keep the cloudy sky and dark sand. A very slight warm-neutral finish is enough.",
+      "published_files": [
+        "/assets/destinations/el-tunco-480.webp",
+        "/assets/destinations/el-tunco-960.webp",
+        "/assets/destinations/el-tunco-1536.webp"
+      ]
+    },
+    {
+      "key": "guide-elzonte",
+      "location": "el-zonte",
+      "source_url": "https://commons.wikimedia.org/wiki/File:El_Zonte_(11-2011)_-_Playa_-_panoramio.jpg",
+      "credit": "Martin Haeusler",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "capture_date": "2011-11-06",
+      "verified_at": "2026-10-27",
+      "source_sha256": "7dcbd15f96f0264d09ec7630bb253c37e6b26de1db3560a9291cfdb8c9669a80",
+      "method": "built-in-image-edit",
+      "edit": "Light tonal and color retouch from a real photograph. No intentional changes to the location.",
+      "prompt": "Use case: lighting-weather. Edit target: the supplied real location photograph for a hospitality website. Apply only restrained photographic color grading and tonal cleanup: gently lift deep shadows, control bright highlights, slightly clarify natural detail, keep realistic restrained color. This must remain the exact original scene, same framing, viewpoint, geometry, coastline, buildings, plants, objects, people, expressions and positions. Do not generate or replace any object, change weather or time of day, replace sky, remove people, add architecture, add text, smooth textures artificially, or enlarge the scene. Keep natural photographic imperfection. Preserve original aspect ratio. This is a real-world location and accuracy takes priority over drama. Keep the original sunny sky, beach, rocks, palms and people exactly. Reduce harsh color saturation slightly if needed.",
+      "published_files": [
+        "/assets/destinations/el-zonte-480.webp",
+        "/assets/destinations/el-zonte-960.webp",
+        "/assets/destinations/el-zonte-1460.webp"
+      ]
+    },
+    {
+      "key": "guide-restaurants",
+      "location": "ola-betos",
+      "source_url": "https://whiteswan.my.canva.site/",
+      "credit": "Photo supplied in the White Swan guest guide",
+      "license": "Owner-supplied guide asset",
+      "license_url": null,
+      "capture_date": null,
+      "verified_at": "2026-10-27",
+      "source_sha256": "be6c95e7736783536cedcdb1596e3595eefe37084a7752636246c0dc94c6548a",
+      "method": "built-in-image-edit",
+      "edit": "Light tonal and color retouch from a real photograph. No intentional changes to the location.",
+      "prompt": "Use case: lighting-weather. Edit target: the supplied real location photograph for a hospitality website. Apply only restrained photographic color grading and tonal cleanup: gently lift deep shadows, control bright highlights, slightly clarify natural detail, keep realistic restrained color. This must remain the exact original scene, same framing, viewpoint, geometry, coastline, buildings, plants, objects, people, expressions and positions. Do not generate or replace any object, change weather or time of day, replace sky, remove people, add architecture, add text, smooth textures artificially, or enlarge the scene. Keep natural photographic imperfection. Preserve original aspect ratio. This is a real-world location and accuracy takes priority over drama. Keep the portrait framing, terrace furniture, umbrellas, flowers, ocean horizon and stone floor exactly. Only recover highlights and add a small amount of natural clarity.",
+      "published_files": [
+        "/assets/destinations/ola-betos-480.webp",
+        "/assets/destinations/ola-betos-960.webp",
+        "/assets/destinations/ola-betos-1122.webp"
+      ]
+    }
+  ]
+}

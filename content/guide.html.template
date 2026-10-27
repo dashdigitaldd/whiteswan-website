@@ -493,9 +493,9 @@ body{padding-bottom:74px}
     </div></div>
     <div class="card"><div class="im"><img src="website-photos/restaurants.jpg" alt="Beachfront dining nearby" onerror="this.closest('.im').style.display='none'"></div><div class="tx">
       <span class="dist"><span class="en">2–5 min by car</span><span class="es">2–5 min en auto</span></span>
-      <h3 class="en">Nearby Restaurants</h3><h3 class="es">Restaurantes Cercanos</h3>
-      <p class="en">Beto's and Olor de Mar (2 min), Vikingos (5 min). Prefer to stay in? PedidosYa and Uber Eats deliver — set the pin to Residencial Xanadu, Casa F-2.</p>
-      <p class="es">Beto's y Olor de Mar (2 min), Vikingos (5 min). ¿Prefieres quedarte? PedidosYa y Uber Eats llegan — coloca el pin en Residencial Xanadu, Casa F-2.</p>
+      <h3>Ola Beto's</h3>
+      <p class="en">A table under the white umbrellas, seafood and a view of the Pacific. Ola Beto's in La Libertad is a short drive from the villa.</p>
+      <p class="es">Una mesa bajo las sombrillas blancas, mariscos y vista al Pacífico. Ola Beto's en La Libertad queda a pocos minutos en carro de la villa.</p>
     </div></div>
     <div class="card"><div class="im"><img src="website-photos/waterfalls.jpg" alt="Tamanique waterfalls" onerror="this.closest('.im').style.display='none'"></div><div class="tx">
       <span class="dist"><span class="en">Nearby hike</span><span class="es">Caminata cercana</span></span>

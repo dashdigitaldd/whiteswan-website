@@ -29,8 +29,9 @@ class PublicContracts(unittest.TestCase):
             self.assertNotIn('type="password"',page)
             self.assertIn('name="contactConsent"',page)
 
-    def sync_fixture(self,rating=5,text='A lovely stay.',accept=False):
+    def sync_fixture(self,rating=5,text='A lovely stay.',accept=False,author=None):
         prior={'source_id':'public-1','platform':'airbnb','rating':5,'date':'2026-01-01','text':'A lovely stay.'}
+        if author: prior['author']=author
         raw={'id':'public-1','platform':'airbnb','reviewed_at':'2026-01-01T12:00:00Z','public':{'rating':rating,'review':text,'response':'host response'},'private':{'feedback':'PRIVATE-SENTINEL'},'reservation_id':'PRIVATE-RESERVATION'}
         with tempfile.TemporaryDirectory() as tmp:
             base=Path(tmp);(base/'content').mkdir();path=base/'content/guest-reviews.json'
@@ -47,12 +48,30 @@ class PublicContracts(unittest.TestCase):
                     result=path.read_text()
                     self.assertNotIn('PRIVATE',result)
                     self.assertNotIn('host response',result)
-                    self.assertEqual(set(json.loads(result)['reviews']['en'][0]),set(prior))
+                    updated=json.loads(result)['reviews']['en'][0]
+                    self.assertEqual(set(updated),set(prior)-({'author'} if text!=prior['text'] else set()))
+                    return updated
 
     def test_refresh_never_exports_private_fields(self):self.sync_fixture()
     def test_rating_change_preserves_published_snapshot(self):self.sync_fixture(rating=4)
     def test_changed_wording_requires_editorial_acceptance(self):self.sync_fixture(text='Changed review.')
     def test_explicitly_accepted_wording_remains_allowlisted(self):self.sync_fixture(text='Changed review.',accept=True)
+
+    def test_verified_public_author_survives_refresh_but_requires_rematch_after_edit(self):
+        author={'first_name':'Sample','image':'/assets/reviewers/sample.webp','profile_url':'https://www.airbnb.com/users/profile/123','source_image_url':'https://a0.muscache.com/sample.jpeg','airbnb_review_id':'123','verified_at':'2026-10-27'}
+        self.assertEqual(self.sync_fixture(author=author)['author'],author)
+        self.assertNotIn('author',self.sync_fixture(author=author,text='Changed review.',accept=True))
+
+    def test_review_cards_keep_verbatim_text_and_matched_public_identity(self):
+        from lxml import html
+        snapshot=json.loads((ROOT/'content/guest-reviews.json').read_text())
+        for lang in ['en','es']:
+            page=html.fromstring(homepage.guest_reviews(lang))
+            cards=page.xpath('.//figure')
+            for card,review in zip(cards,snapshot['reviews'][lang]):
+                self.assertEqual(card.find('.//blockquote/p').text,review['text'])
+                self.assertEqual(card.find('.//figcaption//strong').text,review['author']['first_name'])
+                self.assertEqual(card.find('.//figcaption//img').get('src'),review['author']['image'])
 
 
 class ConciergeLinks(unittest.TestCase):
